@@ -25,5 +25,8 @@
     "GitHub Pages の有効化（Settings → Pages → main / root）",
     "第1回の回答（任意）"
   ],
-  "phase_gate": "P2（試作）完了・確認②待ち"
+  "phase_gate": "P2（試作）完了・確認②待ち",
+  "map_refs": {
+    "1.0": "9cbd08eb2e3895ab3401f278670cba2f80557376"
+  }
 }

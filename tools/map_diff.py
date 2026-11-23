@@ -27,6 +27,12 @@ def at_ref(ref, rel):
 
 
 def latest_map_tag():
+    """直前の地図の版のコミット。state.json の map_refs（版→コミット）を優先し、なければ map-v* タグ。
+    （タグはpushできない環境があるため、map_refs を正とする）"""
+    refs = load("state.json").get("map_refs", {})
+    if refs:
+        latest = max(refs, key=lambda v: tuple(int(x) for x in v.split(".")))
+        return refs[latest]
     r = subprocess.run(["git", "tag", "--list", "map-v*", "--sort=-v:refname"], cwd=ROOT, capture_output=True, text=True)
     tags = r.stdout.split()
     return tags[0] if tags else "none"

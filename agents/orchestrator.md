@@ -40,7 +40,7 @@
 - 教材第1節（復習）・第12節（説明課題）・第13節（確認問題）・付録A（解答）・付録C（回答提出用プロンプト）を作る。
 
 ## 8. 変更点レポート
-- `python3 tools/map_diff.py map-v<前回の版>` の結果をもとに `content/cycles/NNNN/report.md` を書く（DOC-03 §2.2、レポートの11節）。
+- `python3 tools/map_diff.py`（引数なしで直前の版と比較）の結果をもとに `content/cycles/NNNN/report.md` を書く（DOC-03 §2.2、レポートの11節）。
 - 訂正は重要度（DOC-04 §5）を付ける。保留事項・提案（要件変更の提案はここだけ）を書く。
 
 ## 9. 品質確認（Editor：`agents/editor.md`）
@@ -50,7 +50,7 @@
 ## 10. 公開
 1. `data/state.json` を更新：cycle、map_version（MINOR+1）、last_run、current_session、next_cycle_plan、pending。
 2. `data/understanding.json` の、今回の教材で扱ったノードの status を `presented` に（levelは変えない）。
-3. コミット → `main` にマージ → `git tag map-v<版>` → push（タグも）。
+3. コミット → `main` にマージ → push。マージ後のコミットを `state.map_refs["<版>"]` に記録して、もう一度コミット・push する（`git tag map-v<版>` は可能なら）。
 4. 最後のメッセージに、ユーザー向けの要約（3〜5行）と、PDF2本のGitHub上のURLを書く。これが通知に表示される。
 
 ## 失敗時

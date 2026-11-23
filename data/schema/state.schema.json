@@ -45,6 +45,12 @@
     },
     "phase_gate": {
       "type": "string"
+    },
+    "map_refs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
     }
   }
 }
