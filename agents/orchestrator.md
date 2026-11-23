@@ -13,7 +13,8 @@
 
 ## 1. 計画（Planner：`agents/planner.md`）
 - 入力：`state.json`、`curriculum.json`、`understanding.json`、`questions.json`、前回のレポート。
-- 集中期間（`state.intensive_until` 以前）は DOC-04 §4.1 に従い、毎回次のセッションへ進む。
+- DOC-04 §4（v1.2）に従い、回答の有無にかかわらず**毎回次のセッションへ進む**。同じセッションをやり直さない。回答の評価結果は、次の教材の第1節（事前チェック・復習）に反映する。
+- カリキュラムの最後（P04）の後は、Phase 05 の深掘りシリーズ（`curriculum.json` の P05）を順に進める。ユーザーの要望（`questions.json` の origin=user で open のもの）があれば、P05 にセッションを追加して最優先で扱う（DOC-01 v1.3）。
 - 出力：`content/cycles/NNNN/plan.md`（中心の問い、扱うノード、調査の分担、訂正候補、拡張の上限）。
 
 ## 2. 調査（Researcher：`agents/researcher.md`）
@@ -29,6 +30,11 @@
 - research と challenge から「主張リスト」（主張・ラベル・出典ID・URL）を作り、`content/cycles/NNNN/claims.md` に保存する。
 - サブエージェント1〜2体に、claims.md と `agents/verifier.md` のみを渡す（調査の経緯・下書きは渡さない）。
 - 出力：`content/cycles/NNNN/verification.md`。判定が「確認済み」以外の主張は、修正して再検証するか、保留にする。
+
+## 4b. あなたのメモの取り込みと検証（DOC-01 F11、DOC-04 §2 の6）
+1. Notion で3つの用語集の索引ページ（「AI用語集」「ビジネス用語集」「用語集」。Memo の下）を検索して開き、子ページの notion_id を集める。`data/import/notion_glossary.json` にも、移行スクリプトの除外リスト（`EXCLUDE`：notion_id の SHA-1 先頭16桁）にもない notion_id だけを新しい用語として、同じ形式（題名・英語名・1〜2文の定義・notion_id・kind）で追記する。既存の用語の定義がNotion側で変わっていれば、その項目の definition を更新する。Notion の接続が使えないときは、この手順を飛ばしてレポートに書く。Notionは**読むだけで書き換えない**。顧客・案件・議事録・私生活のページ、公人以外の個人名は取り込まない。
+2. `python3 tools/migrations/0002_import_notion_glossary.py` を実行する（何度実行しても同じ結果）。除外が必要なものは、スクリプトの `EXCLUDE_TITLES` に理由つきで足す。
+3. Verifier（ステップ4と同じサブエージェントでよい）に、未検証の用語ノードから約10件を渡し、定義が一般的な理解・信頼できる資料と合っているかを確かめさせる。問題がなければ `verification.status` を verified（`by` に「verifier（あなたのメモの確認）」）にする。誤り・古さ・誤解を招く点があれば、ノードは直さず（正本はNotion）、変更点レポートの「あなたのメモへの指摘」に、用語名・指摘・根拠を書く。
 
 ## 5. 地図の統合（Cartographer：`agents/cartographer.md`）
 - 確認済みの主張だけを `data/graph/*.json`・`data/sources.json` に反映する。

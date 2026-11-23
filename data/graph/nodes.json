@@ -107,7 +107,7 @@
     },
     "target_level": 3,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -447,6 +447,7 @@
     },
     "target_level": 3,
     "curriculum": [
+      "P00-S01",
       "P01-S08"
     ],
     "history": [
@@ -891,7 +892,7 @@
     },
     "target_level": 3,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -926,6 +927,7 @@
     },
     "target_level": 2,
     "curriculum": [
+      "P00-S01",
       "P01-S04"
     ],
     "history": [
@@ -1001,7 +1003,7 @@
     },
     "target_level": 3,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3062,7 +3064,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3096,7 +3098,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3131,7 +3133,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3166,7 +3168,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3200,7 +3202,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3234,7 +3236,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3269,7 +3271,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3304,7 +3306,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3338,7 +3340,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3373,7 +3375,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3407,7 +3409,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3441,7 +3443,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3475,7 +3477,7 @@
     },
     "target_level": 4,
     "curriculum": [
-      "P01-S01"
+      "P00-S01"
     ],
     "history": [
       {
@@ -3992,6 +3994,7 @@
     },
     "target_level": 3,
     "curriculum": [
+      "P00-S01",
       "P01-S07"
     ],
     "history": [
@@ -4122,6 +4125,38 @@
     ]
   },
   {
+    "id": "thm.ai-practice",
+    "type": "theme",
+    "title": {
+      "ja": "生成AIの実装と活用",
+      "en": "Building & using generative AI"
+    },
+    "summary": "LLM・エージェント・RAG・MCPなど、生成AIを仕組みとして組み立て、業務で使うための概念群。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 2,
+    "curriculum": [],
+    "origin": "claude",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "作成",
+        "reason": "あなたのメモの用語の受け皿（DOC-01 F11）"
+      }
+    ]
+  },
+  {
     "id": "thm.arts",
     "type": "theme",
     "title": {
@@ -4157,6 +4192,68 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.body-medicine",
+    "type": "theme",
+    "title": {
+      "ja": "人体と医学",
+      "en": "The human body & medicine"
+    },
+    "summary": "人体の構造と働き、健康と病気、医療と社会保障の制度。",
+    "domains": [
+      "D03"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 2,
+    "curriculum": [],
+    "origin": "claude",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "作成",
+        "reason": "あなたのメモの用語の受け皿（DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "thm.business-practice",
+    "type": "theme",
+    "title": {
+      "ja": "経営と業務の実務",
+      "en": "Management & business practice"
+    },
+    "summary": "経営学・プロジェクトマネジメント・業務システム・マーケティングなど、組織を動かす実務の概念群。",
+    "domains": [
+      "D05"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 2,
+    "curriculum": [],
+    "origin": "claude",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "作成",
+        "reason": "あなたのメモの用語の受け皿（DOC-01 F11）"
       }
     ]
   },
@@ -4379,6 +4476,7 @@
     },
     "target_level": 3,
     "curriculum": [
+      "P00-S01",
       "P01-S01",
       "P01-S08"
     ],
@@ -4455,6 +4553,7 @@
     },
     "target_level": 3,
     "curriculum": [
+      "P00-S01",
       "P04-S01"
     ],
     "history": [
@@ -4698,6 +4797,38 @@
     ]
   },
   {
+    "id": "thm.regions-life",
+    "type": "theme",
+    "title": {
+      "ja": "地域・食・暮らし",
+      "en": "Regions, food & everyday life"
+    },
+    "summary": "地域の自然条件と歴史・産業・食文化の関係、旅や暮らしの知識。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 2,
+    "curriculum": [],
+    "origin": "claude",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "作成",
+        "reason": "あなたのメモの用語の受け皿（DOC-01 F11）"
+      }
+    ]
+  },
+  {
     "id": "thm.state-order",
     "type": "theme",
     "title": {
@@ -4762,6 +4893,7 @@
     },
     "target_level": 3,
     "curriculum": [
+      "P00-S01",
       "P01-S01"
     ],
     "history": [
@@ -5249,6 +5381,7668 @@
         "map_version": "1.0",
         "change": "出典を一次資料に",
         "reason": "Verifier C12"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-00f968d4af",
+    "type": "term",
+    "title": {
+      "ja": "Semantic Search",
+      "en": "Semantic Search"
+    },
+    "summary": "Semantic Searchは、単語一致ではなく意味の近さを使って情報を検索する方法です。EmbeddingとVector DBを用いることが多く、RAGの検索方式として使われます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-0100aa26cb",
+    "type": "term",
+    "title": {
+      "ja": "API",
+      "en": "Application Programming Interface"
+    },
+    "summary": "APIは、ソフトウェア同士が機能やデータをやり取りするための接続仕様です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-01662129a5",
+    "type": "term",
+    "title": {
+      "ja": "RAG（Retrieval-Augmented Generation）",
+      "en": "Retrieval-Augmented Generation"
+    },
+    "summary": "RAGは、外部文書やDBから関連情報を検索し、その結果をLLMに渡して回答・判断させる手法です。モデル自体を再学習せず最新・社内情報を利用できます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-020dfe1256",
+    "type": "term",
+    "title": {
+      "ja": "Claude Code",
+      "en": "Claude Code"
+    },
+    "summary": "Claude Codeは、AnthropicのAgentic Coding環境で、コードベースを読み、ファイル編集・コマンド実行・テスト・修正などを行います。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-026aa16a23",
+    "type": "term",
+    "title": {
+      "ja": "Hallucination",
+      "en": "Hallucination"
+    },
+    "summary": "Hallucinationは、AIが事実ではない内容をもっともらしく生成する現象です。RAG、Grounding、検証、Evals、Tool利用など複数の仕組みで抑制します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-051026d46b",
+    "type": "term",
+    "title": {
+      "ja": "Fine-tuning",
+      "en": "Fine-tuning"
+    },
+    "summary": "Fine-tuningは、追加データを用いてモデルの重みを調整し、特定の振る舞いやタスクへの適合度を高める手法です。RAGやPrompt/Context設計とは目的が異なります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-0951c11a53",
+    "type": "term",
+    "title": {
+      "ja": "Chunking",
+      "en": "Chunking"
+    },
+    "summary": "Chunkingは、長い文書を検索やEmbeddingに適した小さな単位へ分割する処理です。RAGの精度は、Chunkの大きさ・重なり・意味的な区切り方に大きく左右されます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-1224506a30",
+    "type": "term",
+    "title": {
+      "ja": "Salesforce Headless 360",
+      "en": "Salesforce Headless 360"
+    },
+    "summary": "Salesforce Headless 360は、従来のSalesforce画面に限定せず、API・MCPツール・CLI・スキルからSalesforceの機能を利用できるようにするアーキテクチャの拡張。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-18ecb6a936",
+    "type": "term",
+    "title": {
+      "ja": "Vector DB",
+      "en": "Vector Database"
+    },
+    "summary": "Vector DBは、Embeddingされたベクトルを保存し、意味的な近さで高速検索するためのデータベースです。RAGの検索基盤として使われます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-1f9d1b1804",
+    "type": "term",
+    "title": {
+      "ja": "半導体",
+      "en": "Semiconductor"
+    },
+    "summary": "半導体とは、電気をよく通す導体と通しにくい絶縁体の中間的な性質を持ち、電気的性質を精密に制御できる材料・電子部品の総称です。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-26e2e58144",
+    "type": "term",
+    "title": {
+      "ja": "Evals",
+      "en": "Evaluations"
+    },
+    "summary": "Evals（Evaluations）とは、AIやAIエージェントが期待した仕事をどの程度正しくできるかを、再現可能な形で評価する仕組みです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-288a85e9d4",
+    "type": "term",
+    "title": {
+      "ja": "Observability",
+      "en": "Observability"
+    },
+    "summary": "Observabilityは、Agentの内部で何が起きているかを外部から観測・分析できる状態です。Tracing、ログ、メトリクス、エラー、コスト、品質指標などを含みます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-2ca61894d6",
+    "type": "term",
+    "title": {
+      "ja": "GitHub",
+      "en": "GitHub"
+    },
+    "summary": "GitHubは、Gitリポジトリのホスティング、Pull Request、Issue、CI/CD等を提供する開発プラットフォームです。Coding Agentの作業場所・レビュー基盤として使われます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-2d147eb469",
+    "type": "term",
+    "title": {
+      "ja": "Tools",
+      "en": "Tools"
+    },
+    "summary": "Toolsは、Agentが外部世界に対して検索・計算・DB操作・ファイル編集・SaaS操作などを行うための機能です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-2f5c86b4d8",
+    "type": "term",
+    "title": {
+      "ja": "kintone MCP",
+      "en": "kintone MCP"
+    },
+    "summary": "kintoneとClaude/ChatGPTをMCPで連携する仕組みを起点に、ローカルPC、ターミナル、VS Code/Cursor、Claude Code、Git、GitHub、Vercelがどうつながるかを整理する。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-2f677d6825",
+    "type": "term",
+    "title": {
+      "ja": "MCP（Model Context Protocol）",
+      "en": "Model Context Protocol"
+    },
+    "summary": "MCPは、AIアプリケーションと外部Tools・Dataを標準化された形で接続するためのプロトコルです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-332269d401",
+    "type": "term",
+    "title": {
+      "ja": "事後学習（Post-training）",
+      "en": "Post-training"
+    },
+    "summary": "事後学習は、事前学習済みモデルを、人間の嗜好・指示追従・安全性・特定能力などに適合させる追加学習の総称です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-372c051c5c",
+    "type": "term",
+    "title": {
+      "ja": "A2A（Agent2Agent Protocol）",
+      "en": "Agent2Agent Protocol"
+    },
+    "summary": "A2Aは、異なるAIエージェント同士が能力・タスク・結果をやり取りするための相互運用の考え方／プロトコルです。MCPが主にAgentとTool/Dataの接続を扱うのに対し、A2AはAgent同士の協調に焦点があります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-39e1c824c3",
+    "type": "term",
+    "title": {
+      "ja": "Memory",
+      "en": "Memory"
+    },
+    "summary": "Memoryは、セッションをまたいでAIが再利用する情報の仕組みです。ユーザー嗜好、案件の重要事実、過去の決定などを保持しますが、履歴を丸ごと保存することとは区別して考えます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-42591e9f6e",
+    "type": "term",
+    "title": {
+      "ja": "Function Calling",
+      "en": "Function Calling"
+    },
+    "summary": "Function Callingは、LLMが定義された関数の中から適切なものと引数を構造化して選ぶ仕組みです。Tool Callingの代表的な実装パターンです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-46e06fbd59",
+    "type": "term",
+    "title": {
+      "ja": "Context Engineering",
+      "en": "Context Engineering"
+    },
+    "summary": "Context Engineeringとは、LLMやAgentが仕事を正しく行うために、「その瞬間に何を知り、何を参照でき、どう行動できる状態にするか」を設計する考え方です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-501ab6ae4a",
+    "type": "term",
+    "title": {
+      "ja": "Reviewer",
+      "en": "Reviewer"
+    },
+    "summary": "Reviewerは、Executor等が作成した成果物を検査し、基準未達なら修正要求する役割です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-5153334f2d",
+    "type": "term",
+    "title": {
+      "ja": "CLAUDE.md",
+      "en": "CLAUDE.md"
+    },
+    "summary": "CLAUDE.mdは、Claude Codeにプロジェクト固有のルール・構成・作業方針などを継続的に与えるための指示ファイルです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-5220abe20d",
+    "type": "term",
+    "title": {
+      "ja": "HITL（Human-in-the-loop）",
+      "en": "Human-in-the-loop"
+    },
+    "summary": "HITLは、AI処理の途中に人間の確認・承認・修正を組み込む設計です。重要なのは『人を入れること』ではなく、どのリスク点にどの承認を置くかを設計することです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-527d395249",
+    "type": "term",
+    "title": {
+      "ja": "Multi-Agent",
+      "en": "Multi-Agent"
+    },
+    "summary": "Multi-Agentは、複数のAgentが役割分担・協調して処理する構成です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-54e4d6d142",
+    "type": "term",
+    "title": {
+      "ja": "Tracing",
+      "en": "Tracing"
+    },
+    "summary": "Tracingは、Agentの一連の実行経路を追跡することです。どのモデル判断・Tool Call・入力・出力・Retryを経て最終結果に至ったかを時系列で確認します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-5a546acb24",
+    "type": "term",
+    "title": {
+      "ja": "Data",
+      "en": "Data"
+    },
+    "summary": "Dataは、Agentが仕事をする材料となる文書・DB・メール・業務データ等です。Context Engineeringでは、何を常時与えるか、何を必要時に検索させるかを分けて設計します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-5b719f1189",
+    "type": "term",
+    "title": {
+      "ja": "Escalation",
+      "en": "Escalation"
+    },
+    "summary": "Escalationは、Agentが自力で処理を継続せず、人間や上位システムへ判断を引き渡すことです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-5f58f3e491",
+    "type": "term",
+    "title": {
+      "ja": "Gemini Spark",
+      "en": "Gemini Spark"
+    },
+    "summary": "Gemini Sparkは、Geminiを基盤に、Gmail・Google Drive・Calendar・Docs・SheetsなどのGoogleサービスを横断して、情報取得だけでなく操作・定期実行・条件監視まで行うAIエージェント機能。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-6844e889d9",
+    "type": "term",
+    "title": {
+      "ja": "Deterministic Workflow",
+      "en": "Deterministic Workflow"
+    },
+    "summary": "Deterministic Workflowは、入力条件に対してあらかじめ定義されたルール・順序で処理するワークフローです。安定性・再現性が高く、AI判断が不要な処理は原則こちらに寄せます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-6e843a7071",
+    "type": "term",
+    "title": {
+      "ja": "Prompt Engineering",
+      "en": "Prompt Engineering"
+    },
+    "summary": "Prompt Engineeringは、モデルへの入力指示を設計して望ましい出力を得る技術です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-6f4cf50633",
+    "type": "term",
+    "title": {
+      "ja": "Context Window",
+      "en": "Context Window"
+    },
+    "summary": "Context Windowは、LLMが1回の推論で参照できる入力・会話履歴・生成途中情報の上限範囲です。長いContextを入れれば必ず性能が上がるわけではなく、関連情報の選別が重要です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-702a24b5ac",
+    "type": "term",
+    "title": {
+      "ja": "AI Slop（AIスロップ）",
+      "en": "AI Slop"
+    },
+    "summary": "AI Slopは、生成AIで低コスト・低労力に大量生成され、十分な人間の確認・編集・責任が伴わない、質や有用性の低いコンテンツを指す俗語。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-733518bde7",
+    "type": "term",
+    "title": {
+      "ja": "LLM-as-a-Judge",
+      "en": "LLM-as-a-Judge"
+    },
+    "summary": "LLM-as-a-Judgeは、別のLLMを使ってAI出力の品質を採点・比較する評価手法です。柔軟な評価が可能ですが、Judge側の偏りや再現性も評価する必要があります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-751fb8cc56",
+    "type": "term",
+    "title": {
+      "ja": "Executor",
+      "en": "Executor"
+    },
+    "summary": "Executorは、計画されたタスクを実際にToolやコードを使って実行する役割です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-76458d00bb",
+    "type": "term",
+    "title": {
+      "ja": "企業AI基盤"
+    },
+    "summary": "企業AIは、単にLLMを導入するのではなく、企業データをAIが探せる状態にし、必要なシステムへ接続し、会社独自の仕事のやり方をSkillとして標準化することで実務に組み込む。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-773b007b44",
+    "type": "term",
+    "title": {
+      "ja": "Context Degradation",
+      "en": "Context Degradation"
+    },
+    "summary": "Context Degradationとは、AIに与えるContextが長く・複雑になることで、重要情報を見失ったり、古い情報やノイズに引っ張られたりして性能が下がる問題を指す実務的な表現です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-7821771315",
+    "type": "term",
+    "title": {
+      "ja": "Orchestration",
+      "en": "Orchestration"
+    },
+    "summary": "Orchestrationは、複数のAgent・Tool・Workflow・人間承認などを適切な順序と条件で連携させる制御です。Agentic system全体の司令塔に相当します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-7c1e91d2d6",
+    "type": "term",
+    "title": {
+      "ja": "Guardrails",
+      "en": "Guardrails"
+    },
+    "summary": "Guardrailsは、AIの入力・出力・行動範囲を制約する安全策・業務ルールの総称です。禁止操作、権限制御、出力検証、承認条件、予算上限などを含みます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-7e7c33e15e",
+    "type": "term",
+    "title": {
+      "ja": "Vercel",
+      "en": "Vercel"
+    },
+    "summary": "Vercelは、Webアプリのビルド・デプロイ・ホスティングを提供するクラウドプラットフォームです。AI Coding Agentが作ったWebアプリの公開・検証先としてよく使われます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-80c24d08a4",
+    "type": "term",
+    "title": {
+      "ja": "AI Agent（AIエージェント）",
+      "en": "AI Agent"
+    },
+    "summary": "AI Agentは、目標に対して必要な手順を考え、ツールを使い、結果を確認しながら複数ステップで処理を進めるAIシステムです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-822e33177a",
+    "type": "term",
+    "title": {
+      "ja": "Snowflake",
+      "en": "Snowflake"
+    },
+    "summary": "Snowflakeは、企業内外のデータを安全に取り込み、保存・加工・分析・共有し、生成AIでも利用するためのマネージドクラウド型データプラットフォーム。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-8570c17721",
+    "type": "term",
+    "title": {
+      "ja": "Audit Log",
+      "en": "Audit Log"
+    },
+    "summary": "Audit Logは、誰が・いつ・何を実行したかを後から確認できる監査記録です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-85b5fb76de",
+    "type": "term",
+    "title": {
+      "ja": "Temperature",
+      "en": "Temperature"
+    },
+    "summary": "Temperatureは、モデル出力のランダム性を調整する代表的な推論パラメータです。一般に低いほど出力が安定し、高いほど多様性が増えます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-8824af6d2f",
+    "type": "term",
+    "title": {
+      "ja": "Permissions",
+      "en": "Permissions"
+    },
+    "summary": "Permissionsは、Agentが何を閲覧・作成・更新・送信・削除できるかを制御する権限設計です。最小権限、承認、Scope分離、監査ログが企業利用では重要です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-88db16f7f2",
+    "type": "term",
+    "title": {
+      "ja": "State",
+      "en": "State"
+    },
+    "summary": "Stateとは、Agentが仕事を進めるうえで必要な「今どういう状態か」という情報です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-8f8ea9070c",
+    "type": "term",
+    "title": {
+      "ja": "SSOT（Single Source of Truth）",
+      "en": "Single Source of Truth"
+    },
+    "summary": "SSOTは、「ある情報について、どこを正本として扱うかを一意に決める」考え方。AI活用では、AIが参照する情報源の優先順位・更新元・責任者を明確にするために重要。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-9557543a54",
+    "type": "term",
+    "title": {
+      "ja": "Token",
+      "en": "Token"
+    },
+    "summary": "Tokenは、LLMが文章を処理するときの基本単位です。入力・出力のToken数はContext Windowやコスト、処理時間に関係します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-98da77b356",
+    "type": "term",
+    "title": {
+      "ja": "Reranking",
+      "en": "Reranking"
+    },
+    "summary": "Rerankingは、検索で得た候補を、質問との関連性に基づいて再順位付けする処理です。RAGで本当に必要な情報をContextへ入れる精度を高めます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-a863d2e6d0",
+    "type": "term",
+    "title": {
+      "ja": "Computer Use",
+      "en": "Computer Use"
+    },
+    "summary": "Computer Useは、AIがマウス・キーボード相当の操作でGUIを扱う能力です。APIやMCPがないアプリも操作できる反面、速度・安定性・権限管理・誤操作対策が重要です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-a89bba69c8",
+    "type": "term",
+    "title": {
+      "ja": "Jev（TypeSafe AI）",
+      "en": "Jev"
+    },
+    "summary": "Jevは文章を生成せず、ソフトウェアがそのまま使える型付きの意味判断と確率を高速に返すAIモデル。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-ad9b52c639",
+    "type": "term",
+    "title": {
+      "ja": "Agentic Coding",
+      "en": "Agentic Coding"
+    },
+    "summary": "Agentic Codingは、AIがコード補完だけでなく、調査・設計・編集・テスト・修正まで一連の開発作業を自律的に進める開発スタイルです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-addd1ef92d",
+    "type": "term",
+    "title": {
+      "ja": "事前学習（Pre-training）",
+      "en": "Pre-training"
+    },
+    "summary": "事前学習は、大規模データを用いてモデルに一般的な言語・知識・パターンを学ばせる基礎学習です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-b4e48f5e37",
+    "type": "term",
+    "title": {
+      "ja": "Instructions",
+      "en": "Instructions"
+    },
+    "summary": "Instructionsは、AIに役割・目的・制約・優先順位・動作ルールを与える指示です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-b985969f23",
+    "type": "term",
+    "title": {
+      "ja": "Agentic Workflow",
+      "en": "Agentic Workflow"
+    },
+    "summary": "Agentic Workflowは、処理の途中でAIが状況を解釈し、次の行動・Tool・分岐を判断するワークフローです。固定手順だけで進むDeterministic Workflowと対比されます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-bf94d5cfd8",
+    "type": "term",
+    "title": {
+      "ja": "Subagent",
+      "en": "Subagent"
+    },
+    "summary": "Subagentは、メインAgentから委任された限定的な役割やタスクを担当するAgentです。Context分離や並列化に使えますが、分割による通信コストや情報欠落に注意が必要です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-c1393eb63b",
+    "type": "term",
+    "title": {
+      "ja": "Loop Engineering",
+      "en": "Loop Engineering"
+    },
+    "summary": "Loop Engineeringは、Agentが観察・判断・実行・評価・再試行を繰り返すループそのものを設計・制御する考え方です。終了条件、Retry、Escalation、検証などが中心になります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-c188fabba6",
+    "type": "term",
+    "title": {
+      "ja": "Tool Calling",
+      "en": "Tool Calling"
+    },
+    "summary": "Tool Callingは、LLMが外部関数・API・検索・DB・ブラウザなどのToolを選び、必要な引数とともに呼び出す仕組みです。Agentの『行動』を実現する中心機構です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-cc8dbe701b",
+    "type": "term",
+    "title": {
+      "ja": "Transformer",
+      "en": "Transformer"
+    },
+    "summary": "Transformerは、現在の多くのLLMの基礎となるニューラルネットワーク構造です。Attention機構により、入力中の要素同士の関係を効率的に扱います。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-d470160aef",
+    "type": "term",
+    "title": {
+      "ja": "Embedding（エンベディング／埋め込み）",
+      "en": "Embedding"
+    },
+    "summary": "Embeddingは、文章や画像等の意味的特徴を数値ベクトルへ変換することです。類似検索・クラスタリング・RAGなどに使われます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-dfcdc2a3b2",
+    "type": "term",
+    "title": {
+      "ja": "Git",
+      "en": "Git"
+    },
+    "summary": "Gitは、ソースコード等の変更履歴を管理する分散型バージョン管理システムです。Agentic Codingでは、AIによる変更を安全に比較・レビュー・巻き戻す基盤になります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e17e7b87a4",
+    "type": "term",
+    "title": {
+      "ja": "Browser Use",
+      "en": "Browser Use"
+    },
+    "summary": "Browser Useは、AIがブラウザを通じてWebページを閲覧し、クリック・入力・取得などを行う能力です。APIがないシステムも操作できますが、画面変更や誤操作への耐性が課題です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e32e425613",
+    "type": "term",
+    "title": {
+      "ja": "Planner",
+      "en": "Planner"
+    },
+    "summary": "Plannerは、目標をサブタスクへ分解し、実行順序や必要Toolを計画する役割です。独立Agentとして分ける場合も、1つのAgent内部機能として持たせる場合もあります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e38483b18b",
+    "type": "term",
+    "title": {
+      "ja": "バーティカルAI",
+      "en": "Vertical AI"
+    },
+    "summary": "バーティカルAIは、特定業界・職種・業務に深く特化したAIサービス／AI Agentです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e51944a596",
+    "type": "term",
+    "title": {
+      "ja": "Observability・Tracing",
+      "en": "Observability / Tracing"
+    },
+    "summary": "Tracingは Agentの処理経路を追跡すること、ObservabilityはAgent全体の動きを観測・分析できる状態を作ることです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e752883b96",
+    "type": "term",
+    "title": {
+      "ja": "Cursor",
+      "en": "Cursor"
+    },
+    "summary": "Cursorは、AI機能を統合したコードエディタで、コード生成・編集・検索・Agentic Codingなどを支援します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e88aa7cc86",
+    "type": "term",
+    "title": {
+      "ja": "Agent Loop",
+      "en": "Agent Loop"
+    },
+    "summary": "Agent Loopとは、AIエージェントが「考える→行動する→結果を見る→次を考える」を、目的達成まで繰り返す仕組みです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-e8e5a889fc",
+    "type": "term",
+    "title": {
+      "ja": "LLM（Large Language Model）",
+      "en": "Large Language Model"
+    },
+    "summary": "LLMは、大量のテキスト等から言語パターンを学習し、文章生成・要約・推論・Tool選択などを行う大規模言語モデルです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-eac9f7dfa8",
+    "type": "term",
+    "title": {
+      "ja": "Harness Engineering",
+      "en": "Harness Engineering"
+    },
+    "summary": "Harness Engineeringは、Agentが安定して働くための実行環境・ルール・Tool・権限・評価・ログ・回復機構などを総合的に設計する考え方です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-eb3e3a1b3d",
+    "type": "term",
+    "title": {
+      "ja": "HOTL（Human-on-the-loop）",
+      "en": "Human-on-the-loop"
+    },
+    "summary": "HOTLは、AIが基本的には自律実行し、人間は監視・介入可能な立場に置かれる設計です。HITLより自律性が高く、Observabilityや停止条件が重要になります。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-ee882d8a00",
+    "type": "term",
+    "title": {
+      "ja": "Inference（推論）",
+      "en": "Inference"
+    },
+    "summary": "Inferenceは、学習済みモデルに入力を与えて出力を生成させる処理です。生成AIを実際に利用する際に行われる計算で、速度・コスト・モデル性能に関係します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-eecc17b1e5",
+    "type": "term",
+    "title": {
+      "ja": "Skills",
+      "en": "Skills"
+    },
+    "summary": "Skillsは、AIに特定業務の手順・知識・ツール利用法・出力形式などを再利用可能な形で持たせる仕組み／概念です。Instructionsより業務単位の『やり方』に近い位置付けです。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-f148761943",
+    "type": "term",
+    "title": {
+      "ja": "Deterministic WorkflowとAgentic Workflow",
+      "en": "Deterministic Workflow vs Agentic Workflow"
+    },
+    "summary": "Deterministic Workflowは決められたルール・順番で進む処理、Agentic Workflowは途中でAIが状況を判断し、次の行動を選ぶ処理です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-f79eb17026",
+    "type": "term",
+    "title": {
+      "ja": "Examples",
+      "en": "Examples"
+    },
+    "summary": "Examplesは、望ましい入力・判断・出力の具体例です。単なる説明よりも振る舞いを安定させやすく、Few-shot promptingやSkill設計の一部として使われます。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-faa1e5fe6f",
+    "type": "term",
+    "title": {
+      "ja": "Multimodal",
+      "en": "Multimodal"
+    },
+    "summary": "Multimodalは、テキストだけでなく画像・音声・動画など複数種類の情報を扱える能力です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-fb01e9a815",
+    "type": "term",
+    "title": {
+      "ja": "Grounding",
+      "en": "Grounding"
+    },
+    "summary": "Groundingは、AIの回答や判断を、外部データ・検索結果・業務ルールなど確認可能な根拠に結びつけることです。Hallucination低減や業務利用の信頼性向上に重要です。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.ai-fe19c37a64",
+    "type": "term",
+    "title": {
+      "ja": "Retry",
+      "en": "Retry"
+    },
+    "summary": "Retryは、Tool失敗や検証不合格時にAgentが処理を再試行する仕組みです。回数・条件・方針を無制限にせず、Escalationや予算上限と組み合わせて設計します。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-ai-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "ai",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-0410e2872c",
+    "type": "term",
+    "title": {
+      "ja": "ITインフラ基礎",
+      "en": "IT Infrastructure"
+    },
+    "summary": "サーバー、NAS、クラウド、共有フォルダ、メールサーバーは同じ階層の製品ではなく、処理・保存・認証・共有・保護という役割を組み合わせて企業ITは構成される。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-0e04b0a5a5",
+    "type": "term",
+    "title": {
+      "ja": "LP・HP作成（ワイヤーフレーム、CTA、FV、HTML、CSS、JavaScriptなど）",
+      "en": "Landing Page / Website Creation"
+    },
+    "summary": "LP・HP作成とは、誰に、何を伝え、どの行動をしてもらうかを設計し、それを情報構造・文章・デザイン・HTML/CSS/JavaScriptとして実装し、計測と改善まで行う仕事である。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-0f516c05be",
+    "type": "term",
+    "title": {
+      "ja": "Mashmatrix Sheet",
+      "en": "Mashmatrix Sheet"
+    },
+    "summary": "Mashmatrix SheetはSalesforceのレコードをブラウザー上でExcelのように一覧表示し、コピー＆ペーストや一括編集、検索、並べ替えを行えるアドオン製品。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-0fa07d9a03",
+    "type": "term",
+    "title": {
+      "ja": "経済学入門",
+      "en": "Economics"
+    },
+    "summary": "経済学は、限られた資源を人や企業・政府がどう配分し、その選択が価格・所得・雇用・景気・格差にどのような結果を生むかを分析する学問。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-1bdbe5c0a7",
+    "type": "term",
+    "title": {
+      "ja": "倉庫管理・WMSの全体像",
+      "en": "Warehouse Management System"
+    },
+    "summary": "WMS（Warehouse Management System）は、商品・材料が倉庫へ入ってから出ていくまでの倉庫内業務を管理・統制するシステム。何を・どこに置き・誰が・どの順番で動かすかを統制する実行系のシステムである。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-255c6738c5",
+    "type": "term",
+    "title": {
+      "ja": "経営学入門",
+      "en": "Management"
+    },
+    "summary": "経営学は、企業や組織が限られた人・物・金・情報を使い、顧客価値を生み、持続的に成果を出す仕組みを研究する学問。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-264411aba6",
+    "type": "term",
+    "title": {
+      "ja": "サーキットブレーカー",
+      "en": "Circuit Breaker"
+    },
+    "summary": "金融市場のサーキットブレーカーとは、相場が極端に動いたときに取引を一時中断し、投資家が冷静に情報を確認できる時間を設ける仕組みです。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-2a11408e25",
+    "type": "term",
+    "title": {
+      "ja": "エクイティ／デット",
+      "en": "Equity / Debt"
+    },
+    "summary": "エクイティは「会社の所有権を渡して集める資金」、デットは「返済義務を負って借りる資金」です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-33c2ce7344",
+    "type": "term",
+    "title": {
+      "ja": "設計・建築・施工等の流れ",
+      "en": "Building Design and Construction Process"
+    },
+    "summary": "建物づくりは、事業・要望を整理し、調査して設計し、法的確認と見積・契約を経て施工し、設計者が工事監理を行い、検査・引渡し後は維持管理するという長いプロジェクトである。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-479ccedd85",
+    "type": "term",
+    "title": {
+      "ja": "401kとは",
+      "en": "401(k)"
+    },
+    "summary": "401(k)は、米国の会社員向けの「税制優遇付き・確定拠出型の退職資産形成制度」です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-48b4689a2a",
+    "type": "term",
+    "title": {
+      "ja": "確定拠出年金",
+      "en": "Defined Contribution Pension"
+    },
+    "summary": "確定拠出年金（DC）は、拠出する掛金額を先に決め、加入者本人が商品を選んで運用し、その結果によって将来の受取額が変わる私的年金制度である。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-4ad0e4b186",
+    "type": "term",
+    "title": {
+      "ja": "コンサルティング手法",
+      "en": "Consulting Methods"
+    },
+    "summary": "コンサルティング手法とは、曖昧な経営・業務課題を構造化し、事実と仮説を使って原因を特定し、実行可能な選択肢を比較し、意思決定と変革まで支援するための問題解決方法である。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-5b1864a7b7",
+    "type": "term",
+    "title": {
+      "ja": "グローバルサウス",
+      "en": "Global South"
+    },
+    "summary": "グローバルサウスとは、主にアジア・アフリカ・中南米などの新興国・途上国を、植民地支配の歴史、開発課題、国際政治上の立場などを踏まえてまとめて呼ぶ緩やかな概念です。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-5cf2f441b5",
+    "type": "term",
+    "title": {
+      "ja": "PMO",
+      "en": "Project Management Office"
+    },
+    "summary": "PMOは、プロジェクトが正しく意思決定され、管理され、組織として成功確率を高められるように、標準化・可視化・調整・支援・統制を行う機能です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-636501c0d5",
+    "type": "term",
+    "title": {
+      "ja": "システム開発",
+      "en": "System Development"
+    },
+    "summary": "システム開発とは、単にプログラムを書く作業ではなく、経営・業務上の目的を明確にし、要件を定義し、設計・実装・テスト・導入・運用・廃棄までを一つのライフサイクルとして管理する活動です。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-654a5b4dc6",
+    "type": "term",
+    "title": {
+      "ja": "アントレプレナー/CoE",
+      "en": "Entrepreneur / Center of Excellence"
+    },
+    "summary": "アントレプレナーは不確実性の中で人・資金・技術を組み合わせ新しい価値を事業化する人。CoEは特定領域の知識・ルール・人材・事例を集約し組織全体の能力を高める中核組織。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-6db364b6a2",
+    "type": "term",
+    "title": {
+      "ja": "IT・DX領域における契約形態と事業モデル"
+    },
+    "summary": "IT・DX領域の契約は、単に「請負」か「準委任」かを選ぶだけでは不十分であり、提供内容・完成責任・指揮命令・品質判定・責任範囲・終了時の移行を一体で設計する必要がある。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-711c65477d",
+    "type": "term",
+    "title": {
+      "ja": "暦年贈与",
+      "en": "Annual Gift (Calendar-Year Taxation)"
+    },
+    "summary": "1年間に個人から受けた贈与を合計し、受贈者1人につき年間110万円の基礎控除を差し引いて贈与税を計算する「暦年課税」を利用した生前贈与です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-71dc93e038",
+    "type": "term",
+    "title": {
+      "ja": "閉域ネットワーク",
+      "en": "Closed Network"
+    },
+    "summary": "閉域ネットワークとは、契約者や関係者など限定されたネットワーク間で通信し、不特定多数が利用する一般インターネットを通さない通信網（またはその構成）を指す。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-72ccfea952",
+    "type": "term",
+    "title": {
+      "ja": "追証（おいしょう）",
+      "en": "Margin Call"
+    },
+    "summary": "追証とは、信用取引やデリバティブ取引で相場が不利に動き、預けている保証金・証拠金が必要水準を下回ったときに、追加で差し入れる必要が生じる資金・担保です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-841f782477",
+    "type": "term",
+    "title": {
+      "ja": "日本の法律の全体像"
+    },
+    "summary": "日本法を実務で理解するには、法律名を大量に覚えるより、①どのレベルのルールか、②誰と誰の関係か、③何が起きているかを分けて考えることが重要である。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-84a6dfbc43",
+    "type": "term",
+    "title": {
+      "ja": "評価指標（KPI・KGIなど）",
+      "en": "KPI / KGI"
+    },
+    "summary": "KGI・KPIなどの評価指標は、「最終的に何を実現したいか」と「その成果へ向けて今うまく進んでいるか」を数値で観測し、意思決定と改善につなげる仕組みである。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-85044eef6e",
+    "type": "term",
+    "title": {
+      "ja": "PMBOK",
+      "en": "Project Management Body of Knowledge"
+    },
+    "summary": "PMBOKは、プロジェクトを成功させるための「唯一の手順書」ではなく、プロジェクトマネジメントで考えるべき原則・領域・プロセスを体系化した世界的な知識体系です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-8518fadab2",
+    "type": "term",
+    "title": {
+      "ja": "生産管理の全体像",
+      "en": "Production Management"
+    },
+    "summary": "生産管理とは、必要なものを、必要な品質で、必要な数量だけ、必要な時期に、適正なコストで作れるように計画し、実行を管理すること。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-a4f2c78fe2",
+    "type": "term",
+    "title": {
+      "ja": "冪等性（Idempotency）",
+      "en": "Idempotency"
+    },
+    "summary": "冪等性（べきとうせい）とは、同じ操作を1回実行した場合と複数回実行した場合とで、対象の最終状態・効果が変わらない性質。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-a73635cc77",
+    "type": "term",
+    "title": {
+      "ja": "マーケティング手法",
+      "en": "Marketing"
+    },
+    "summary": "マーケティングとは、顧客・市場を理解し、価値ある商品・サービスを設計し、適切な価格・流通・伝達方法で届け、顧客との関係を継続して事業成果につなげる活動である。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-a8635d3dc3",
+    "type": "term",
+    "title": {
+      "ja": "プロジェクトマネジメント体系的調査レポート",
+      "en": "Project Management"
+    },
+    "summary": "プロジェクトとは「変化を起こすための一時的活動」であり、プロジェクトマネジメントとは、その変化を限られた資源と多様な利害の中で価値につながるように統治・設計・実行・修正する営みである。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-abfe416349",
+    "type": "term",
+    "title": {
+      "ja": "ポートフォリオ最適化",
+      "en": "Portfolio Optimization"
+    },
+    "summary": "ポートフォリオ最適化とは、個々の資産の良し悪しではなく、資産同士の値動きの関係まで考え、期待収益とリスクの組合せを最も望ましい形にする方法です。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-b85162696b",
+    "type": "term",
+    "title": {
+      "ja": "デカップリング",
+      "en": "Decoupling"
+    },
+    "summary": "デカップリングとは、相互依存している国・企業・市場・技術体系の結びつきを意図的または結果的に弱め、切り離していくことです。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.economy",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-bc6fd49954",
+    "type": "term",
+    "title": {
+      "ja": "ISO",
+      "en": "International Organization for Standardization"
+    },
+    "summary": "ISOとは、各国の標準化機関が集まり、製品・サービス・業務プロセスを世界で共通化する「国際規格」を作る非政府の国際組織です。",
+    "domains": [
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-bdee76651e",
+    "type": "term",
+    "title": {
+      "ja": "PCなどハードウェアについて",
+      "en": "PC Hardware"
+    },
+    "summary": "PCのハードウェアとは、CPU・RAM・SSD/HDD・GPUなどを、マザーボード、電源、冷却、通信装置がつないで動かす物理システムである。性能は仕事の種類に対してどこがボトルネックになるかで決まる。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-d2a1040665",
+    "type": "term",
+    "title": {
+      "ja": "中小企業のIT・AIセキュリティ",
+      "en": "Information Security for SMEs"
+    },
+    "summary": "セキュリティの本質は、何を守るかを把握し、侵入されにくくし、侵入されても早期に気付き、被害を広げず、事業を復旧できる状態を、経営として継続運用すること。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.computation",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-d3c9e81ce3",
+    "type": "term",
+    "title": {
+      "ja": "人事評価",
+      "en": "Performance Evaluation"
+    },
+    "summary": "人事評価とは、社員に期待する成果・行動・能力をあらかじめ示し、一定期間の事実に基づいて評価し、報酬・昇進だけでなく育成・配置・組織改善へつなげる仕組みである。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-ebed75f72b",
+    "type": "term",
+    "title": {
+      "ja": "経営手法",
+      "en": "Management Methods"
+    },
+    "summary": "経営手法とは、企業が目的・戦略を決め、資源を配分し、業務を改善し、人と組織を動かし、成果とリスクを管理するための考え方・仕組みの集合である。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-eeeaff92d3",
+    "type": "term",
+    "title": {
+      "ja": "法学入門",
+      "en": "Law"
+    },
+    "summary": "法学は、社会のルールである「法」がどのように作られ、解釈され、適用され、権利・義務・国家権力を調整しているかを体系的に考える学問。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.bus-fd3dbfed62",
+    "type": "term",
+    "title": {
+      "ja": "KJ法",
+      "en": "KJ Method"
+    },
+    "summary": "フィールドワークで集めた大量の断片的情報を一つずつラベルにし、先入観で分類せず「意味の近さ」から集め、全体構造と新しい仮説を発見するための情報整理・発想法。",
+    "domains": [
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.business-practice",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-business-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "business",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-038ecd8b32",
+    "type": "term",
+    "title": {
+      "ja": "大政翼賛会",
+      "en": "Imperial Rule Assistance Association"
+    },
+    "summary": "大政翼賛会は1940年、近衛文麿を中心に成立した政治・国民動員組織。既存政党が相次いで解党し、総力戦体制への協力を全国へ組織化した。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-09c0c0a08e",
+    "type": "term",
+    "title": {
+      "ja": "霞が関",
+      "en": "Kasumigaseki"
+    },
+    "summary": "霞が関は東京都千代田区の中央省庁が集中する地域名。転じて、中央省庁や官僚機構全体を指す比喩として使われる。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-09ece44712",
+    "type": "term",
+    "title": {
+      "ja": "生理学入門",
+      "en": "Physiology"
+    },
+    "summary": "生理学は、生物の身体がどのように働き、その働きがどのように調節されて生命が維持されるかを研究する学問。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-0b4c03b0d0",
+    "type": "term",
+    "title": {
+      "ja": "補完性原理",
+      "en": "Principle of Subsidiarity"
+    },
+    "summary": "補完性原理は、個人・地域など小さい単位で解決できる問題はその単位に任せ、そこで処理できない問題だけを上位の共同体へ移す考え方。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-0f6ea82e63",
+    "type": "term",
+    "title": {
+      "ja": "シオニズム",
+      "en": "Zionism"
+    },
+    "summary": "ユダヤ人を民族として捉え、その自己決定と安全な共同体・国家を歴史的パレスチナに築こうとした近代的民族運動。単一の思想ではなく、政治・文化・宗教・社会主義など複数の潮流があります。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-115e560c4a",
+    "type": "term",
+    "title": {
+      "ja": "地学入門",
+      "en": "Earth Science"
+    },
+    "summary": "地学は、地球とその周辺を、地質・地震・火山・気象・海洋・天文などを横断して理解する学問。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.earth-solar",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-11dea9dcb4",
+    "type": "term",
+    "title": {
+      "ja": "戸籍",
+      "en": "Koseki (Family Register)"
+    },
+    "summary": "戸籍は、日本国民の出生・親子・婚姻・離婚・死亡などの身分関係を公的に記録・証明する制度。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-165dc38c7d",
+    "type": "term",
+    "title": {
+      "ja": "プロトコル",
+      "en": "Protocol"
+    },
+    "summary": "プロトコルは、複数の主体が互いを詳しく知らなくても協調できるようにする共通ルール・手順。",
+    "domains": [
+      "D10"
+    ],
+    "level": 4,
+    "parent": "thm.systems",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-198d7790f3",
+    "type": "term",
+    "title": {
+      "ja": "日本全国の農作物と食文化―地質・水質・土壌・気候から見る地域差",
+      "en": "Regional Crops and Food Culture of Japan"
+    },
+    "summary": "日本の農作物と食文化の地域性を、地質・水質・土壌・気候という自然条件に人と技術が適応した結果として整理したレポート。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-1a2e0e1981",
+    "type": "term",
+    "title": {
+      "ja": "ジョルジョーネ",
+      "en": "Giorgione"
+    },
+    "summary": "盛期ルネサンス期のヴェネツィアで、物語を明確に説明するよりも、色彩・光・風景・人物の気配によって詩的な雰囲気を生み出した画家。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-1af5955aa2",
+    "type": "term",
+    "title": {
+      "ja": "政治",
+      "en": "Politics"
+    },
+    "summary": "政治とは、意見・価値観・利害が異なる人々が共存する共同体で、誰が何を負担し、何を優先し、どんなルールにするかを決める営み。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-22e1a8f056",
+    "type": "term",
+    "title": {
+      "ja": "解剖学的肢位と弛緩状態",
+      "en": "Anatomical Position"
+    },
+    "summary": "解剖学的肢位は、身体の方向を統一して表現するための基準姿勢であり、人体全体の標準姿勢と器官の生理的状態（弛緩状態）とは区別して理解する必要がある。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-283d4b2f14",
+    "type": "term",
+    "title": {
+      "ja": "社会学入門",
+      "en": "Sociology"
+    },
+    "summary": "社会学は、個人の行動や価値観を「その人の性格」だけでなく、家族・学校・会社・階級・制度・文化・歴史など社会構造との関係で理解する学問。",
+    "domains": [
+      "D10"
+    ],
+    "level": 4,
+    "parent": "thm.systems",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-2a643e8d7c",
+    "type": "term",
+    "title": {
+      "ja": "サント・シャペル",
+      "en": "Sainte-Chapelle"
+    },
+    "summary": "13世紀のフランス王ルイ9世が、キリスト受難の聖遺物を納めるためにパリの王宮内へ建てた礼拝堂。ゴシック建築の到達点の一つです。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-2ab3aae0ea",
+    "type": "term",
+    "title": {
+      "ja": "お茶の種類",
+      "en": "Types of Tea"
+    },
+    "summary": "緑茶、烏龍茶、紅茶は多くの場合、同じチャノキ（Camellia sinensis）の葉を、摘採後にどの程度酸化させるかなど製法の違いで作り分けたもの。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-2cabc94414",
+    "type": "term",
+    "title": {
+      "ja": "アラスカ歴史",
+      "en": "History of Alaska"
+    },
+    "summary": "アラスカの歴史は、数千年に及ぶ多様な先住民社会の上に、ロシアの毛皮植民地、米国の資源フロンティア、軍事拠点、石油州が重なった歴史である。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-2ecb7f71c8",
+    "type": "term",
+    "title": {
+      "ja": "近代国家",
+      "en": "Modern State"
+    },
+    "summary": "近代国家は、数百万人・数千万人の見知らぬ人間を、一つのルールと巨大な制度群によって協働させるシステムと捉えると分かりやすい。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-3144c43df3",
+    "type": "term",
+    "title": {
+      "ja": "官僚",
+      "en": "Bureaucrat"
+    },
+    "summary": "官僚は、選挙で選ばれる政治家とは異なり、専門職として継続的に行政を運営する公務員を指すことが多い。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-31a5eedf38",
+    "type": "term",
+    "title": {
+      "ja": "うなぎ",
+      "en": "Eel (Unagi)"
+    },
+    "summary": "ニホンウナギの生態、シラスウナギの池入れから出荷までの養殖、日本のうなぎ食文化の歴史を整理した記事。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-398793f4ad",
+    "type": "term",
+    "title": {
+      "ja": "愛知県",
+      "en": "Aichi Prefecture"
+    },
+    "summary": "愛知県を、濃尾平野・陶土・治水から繊維産業・自動車産業へと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-3faab0e8c2",
+    "type": "term",
+    "title": {
+      "ja": "医療費控除",
+      "en": "Medical Expense Deduction"
+    },
+    "summary": "医療費控除とは、本人や生計を一にする家族のために支払った年間医療費が一定額を超えた場合、その超過部分を所得から差し引き、所得税・住民税の負担を軽くする制度です。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-3fedd9618b",
+    "type": "term",
+    "title": {
+      "ja": "アンカレッジ歴史",
+      "en": "History of Anchorage"
+    },
+    "summary": "アンカレッジは、先住民が長く暮らしたクック湾岸に、1915年のアラスカ鉄道建設拠点として急速に成立し、軍事・航空・石油・物流の結節点へ成長した「計画都市」である。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-43e47d752a",
+    "type": "term",
+    "title": {
+      "ja": "縦割り行政",
+      "en": "Siloed Administration"
+    },
+    "summary": "縦割り行政は、省庁・部局がそれぞれの所管・予算・法律に沿って動く結果、複数分野にまたがる課題で連携不足が生じる状態。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-4552c46b83",
+    "type": "term",
+    "title": {
+      "ja": "インプロヴィゼーション（improvisation）",
+      "en": "Improvisation"
+    },
+    "summary": "インプロヴィゼーションとは、完成した台本・譜面・手順を事前にすべて決めず、その場の状況に反応しながら創作・行動する「即興」です。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-457557a609",
+    "type": "term",
+    "title": {
+      "ja": "オーロラ",
+      "en": "Aurora"
+    },
+    "summary": "オーロラは、太陽から来た荷電粒子のエネルギーが地球磁気圏を介して上層大気に届き、発光として現れる現象。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.earth-solar",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-4795257501",
+    "type": "term",
+    "title": {
+      "ja": "バイクを体系的に理解するための全体像",
+      "en": "How Motorcycles Work"
+    },
+    "summary": "バイク全体を7つの領域に分け、走る基本的な流れ・エンジン・ライダーの操作などの仕組みを体系的に整理した記事。",
+    "domains": [
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-4ae8e5a33e",
+    "type": "term",
+    "title": {
+      "ja": "政・まつりごと"
+    },
+    "summary": "政（まつりごと）は、共同体を治め、秩序を整え、公共的な事柄を決めること。古代には祭祀と統治が密接で、「祭り事」と「政」が重なっていた社会も多い。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-4f0ce949ce",
+    "type": "term",
+    "title": {
+      "ja": "ルイ・アントワーヌ・フォヴレ・ド・ブーリエンヌ",
+      "en": "Louis-Antoine Fauvelet de Bourrienne"
+    },
+    "summary": "ナポレオンの同級生・私設秘書・外交官として政権中枢を見た人物で、後年の回想録で有名になったが、その記述には編集・誇張・自己弁護が混じるため慎重に読む必要がある。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-51528a96a1",
+    "type": "term",
+    "title": {
+      "ja": "医学入門",
+      "en": "Medicine"
+    },
+    "summary": "医学は、人体の正常な構造・機能を理解し、病気やけがの原因・仕組みを明らかにし、予防や治療につなげる学問。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-51b367c1bc",
+    "type": "term",
+    "title": {
+      "ja": "二・二六事件",
+      "en": "February 26 Incident"
+    },
+    "summary": "二・二六事件は1936年2月26日、陸軍青年将校らが約1,400人の兵を動かし東京中心部を占拠したクーデター未遂。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-533d040e1a",
+    "type": "term",
+    "title": {
+      "ja": "京都府",
+      "en": "Kyoto Prefecture"
+    },
+    "summary": "京都府を、盆地の地下水・琵琶湖疏水と日本海側の環境から、平安京、織物、精密技術産業へと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5462d9ab4e",
+    "type": "term",
+    "title": {
+      "ja": "ベクトル",
+      "en": "Vector"
+    },
+    "summary": "ベクトルは、複数の数をひとまとまりとして扱い、「大きさと向き」または「多数の特徴」を表す数学的な器です。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5672c76a44",
+    "type": "term",
+    "title": {
+      "ja": "門割制度",
+      "en": "Kadowari System"
+    },
+    "summary": "門割制度（かどわりせいど）は、薩摩藩で農村の数戸を「門（かど）」という単位にまとめ、土地を割り当て、年貢・労役等を門単位で負担させた制度。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5724ca85d4",
+    "type": "term",
+    "title": {
+      "ja": "バルフォア宣言",
+      "en": "Balfour Declaration"
+    },
+    "summary": "1917年、英国政府がパレスチナに「ユダヤ人の民族的郷土」を設けることを支持した短い外交文書。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-58ea9fb176",
+    "type": "term",
+    "title": {
+      "ja": "シャルル・ド・ゴール",
+      "en": "Charles de Gaulle"
+    },
+    "summary": "第二次世界大戦中に「自由フランス」を率い、戦後には強い大統領制を柱とするフランス第五共和政を築いた軍人・政治家。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5907641cde",
+    "type": "term",
+    "title": {
+      "ja": "ビザ・ESTA・ETA・eTA・ETIAS",
+      "en": "Visa and Electronic Travel Authorization"
+    },
+    "summary": "ビザ免除で旅行できる国でも事前審査として求められる電子渡航認証（米国ESTA、英国ETA、カナダeTA、欧州ETIAS等）とビザの違い、入国許可との関係を整理した記事。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5a0fbaac6c",
+    "type": "term",
+    "title": {
+      "ja": "風博士",
+      "en": "Kaze Hakase"
+    },
+    "summary": "『風博士』（かぜはかせ）は坂口安吾が1931年に文芸誌『青い馬』で発表した短編小説。本記事はその内容と、同名の音楽名義や楽曲歌詞との関係を整理する。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5dc1d70702",
+    "type": "term",
+    "title": {
+      "ja": "村上春樹",
+      "en": "Haruki Murakami"
+    },
+    "summary": "村上春樹は、現代日本の日常、孤独、喪失、記憶、暴力、異界を、アメリカ文学・音楽・都市文化の影響を受けた文体で描く小説家・翻訳家。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-5e129ad7fa",
+    "type": "term",
+    "title": {
+      "ja": "交感神経・副交感神経",
+      "en": "Sympathetic / Parasympathetic Nervous System"
+    },
+    "summary": "交感神経と副交感神経は、意識せずに心臓・血管・消化管・瞳孔・膀胱・生殖器などを調節する自律神経系の主要2部門。単純なON/OFFではなく状況に応じて働く。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-60b77cb140",
+    "type": "term",
+    "title": {
+      "ja": "国家総動員法",
+      "en": "National Mobilization Law"
+    },
+    "summary": "国家総動員法は1938年、戦争遂行のため人員・物資・工場・価格・金融・労働など社会全体を政府が統制できるようにした法律。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-6b52627c0c",
+    "type": "term",
+    "title": {
+      "ja": "解剖学入門",
+      "en": "Anatomy"
+    },
+    "summary": "解剖学は、生物の身体を「何が、どこに、どのような形で存在し、周囲とどうつながるか」という構造の観点から理解する学問。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-6c6f1b6319",
+    "type": "term",
+    "title": {
+      "ja": "グッドイヤーウェルト製法",
+      "en": "Goodyear Welt"
+    },
+    "summary": "靴のアッパーと中底を細長い革の帯「ウェルト」で縫い合わせ、そのウェルトへ本底を縫い付ける製法。底を交換しやすく構造が丈夫で、高級革靴やワークブーツに広く使われます。",
+    "domains": [
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-6e79ce87e7",
+    "type": "term",
+    "title": {
+      "ja": "オットー1世",
+      "en": "Otto I"
+    },
+    "summary": "10世紀の東フランク王国を再統合し、955年にマジャール人を破り、962年にローマ皇帝として戴冠したザクセン朝の君主。後の神聖ローマ帝国の基礎を築きました。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-725d80d7f6",
+    "type": "term",
+    "title": {
+      "ja": "国内映画市場規模",
+      "en": "Japanese Film Market"
+    },
+    "summary": "日本の映画館の興行収入（約2,000億円規模）の内訳と、邦画、とりわけアニメや大型日本作品への依存度、関連市場の広がりを整理したメモ。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-7645389332",
+    "type": "term",
+    "title": {
+      "ja": "日本ポップス伝(大滝詠一)"
+    },
+    "summary": "大滝詠一がNHK-FMの番組『大瀧詠一の日本ポップス伝』（1995年、続編1999年）で、日本のポップスの成り立ちを音源とともに解説した内容の整理。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-77bad6a1f6",
+    "type": "term",
+    "title": {
+      "ja": "旅行英語の万能構文",
+      "en": "Travel English Patterns"
+    },
+    "summary": "旅行英語は英文を毎回ゼロから作らず、汎用性の高い骨格（チャンク）を10〜20個覚え、名詞・動詞・場所だけ交換すると急速に話せる範囲が広がる、という考えに基づく構文集。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-780fe9fd78",
+    "type": "term",
+    "title": {
+      "ja": "物理学入門",
+      "en": "Physics"
+    },
+    "summary": "物理学は、物体・エネルギー・空間・時間・場の振る舞いを、測定可能な量と数学的法則で記述する学問。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-78593b35ef",
+    "type": "term",
+    "title": {
+      "ja": "介護保険",
+      "en": "Long-Term Care Insurance"
+    },
+    "summary": "介護保険は、介護を家族だけの責任にせず、40歳以上の保険料と税金を財源に、社会全体で高齢者等の介護を支える公的社会保険です。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-79f6a19f28",
+    "type": "term",
+    "title": {
+      "ja": "政党政治",
+      "en": "Party Politics"
+    },
+    "summary": "政党政治は、政党が政策・価値観をまとめて選挙で競争し、議会で多数派を形成して政権を担う政治。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-7a6c76918f",
+    "type": "term",
+    "title": {
+      "ja": "エンジンの仕組み",
+      "en": "Internal Combustion Engine"
+    },
+    "summary": "自動車の内燃エンジンは、燃料と空気を燃やして生じた熱エネルギーを、ピストンなどを介して回転運動（動力）に変える装置。",
+    "domains": [
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-7debcc4ac8",
+    "type": "term",
+    "title": {
+      "ja": "かさぶたの仕組み",
+      "en": "Scab"
+    },
+    "summary": "瘡蓋（かさぶた）は、傷口を守るために、血液が固まって作る保護膜です。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-7f77589343",
+    "type": "term",
+    "title": {
+      "ja": "ボスポロス王国",
+      "en": "Bosporan Kingdom"
+    },
+    "summary": "紀元前5世紀ごろから黒海北岸のクリミア東部とタマン半島に栄えた古代王国。ギリシア都市とスキタイ・サルマタイ系住民が融合し、穀物貿易によって繁栄しました。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-84c409a051",
+    "type": "term",
+    "title": {
+      "ja": "レゾナンス（resonance）",
+      "en": "Resonance"
+    },
+    "summary": "レゾナンスは、物理学では外から与える振動の周期が系の固有振動と合うことで振幅が大きくなる「共振」、人文・音楽・ビジネスでは人・作品・考えが強く響き合う「共鳴」を意味する。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-860d729f9a",
+    "type": "term",
+    "title": {
+      "ja": "Kp指数（KP値）とオーロラ予報",
+      "en": "Kp index"
+    },
+    "summary": "Kp指数（Kp index）は、複数の地磁気観測所のK指数を統合した、地球全体の地磁気の乱れの大きさを表す指標。オーロラ予報などに使われる。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.earth-solar",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-8dc4feb54a",
+    "type": "term",
+    "title": {
+      "ja": "日本政治 AtoZ",
+      "en": "Japanese Politics"
+    },
+    "summary": "日本の政治制度・政党・主要な政策対立・ニュースの読み方・ビジネスへの影響を、2026年8月時点で整理した記事。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-8fa5155323",
+    "type": "term",
+    "title": {
+      "ja": "家制度",
+      "en": "Ie System"
+    },
+    "summary": "家制度は、明治民法下で「家」を法的単位とし、戸主を中心に家族関係・家督相続などを構成した制度。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-90f0dfda02",
+    "type": "term",
+    "title": {
+      "ja": "シャルル・ド・ゴール空港",
+      "en": "Paris Charles de Gaulle Airport"
+    },
+    "summary": "パリ北東部のロワシー地区に建設され、1974年に開港したフランス最大級の国際空港。名称はシャルル・ド・ゴールに由来します。",
+    "domains": [
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-93a3346a67",
+    "type": "term",
+    "title": {
+      "ja": "戸長"
+    },
+    "summary": "戸長（こちょう）は、明治初期に戸籍区などで戸籍、住民異動、徴税や行政連絡などを担った地域行政の担当者。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-97dab2cf02",
+    "type": "term",
+    "title": {
+      "ja": "カール大帝",
+      "en": "Charlemagne"
+    },
+    "summary": "8～9世紀にフランク王国を西・中央ヨーロッパ最大の国家へ拡大し、800年にローマ皇帝として戴冠したカロリング朝の君主。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-984775ed4c",
+    "type": "term",
+    "title": {
+      "ja": "大和猿楽",
+      "en": "Yamato Sarugaku"
+    },
+    "summary": "中世の大和国（現在の奈良県）を中心に、興福寺・春日社などの寺社に奉仕した猿楽の芸能集団とその芸風。大和四座から観世・宝生・金春・金剛の能楽諸流が生まれました。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-98b9d2fbcb",
+    "type": "term",
+    "title": {
+      "ja": "国家",
+      "en": "State"
+    },
+    "summary": "国家は、一定の領域と人口をもち、政府を通じて法を制定・執行し、対外的に主権を行使する政治共同体。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-98f1f53d90",
+    "type": "term",
+    "title": {
+      "ja": "苗字必称義務令"
+    },
+    "summary": "苗字必称義務令は1875年、全国民に苗字を名乗ることを義務づけた太政官布告。祖先以来の苗字が不明なら新たに設けることも求めた。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-99bb28991b",
+    "type": "term",
+    "title": {
+      "ja": "ずとまよ『あかねさす頃』"
+    },
+    "summary": "ずっと真夜中でいいのに。の楽曲『あかねさす頃』の歌詞を、古典和歌の枕詞「あかねさす」や万葉集・奈良との関係から考察した記事（作者の公式意図とは区別した解釈）。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-9aca8d02a3",
+    "type": "term",
+    "title": {
+      "ja": "心理学効果（認知バイアス）",
+      "en": "Psychological Effects and Cognitive Biases"
+    },
+    "summary": "バンドワゴン効果・アンカリング効果・確証バイアスなど、人間の判断や行動を一定方向に動かしやすい心理現象（効果・認知バイアス・ヒューリスティック等）を整理した記事。",
+    "domains": [
+      "D03",
+      "D08"
+    ],
+    "level": 4,
+    "parent": "thm.mind",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-9c7b7b496b",
+    "type": "term",
+    "title": {
+      "ja": "朝廷",
+      "en": "Imperial Court"
+    },
+    "summary": "朝廷（ちょうてい）は、天皇とその周囲の公家を中心とする宮廷・政治的組織。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-a24a5b6764",
+    "type": "term",
+    "title": {
+      "ja": "大阪府",
+      "en": "Osaka Prefecture"
+    },
+    "summary": "大阪府を、古代の河内湾・淀川と江戸時代の水運から、商都、そして中小製造業の集積へと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-a48657aed8",
+    "type": "term",
+    "title": {
+      "ja": "三重県",
+      "en": "Mie Prefecture"
+    },
+    "summary": "三重県を、中央構造線・伊勢湾と熊野灘という自然条件から、伊勢神宮・真珠・工業へと続く物語として整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-a5f4beaa9d",
+    "type": "term",
+    "title": {
+      "ja": "兵庫県",
+      "en": "Hyogo Prefecture"
+    },
+    "summary": "兵庫県を、日本海・瀬戸内・六甲の断層という自然条件から、五地域の文化と神戸港へと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-a8ba229808",
+    "type": "term",
+    "title": {
+      "ja": "海外旅行で使う頻出英会話",
+      "en": "Travel English Phrases"
+    },
+    "summary": "海外旅行で使う頻出英会話を場面別に整理したフレーズ集。場面ごとに丸暗記し、空欄部分だけを交換して使う。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-aa10488faa",
+    "type": "term",
+    "title": {
+      "ja": "流行歌の歴史",
+      "en": "History of Japanese Popular Songs"
+    },
+    "summary": "日本の流行歌の歴史とは、明治以降に西洋音楽や、同じ録音を大量複製して届けるメディアと結びつきながら、その時代に広く流行した歌が変化してきた歴史。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-afa381984f",
+    "type": "term",
+    "title": {
+      "ja": "クロソイド曲線",
+      "en": "Clothoid"
+    },
+    "summary": "進む距離に比例して曲がり方が少しずつ強くなる曲線。直線と円曲線を滑らかにつなぎ、道路・鉄道設計で広く使われます。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-b405722675",
+    "type": "term",
+    "title": {
+      "ja": "生物学入門",
+      "en": "Biology"
+    },
+    "summary": "生物学は、生命の構造・機能・遺伝・進化・多様性・環境との相互作用を研究する学問。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-b630b3e471",
+    "type": "term",
+    "title": {
+      "ja": "幕府",
+      "en": "Shogunate"
+    },
+    "summary": "幕府（ばくふ）は、将軍を頂点として武士が実際の政治・軍事・大名統制などを担った政府。鎌倉・室町・江戸幕府が代表例。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-b89cf7d987",
+    "type": "term",
+    "title": {
+      "ja": "イデオロギー",
+      "en": "Ideology"
+    },
+    "summary": "イデオロギーは、「社会はどう成り立っているか」「どうあるべきか」を一貫した価値観・概念で捉える世界観。自由主義、社会主義、保守主義などが典型。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-b8c02258c9",
+    "type": "term",
+    "title": {
+      "ja": "戸籍区"
+    },
+    "summary": "戸籍区（こせきく）は、1871年の戸籍法にもとづいて全国統一戸籍を作るため設定された戸籍事務上の地域区分。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-b8d822d598",
+    "type": "term",
+    "title": {
+      "ja": "平民苗字許可令"
+    },
+    "summary": "平民苗字許可令は、1870年に平民が公に苗字を名乗ることを認めた太政官布告。身分秩序の再編・四民平等の流れの一つ。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-bbd6c49611",
+    "type": "term",
+    "title": {
+      "ja": "内閣制度",
+      "en": "Cabinet System"
+    },
+    "summary": "内閣制度は、内閣総理大臣と国務大臣が行政を統括する仕組み。日本では1885年に太政官制を廃止して創設され、初代首相は伊藤博文。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-bc121aa19c",
+    "type": "term",
+    "title": {
+      "ja": "EBiDAN入門",
+      "en": "EBiDAN"
+    },
+    "summary": "EBiDAN（恵比寿学園男子部）は1つのアイドルグループではなく、音楽性・キャラクターの異なる男性グループの集合体。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-bcba56b19c",
+    "type": "term",
+    "title": {
+      "ja": "文学入門",
+      "en": "Literature"
+    },
+    "summary": "文学は、言語によって人間の経験・感情・社会・想像世界を表現し、読者がその意味を解釈する芸術・文化実践。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-be9f46a879",
+    "type": "term",
+    "title": {
+      "ja": "奈良県",
+      "en": "Nara Prefecture"
+    },
+    "summary": "奈良県を、地質・水・気候という自然条件から、歴史・文化・産業・県民の暮らしへと続く一つの物語として整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-bebc21a0b8",
+    "type": "term",
+    "title": {
+      "ja": "建築学入門",
+      "en": "Architecture"
+    },
+    "summary": "建築学とは、人が安全・快適・持続的に暮らし活動する空間を、意匠・構造・環境・材料などの観点から扱う学問。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-bfea7d4e1b",
+    "type": "term",
+    "title": {
+      "ja": "シアトルの歴史",
+      "en": "History of Seattle"
+    },
+    "summary": "シアトルは、コースト・セイリッシュの先住民社会の土地に19世紀半ば以降形成され、木材→港湾・アラスカ交易→造船・航空→ソフトウェア・クラウドへと産業の軸を変えながら成長した都市です。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-c04c6b659b",
+    "type": "term",
+    "title": {
+      "ja": "フェアバンクス歴史",
+      "en": "History of Fairbanks"
+    },
+    "summary": "フェアバンクスは、1902年の金発見を契機にチェナ川沿いに成立し、金鉱町から鉄道・軍事・大学・北極圏研究の中心へ変化したアラスカ内陸部の中核都市である。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-c1df0a1a42",
+    "type": "term",
+    "title": {
+      "ja": "壬申戸籍",
+      "en": "Jinshin Koseki"
+    },
+    "summary": "壬申戸籍（じんしんこせき）は、1871年の戸籍法に基づき1872年に編製された全国統一戸籍。1872年が干支で壬申だったことから呼ばれる。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-c940266a9d",
+    "type": "term",
+    "title": {
+      "ja": "滋賀県",
+      "en": "Shiga Prefecture"
+    },
+    "summary": "滋賀県を、約400万年の歴史をもつ琵琶湖・水と街道から、近江商人・工業・暮らしへと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-d111cd48ff",
+    "type": "term",
+    "title": {
+      "ja": "ビールの歴史・地理・スタイル・ペアリング",
+      "en": "Beer"
+    },
+    "summary": "ビールは、麦芽など穀物に含まれるデンプン由来の糖を酵母で発酵させた酒。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-d4f3077460",
+    "type": "term",
+    "title": {
+      "ja": "海外旅行の準備・安全・持ち物完全ガイド",
+      "en": "Overseas Travel Preparation Guide"
+    },
+    "summary": "海外旅行の安全性と快適性は、現地での対応力より出発前の確認・情報の二重化・紛失時の備えで決まるという考えから、準備・安全・持ち物・保険等を整理したガイド。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-d54eab2171",
+    "type": "term",
+    "title": {
+      "ja": "日本の地理・地質・水質と食文化",
+      "en": "Geography and Food Culture of Japan"
+    },
+    "summary": "日本の食文化を、地理・地質・水質などの自然条件と歴史との因果関係として理解し、旅先で自分で食文化を読み解けるようにするためのレポート。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-d5d065d453",
+    "type": "term",
+    "title": {
+      "ja": "宗門人別帳",
+      "en": "Shūmon Ninbetsuchō"
+    },
+    "summary": "宗門人別帳（しゅうもんにんべつちょう）は、江戸時代に村・町の住民を把握し、キリスト教徒でないことを確認するため作られた台帳。人別改と宗門改が結びついたもの。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-d65253e58b",
+    "type": "term",
+    "title": {
+      "ja": "五・一五事件",
+      "en": "May 15 Incident"
+    },
+    "summary": "五・一五事件は1932年5月15日、海軍青年将校らが首相官邸などを襲撃し、犬養毅首相を殺害した事件。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-d697fc9ff8",
+    "type": "term",
+    "title": {
+      "ja": "日常生活における物理学",
+      "en": "Everyday Physics"
+    },
+    "summary": "物理学は教科書の公式ではなく、歩く・曲がる・冷やす・撮る・聞く・充電する、といった日常のほぼすべてに働いている。日常現象は主に力学、熱、流体、電磁気、波、光によって説明できる。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-da899b0d8a",
+    "type": "term",
+    "title": {
+      "ja": "大滝詠一",
+      "en": "Eiichi Ohtaki"
+    },
+    "summary": "はっぴいえんどで日本語をロックのリズムへ載せる実験に関わり、のちにナイアガラ・レーベルを率いた日本のシンガーソングライター・作曲家・プロデューサー。",
+    "domains": [
+      "D09"
+    ],
+    "level": 4,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-ddcd74047c",
+    "type": "term",
+    "title": {
+      "ja": "人体の構造入門",
+      "en": "Structure of the Human Body"
+    },
+    "summary": "人体は、約数十兆個の細胞が組織をつくり、組織が器官をつくり、複数の器官が器官系として協調する多階層システム。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-e118d6a659",
+    "type": "term",
+    "title": {
+      "ja": "微分積分",
+      "en": "Calculus"
+    },
+    "summary": "微分は「今この瞬間にどれくらい変化しているか」を測り、積分は「小さな変化を積み重ねると全体でどれくらいになるか」を求める数学です。",
+    "domains": [
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-e3a3e30978",
+    "type": "term",
+    "title": {
+      "ja": "静岡県",
+      "en": "Shizuoka Prefecture"
+    },
+    "summary": "静岡県を、伊豆の衝突・富士山の水という自然条件から、東海道・茶・楽器・二輪産業へと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-e5b2a1b66d",
+    "type": "term",
+    "title": {
+      "ja": "和歌山県",
+      "en": "Wakayama Prefecture"
+    },
+    "summary": "和歌山県を、四万十帯の地質・紀ノ川と熊野の多雨という自然条件から、巡礼・柑橘・林業へと続く流れで整理した地域研究。",
+    "domains": [
+      "D10",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.regions-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-e6756304a1",
+    "type": "term",
+    "title": {
+      "ja": "国家イデオロギー",
+      "en": "State Ideology"
+    },
+    "summary": "国家イデオロギーは、憲法・法律・教育・儀礼・政治文化などに埋め込まれた「この国家は何を正当とするか」という価値体系。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-ef0cb9cc29",
+    "type": "term",
+    "title": {
+      "ja": "アーリア人",
+      "en": "Aryan"
+    },
+    "summary": "本来の「アーリア」は古代インドと古代イランの一部の人々の自己呼称で、学術上は主にインド・イラン語派の文脈で扱われる。欧州人の生物学的人種とする考えは19世紀以降の誤用である。",
+    "domains": [
+      "D07"
+    ],
+    "level": 4,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-f1e274890d",
+    "type": "term",
+    "title": {
+      "ja": "化学入門",
+      "en": "Chemistry"
+    },
+    "summary": "化学は、物質が何ででき、原子や分子がどう結び付き、どのような条件で別の物質へ変化するかを研究する学問。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-f3a6c45061",
+    "type": "term",
+    "title": {
+      "ja": "太政官",
+      "en": "Daijō-kan"
+    },
+    "summary": "太政官（だじょうかん）は、明治維新直後の日本で、現在の「内閣＋各省を束ねる中央政府」に近い役割を担った最高政府機関。1885年に内閣制度が創設されるまで明治政府の中枢だった。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.modernity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-f4919e588c",
+    "type": "term",
+    "title": {
+      "ja": "解剖学的肢位と自律神経",
+      "en": "Anatomical Position and Autonomic Nervous System"
+    },
+    "summary": "解剖学的肢位（anatomical position）とは、人体の位置・方向を医学的に表現するための共通基準姿勢。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.body-medicine",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-f4e2d20cdb",
+    "type": "term",
+    "title": {
+      "ja": "政府",
+      "en": "Government"
+    },
+    "summary": "政府は、国家の政策を決定・実行し、行政を運営する機構。狭義には内閣、広義には統治機構全体に近い意味で使われることもある。",
+    "domains": [
+      "D06"
+    ],
+    "level": 4,
+    "parent": "thm.state-order",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "term",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "trm.gen-fefebef18d",
+    "type": "term",
+    "title": {
+      "ja": "ロンドン・ヒースロー空港",
+      "en": "London Heathrow Airport"
+    },
+    "summary": "第二次世界大戦末期に軍用飛行場として整備され、1946年に民間空港として開港した英国最大の国際航空拠点。",
+    "domains": [
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.notion-general-glossary"
+    ],
+    "verification": {
+      "status": "unverified"
+    },
+    "target_level": 1,
+    "curriculum": [],
+    "origin": "user-note",
+    "glossary": "general",
+    "note_kind": "topic",
+    "history": [
+      {
+        "map_version": "1.1",
+        "change": "取り込み",
+        "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
       }
     ]
   }

@@ -18,15 +18,16 @@ def main():
             lessons[s["id"]] = {"title": s["title"], "status": s["status"], "lessons": s.get("lessons", [])}
 
     # 時間を持たないノードは、主領域ごとに x を等間隔に割り当てる
+    # 用語ノードは別の列に分け、用語が増えても他のノードの位置が動かないようにする（DOC-03 §3.1）
     timeless = {}
     for n in d["nodes"]:
         if n["time"] is None:
-            timeless.setdefault(n["domains"][0], []).append(n["id"])
+            timeless.setdefault((n["domains"][0], n["type"] == "term"), []).append(n["id"])
 
     out_nodes, errors = [], []
     for n in d["nodes"]:
         if n["time"] is None:
-            grp = timeless[n["domains"][0]]
+            grp = timeless[(n["domains"][0], n["type"] == "term")]
             x = time_x(n, grp.index(n["id"]), len(grp))
         else:
             x = time_x(n)
@@ -43,6 +44,7 @@ def main():
             "perspectives": n.get("perspectives", []),
             "understanding": {"level": u["level"], "status": u["status"]},
             "target_level": n["target_level"], "curriculum": n.get("curriculum", []),
+            "origin": n.get("origin", "claude"), "glossary": n.get("glossary"), "note_kind": n.get("note_kind"),
             "pos": {"cyl": [round(v, 3) for v in cyl], "flat": [round(v, 3) for v in flat]},
         })
     # 変更点レポートの一覧（content/cycles/*/report.md の frontmatter と output/reports の PDF）
@@ -67,7 +69,10 @@ def main():
         "domains": d["domains"], "nodes": out_nodes, "edges": d["edges"], "sessions": lessons,
         "questions": d["questions"], "phases": phases, "reports": reports,
         "stats": {"nodes": len(out_nodes), "edges": len(d["edges"]),
-                  "assessed": sum(1 for v in und.values() if v.get("status") == "assessed")},
+                  "assessed": sum(1 for v in und.values() if v.get("status") == "assessed"),
+                  "notes": sum(1 for n in out_nodes if n["origin"] == "user-note")},
+        "glossaries": [{"key": s["glossary"], "title": s["title"], "source": s["id"]}
+                       for s in d["sources"] if s.get("kind") == "user-note" and s.get("glossary")],
     }
     out = ROOT / "viewer" / "data" / "graph.json"
     out.parent.mkdir(parents=True, exist_ok=True)

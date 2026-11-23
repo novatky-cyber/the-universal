@@ -1,0 +1,1536 @@
+{
+  "fetched_at": "2026-11-24",
+  "glossaries": [
+    {
+      "key": "ai",
+      "title": "AI用語集",
+      "entries": [
+        {
+          "title": "AI Agent（AIエージェント）",
+          "title_en": "AI Agent",
+          "definition": "AI Agentは、目標に対して必要な手順を考え、ツールを使い、結果を確認しながら複数ステップで処理を進めるAIシステムです。",
+          "notion_id": "3c45a916-883f-8198-b3b3-e5f385ad23b2",
+          "kind": "term"
+        },
+        {
+          "title": "A2A（Agent2Agent Protocol）",
+          "title_en": "Agent2Agent Protocol",
+          "definition": "A2Aは、異なるAIエージェント同士が能力・タスク・結果をやり取りするための相互運用の考え方／プロトコルです。MCPが主にAgentとTool/Dataの接続を扱うのに対し、A2AはAgent同士の協調に焦点があります。",
+          "notion_id": "3c45a916-883f-816f-8972-f5129d32adae",
+          "kind": "term"
+        },
+        {
+          "title": "API",
+          "title_en": "Application Programming Interface",
+          "definition": "APIは、ソフトウェア同士が機能やデータをやり取りするための接続仕様です。",
+          "notion_id": "3c45a916-883f-81d6-819c-e146195ea770",
+          "kind": "term"
+        },
+        {
+          "title": "Agent Loop",
+          "title_en": "Agent Loop",
+          "definition": "Agent Loopとは、AIエージェントが「考える→行動する→結果を見る→次を考える」を、目的達成まで繰り返す仕組みです。",
+          "notion_id": "3c45a916-883f-8143-bdbb-ca76d5cdbc4c",
+          "kind": "term"
+        },
+        {
+          "title": "Agentic Coding",
+          "title_en": "Agentic Coding",
+          "definition": "Agentic Codingは、AIがコード補完だけでなく、調査・設計・編集・テスト・修正まで一連の開発作業を自律的に進める開発スタイルです。",
+          "notion_id": "3c45a916-883f-8149-86fa-cd1daea23c1b",
+          "kind": "term"
+        },
+        {
+          "title": "Agentic Workflow",
+          "title_en": "Agentic Workflow",
+          "definition": "Agentic Workflowは、処理の途中でAIが状況を解釈し、次の行動・Tool・分岐を判断するワークフローです。固定手順だけで進むDeterministic Workflowと対比されます。",
+          "notion_id": "3c45a916-883f-815c-83d1-dc4ae80718ea",
+          "kind": "term"
+        },
+        {
+          "title": "Audit Log",
+          "title_en": "Audit Log",
+          "definition": "Audit Logは、誰が・いつ・何を実行したかを後から確認できる監査記録です。",
+          "notion_id": "3c45a916-883f-81f8-a0b6-d148f861bf71",
+          "kind": "term"
+        },
+        {
+          "title": "Evals",
+          "title_en": "Evaluations",
+          "definition": "Evals（Evaluations）とは、AIやAIエージェントが期待した仕事をどの程度正しくできるかを、再現可能な形で評価する仕組みです。",
+          "notion_id": "3c45a916-883f-8136-9d78-cd8a0f76f029",
+          "kind": "term"
+        },
+        {
+          "title": "Executor",
+          "title_en": "Executor",
+          "definition": "Executorは、計画されたタスクを実際にToolやコードを使って実行する役割です。",
+          "notion_id": "3c45a916-883f-81d7-baf8-c9686f98f22c",
+          "kind": "term"
+        },
+        {
+          "title": "Escalation",
+          "title_en": "Escalation",
+          "definition": "Escalationは、Agentが自力で処理を継続せず、人間や上位システムへ判断を引き渡すことです。",
+          "notion_id": "3c45a916-883f-8151-9d86-ee5a7d670b3e",
+          "kind": "term"
+        },
+        {
+          "title": "Examples",
+          "title_en": "Examples",
+          "definition": "Examplesは、望ましい入力・判断・出力の具体例です。単なる説明よりも振る舞いを安定させやすく、Few-shot promptingやSkill設計の一部として使われます。",
+          "notion_id": "3c45a916-883f-81de-826d-de2c5be3d940",
+          "kind": "term"
+        },
+        {
+          "title": "Inference（推論）",
+          "title_en": "Inference",
+          "definition": "Inferenceは、学習済みモデルに入力を与えて出力を生成させる処理です。生成AIを実際に利用する際に行われる計算で、速度・コスト・モデル性能に関係します。",
+          "notion_id": "3c45a916-883f-81b0-b513-d40c38e5b1cf",
+          "kind": "term"
+        },
+        {
+          "title": "Instructions",
+          "title_en": "Instructions",
+          "definition": "Instructionsは、AIに役割・目的・制約・優先順位・動作ルールを与える指示です。",
+          "notion_id": "3c45a916-883f-819a-9efd-c398e35e0e5a",
+          "kind": "term"
+        },
+        {
+          "title": "LLM（Large Language Model）",
+          "title_en": "Large Language Model",
+          "definition": "LLMは、大量のテキスト等から言語パターンを学習し、文章生成・要約・推論・Tool選択などを行う大規模言語モデルです。",
+          "notion_id": "3c45a916-883f-81fc-9f98-c7381b696bcb",
+          "kind": "term"
+        },
+        {
+          "title": "LLM-as-a-Judge",
+          "title_en": "LLM-as-a-Judge",
+          "definition": "LLM-as-a-Judgeは、別のLLMを使ってAI出力の品質を採点・比較する評価手法です。柔軟な評価が可能ですが、Judge側の偏りや再現性も評価する必要があります。",
+          "notion_id": "3c45a916-883f-812b-afc1-ef150267784e",
+          "kind": "term"
+        },
+        {
+          "title": "MCP（Model Context Protocol）",
+          "title_en": "Model Context Protocol",
+          "definition": "MCPは、AIアプリケーションと外部Tools・Dataを標準化された形で接続するためのプロトコルです。",
+          "notion_id": "3c45a916-883f-8129-aa5e-d7c9ca0dc99c",
+          "kind": "term"
+        },
+        {
+          "title": "kintone MCP",
+          "title_en": "kintone MCP",
+          "definition": "kintoneとClaude/ChatGPTをMCPで連携する仕組みを起点に、ローカルPC、ターミナル、VS Code/Cursor、Claude Code、Git、GitHub、Vercelがどうつながるかを整理する。",
+          "notion_id": "3c45a916-883f-81be-9667-e17b65a209be",
+          "kind": "topic"
+        },
+        {
+          "title": "Observability",
+          "title_en": "Observability",
+          "definition": "Observabilityは、Agentの内部で何が起きているかを外部から観測・分析できる状態です。Tracing、ログ、メトリクス、エラー、コスト、品質指標などを含みます。",
+          "notion_id": "3c45a916-883f-8161-812f-d27af94bd6ee",
+          "kind": "term"
+        },
+        {
+          "title": "Orchestration",
+          "title_en": "Orchestration",
+          "definition": "Orchestrationは、複数のAgent・Tool・Workflow・人間承認などを適切な順序と条件で連携させる制御です。Agentic system全体の司令塔に相当します。",
+          "notion_id": "3c45a916-883f-81dc-9a84-eb6fab3149b6",
+          "kind": "term"
+        },
+        {
+          "title": "Embedding（エンベディング／埋め込み）",
+          "title_en": "Embedding",
+          "definition": "Embeddingは、文章や画像等の意味的特徴を数値ベクトルへ変換することです。類似検索・クラスタリング・RAGなどに使われます。",
+          "notion_id": "3c45a916-883f-81ec-89e0-fc7c1e968e7d",
+          "kind": "term"
+        },
+        {
+          "title": "HITL（Human-in-the-loop）",
+          "title_en": "Human-in-the-loop",
+          "definition": "HITLは、AI処理の途中に人間の確認・承認・修正を組み込む設計です。重要なのは『人を入れること』ではなく、どのリスク点にどの承認を置くかを設計することです。",
+          "notion_id": "3c45a916-883f-81ca-b510-e86a94586473",
+          "kind": "term"
+        },
+        {
+          "title": "HOTL（Human-on-the-loop）",
+          "title_en": "Human-on-the-loop",
+          "definition": "HOTLは、AIが基本的には自律実行し、人間は監視・介入可能な立場に置かれる設計です。HITLより自律性が高く、Observabilityや停止条件が重要になります。",
+          "notion_id": "3c45a916-883f-81a9-99a0-db9e968f651a",
+          "kind": "term"
+        },
+        {
+          "title": "Gemini Spark",
+          "title_en": "Gemini Spark",
+          "definition": "Gemini Sparkは、Geminiを基盤に、Gmail・Google Drive・Calendar・Docs・SheetsなどのGoogleサービスを横断して、情報取得だけでなく操作・定期実行・条件監視まで行うAIエージェント機能。",
+          "notion_id": "3c45a916-883f-81ff-8972-fb52e3572c56",
+          "kind": "term"
+        },
+        {
+          "title": "Cursor",
+          "title_en": "Cursor",
+          "definition": "Cursorは、AI機能を統合したコードエディタで、コード生成・編集・検索・Agentic Codingなどを支援します。",
+          "notion_id": "3c45a916-883f-81c1-8af7-fd4b8e9b3482",
+          "kind": "term"
+        },
+        {
+          "title": "Guardrails",
+          "title_en": "Guardrails",
+          "definition": "Guardrailsは、AIの入力・出力・行動範囲を制約する安全策・業務ルールの総称です。禁止操作、権限制御、出力検証、承認条件、予算上限などを含みます。",
+          "notion_id": "3c45a916-883f-81df-8f77-e2e138427659",
+          "kind": "term"
+        },
+        {
+          "title": "Git",
+          "title_en": "Git",
+          "definition": "Gitは、ソースコード等の変更履歴を管理する分散型バージョン管理システムです。Agentic Codingでは、AIによる変更を安全に比較・レビュー・巻き戻す基盤になります。",
+          "notion_id": "3c45a916-883f-81df-8edc-e4c3a094e425",
+          "kind": "term"
+        },
+        {
+          "title": "GitHub",
+          "title_en": "GitHub",
+          "definition": "GitHubは、Gitリポジトリのホスティング、Pull Request、Issue、CI/CD等を提供する開発プラットフォームです。Coding Agentの作業場所・レビュー基盤として使われます。",
+          "notion_id": "3c45a916-883f-8153-826c-e5d459d15dc4",
+          "kind": "term"
+        },
+        {
+          "title": "Grounding",
+          "title_en": "Grounding",
+          "definition": "Groundingは、AIの回答や判断を、外部データ・検索結果・業務ルールなど確認可能な根拠に結びつけることです。Hallucination低減や業務利用の信頼性向上に重要です。",
+          "notion_id": "3c45a916-883f-81d9-bba7-c6aafdc34176",
+          "kind": "term"
+        },
+        {
+          "title": "CLAUDE.md",
+          "title_en": "CLAUDE.md",
+          "definition": "CLAUDE.mdは、Claude Codeにプロジェクト固有のルール・構成・作業方針などを継続的に与えるための指示ファイルです。",
+          "notion_id": "3c45a916-883f-811d-8e4f-ec13611aee7b",
+          "kind": "term"
+        },
+        {
+          "title": "Claude Code",
+          "title_en": "Claude Code",
+          "definition": "Claude Codeは、AnthropicのAgentic Coding環境で、コードベースを読み、ファイル編集・コマンド実行・テスト・修正などを行います。",
+          "notion_id": "3c45a916-883f-81d9-977f-d9c6280339e9",
+          "kind": "term"
+        },
+        {
+          "title": "Context Engineering",
+          "title_en": "Context Engineering",
+          "definition": "Context Engineeringとは、LLMやAgentが仕事を正しく行うために、「その瞬間に何を知り、何を参照でき、どう行動できる状態にするか」を設計する考え方です。",
+          "notion_id": "3c45a916-883f-8105-a9eb-f009981a7368",
+          "kind": "term"
+        },
+        {
+          "title": "Context Window",
+          "title_en": "Context Window",
+          "definition": "Context Windowは、LLMが1回の推論で参照できる入力・会話履歴・生成途中情報の上限範囲です。長いContextを入れれば必ず性能が上がるわけではなく、関連情報の選別が重要です。",
+          "notion_id": "3c45a916-883f-81b4-a081-d251454b4d48",
+          "kind": "term"
+        },
+        {
+          "title": "Context Degradation",
+          "title_en": "Context Degradation",
+          "definition": "Context Degradationとは、AIに与えるContextが長く・複雑になることで、重要情報を見失ったり、古い情報やノイズに引っ張られたりして性能が下がる問題を指す実務的な表現です。",
+          "notion_id": "3c45a916-883f-81fb-9e57-c4d4227a159b",
+          "kind": "term"
+        },
+        {
+          "title": "Computer Use",
+          "title_en": "Computer Use",
+          "definition": "Computer Useは、AIがマウス・キーボード相当の操作でGUIを扱う能力です。APIやMCPがないアプリも操作できる反面、速度・安定性・権限管理・誤操作対策が重要です。",
+          "notion_id": "3c45a916-883f-81cf-9314-ec8d446cbb74",
+          "kind": "term"
+        },
+        {
+          "title": "AI Slop（AIスロップ）",
+          "title_en": "AI Slop",
+          "definition": "AI Slopは、生成AIで低コスト・低労力に大量生成され、十分な人間の確認・編集・責任が伴わない、質や有用性の低いコンテンツを指す俗語。",
+          "notion_id": "3f15a916-883f-814c-bb55-c0bfb1dd9d1c",
+          "kind": "term"
+        },
+        {
+          "title": "事後学習（Post-training）",
+          "title_en": "Post-training",
+          "definition": "事後学習は、事前学習済みモデルを、人間の嗜好・指示追従・安全性・特定能力などに適合させる追加学習の総称です。",
+          "notion_id": "3c45a916-883f-81c4-8aa6-c18e3be6bbae",
+          "kind": "term"
+        },
+        {
+          "title": "事前学習（Pre-training）",
+          "title_en": "Pre-training",
+          "definition": "事前学習は、大規模データを用いてモデルに一般的な言語・知識・パターンを学ばせる基礎学習です。",
+          "notion_id": "3c45a916-883f-816d-87b1-f4f26b1d34cf",
+          "kind": "term"
+        },
+        {
+          "title": "Subagent",
+          "title_en": "Subagent",
+          "definition": "Subagentは、メインAgentから委任された限定的な役割やタスクを担当するAgentです。Context分離や並列化に使えますが、分割による通信コストや情報欠落に注意が必要です。",
+          "notion_id": "3c45a916-883f-81a9-be2a-d4f7d4076e22",
+          "kind": "term"
+        },
+        {
+          "title": "Skills",
+          "title_en": "Skills",
+          "definition": "Skillsは、AIに特定業務の手順・知識・ツール利用法・出力形式などを再利用可能な形で持たせる仕組み／概念です。Instructionsより業務単位の『やり方』に近い位置付けです。",
+          "notion_id": "3c45a916-883f-81f4-84f5-c97f37115276",
+          "kind": "term"
+        },
+        {
+          "title": "State",
+          "title_en": "State",
+          "definition": "Stateとは、Agentが仕事を進めるうえで必要な「今どういう状態か」という情報です。",
+          "notion_id": "3c45a916-883f-8193-b65d-ef847b4032e1",
+          "kind": "term"
+        },
+        {
+          "title": "Semantic Search",
+          "title_en": "Semantic Search",
+          "definition": "Semantic Searchは、単語一致ではなく意味の近さを使って情報を検索する方法です。EmbeddingとVector DBを用いることが多く、RAGの検索方式として使われます。",
+          "notion_id": "3c45a916-883f-8176-927b-c58efa1fad34",
+          "kind": "term"
+        },
+        {
+          "title": "SSOT（Single Source of Truth）",
+          "title_en": "Single Source of Truth",
+          "definition": "SSOTは、「ある情報について、どこを正本として扱うかを一意に決める」考え方。AI活用では、AIが参照する情報源の優先順位・更新元・責任者を明確にするために重要。",
+          "notion_id": "3f15a916-883f-81e7-9b7d-c0bb01bc2bcf",
+          "kind": "term"
+        },
+        {
+          "title": "Chunking",
+          "title_en": "Chunking",
+          "definition": "Chunkingは、長い文書を検索やEmbeddingに適した小さな単位へ分割する処理です。RAGの精度は、Chunkの大きさ・重なり・意味的な区切り方に大きく左右されます。",
+          "notion_id": "3c45a916-883f-81e2-9086-fc62d66b980e",
+          "kind": "term"
+        },
+        {
+          "title": "Data",
+          "title_en": "Data",
+          "definition": "Dataは、Agentが仕事をする材料となる文書・DB・メール・業務データ等です。Context Engineeringでは、何を常時与えるか、何を必要時に検索させるかを分けて設計します。",
+          "notion_id": "3c45a916-883f-8125-9646-dbbe23015fb6",
+          "kind": "term"
+        },
+        {
+          "title": "Deterministic Workflow",
+          "title_en": "Deterministic Workflow",
+          "definition": "Deterministic Workflowは、入力条件に対してあらかじめ定義されたルール・順序で処理するワークフローです。安定性・再現性が高く、AI判断が不要な処理は原則こちらに寄せます。",
+          "notion_id": "3c45a916-883f-8160-abfa-dfbc498da154",
+          "kind": "term"
+        },
+        {
+          "title": "Temperature",
+          "title_en": "Temperature",
+          "definition": "Temperatureは、モデル出力のランダム性を調整する代表的な推論パラメータです。一般に低いほど出力が安定し、高いほど多様性が増えます。",
+          "notion_id": "3c45a916-883f-8138-b9d5-d0522672dc32",
+          "kind": "term"
+        },
+        {
+          "title": "Tool Calling",
+          "title_en": "Tool Calling",
+          "definition": "Tool Callingは、LLMが外部関数・API・検索・DB・ブラウザなどのToolを選び、必要な引数とともに呼び出す仕組みです。Agentの『行動』を実現する中心機構です。",
+          "notion_id": "3c45a916-883f-8171-a4a3-d5e6633697be",
+          "kind": "term"
+        },
+        {
+          "title": "Tools",
+          "title_en": "Tools",
+          "definition": "Toolsは、Agentが外部世界に対して検索・計算・DB操作・ファイル編集・SaaS操作などを行うための機能です。",
+          "notion_id": "3c45a916-883f-81e5-a6c3-cbb9a8d3fb07",
+          "kind": "term"
+        },
+        {
+          "title": "Token",
+          "title_en": "Token",
+          "definition": "Tokenは、LLMが文章を処理するときの基本単位です。入力・出力のToken数はContext Windowやコスト、処理時間に関係します。",
+          "notion_id": "3c45a916-883f-8176-842a-e32d25683ed4",
+          "kind": "term"
+        },
+        {
+          "title": "Tracing",
+          "title_en": "Tracing",
+          "definition": "Tracingは、Agentの一連の実行経路を追跡することです。どのモデル判断・Tool Call・入力・出力・Retryを経て最終結果に至ったかを時系列で確認します。",
+          "notion_id": "3c45a916-883f-818c-b4b1-f8dfae5be379",
+          "kind": "term"
+        },
+        {
+          "title": "Transformer",
+          "title_en": "Transformer",
+          "definition": "Transformerは、現在の多くのLLMの基礎となるニューラルネットワーク構造です。Attention機構により、入力中の要素同士の関係を効率的に扱います。",
+          "notion_id": "3c45a916-883f-819c-ba4b-ed16ec440386",
+          "kind": "term"
+        },
+        {
+          "title": "Harness Engineering",
+          "title_en": "Harness Engineering",
+          "definition": "Harness Engineeringは、Agentが安定して働くための実行環境・ルール・Tool・権限・評価・ログ・回復機構などを総合的に設計する考え方です。",
+          "notion_id": "3c45a916-883f-81c8-adef-ea471c383b01",
+          "kind": "term"
+        },
+        {
+          "title": "Hallucination",
+          "title_en": "Hallucination",
+          "definition": "Hallucinationは、AIが事実ではない内容をもっともらしく生成する現象です。RAG、Grounding、検証、Evals、Tool利用など複数の仕組みで抑制します。",
+          "notion_id": "3c45a916-883f-810f-b1cd-c04e9db368b1",
+          "kind": "term"
+        },
+        {
+          "title": "Fine-tuning",
+          "title_en": "Fine-tuning",
+          "definition": "Fine-tuningは、追加データを用いてモデルの重みを調整し、特定の振る舞いやタスクへの適合度を高める手法です。RAGやPrompt/Context設計とは目的が異なります。",
+          "notion_id": "3c45a916-883f-8143-90f7-cb82d904e452",
+          "kind": "term"
+        },
+        {
+          "title": "Function Calling",
+          "title_en": "Function Calling",
+          "definition": "Function Callingは、LLMが定義された関数の中から適切なものと引数を構造化して選ぶ仕組みです。Tool Callingの代表的な実装パターンです。",
+          "notion_id": "3c45a916-883f-815c-9249-f23eed829d84",
+          "kind": "term"
+        },
+        {
+          "title": "Browser Use",
+          "title_en": "Browser Use",
+          "definition": "Browser Useは、AIがブラウザを通じてWebページを閲覧し、クリック・入力・取得などを行う能力です。APIがないシステムも操作できますが、画面変更や誤操作への耐性が課題です。",
+          "notion_id": "3c45a916-883f-81fc-9134-d0d463f4d7cc",
+          "kind": "term"
+        },
+        {
+          "title": "Planner",
+          "title_en": "Planner",
+          "definition": "Plannerは、目標をサブタスクへ分解し、実行順序や必要Toolを計画する役割です。独立Agentとして分ける場合も、1つのAgent内部機能として持たせる場合もあります。",
+          "notion_id": "3c45a916-883f-81ec-8a5e-e7d467799825",
+          "kind": "term"
+        },
+        {
+          "title": "Prompt Engineering",
+          "title_en": "Prompt Engineering",
+          "definition": "Prompt Engineeringは、モデルへの入力指示を設計して望ましい出力を得る技術です。",
+          "notion_id": "3c45a916-883f-81ad-a271-c97f9b4bb950",
+          "kind": "term"
+        },
+        {
+          "title": "Permissions",
+          "title_en": "Permissions",
+          "definition": "Permissionsは、Agentが何を閲覧・作成・更新・送信・削除できるかを制御する権限設計です。最小権限、承認、Scope分離、監査ログが企業利用では重要です。",
+          "notion_id": "3c45a916-883f-818f-a5a2-dc4b677cd237",
+          "kind": "term"
+        },
+        {
+          "title": "Vector DB",
+          "title_en": "Vector Database",
+          "definition": "Vector DBは、Embeddingされたベクトルを保存し、意味的な近さで高速検索するためのデータベースです。RAGの検索基盤として使われます。",
+          "notion_id": "3c45a916-883f-81aa-9fab-f38e56c63ff0",
+          "kind": "term"
+        },
+        {
+          "title": "Vercel",
+          "title_en": "Vercel",
+          "definition": "Vercelは、Webアプリのビルド・デプロイ・ホスティングを提供するクラウドプラットフォームです。AI Coding Agentが作ったWebアプリの公開・検証先としてよく使われます。",
+          "notion_id": "3c45a916-883f-81a3-a721-f9687d9393d0",
+          "kind": "term"
+        },
+        {
+          "title": "バーティカルAI",
+          "title_en": "Vertical AI",
+          "definition": "バーティカルAIは、特定業界・職種・業務に深く特化したAIサービス／AI Agentです。",
+          "notion_id": "3c45a916-883f-8146-a9f9-d1df38fcc30b",
+          "kind": "term"
+        },
+        {
+          "title": "Multi-Agent",
+          "title_en": "Multi-Agent",
+          "definition": "Multi-Agentは、複数のAgentが役割分担・協調して処理する構成です。",
+          "notion_id": "3c45a916-883f-81fe-a53a-fcf69df6fd15",
+          "kind": "term"
+        },
+        {
+          "title": "Multimodal",
+          "title_en": "Multimodal",
+          "definition": "Multimodalは、テキストだけでなく画像・音声・動画など複数種類の情報を扱える能力です。",
+          "notion_id": "3c45a916-883f-81d1-961e-ffee6f53d3aa",
+          "kind": "term"
+        },
+        {
+          "title": "Memory",
+          "title_en": "Memory",
+          "definition": "Memoryは、セッションをまたいでAIが再利用する情報の仕組みです。ユーザー嗜好、案件の重要事実、過去の決定などを保持しますが、履歴を丸ごと保存することとは区別して考えます。",
+          "notion_id": "3c45a916-883f-813c-892d-e18d77c6e1a3",
+          "kind": "term"
+        },
+        {
+          "title": "RAG（Retrieval-Augmented Generation）",
+          "title_en": "Retrieval-Augmented Generation",
+          "definition": "RAGは、外部文書やDBから関連情報を検索し、その結果をLLMに渡して回答・判断させる手法です。モデル自体を再学習せず最新・社内情報を利用できます。",
+          "notion_id": "3c45a916-883f-815d-9aa7-d572890916bf",
+          "kind": "term"
+        },
+        {
+          "title": "Reranking",
+          "title_en": "Reranking",
+          "definition": "Rerankingは、検索で得た候補を、質問との関連性に基づいて再順位付けする処理です。RAGで本当に必要な情報をContextへ入れる精度を高めます。",
+          "notion_id": "3c45a916-883f-8148-8850-e88020cebe41",
+          "kind": "term"
+        },
+        {
+          "title": "Retry",
+          "title_en": "Retry",
+          "definition": "Retryは、Tool失敗や検証不合格時にAgentが処理を再試行する仕組みです。回数・条件・方針を無制限にせず、Escalationや予算上限と組み合わせて設計します。",
+          "notion_id": "3c45a916-883f-8111-a778-ff0050ed830d",
+          "kind": "term"
+        },
+        {
+          "title": "Reviewer",
+          "title_en": "Reviewer",
+          "definition": "Reviewerは、Executor等が作成した成果物を検査し、基準未達なら修正要求する役割です。",
+          "notion_id": "3c45a916-883f-81fd-9948-f10ad872685d",
+          "kind": "term"
+        },
+        {
+          "title": "Loop Engineering",
+          "title_en": "Loop Engineering",
+          "definition": "Loop Engineeringは、Agentが観察・判断・実行・評価・再試行を繰り返すループそのものを設計・制御する考え方です。終了条件、Retry、Escalation、検証などが中心になります。",
+          "notion_id": "3c45a916-883f-8158-b4db-e3896694adb0",
+          "kind": "term"
+        },
+        {
+          "title": "Observability・Tracing",
+          "title_en": "Observability / Tracing",
+          "definition": "Tracingは Agentの処理経路を追跡すること、ObservabilityはAgent全体の動きを観測・分析できる状態を作ることです。",
+          "notion_id": "3c45a916-883f-81c3-abf8-ddf0ec520a03",
+          "kind": "term"
+        },
+        {
+          "title": "Deterministic WorkflowとAgentic Workflow",
+          "title_en": "Deterministic Workflow vs Agentic Workflow",
+          "definition": "Deterministic Workflowは決められたルール・順番で進む処理、Agentic Workflowは途中でAIが状況を判断し、次の行動を選ぶ処理です。",
+          "notion_id": "3c45a916-883f-811b-8e70-c46b3475c1a4",
+          "kind": "term"
+        },
+        {
+          "title": "半導体",
+          "title_en": "Semiconductor",
+          "definition": "半導体とは、電気をよく通す導体と通しにくい絶縁体の中間的な性質を持ち、電気的性質を精密に制御できる材料・電子部品の総称です。",
+          "notion_id": "3cb5a916-883f-81eb-a58d-e41af20c013d",
+          "kind": "term"
+        },
+        {
+          "title": "Jev（TypeSafe AI）",
+          "title_en": "Jev",
+          "definition": "Jevは文章を生成せず、ソフトウェアがそのまま使える型付きの意味判断と確率を高速に返すAIモデル。",
+          "notion_id": "3ea5a916-883f-81da-93a4-dc4ffe1e7251",
+          "kind": "term"
+        },
+        {
+          "title": "企業AI基盤",
+          "title_en": "",
+          "definition": "企業AIは、単にLLMを導入するのではなく、企業データをAIが探せる状態にし、必要なシステムへ接続し、会社独自の仕事のやり方をSkillとして標準化することで実務に組み込む。",
+          "notion_id": "3f15a916-883f-81e9-8a2d-fc9695306ffd",
+          "kind": "topic"
+        },
+        {
+          "title": "Snowflake",
+          "title_en": "Snowflake",
+          "definition": "Snowflakeは、企業内外のデータを安全に取り込み、保存・加工・分析・共有し、生成AIでも利用するためのマネージドクラウド型データプラットフォーム。",
+          "notion_id": "3f85a916-883f-819f-880b-f6e4d66f1ec6",
+          "kind": "term"
+        },
+        {
+          "title": "Salesforce Headless 360",
+          "title_en": "Salesforce Headless 360",
+          "definition": "Salesforce Headless 360は、従来のSalesforce画面に限定せず、API・MCPツール・CLI・スキルからSalesforceの機能を利用できるようにするアーキテクチャの拡張。",
+          "notion_id": "3f85a916-883f-8181-bdcf-fc42b8b2f3d2",
+          "kind": "term"
+        }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "ビジネス用語集",
+      "entries": [
+        {
+          "title": "Mashmatrix Sheet",
+          "title_en": "Mashmatrix Sheet",
+          "definition": "Mashmatrix SheetはSalesforceのレコードをブラウザー上でExcelのように一覧表示し、コピー＆ペーストや一括編集、検索、並べ替えを行えるアドオン製品。",
+          "notion_id": "3f85a916-883f-8128-a13b-f084caf055df",
+          "kind": "term"
+        },
+        {
+          "title": "冪等性（Idempotency）",
+          "title_en": "Idempotency",
+          "definition": "冪等性（べきとうせい）とは、同じ操作を1回実行した場合と複数回実行した場合とで、対象の最終状態・効果が変わらない性質。",
+          "notion_id": "3f85a916-883f-811e-92c9-c6497dd8f2ee",
+          "kind": "term"
+        },
+        {
+          "title": "閉域ネットワーク",
+          "title_en": "Closed Network",
+          "definition": "閉域ネットワークとは、契約者や関係者など限定されたネットワーク間で通信し、不特定多数が利用する一般インターネットを通さない通信網（またはその構成）を指す。",
+          "notion_id": "3f85a916-883f-8123-9969-f29d0a2c7c31",
+          "kind": "term"
+        },
+        {
+          "title": "デカップリング",
+          "title_en": "Decoupling",
+          "definition": "デカップリングとは、相互依存している国・企業・市場・技術体系の結びつきを意図的または結果的に弱め、切り離していくことです。",
+          "notion_id": "3cb5a916-883f-8116-827c-c28af6ad31a2",
+          "kind": "term"
+        },
+        {
+          "title": "グローバルサウス",
+          "title_en": "Global South",
+          "definition": "グローバルサウスとは、主にアジア・アフリカ・中南米などの新興国・途上国を、植民地支配の歴史、開発課題、国際政治上の立場などを踏まえてまとめて呼ぶ緩やかな概念です。",
+          "notion_id": "3cb5a916-883f-813d-856a-c2cb14764870",
+          "kind": "term"
+        },
+        {
+          "title": "サーキットブレーカー",
+          "title_en": "Circuit Breaker",
+          "definition": "金融市場のサーキットブレーカーとは、相場が極端に動いたときに取引を一時中断し、投資家が冷静に情報を確認できる時間を設ける仕組みです。",
+          "notion_id": "3cb5a916-883f-8148-84fe-fe83653571fc",
+          "kind": "term"
+        },
+        {
+          "title": "追証（おいしょう）",
+          "title_en": "Margin Call",
+          "definition": "追証とは、信用取引やデリバティブ取引で相場が不利に動き、預けている保証金・証拠金が必要水準を下回ったときに、追加で差し入れる必要が生じる資金・担保です。",
+          "notion_id": "3cb5a916-883f-810a-9661-fb4c8a0cb3e0",
+          "kind": "term"
+        },
+        {
+          "title": "経営学入門",
+          "title_en": "Management",
+          "definition": "経営学は、企業や組織が限られた人・物・金・情報を使い、顧客価値を生み、持続的に成果を出す仕組みを研究する学問。",
+          "notion_id": "3c05a916-883f-815a-88f1-d480e3a1ad96",
+          "kind": "topic"
+        },
+        {
+          "title": "経済学入門",
+          "title_en": "Economics",
+          "definition": "経済学は、限られた資源を人や企業・政府がどう配分し、その選択が価格・所得・雇用・景気・格差にどのような結果を生むかを分析する学問。",
+          "notion_id": "3c05a916-883f-81c6-9f74-cc2c6fcd09ad",
+          "kind": "topic"
+        },
+        {
+          "title": "法学入門",
+          "title_en": "Law",
+          "definition": "法学は、社会のルールである「法」がどのように作られ、解釈され、適用され、権利・義務・国家権力を調整しているかを体系的に考える学問。",
+          "notion_id": "3c05a916-883f-8166-9ecd-e13f5140af93",
+          "kind": "topic"
+        },
+        {
+          "title": "日本の法律の全体像",
+          "title_en": "",
+          "definition": "日本法を実務で理解するには、法律名を大量に覚えるより、①どのレベルのルールか、②誰と誰の関係か、③何が起きているかを分けて考えることが重要である。",
+          "notion_id": "3b55a916-883f-812a-b94d-d483ea140290",
+          "kind": "topic"
+        },
+        {
+          "title": "経営手法",
+          "title_en": "Management Methods",
+          "definition": "経営手法とは、企業が目的・戦略を決め、資源を配分し、業務を改善し、人と組織を動かし、成果とリスクを管理するための考え方・仕組みの集合である。",
+          "notion_id": "3ba5a916-883f-8196-8fd7-dee150c28765",
+          "kind": "topic"
+        },
+        {
+          "title": "評価指標（KPI・KGIなど）",
+          "title_en": "KPI / KGI",
+          "definition": "KGI・KPIなどの評価指標は、「最終的に何を実現したいか」と「その成果へ向けて今うまく進んでいるか」を数値で観測し、意思決定と改善につなげる仕組みである。",
+          "notion_id": "3ba5a916-883f-81c7-a097-d6eb6d4aa0cd",
+          "kind": "term"
+        },
+        {
+          "title": "人事評価",
+          "title_en": "Performance Evaluation",
+          "definition": "人事評価とは、社員に期待する成果・行動・能力をあらかじめ示し、一定期間の事実に基づいて評価し、報酬・昇進だけでなく育成・配置・組織改善へつなげる仕組みである。",
+          "notion_id": "3ba5a916-883f-817c-94d0-f6ab08f12786",
+          "kind": "term"
+        },
+        {
+          "title": "コンサルティング手法",
+          "title_en": "Consulting Methods",
+          "definition": "コンサルティング手法とは、曖昧な経営・業務課題を構造化し、事実と仮説を使って原因を特定し、実行可能な選択肢を比較し、意思決定と変革まで支援するための問題解決方法である。",
+          "notion_id": "3ba5a916-883f-81be-8d7e-ee2939b477bf",
+          "kind": "topic"
+        },
+        {
+          "title": "マーケティング手法",
+          "title_en": "Marketing",
+          "definition": "マーケティングとは、顧客・市場を理解し、価値ある商品・サービスを設計し、適切な価格・流通・伝達方法で届け、顧客との関係を継続して事業成果につなげる活動である。",
+          "notion_id": "3ba5a916-883f-8157-988e-df193c3c0fd1",
+          "kind": "topic"
+        },
+        {
+          "title": "KJ法",
+          "title_en": "KJ Method",
+          "definition": "フィールドワークで集めた大量の断片的情報を一つずつラベルにし、先入観で分類せず「意味の近さ」から集め、全体構造と新しい仮説を発見するための情報整理・発想法。",
+          "notion_id": "3b25a916-883f-818d-860b-c4b1fd217a19",
+          "kind": "term"
+        },
+        {
+          "title": "アントレプレナー/CoE",
+          "title_en": "Entrepreneur / Center of Excellence",
+          "definition": "アントレプレナーは不確実性の中で人・資金・技術を組み合わせ新しい価値を事業化する人。CoEは特定領域の知識・ルール・人材・事例を集約し組織全体の能力を高める中核組織。",
+          "notion_id": "39c5a916-883f-805b-b50f-f270af28d965",
+          "kind": "term"
+        },
+        {
+          "title": "PMO",
+          "title_en": "Project Management Office",
+          "definition": "PMOは、プロジェクトが正しく意思決定され、管理され、組織として成功確率を高められるように、標準化・可視化・調整・支援・統制を行う機能です。",
+          "notion_id": "3b55a916-883f-818f-a88e-d82715fd0d35",
+          "kind": "term"
+        },
+        {
+          "title": "PMBOK",
+          "title_en": "Project Management Body of Knowledge",
+          "definition": "PMBOKは、プロジェクトを成功させるための「唯一の手順書」ではなく、プロジェクトマネジメントで考えるべき原則・領域・プロセスを体系化した世界的な知識体系です。",
+          "notion_id": "3b55a916-883f-8142-8dcd-f5bf665b3aa7",
+          "kind": "term"
+        },
+        {
+          "title": "IT・DX領域における契約形態と事業モデル",
+          "title_en": "",
+          "definition": "IT・DX領域の契約は、単に「請負」か「準委任」かを選ぶだけでは不十分であり、提供内容・完成責任・指揮命令・品質判定・責任範囲・終了時の移行を一体で設計する必要がある。",
+          "notion_id": "39e5a916-883f-8070-97e7-e114a7503563",
+          "kind": "topic"
+        },
+        {
+          "title": "システム開発",
+          "title_en": "System Development",
+          "definition": "システム開発とは、単にプログラムを書く作業ではなく、経営・業務上の目的を明確にし、要件を定義し、設計・実装・テスト・導入・運用・廃棄までを一つのライフサイクルとして管理する活動です。",
+          "notion_id": "3b55a916-883f-81d4-9087-d530b17e85dc",
+          "kind": "topic"
+        },
+        {
+          "title": "プロジェクトマネジメント体系的調査レポート",
+          "title_en": "Project Management",
+          "definition": "プロジェクトとは「変化を起こすための一時的活動」であり、プロジェクトマネジメントとは、その変化を限られた資源と多様な利害の中で価値につながるように統治・設計・実行・修正する営みである。",
+          "notion_id": "39c5a916-883f-80e2-ba17-c01908454928",
+          "kind": "topic"
+        },
+        {
+          "title": "PCなどハードウェアについて",
+          "title_en": "PC Hardware",
+          "definition": "PCのハードウェアとは、CPU・RAM・SSD/HDD・GPUなどを、マザーボード、電源、冷却、通信装置がつないで動かす物理システムである。性能は仕事の種類に対してどこがボトルネックになるかで決まる。",
+          "notion_id": "3ba5a916-883f-8134-97b8-f73640fcae8f",
+          "kind": "topic"
+        },
+        {
+          "title": "LP・HP作成（ワイヤーフレーム、CTA、FV、HTML、CSS、JavaScriptなど）",
+          "title_en": "Landing Page / Website Creation",
+          "definition": "LP・HP作成とは、誰に、何を伝え、どの行動をしてもらうかを設計し、それを情報構造・文章・デザイン・HTML/CSS/JavaScriptとして実装し、計測と改善まで行う仕事である。",
+          "notion_id": "3ba5a916-883f-81d5-aa04-ee74fb09bca7",
+          "kind": "topic"
+        },
+        {
+          "title": "ITインフラ基礎",
+          "title_en": "IT Infrastructure",
+          "definition": "サーバー、NAS、クラウド、共有フォルダ、メールサーバーは同じ階層の製品ではなく、処理・保存・認証・共有・保護という役割を組み合わせて企業ITは構成される。",
+          "notion_id": "3b75a916-883f-819a-b39a-ec2b54c669be",
+          "kind": "topic"
+        },
+        {
+          "title": "中小企業のIT・AIセキュリティ",
+          "title_en": "Information Security for SMEs",
+          "definition": "セキュリティの本質は、何を守るかを把握し、侵入されにくくし、侵入されても早期に気付き、被害を広げず、事業を復旧できる状態を、経営として継続運用すること。",
+          "notion_id": "3b75a916-883f-8194-b9c4-ffe2f993b1c3",
+          "kind": "topic"
+        },
+        {
+          "title": "ISO",
+          "title_en": "International Organization for Standardization",
+          "definition": "ISOとは、各国の標準化機関が集まり、製品・サービス・業務プロセスを世界で共通化する「国際規格」を作る非政府の国際組織です。",
+          "notion_id": "3b55a916-883f-8199-b32d-d1b0ec92b917",
+          "kind": "term"
+        },
+        {
+          "title": "ポートフォリオ最適化",
+          "title_en": "Portfolio Optimization",
+          "definition": "ポートフォリオ最適化とは、個々の資産の良し悪しではなく、資産同士の値動きの関係まで考え、期待収益とリスクの組合せを最も望ましい形にする方法です。",
+          "notion_id": "3b25a916-883f-815f-a690-c21239422da9",
+          "kind": "term"
+        },
+        {
+          "title": "エクイティ／デット",
+          "title_en": "Equity / Debt",
+          "definition": "エクイティは「会社の所有権を渡して集める資金」、デットは「返済義務を負って借りる資金」です。",
+          "notion_id": "3b25a916-883f-8168-b736-fba2c108eff8",
+          "kind": "term"
+        },
+        {
+          "title": "確定拠出年金",
+          "title_en": "Defined Contribution Pension",
+          "definition": "確定拠出年金（DC）は、拠出する掛金額を先に決め、加入者本人が商品を選んで運用し、その結果によって将来の受取額が変わる私的年金制度である。",
+          "notion_id": "3b25a916-883f-810b-9267-ec72cbf5d79b",
+          "kind": "term"
+        },
+        {
+          "title": "401kとは",
+          "title_en": "401(k)",
+          "definition": "401(k)は、米国の会社員向けの「税制優遇付き・確定拠出型の退職資産形成制度」です。",
+          "notion_id": "3a55a916-883f-8006-92ad-de9571cd3049",
+          "kind": "term"
+        },
+        {
+          "title": "暦年贈与",
+          "title_en": "Annual Gift (Calendar-Year Taxation)",
+          "definition": "1年間に個人から受けた贈与を合計し、受贈者1人につき年間110万円の基礎控除を差し引いて贈与税を計算する「暦年課税」を利用した生前贈与です。",
+          "notion_id": "3b25a916-883f-815e-bb1c-f92c6e4cf3cc",
+          "kind": "term"
+        },
+        {
+          "title": "倉庫管理・WMSの全体像",
+          "title_en": "Warehouse Management System",
+          "definition": "WMS（Warehouse Management System）は、商品・材料が倉庫へ入ってから出ていくまでの倉庫内業務を管理・統制するシステム。何を・どこに置き・誰が・どの順番で動かすかを統制する実行系のシステムである。",
+          "notion_id": "3b75a916-883f-8146-b4ad-c69de69b4d1a",
+          "kind": "term"
+        },
+        {
+          "title": "生産管理の全体像",
+          "title_en": "Production Management",
+          "definition": "生産管理とは、必要なものを、必要な品質で、必要な数量だけ、必要な時期に、適正なコストで作れるように計画し、実行を管理すること。",
+          "notion_id": "3b75a916-883f-815c-8882-d706b8d00e41",
+          "kind": "topic"
+        },
+        {
+          "title": "設計・建築・施工等の流れ",
+          "title_en": "Building Design and Construction Process",
+          "definition": "建物づくりは、事業・要望を整理し、調査して設計し、法的確認と見積・契約を経て施工し、設計者が工事監理を行い、検査・引渡し後は維持管理するという長いプロジェクトである。",
+          "notion_id": "3ba5a916-883f-81e9-b10c-f6d58630d931",
+          "kind": "topic"
+        }
+      ]
+    },
+    {
+      "key": "general",
+      "title": "一般用語集（科学・文化・歴史・生活）",
+      "entries": [
+        {
+          "title": "太政官",
+          "title_en": "Daijō-kan",
+          "definition": "太政官（だじょうかん）は、明治維新直後の日本で、現在の「内閣＋各省を束ねる中央政府」に近い役割を担った最高政府機関。1885年に内閣制度が創設されるまで明治政府の中枢だった。",
+          "notion_id": "3c55a916-883f-81b7-a8f9-d62028a03c5c",
+          "kind": "term"
+        },
+        {
+          "title": "幕府",
+          "title_en": "Shogunate",
+          "definition": "幕府（ばくふ）は、将軍を頂点として武士が実際の政治・軍事・大名統制などを担った政府。鎌倉・室町・江戸幕府が代表例。",
+          "notion_id": "3c55a916-883f-81aa-a2ec-db3e307c4446",
+          "kind": "term"
+        },
+        {
+          "title": "朝廷",
+          "title_en": "Imperial Court",
+          "definition": "朝廷（ちょうてい）は、天皇とその周囲の公家を中心とする宮廷・政治的組織。",
+          "notion_id": "3c55a916-883f-811e-b2a9-ed31fa597a7d",
+          "kind": "term"
+        },
+        {
+          "title": "宗門人別帳",
+          "title_en": "Shūmon Ninbetsuchō",
+          "definition": "宗門人別帳（しゅうもんにんべつちょう）は、江戸時代に村・町の住民を把握し、キリスト教徒でないことを確認するため作られた台帳。人別改と宗門改が結びついたもの。",
+          "notion_id": "3c55a916-883f-814f-baec-fc69745d3de2",
+          "kind": "term"
+        },
+        {
+          "title": "戸籍",
+          "title_en": "Koseki (Family Register)",
+          "definition": "戸籍は、日本国民の出生・親子・婚姻・離婚・死亡などの身分関係を公的に記録・証明する制度。",
+          "notion_id": "3c55a916-883f-810c-a62a-d15a106dc5b5",
+          "kind": "term"
+        },
+        {
+          "title": "戸籍区",
+          "title_en": "",
+          "definition": "戸籍区（こせきく）は、1871年の戸籍法にもとづいて全国統一戸籍を作るため設定された戸籍事務上の地域区分。",
+          "notion_id": "3c55a916-883f-8158-b7ca-c1281c43f9f4",
+          "kind": "term"
+        },
+        {
+          "title": "壬申戸籍",
+          "title_en": "Jinshin Koseki",
+          "definition": "壬申戸籍（じんしんこせき）は、1871年の戸籍法に基づき1872年に編製された全国統一戸籍。1872年が干支で壬申だったことから呼ばれる。",
+          "notion_id": "3c55a916-883f-8128-983b-d2d6bf53ef1f",
+          "kind": "term"
+        },
+        {
+          "title": "戸長",
+          "title_en": "",
+          "definition": "戸長（こちょう）は、明治初期に戸籍区などで戸籍、住民異動、徴税や行政連絡などを担った地域行政の担当者。",
+          "notion_id": "3c55a916-883f-8170-ae5a-c779014a84ba",
+          "kind": "term"
+        },
+        {
+          "title": "平民苗字許可令",
+          "title_en": "",
+          "definition": "平民苗字許可令は、1870年に平民が公に苗字を名乗ることを認めた太政官布告。身分秩序の再編・四民平等の流れの一つ。",
+          "notion_id": "3c55a916-883f-81b0-8f4b-e8564a6a30a6",
+          "kind": "term"
+        },
+        {
+          "title": "苗字必称義務令",
+          "title_en": "",
+          "definition": "苗字必称義務令は1875年、全国民に苗字を名乗ることを義務づけた太政官布告。祖先以来の苗字が不明なら新たに設けることも求めた。",
+          "notion_id": "3c55a916-883f-8193-a851-e0688e4ffecd",
+          "kind": "term"
+        },
+        {
+          "title": "門割制度",
+          "title_en": "Kadowari System",
+          "definition": "門割制度（かどわりせいど）は、薩摩藩で農村の数戸を「門（かど）」という単位にまとめ、土地を割り当て、年貢・労役等を門単位で負担させた制度。",
+          "notion_id": "3c55a916-883f-81b5-8008-d78f2871a2fa",
+          "kind": "term"
+        },
+        {
+          "title": "内閣制度",
+          "title_en": "Cabinet System",
+          "definition": "内閣制度は、内閣総理大臣と国務大臣が行政を統括する仕組み。日本では1885年に太政官制を廃止して創設され、初代首相は伊藤博文。",
+          "notion_id": "3c55a916-883f-8100-b9bb-e0fb2abc77ca",
+          "kind": "term"
+        },
+        {
+          "title": "政治",
+          "title_en": "Politics",
+          "definition": "政治とは、意見・価値観・利害が異なる人々が共存する共同体で、誰が何を負担し、何を優先し、どんなルールにするかを決める営み。",
+          "notion_id": "3c55a916-883f-811c-83bf-f34443b88344",
+          "kind": "term"
+        },
+        {
+          "title": "政・まつりごと",
+          "title_en": "",
+          "definition": "政（まつりごと）は、共同体を治め、秩序を整え、公共的な事柄を決めること。古代には祭祀と統治が密接で、「祭り事」と「政」が重なっていた社会も多い。",
+          "notion_id": "3c55a916-883f-813e-b403-e642ad33b919",
+          "kind": "term"
+        },
+        {
+          "title": "政府",
+          "title_en": "Government",
+          "definition": "政府は、国家の政策を決定・実行し、行政を運営する機構。狭義には内閣、広義には統治機構全体に近い意味で使われることもある。",
+          "notion_id": "3c55a916-883f-8163-a1fd-ca89a9f77bdd",
+          "kind": "term"
+        },
+        {
+          "title": "国家",
+          "title_en": "State",
+          "definition": "国家は、一定の領域と人口をもち、政府を通じて法を制定・執行し、対外的に主権を行使する政治共同体。",
+          "notion_id": "3c55a916-883f-815a-baad-f7e7c2605055",
+          "kind": "term"
+        },
+        {
+          "title": "近代国家",
+          "title_en": "Modern State",
+          "definition": "近代国家は、数百万人・数千万人の見知らぬ人間を、一つのルールと巨大な制度群によって協働させるシステムと捉えると分かりやすい。",
+          "notion_id": "3c55a916-883f-8142-8550-f2d9acf2f2f3",
+          "kind": "term"
+        },
+        {
+          "title": "政党政治",
+          "title_en": "Party Politics",
+          "definition": "政党政治は、政党が政策・価値観をまとめて選挙で競争し、議会で多数派を形成して政権を担う政治。",
+          "notion_id": "3c55a916-883f-81a7-9cf9-c704cce6aed6",
+          "kind": "term"
+        },
+        {
+          "title": "五・一五事件",
+          "title_en": "May 15 Incident",
+          "definition": "五・一五事件は1932年5月15日、海軍青年将校らが首相官邸などを襲撃し、犬養毅首相を殺害した事件。",
+          "notion_id": "3c55a916-883f-81ee-9af6-fa63a5ccb5ea",
+          "kind": "term"
+        },
+        {
+          "title": "二・二六事件",
+          "title_en": "February 26 Incident",
+          "definition": "二・二六事件は1936年2月26日、陸軍青年将校らが約1,400人の兵を動かし東京中心部を占拠したクーデター未遂。",
+          "notion_id": "3c55a916-883f-8153-ab2e-f0988f2dbb88",
+          "kind": "term"
+        },
+        {
+          "title": "国家総動員法",
+          "title_en": "National Mobilization Law",
+          "definition": "国家総動員法は1938年、戦争遂行のため人員・物資・工場・価格・金融・労働など社会全体を政府が統制できるようにした法律。",
+          "notion_id": "3c55a916-883f-81ba-a5be-f83971768ed8",
+          "kind": "term"
+        },
+        {
+          "title": "大政翼賛会",
+          "title_en": "Imperial Rule Assistance Association",
+          "definition": "大政翼賛会は1940年、近衛文麿を中心に成立した政治・国民動員組織。既存政党が相次いで解党し、総力戦体制への協力を全国へ組織化した。",
+          "notion_id": "3c55a916-883f-81e6-9730-fff72b611093",
+          "kind": "term"
+        },
+        {
+          "title": "家制度",
+          "title_en": "Ie System",
+          "definition": "家制度は、明治民法下で「家」を法的単位とし、戸主を中心に家族関係・家督相続などを構成した制度。",
+          "notion_id": "3c55a916-883f-8111-9879-fde30020ec06",
+          "kind": "term"
+        },
+        {
+          "title": "霞が関",
+          "title_en": "Kasumigaseki",
+          "definition": "霞が関は東京都千代田区の中央省庁が集中する地域名。転じて、中央省庁や官僚機構全体を指す比喩として使われる。",
+          "notion_id": "3c55a916-883f-81d9-94e2-c0eae3f73ec3",
+          "kind": "term"
+        },
+        {
+          "title": "官僚",
+          "title_en": "Bureaucrat",
+          "definition": "官僚は、選挙で選ばれる政治家とは異なり、専門職として継続的に行政を運営する公務員を指すことが多い。",
+          "notion_id": "3c55a916-883f-81ce-b654-da60236e9d80",
+          "kind": "term"
+        },
+        {
+          "title": "縦割り行政",
+          "title_en": "Siloed Administration",
+          "definition": "縦割り行政は、省庁・部局がそれぞれの所管・予算・法律に沿って動く結果、複数分野にまたがる課題で連携不足が生じる状態。",
+          "notion_id": "3c55a916-883f-811b-a294-c44c921ff704",
+          "kind": "term"
+        },
+        {
+          "title": "イデオロギー",
+          "title_en": "Ideology",
+          "definition": "イデオロギーは、「社会はどう成り立っているか」「どうあるべきか」を一貫した価値観・概念で捉える世界観。自由主義、社会主義、保守主義などが典型。",
+          "notion_id": "3c55a916-883f-81e5-acfa-e45b196d607a",
+          "kind": "term"
+        },
+        {
+          "title": "国家イデオロギー",
+          "title_en": "State Ideology",
+          "definition": "国家イデオロギーは、憲法・法律・教育・儀礼・政治文化などに埋め込まれた「この国家は何を正当とするか」という価値体系。",
+          "notion_id": "3c55a916-883f-816c-8b25-c382cef8965e",
+          "kind": "term"
+        },
+        {
+          "title": "プロトコル",
+          "title_en": "Protocol",
+          "definition": "プロトコルは、複数の主体が互いを詳しく知らなくても協調できるようにする共通ルール・手順。",
+          "notion_id": "3c55a916-883f-81ec-b4e7-deaaad2bd829",
+          "kind": "term"
+        },
+        {
+          "title": "補完性原理",
+          "title_en": "Principle of Subsidiarity",
+          "definition": "補完性原理は、個人・地域など小さい単位で解決できる問題はその単位に任せ、そこで処理できない問題だけを上位の共同体へ移す考え方。",
+          "notion_id": "3c55a916-883f-8166-a88d-ffb3243b6429",
+          "kind": "term"
+        },
+        {
+          "title": "レゾナンス（resonance）",
+          "title_en": "Resonance",
+          "definition": "レゾナンスは、物理学では外から与える振動の周期が系の固有振動と合うことで振幅が大きくなる「共振」、人文・音楽・ビジネスでは人・作品・考えが強く響き合う「共鳴」を意味する。",
+          "notion_id": "3cb5a916-883f-8186-be8b-c7708d1348ed",
+          "kind": "term"
+        },
+        {
+          "title": "インプロヴィゼーション（improvisation）",
+          "title_en": "Improvisation",
+          "definition": "インプロヴィゼーションとは、完成した台本・譜面・手順を事前にすべて決めず、その場の状況に反応しながら創作・行動する「即興」です。",
+          "notion_id": "3cb5a916-883f-81c9-a689-fb13574d986d",
+          "kind": "term"
+        },
+        {
+          "title": "心理学効果（認知バイアス）",
+          "title_en": "Psychological Effects and Cognitive Biases",
+          "definition": "バンドワゴン効果・アンカリング効果・確証バイアスなど、人間の判断や行動を一定方向に動かしやすい心理現象（効果・認知バイアス・ヒューリスティック等）を整理した記事。",
+          "notion_id": "3aa5a916-883f-80e8-bec7-e0e13bd3843a",
+          "kind": "topic"
+        },
+        {
+          "title": "シオニズム",
+          "title_en": "Zionism",
+          "definition": "ユダヤ人を民族として捉え、その自己決定と安全な共同体・国家を歴史的パレスチナに築こうとした近代的民族運動。単一の思想ではなく、政治・文化・宗教・社会主義など複数の潮流があります。",
+          "notion_id": "3b25a916-883f-815f-af8e-d5e0e7d9c62f",
+          "kind": "term"
+        },
+        {
+          "title": "バルフォア宣言",
+          "title_en": "Balfour Declaration",
+          "definition": "1917年、英国政府がパレスチナに「ユダヤ人の民族的郷土」を設けることを支持した短い外交文書。",
+          "notion_id": "3b25a916-883f-81f1-9be6-d703abf2707d",
+          "kind": "term"
+        },
+        {
+          "title": "微分積分",
+          "title_en": "Calculus",
+          "definition": "微分は「今この瞬間にどれくらい変化しているか」を測り、積分は「小さな変化を積み重ねると全体でどれくらいになるか」を求める数学です。",
+          "notion_id": "3b25a916-883f-8134-8773-fc1ce117ef54",
+          "kind": "term"
+        },
+        {
+          "title": "ベクトル",
+          "title_en": "Vector",
+          "definition": "ベクトルは、複数の数をひとまとまりとして扱い、「大きさと向き」または「多数の特徴」を表す数学的な器です。",
+          "notion_id": "3b25a916-883f-81d3-bcd2-d37534da38a9",
+          "kind": "term"
+        },
+        {
+          "title": "クロソイド曲線",
+          "title_en": "Clothoid",
+          "definition": "進む距離に比例して曲がり方が少しずつ強くなる曲線。直線と円曲線を滑らかにつなぎ、道路・鉄道設計で広く使われます。",
+          "notion_id": "3b25a916-883f-8108-b5d4-e9635a5558ab",
+          "kind": "term"
+        },
+        {
+          "title": "かさぶたの仕組み",
+          "title_en": "Scab",
+          "definition": "瘡蓋（かさぶた）は、傷口を守るために、血液が固まって作る保護膜です。",
+          "notion_id": "3ac5a916-883f-8020-a80f-d5899c427b86",
+          "kind": "term"
+        },
+        {
+          "title": "医療費控除",
+          "title_en": "Medical Expense Deduction",
+          "definition": "医療費控除とは、本人や生計を一にする家族のために支払った年間医療費が一定額を超えた場合、その超過部分を所得から差し引き、所得税・住民税の負担を軽くする制度です。",
+          "notion_id": "3b25a916-883f-81d0-a98a-f7b2d5b129f1",
+          "kind": "term"
+        },
+        {
+          "title": "介護保険",
+          "title_en": "Long-Term Care Insurance",
+          "definition": "介護保険は、介護を家族だけの責任にせず、40歳以上の保険料と税金を財源に、社会全体で高齢者等の介護を支える公的社会保険です。",
+          "notion_id": "3b25a916-883f-81e7-a393-f55c48299cb2",
+          "kind": "term"
+        },
+        {
+          "title": "サント・シャペル",
+          "title_en": "Sainte-Chapelle",
+          "definition": "13世紀のフランス王ルイ9世が、キリスト受難の聖遺物を納めるためにパリの王宮内へ建てた礼拝堂。ゴシック建築の到達点の一つです。",
+          "notion_id": "3b25a916-883f-81fb-839b-d6bbbb7ba4ed",
+          "kind": "topic"
+        },
+        {
+          "title": "ジョルジョーネ",
+          "title_en": "Giorgione",
+          "definition": "盛期ルネサンス期のヴェネツィアで、物語を明確に説明するよりも、色彩・光・風景・人物の気配によって詩的な雰囲気を生み出した画家。",
+          "notion_id": "3b25a916-883f-8139-9dd2-e12370723991",
+          "kind": "topic"
+        },
+        {
+          "title": "大和猿楽",
+          "title_en": "Yamato Sarugaku",
+          "definition": "中世の大和国（現在の奈良県）を中心に、興福寺・春日社などの寺社に奉仕した猿楽の芸能集団とその芸風。大和四座から観世・宝生・金春・金剛の能楽諸流が生まれました。",
+          "notion_id": "3b25a916-883f-816d-bc96-f445deddf2bd",
+          "kind": "term"
+        },
+        {
+          "title": "グッドイヤーウェルト製法",
+          "title_en": "Goodyear Welt",
+          "definition": "靴のアッパーと中底を細長い革の帯「ウェルト」で縫い合わせ、そのウェルトへ本底を縫い付ける製法。底を交換しやすく構造が丈夫で、高級革靴やワークブーツに広く使われます。",
+          "notion_id": "3b25a916-883f-8176-9d9f-cb6b4a3ca4d1",
+          "kind": "term"
+        },
+        {
+          "title": "ボスポロス王国",
+          "title_en": "Bosporan Kingdom",
+          "definition": "紀元前5世紀ごろから黒海北岸のクリミア東部とタマン半島に栄えた古代王国。ギリシア都市とスキタイ・サルマタイ系住民が融合し、穀物貿易によって繁栄しました。",
+          "notion_id": "3b25a916-883f-81f9-aeb2-ce6a88899fcd",
+          "kind": "topic"
+        },
+        {
+          "title": "アーリア人",
+          "title_en": "Aryan",
+          "definition": "本来の「アーリア」は古代インドと古代イランの一部の人々の自己呼称で、学術上は主にインド・イラン語派の文脈で扱われる。欧州人の生物学的人種とする考えは19世紀以降の誤用である。",
+          "notion_id": "3b25a916-883f-81e6-979e-eb1ecbed268b",
+          "kind": "term"
+        },
+        {
+          "title": "カール大帝",
+          "title_en": "Charlemagne",
+          "definition": "8～9世紀にフランク王国を西・中央ヨーロッパ最大の国家へ拡大し、800年にローマ皇帝として戴冠したカロリング朝の君主。",
+          "notion_id": "3b25a916-883f-813b-b3a5-fd8bf7f9ec49",
+          "kind": "topic"
+        },
+        {
+          "title": "オットー1世",
+          "title_en": "Otto I",
+          "definition": "10世紀の東フランク王国を再統合し、955年にマジャール人を破り、962年にローマ皇帝として戴冠したザクセン朝の君主。後の神聖ローマ帝国の基礎を築きました。",
+          "notion_id": "3b25a916-883f-81c9-87aa-f8c15ea9ebf0",
+          "kind": "topic"
+        },
+        {
+          "title": "シャルル・ド・ゴール",
+          "title_en": "Charles de Gaulle",
+          "definition": "第二次世界大戦中に「自由フランス」を率い、戦後には強い大統領制を柱とするフランス第五共和政を築いた軍人・政治家。",
+          "notion_id": "3b25a916-883f-8184-85b6-c631109a27d1",
+          "kind": "topic"
+        },
+        {
+          "title": "ルイ・アントワーヌ・フォヴレ・ド・ブーリエンヌ",
+          "title_en": "Louis-Antoine Fauvelet de Bourrienne",
+          "definition": "ナポレオンの同級生・私設秘書・外交官として政権中枢を見た人物で、後年の回想録で有名になったが、その記述には編集・誇張・自己弁護が混じるため慎重に読む必要がある。",
+          "notion_id": "3b25a916-883f-81c5-987f-ce54fcfe5df5",
+          "kind": "topic"
+        },
+        {
+          "title": "ロンドン・ヒースロー空港",
+          "title_en": "London Heathrow Airport",
+          "definition": "第二次世界大戦末期に軍用飛行場として整備され、1946年に民間空港として開港した英国最大の国際航空拠点。",
+          "notion_id": "3b25a916-883f-8154-9f36-d4f44f464a23",
+          "kind": "topic"
+        },
+        {
+          "title": "シャルル・ド・ゴール空港",
+          "title_en": "Paris Charles de Gaulle Airport",
+          "definition": "パリ北東部のロワシー地区に建設され、1974年に開港したフランス最大級の国際空港。名称はシャルル・ド・ゴールに由来します。",
+          "notion_id": "3b25a916-883f-810b-a3f7-e89c56f11af9",
+          "kind": "topic"
+        },
+        {
+          "title": "アラスカ歴史",
+          "title_en": "History of Alaska",
+          "definition": "アラスカの歴史は、数千年に及ぶ多様な先住民社会の上に、ロシアの毛皮植民地、米国の資源フロンティア、軍事拠点、石油州が重なった歴史である。",
+          "notion_id": "3b25a916-883f-8130-8515-cfaf48abf5eb",
+          "kind": "topic"
+        },
+        {
+          "title": "フェアバンクス歴史",
+          "title_en": "History of Fairbanks",
+          "definition": "フェアバンクスは、1902年の金発見を契機にチェナ川沿いに成立し、金鉱町から鉄道・軍事・大学・北極圏研究の中心へ変化したアラスカ内陸部の中核都市である。",
+          "notion_id": "3b25a916-883f-8117-9038-cf4500e9bf78",
+          "kind": "topic"
+        },
+        {
+          "title": "アンカレッジ歴史",
+          "title_en": "History of Anchorage",
+          "definition": "アンカレッジは、先住民が長く暮らしたクック湾岸に、1915年のアラスカ鉄道建設拠点として急速に成立し、軍事・航空・石油・物流の結節点へ成長した「計画都市」である。",
+          "notion_id": "3b25a916-883f-81eb-af1c-d6763ac1733f",
+          "kind": "topic"
+        },
+        {
+          "title": "シアトルの歴史",
+          "title_en": "History of Seattle",
+          "definition": "シアトルは、コースト・セイリッシュの先住民社会の土地に19世紀半ば以降形成され、木材→港湾・アラスカ交易→造船・航空→ソフトウェア・クラウドへと産業の軸を変えながら成長した都市です。",
+          "notion_id": "3b25a916-883f-81b3-a7ff-d318ebabc14d",
+          "kind": "topic"
+        },
+        {
+          "title": "物理学入門",
+          "title_en": "Physics",
+          "definition": "物理学は、物体・エネルギー・空間・時間・場の振る舞いを、測定可能な量と数学的法則で記述する学問。",
+          "notion_id": "3bf5a916-883f-8123-869c-f875fc7f2f6d",
+          "kind": "topic"
+        },
+        {
+          "title": "日常生活における物理学",
+          "title_en": "Everyday Physics",
+          "definition": "物理学は教科書の公式ではなく、歩く・曲がる・冷やす・撮る・聞く・充電する、といった日常のほぼすべてに働いている。日常現象は主に力学、熱、流体、電磁気、波、光によって説明できる。",
+          "notion_id": "3bf5a916-883f-8119-bdd9-d974fdf42a39",
+          "kind": "topic"
+        },
+        {
+          "title": "地学入門",
+          "title_en": "Earth Science",
+          "definition": "地学は、地球とその周辺を、地質・地震・火山・気象・海洋・天文などを横断して理解する学問。",
+          "notion_id": "3bf5a916-883f-813a-b646-dd4440355771",
+          "kind": "topic"
+        },
+        {
+          "title": "化学入門",
+          "title_en": "Chemistry",
+          "definition": "化学は、物質が何ででき、原子や分子がどう結び付き、どのような条件で別の物質へ変化するかを研究する学問。",
+          "notion_id": "3bf5a916-883f-81ab-b0f2-ee17781437b4",
+          "kind": "topic"
+        },
+        {
+          "title": "生物学入門",
+          "title_en": "Biology",
+          "definition": "生物学は、生命の構造・機能・遺伝・進化・多様性・環境との相互作用を研究する学問。",
+          "notion_id": "3bf5a916-883f-81db-8dfa-f5e6de27a43d",
+          "kind": "topic"
+        },
+        {
+          "title": "医学入門",
+          "title_en": "Medicine",
+          "definition": "医学は、人体の正常な構造・機能を理解し、病気やけがの原因・仕組みを明らかにし、予防や治療につなげる学問。",
+          "notion_id": "3bf5a916-883f-81ab-94fc-d3198c6b47dc",
+          "kind": "topic"
+        },
+        {
+          "title": "解剖学入門",
+          "title_en": "Anatomy",
+          "definition": "解剖学は、生物の身体を「何が、どこに、どのような形で存在し、周囲とどうつながるか」という構造の観点から理解する学問。",
+          "notion_id": "3bf5a916-883f-8137-99a4-ec9e45a9d2a8",
+          "kind": "topic"
+        },
+        {
+          "title": "生理学入門",
+          "title_en": "Physiology",
+          "definition": "生理学は、生物の身体がどのように働き、その働きがどのように調節されて生命が維持されるかを研究する学問。",
+          "notion_id": "3bf5a916-883f-81fc-a36a-f1cfc283d4df",
+          "kind": "topic"
+        },
+        {
+          "title": "人体の構造入門",
+          "title_en": "Structure of the Human Body",
+          "definition": "人体は、約数十兆個の細胞が組織をつくり、組織が器官をつくり、複数の器官が器官系として協調する多階層システム。",
+          "notion_id": "3bf5a916-883f-814e-9cab-e9fb6276591c",
+          "kind": "topic"
+        },
+        {
+          "title": "社会学入門",
+          "title_en": "Sociology",
+          "definition": "社会学は、個人の行動や価値観を「その人の性格」だけでなく、家族・学校・会社・階級・制度・文化・歴史など社会構造との関係で理解する学問。",
+          "notion_id": "3c05a916-883f-8191-91e7-d18cdef16d2b",
+          "kind": "topic"
+        },
+        {
+          "title": "文学入門",
+          "title_en": "Literature",
+          "definition": "文学は、言語によって人間の経験・感情・社会・想像世界を表現し、読者がその意味を解釈する芸術・文化実践。",
+          "notion_id": "3c05a916-883f-817e-9f71-f7c19fe7d293",
+          "kind": "topic"
+        },
+        {
+          "title": "建築学入門",
+          "title_en": "Architecture",
+          "definition": "建築学とは、人が安全・快適・持続的に暮らし活動する空間を、意匠・構造・環境・材料などの観点から扱う学問。",
+          "notion_id": "3ba5a916-883f-81e8-9154-faa3c4d3f52f",
+          "kind": "topic"
+        },
+        {
+          "title": "交感神経・副交感神経",
+          "title_en": "Sympathetic / Parasympathetic Nervous System",
+          "definition": "交感神経と副交感神経は、意識せずに心臓・血管・消化管・瞳孔・膀胱・生殖器などを調節する自律神経系の主要2部門。単純なON/OFFではなく状況に応じて働く。",
+          "notion_id": "3bf5a916-883f-813f-ac44-e468e5221c67",
+          "kind": "term"
+        },
+        {
+          "title": "解剖学的肢位と弛緩状態",
+          "title_en": "Anatomical Position",
+          "definition": "解剖学的肢位は、身体の方向を統一して表現するための基準姿勢であり、人体全体の標準姿勢と器官の生理的状態（弛緩状態）とは区別して理解する必要がある。",
+          "notion_id": "3bf5a916-883f-8179-a9b9-f3adc6cd2b7d",
+          "kind": "topic"
+        },
+        {
+          "title": "解剖学的肢位と自律神経",
+          "title_en": "Anatomical Position and Autonomic Nervous System",
+          "definition": "解剖学的肢位（anatomical position）とは、人体の位置・方向を医学的に表現するための共通基準姿勢。",
+          "notion_id": "3bf5a916-883f-81ed-b3d7-d95821140b04",
+          "kind": "topic"
+        },
+        {
+          "title": "オーロラ",
+          "title_en": "Aurora",
+          "definition": "オーロラは、太陽から来た荷電粒子のエネルギーが地球磁気圏を介して上層大気に届き、発光として現れる現象。",
+          "notion_id": "3bf5a916-883f-8120-bb93-ec645c4e28db",
+          "kind": "term"
+        },
+        {
+          "title": "Kp指数（KP値）とオーロラ予報",
+          "title_en": "Kp index",
+          "definition": "Kp指数（Kp index）は、複数の地磁気観測所のK指数を統合した、地球全体の地磁気の乱れの大きさを表す指標。オーロラ予報などに使われる。",
+          "notion_id": "3bf5a916-883f-819d-9545-d82bcc346f83",
+          "kind": "term"
+        },
+        {
+          "title": "エンジンの仕組み",
+          "title_en": "Internal Combustion Engine",
+          "definition": "自動車の内燃エンジンは、燃料と空気を燃やして生じた熱エネルギーを、ピストンなどを介して回転運動（動力）に変える装置。",
+          "notion_id": "3ba5a916-883f-8192-a6fd-e773676d024d",
+          "kind": "topic"
+        },
+        {
+          "title": "日本政治 AtoZ",
+          "title_en": "Japanese Politics",
+          "definition": "日本の政治制度・政党・主要な政策対立・ニュースの読み方・ビジネスへの影響を、2026年8月時点で整理した記事。",
+          "notion_id": "3b55a916-883f-81ff-8c65-d088e301c565",
+          "kind": "topic"
+        },
+        {
+          "title": "村上春樹",
+          "title_en": "Haruki Murakami",
+          "definition": "村上春樹は、現代日本の日常、孤独、喪失、記憶、暴力、異界を、アメリカ文学・音楽・都市文化の影響を受けた文体で描く小説家・翻訳家。",
+          "notion_id": "3bf5a916-883f-8119-8c96-ce05b1d78d48",
+          "kind": "topic"
+        },
+        {
+          "title": "大滝詠一",
+          "title_en": "Eiichi Ohtaki",
+          "definition": "はっぴいえんどで日本語をロックのリズムへ載せる実験に関わり、のちにナイアガラ・レーベルを率いた日本のシンガーソングライター・作曲家・プロデューサー。",
+          "notion_id": "3ba5a916-883f-8162-8801-da326dc83fdb",
+          "kind": "topic"
+        },
+        {
+          "title": "日本ポップス伝(大滝詠一)",
+          "title_en": "",
+          "definition": "大滝詠一がNHK-FMの番組『大瀧詠一の日本ポップス伝』（1995年、続編1999年）で、日本のポップスの成り立ちを音源とともに解説した内容の整理。",
+          "notion_id": "3ba5a916-883f-8151-a836-c6ff63aa9dfe",
+          "kind": "topic"
+        },
+        {
+          "title": "流行歌の歴史",
+          "title_en": "History of Japanese Popular Songs",
+          "definition": "日本の流行歌の歴史とは、明治以降に西洋音楽や、同じ録音を大量複製して届けるメディアと結びつきながら、その時代に広く流行した歌が変化してきた歴史。",
+          "notion_id": "3ba5a916-883f-81ed-918f-f6d18598eb99",
+          "kind": "topic"
+        },
+        {
+          "title": "国内映画市場規模",
+          "title_en": "Japanese Film Market",
+          "definition": "日本の映画館の興行収入（約2,000億円規模）の内訳と、邦画、とりわけアニメや大型日本作品への依存度、関連市場の広がりを整理したメモ。",
+          "notion_id": "3a65a916-883f-8059-b6de-f244449b7d83",
+          "kind": "topic"
+        },
+        {
+          "title": "EBiDAN入門",
+          "title_en": "EBiDAN",
+          "definition": "EBiDAN（恵比寿学園男子部）は1つのアイドルグループではなく、音楽性・キャラクターの異なる男性グループの集合体。",
+          "notion_id": "3c45a916-883f-81f5-bf62-c9bfe532cbd5",
+          "kind": "topic"
+        },
+        {
+          "title": "奈良県",
+          "title_en": "Nara Prefecture",
+          "definition": "奈良県を、地質・水・気候という自然条件から、歴史・文化・産業・県民の暮らしへと続く一つの物語として整理した地域研究。",
+          "notion_id": "3f85a916-883f-81f8-90df-d1901092a7e1",
+          "kind": "topic"
+        },
+        {
+          "title": "大阪府",
+          "title_en": "Osaka Prefecture",
+          "definition": "大阪府を、古代の河内湾・淀川と江戸時代の水運から、商都、そして中小製造業の集積へと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-81ad-945b-dcbc8ba2e892",
+          "kind": "topic"
+        },
+        {
+          "title": "京都府",
+          "title_en": "Kyoto Prefecture",
+          "definition": "京都府を、盆地の地下水・琵琶湖疏水と日本海側の環境から、平安京、織物、精密技術産業へと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-8146-9eac-fc0da68b9a9b",
+          "kind": "topic"
+        },
+        {
+          "title": "和歌山県",
+          "title_en": "Wakayama Prefecture",
+          "definition": "和歌山県を、四万十帯の地質・紀ノ川と熊野の多雨という自然条件から、巡礼・柑橘・林業へと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-8110-9bdf-e2216998e047",
+          "kind": "topic"
+        },
+        {
+          "title": "滋賀県",
+          "title_en": "Shiga Prefecture",
+          "definition": "滋賀県を、約400万年の歴史をもつ琵琶湖・水と街道から、近江商人・工業・暮らしへと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-814f-9e91-decb1895abec",
+          "kind": "topic"
+        },
+        {
+          "title": "三重県",
+          "title_en": "Mie Prefecture",
+          "definition": "三重県を、中央構造線・伊勢湾と熊野灘という自然条件から、伊勢神宮・真珠・工業へと続く物語として整理した地域研究。",
+          "notion_id": "3f85a916-883f-813b-bf54-e03792e04fd8",
+          "kind": "topic"
+        },
+        {
+          "title": "愛知県",
+          "title_en": "Aichi Prefecture",
+          "definition": "愛知県を、濃尾平野・陶土・治水から繊維産業・自動車産業へと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-81a9-8ff1-c9d260a3d04c",
+          "kind": "topic"
+        },
+        {
+          "title": "静岡県",
+          "title_en": "Shizuoka Prefecture",
+          "definition": "静岡県を、伊豆の衝突・富士山の水という自然条件から、東海道・茶・楽器・二輪産業へと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-8187-8501-d79230dbe89f",
+          "kind": "topic"
+        },
+        {
+          "title": "兵庫県",
+          "title_en": "Hyogo Prefecture",
+          "definition": "兵庫県を、日本海・瀬戸内・六甲の断層という自然条件から、五地域の文化と神戸港へと続く流れで整理した地域研究。",
+          "notion_id": "3f85a916-883f-81e1-8d04-ff6a7d83d555",
+          "kind": "topic"
+        },
+        {
+          "title": "日本の地理・地質・水質と食文化",
+          "title_en": "Geography and Food Culture of Japan",
+          "definition": "日本の食文化を、地理・地質・水質などの自然条件と歴史との因果関係として理解し、旅先で自分で食文化を読み解けるようにするためのレポート。",
+          "notion_id": "3b55a916-883f-8197-b55a-f393d0cf8f98",
+          "kind": "topic"
+        },
+        {
+          "title": "日本全国の農作物と食文化―地質・水質・土壌・気候から見る地域差",
+          "title_en": "Regional Crops and Food Culture of Japan",
+          "definition": "日本の農作物と食文化の地域性を、地質・水質・土壌・気候という自然条件に人と技術が適応した結果として整理したレポート。",
+          "notion_id": "3b55a916-883f-81c6-97d2-c91bc717301a",
+          "kind": "topic"
+        },
+        {
+          "title": "お茶の種類",
+          "title_en": "Types of Tea",
+          "definition": "緑茶、烏龍茶、紅茶は多くの場合、同じチャノキ（Camellia sinensis）の葉を、摘採後にどの程度酸化させるかなど製法の違いで作り分けたもの。",
+          "notion_id": "3ba5a916-883f-81f1-af20-d24097b56d04",
+          "kind": "topic"
+        },
+        {
+          "title": "ビールの歴史・地理・スタイル・ペアリング",
+          "title_en": "Beer",
+          "definition": "ビールは、麦芽など穀物に含まれるデンプン由来の糖を酵母で発酵させた酒。",
+          "notion_id": "3b55a916-883f-81d9-8fc2-dde399f7b14f",
+          "kind": "topic"
+        },
+        {
+          "title": "うなぎ",
+          "title_en": "Eel (Unagi)",
+          "definition": "ニホンウナギの生態、シラスウナギの池入れから出荷までの養殖、日本のうなぎ食文化の歴史を整理した記事。",
+          "notion_id": "3b55a916-883f-81ca-a0c9-d220c8d69eaf",
+          "kind": "topic"
+        },
+        {
+          "title": "海外旅行の準備・安全・持ち物完全ガイド",
+          "title_en": "Overseas Travel Preparation Guide",
+          "definition": "海外旅行の安全性と快適性は、現地での対応力より出発前の確認・情報の二重化・紛失時の備えで決まるという考えから、準備・安全・持ち物・保険等を整理したガイド。",
+          "notion_id": "3bf5a916-883f-8138-895c-d68d564b0b67",
+          "kind": "topic"
+        },
+        {
+          "title": "ビザ・ESTA・ETA・eTA・ETIAS",
+          "title_en": "Visa and Electronic Travel Authorization",
+          "definition": "ビザ免除で旅行できる国でも事前審査として求められる電子渡航認証（米国ESTA、英国ETA、カナダeTA、欧州ETIAS等）とビザの違い、入国許可との関係を整理した記事。",
+          "notion_id": "3bf5a916-883f-819e-9114-ead32a5fb84a",
+          "kind": "topic"
+        },
+        {
+          "title": "旅行英語の万能構文",
+          "title_en": "Travel English Patterns",
+          "definition": "旅行英語は英文を毎回ゼロから作らず、汎用性の高い骨格（チャンク）を10〜20個覚え、名詞・動詞・場所だけ交換すると急速に話せる範囲が広がる、という考えに基づく構文集。",
+          "notion_id": "3bf5a916-883f-8153-ab6b-fef0d268bf60",
+          "kind": "topic"
+        },
+        {
+          "title": "海外旅行で使う頻出英会話",
+          "title_en": "Travel English Phrases",
+          "definition": "海外旅行で使う頻出英会話を場面別に整理したフレーズ集。場面ごとに丸暗記し、空欄部分だけを交換して使う。",
+          "notion_id": "3bf5a916-883f-81c6-8146-fc55b542fdbb",
+          "kind": "topic"
+        },
+        {
+          "title": "バイクを体系的に理解するための全体像",
+          "title_en": "How Motorcycles Work",
+          "definition": "バイク全体を7つの領域に分け、走る基本的な流れ・エンジン・ライダーの操作などの仕組みを体系的に整理した記事。",
+          "notion_id": "3ac5a916-883f-8059-967b-fe77829976e3",
+          "kind": "topic"
+        },
+        {
+          "title": "風博士",
+          "title_en": "Kaze Hakase",
+          "definition": "『風博士』（かぜはかせ）は坂口安吾が1931年に文芸誌『青い馬』で発表した短編小説。本記事はその内容と、同名の音楽名義や楽曲歌詞との関係を整理する。",
+          "notion_id": "3f85a916-883f-8107-9f7c-f55b76b61d42",
+          "kind": "topic"
+        },
+        {
+          "title": "ずとまよ『あかねさす頃』",
+          "title_en": "",
+          "definition": "ずっと真夜中でいいのに。の楽曲『あかねさす頃』の歌詞を、古典和歌の枕詞「あかねさす」や万葉集・奈良との関係から考察した記事（作者の公式意図とは区別した解釈）。",
+          "notion_id": "3f85a916-883f-8179-8a6a-c9b74d4bde4b",
+          "kind": "topic"
+        }
+      ]
+    }
+  ],
+  "excluded": []
+}

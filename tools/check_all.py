@@ -23,7 +23,7 @@ def main():
     ap.add_argument("--cycle")
     ap.add_argument("--skip-pdf", action="store_true")
     a = ap.parse_args()
-    ok = run("T-01〜T-05 データ検証", ["validate.py"])
+    ok = run("T-01〜T-05・T-11 データ検証", ["validate.py"])
     ok &= run("T-06 ビューア用データ", ["build_viewer_data.py"])
     cyc = a.cycle
     if not cyc:

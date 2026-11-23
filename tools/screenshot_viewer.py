@@ -6,6 +6,7 @@
   - コンソールのエラーを表示し、エラーがあれば終了コード1。
 """
 import argparse
+import json
 import functools
 import http.server
 import sys
@@ -38,13 +39,18 @@ def main():
     base = f"http://127.0.0.1:{srv.server_address[1]}/index.html"
     errors = []
     # (名前, 幅, 高さ, ハッシュまたは ?menu=節, 端末に保存された設定)
+    # 用語ノードの撮影には、graph.json の最初の用語を使う（IDを直書きしない）
+    term_id = next((n["id"] for n in json.loads((ROOT / "viewer" / "data" / "graph.json").read_text(encoding="utf-8"))["nodes"]
+                    if n["type"] == "term"), "")
     D, L, P = {"theme": "dark", "guided": "1"}, {"theme": "light", "guided": "1"}, {"theme": "light", "view": "plane", "guided": "1"}
     shots = [("iphone", 390, 844, "", D), ("iphone_node", 390, 844, "#con.entropy", D), ("ipad", 820, 1180, "#evd.cmb", D),
              ("iphone_menu", 390, 844, "?menu=index", D), ("desktop", 1440, 900, "", D),
              ("iphone_light", 390, 844, "", L), ("iphone_light_node", 390, 844, "#con.entropy", L),
              ("iphone_plane", 390, 844, "", P), ("desktop_plane", 1440, 900, "", {"theme": "dark", "view": "plane", "guided": "1"}),
              ("iphone_settings", 390, 844, "?menu=settings", L), ("iphone_guide", 390, 844, "", {"theme": "light"}),
-             ("iphone_finder", 390, 844, "?finder=エン", L), ("iphone_focus", 390, 844, "?focus=1", L)]
+             ("iphone_finder", 390, 844, "?finder=エン", L), ("iphone_focus", 390, 844, "?focus=1", L),
+             ("iphone_glossary", 390, 844, "?menu=glossary", L), ("iphone_term", 390, 844, "#" + term_id, D),
+             ("desktop_notes", 1440, 900, "#mth.base-rate", L), ("desktop_notes_off", 1440, 900, "", {"theme": "dark", "notes": "off", "guided": "1"})]
     with sync_playwright() as p:
         exe = "/usr/bin/google-chrome" if Path("/usr/bin/google-chrome").exists() else None
         b = p.chromium.launch(executable_path=exe, args=["--use-gl=swiftshader", "--enable-webgl", "--ignore-gpu-blocklist"])

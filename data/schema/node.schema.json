@@ -22,7 +22,7 @@
     "properties": {
       "id": {
         "type": "string",
-        "pattern": "^(thm|con|evt|act|thy|evd|q|mth)\\.[a-z0-9-]+$"
+        "pattern": "^(thm|con|evt|act|thy|evd|q|mth|trm)\\.[a-z0-9-]+$"
       },
       "type": {
         "enum": [
@@ -33,7 +33,8 @@
           "theory",
           "evidence",
           "question",
-          "method"
+          "method",
+          "term"
         ]
       },
       "title": {
@@ -217,6 +218,28 @@
             }
           }
         }
+      },
+      "origin": {
+        "enum": [
+          "claude",
+          "user-note"
+        ],
+        "description": "出どころ。user-note はユーザーのNotionメモ由来（DOC-01 F11）"
+      },
+      "glossary": {
+        "enum": [
+          "ai",
+          "business",
+          "general"
+        ],
+        "description": "user-note の場合の元の用語集"
+      },
+      "note_kind": {
+        "enum": [
+          "term",
+          "topic"
+        ],
+        "description": "user-note の場合：用語の定義か、解説記事か"
       }
     }
   }

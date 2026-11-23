@@ -16,8 +16,8 @@ const PALETTES = {
 let PAL = PALETTES[document.documentElement.dataset.theme === "light" ? "light" : "dark"];
 let LEVEL_COLORS = PAL.levels;
 const LEVEL_NAMES = ["未学習", "認知", "説明できる", "専門的に理解", "統合・応用", "批判的に検証"];
-const TYPE_EN = { theme: "Theme", concept: "Concept", event: "Event", actor: "Actor", theory: "Theory", evidence: "Evidence", question: "Question", method: "Method" };
-const TYPE_JA = { theme: "テーマ", concept: "概念", event: "出来事", actor: "主体", theory: "理論", evidence: "証拠", question: "問い", method: "思考法" };
+const TYPE_EN = { theme: "Theme", concept: "Concept", event: "Event", actor: "Actor", theory: "Theory", evidence: "Evidence", question: "Question", method: "Method", term: "Term" };
+const TYPE_JA = { theme: "テーマ", concept: "概念", event: "出来事", actor: "主体", theory: "理論", evidence: "証拠", question: "問い", method: "思考法", term: "用語（あなたのメモ）" };
 const EP_TEXT = { fact: ["事実", "観測・測定・史料で確認できる"], theory: ["理論", "強い証拠に支えられた説明"],
   debate: ["論争", "学説・解釈が競合している"], normative: ["規範", "価値・望ましさの問題"],
   hypothesis: ["仮説", "予測・未検証の説明"], unknown: ["未知", "現時点で確定できない"] };
@@ -52,7 +52,7 @@ const safePdf = (f) => (/^output\/[\w./-]+\.pdf$/.test(f || "") ? f : "");
 
 let focusOn = false, focusSet = new Set(), navStack = [];   // DOC-03 §3.8
 let G, byId = {}, mode = ["cyl", "flat", "plane"].includes(store.get("view", "cyl")) ? store.get("view", "cyl") : "cyl", selected = null;
-const meshes = [], labels = {};
+const meshes = [], labels = {}, meshById = {};
 let modeTween = null, camTween = null;
 
 // ---------------------------------------------------------------- シーン
@@ -100,6 +100,7 @@ const SHAPES = {
   event: new THREE.OctahedronGeometry(0.95), actor: new THREE.BoxGeometry(1.1, 1.1, 1.1),
   theory: new THREE.DodecahedronGeometry(0.95), evidence: new THREE.TetrahedronGeometry(1.1),
   question: new THREE.TorusGeometry(0.75, 0.12, 4, 20), method: starGeometry(0.85),
+  term: new THREE.CylinderGeometry(0.45, 0.45, 0.3, 6),   // あなたのメモの用語：小さな六角柱（どの向きからも六角形に見える）
 };
 const EDGES = Object.fromEntries(Object.entries(SHAPES).map(([k, g]) => [k, new THREE.EdgesGeometry(g)]));
 // 当たり判定は形によらず共通の見えない球で行う（細い形でもタップできるように）
@@ -134,13 +135,14 @@ function init(g) {
     const [x, y, z] = n.pos.flat;
     n.pos.plane = [x, -z + (y - 7) * 0.35, 0];   // DOC-03 §3.7
   });
-  $("#ver").innerHTML = `MAP V${esc(G.map_version)} — ${G.stats.nodes} NODES<span class="wide"> — ${G.stats.edges} RELATIONS</span>`;
+  $("#ver").innerHTML = `MAP V${esc(G.map_version)} — ${G.stats.nodes} NODES<span class="wide"> — ${G.stats.edges} RELATIONS — ${G.stats.notes || 0} FROM YOUR NOTES</span>`;
   buildLayers();
   buildDomains();
   buildNodes();
   applyMode(false);
   if (mode === "plane") placeCamera(false);
   buildMenu();
+  applyVisibility();
   initUsability();
   const mq = matchMedia("(prefers-color-scheme: light)");
   const onScheme = () => { if (store.get("theme", "auto") === "auto") applyTheme(); };
@@ -216,6 +218,7 @@ function buildNodes() {
     hit.position.fromArray(n.pos.cyl);
     groups.nodes.add(hit);
     meshes.push(hit);
+    meshById[n.id] = hit;
     const el = document.createElement("div");
     el.className = "lbl l" + n.level;
     el.textContent = n.title.ja;
@@ -224,6 +227,17 @@ function buildNodes() {
     hit.add(o);
     labels[n.id] = o;
   }
+}
+// 表示するノード：領域の絞り込みと「あなたのメモ」の表示設定（DOC-03 §3.8）。選択中のノードは常に表示する
+const notesOn = () => store.get("notes", "on") === "on";
+function applyVisibility() {
+  const dom = $("#f-domain") ? $("#f-domain").value : "";
+  meshes.forEach((m) => {
+    const n = byId[m.userData.id];
+    m.visible = n.id === selected || ((!dom || n.domains.includes(dom)) && (n.type !== "term" || notesOn()));
+  });
+  groups.links.visible = !dom;
+  if (G && groups.links) { buildLinks(); buildHot(); if (typeof renderChips === "function") renderChips(); }
 }
 function nodeColor(n) {
   return n.understanding.status === "presented" && n.understanding.level === 0 ? PAL.presented : LEVEL_COLORS[n.understanding.level] || LEVEL_COLORS[0];
@@ -274,8 +288,10 @@ function buildLinks() {
   clearGroup(groups.links);
   const pos = [];
   const push = (a, b) => { const p = curvePoints(a, b); for (let i = 0; i < p.length - 1; i++) pos.push(p[i].x, p[i].y, p[i].z, p[i + 1].x, p[i + 1].y, p[i + 1].z); };
-  for (const e of G.edges) push(posOf(e.from), posOf(e.to));
-  for (const n of G.nodes) if (n.parent && byId[n.parent]) push(posOf(n.id), posOf(n.parent));
+  // 見えているノードどうしだけを結ぶ（NOTES を隠したとき、見えない用語への線を残さない）
+  const vis = (id) => !meshById[id] || meshById[id].visible;
+  for (const e of G.edges) if (vis(e.from) && vis(e.to)) push(posOf(e.from), posOf(e.to));
+  for (const n of G.nodes) if (n.parent && byId[n.parent] && vis(n.id) && vis(n.parent)) push(posOf(n.id), posOf(n.parent));
   const g = new THREE.BufferGeometry();
   g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
   groups.links.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: PAL.line, transparent: true, opacity: selected || focusOn ? 0.04 : PAL.linkOpacity })));
@@ -392,6 +408,7 @@ function select(id, fly, opts = {}) {
   if (selected && selected !== id && !opts.back) { navStack.push(selected); if (navStack.length > 50) navStack.shift(); }
   selected = id;
   history.replaceState(null, "", "#" + encodeURIComponent(id));
+  applyVisibility();
   applyEmphasis();
   Object.entries(labels).forEach(([k, o]) => o.element.classList.toggle("sel", k === id));
   buildLinks();
@@ -404,6 +421,7 @@ function clearSelection() {
   wake();
   selected = null;
   navStack = [];
+  applyVisibility();
   history.replaceState(null, "", location.pathname);
   applyEmphasis();
   Object.values(labels).forEach((o) => o.element.classList.remove("sel"));
@@ -476,6 +494,7 @@ function renderPanel(n) {
     ${crumbs}
     <div class="kick kick-top">${TYPE_EN[n.type]} — <span class="ep-dot" style="background:${ep[1]}"></span>${ep[0]} — ${CONF_EN[n.confidence]}</div>
     <h2>${esc(n.title.ja)}</h2><div class="en">${esc(n.title.en || "")}</div>
+    ${n.origin === "user-note" ? `<div class="notebar">FROM YOUR NOTES — ${esc((G.glossaries || []).find((x) => x.key === n.glossary)?.title || "")}<span>正本はあなたのNotion。地図には名前と短い定義だけを写しています。</span></div>` : ""}
     ${lessonbar}
     <p>${esc(n.summary)}</p>
     ${n.body ? `<p>${esc(n.body)}</p>` : ""}
@@ -663,6 +682,7 @@ function showSection(sec, reading = true) {
   $("#back").onclick = () => $("#menu-body").classList.remove("reading");
   c.querySelectorAll("[data-node]").forEach((el) => (el.onclick = (ev) => { ev.stopPropagation(); goNode(el.dataset.node); }));
   c.querySelectorAll("[data-theme]").forEach((el) => (el.onclick = () => { store.set("theme", el.dataset.theme); applyTheme(); showSection("settings", $("#menu-body").classList.contains("reading")); }));
+  c.querySelectorAll("[data-notes]").forEach((el) => (el.onclick = () => { store.set("notes", el.dataset.notes); applyVisibility(); wake(); showSection("settings", $("#menu-body").classList.contains("reading")); }));
   c.querySelectorAll("[data-view]").forEach((el) => (el.onclick = () => { setView(el.dataset.view); showSection("settings", $("#menu-body").classList.contains("reading")); }));
 }
 
@@ -670,8 +690,7 @@ function buildMenu() {
   document.querySelectorAll(".sections button").forEach((b) => (b.onclick = () => showSection(b.dataset.sec, true)));
   const run = () => {
     const q = $("#q").value.trim().toLowerCase(), dom = $("#f-domain").value;
-    meshes.forEach((m) => (m.visible = !dom || byId[m.userData.id].domains.includes(dom)));
-    groups.links.visible = !dom;
+    applyVisibility();
     renderChips();
     if (focusOn) { buildHot(); }
     wake();
@@ -694,19 +713,19 @@ const yaOf = (n) => (n.time ? n.time.start_ya : -1e12);
 const RENDER = {
   index() {
     const kids = {};
-    G.nodes.forEach((n) => { if (n.parent) (kids[n.parent] ||= []).push(n); });
+    G.nodes.forEach((n) => { if (n.parent && n.type !== "term") (kids[n.parent] ||= []).push(n); });
     const sortT = (a, b) => yaOf(b) - yaOf(a) || a.title.ja.localeCompare(b.title.ja, "ja");
     const tree = (id, depth) => (kids[id] || []).sort(sortT).map((c) =>
       `<li class="d${Math.min(depth, 4)}" data-node="${esc(c.id)}">${lvSwatch(c)}<span>${esc(c.title.ja)}</span><span class="ty">${TYPE_EN[c.type]}</span></li>` + tree(c.id, depth + 1)).join("");
     const doms = G.domains.map((d) => {
       const themes = G.nodes.filter((n) => n.type === "theme" && n.domains[0] === d.id).sort(sortT);
-      const count = G.nodes.filter((n) => n.domains[0] === d.id).length;
+      const count = G.nodes.filter((n) => n.domains[0] === d.id && n.type !== "term").length;
       return `<details class="dom"${d.id === "D01" ? " open" : ""}><summary><span class="id">${esc(d.id)}</span>
         <span class="ja">${esc(d.ja)}<span class="en">${esc(d.en)}</span></span><span class="n">${count}</span></summary>
         ${themes.map((t) => `<div class="theme"><div class="th" data-node="${esc(t.id)}"><span>${esc(t.title.ja)}</span><small>${esc(t.time ? t.time.label : "TIMELESS")}</small></div>
           <ul class="tree">${tree(t.id, 3)}</ul></div>`).join("")}</details>`;
     }).join("");
-    return `<div class="sec-title">Index</div><p class="sec-lead">領域 → テーマ → 概念・出来事 → 詳細。行を選ぶと、地図のその場所へ移動します。左の小さな四角は理解レベルです。</p>${doms}`;
+    return `<div class="sec-title">Index</div><p class="sec-lead">領域 → テーマ → 概念・出来事 → 詳細。行を選ぶと、地図のその場所へ移動します。左の小さな四角は理解レベルです。あなたのメモの用語は 05 GLOSSARY にあります。</p>${doms}`;
   },
   lessons() {
     return `<div class="sec-title">Lessons</div><p class="sec-lead">カリキュラムと教材。教材は前編・後編のPDFで届きます。</p>` +
@@ -723,11 +742,22 @@ const RENDER = {
     return `<div class="sec-title">Questions</div><p class="sec-lead">問いの在庫。あなたの疑問と未解明の問題が、学習計画の出発点になります。</p><ul class="rows">` +
       G.questions.map((q) => `<li${q.nodes[0] ? ` data-node="${esc(q.nodes[0])}"` : ""}><span class="k">${esc(q.id.replace("qq.", "Q"))}</span><span class="v">${esc(q.text)}</span><span class="r">${STATUS_EN[q.status] || q.status}</span></li>`).join("") + `</ul>`;
   },
+  glossary() {
+    const terms = G.nodes.filter((n) => n.type === "term");
+    const blocks = (G.glossaries || []).map((g) => {
+      const list = terms.filter((n) => n.glossary === g.key).sort((a, b) => a.title.ja.localeCompare(b.title.ja, "ja"));
+      return `<details class="dom"${g.key === "ai" ? " open" : ""}><summary><span class="id">${esc(g.key.toUpperCase())}</span>
+        <span class="ja">${esc(g.title.replace("（あなたのNotionメモ）", ""))}<span class="en">FROM YOUR NOTION</span></span><span class="n">${list.length}</span></summary>
+        <ul class="rows">${list.map((n) => `<li data-node="${esc(n.id)}"><span class="k">${esc(n.domains[0])}</span><span class="v">${esc(n.title.ja)}<span class="note">${esc(n.summary)}</span></span><span class="r">${n.verification === "verified" ? "Verified" : "Note"}</span></li>`).join("")}</ul></details>`;
+    }).join("");
+    return `<div class="sec-title">Glossary</div><p class="sec-lead">あなたのNotionの用語集から取り込んだ用語です（${terms.length}件）。地図の上では、思考法の外側に小さな六角形で並びます。正本はNotionのままで、ここには名前と短い定義だけを写しています。行を選ぶと、地図のその場所へ移動します。定義はClaudeの検証役が少しずつ確かめ、気づいた点を変更点レポートでお知らせします。</p>${blocks}`;
+  },
   legend() {
     const icon = (t) => {
       const paths = { theme: "M17 4 L29 11 L29 23 L17 30 L5 23 L5 11 Z M17 4 L17 30 M5 11 L29 23 M29 11 L5 23", concept: "M17 8 L25 13 L25 21 L17 26 L9 21 L9 13 Z",
         event: "M17 5 L29 17 L17 29 L5 17 Z M5 17 L29 17", actor: "M9 9 H25 V25 H9 Z M9 9 L14 5 H30 L25 9 M25 25 L30 21 V5",
-        theory: "M17 5 L28 13 L24 27 L10 27 L6 13 Z", evidence: "M17 5 L29 28 L5 28 Z", question: "M17 9 A8 8 0 1 1 16.9 9 Z", method: "M17 5 L27 24 L7 24 Z M17 29 L7 10 L27 10 Z" };
+        theory: "M17 5 L28 13 L24 27 L10 27 L6 13 Z", evidence: "M17 5 L29 28 L5 28 Z", question: "M17 9 A8 8 0 1 1 16.9 9 Z", method: "M17 5 L27 24 L7 24 Z M17 29 L7 10 L27 10 Z",
+        term: "M13 11 L21 11 L25 17 L21 23 L13 23 L9 17 Z" };
       return `<svg viewBox="0 0 34 34"><path d="${paths[t]}" fill="none" stroke="currentColor" stroke-width="1"/></svg>`;
     };
     return `<div class="sec-title">Legend</div><p class="sec-lead">地図の読み方。</p>
@@ -755,7 +785,9 @@ const RENDER = {
       <div class="legend-block"><h4>THEME — 配色</h4><div class="opts">${opt("theme", "auto", "AUTO", th)}${opt("theme", "light", "LIGHT", th)}${opt("theme", "dark", "DARK", th)}</div>
         <p class="small">AUTO は端末のライト／ダークの設定に従います。</p></div>
       <div class="legend-block"><h4>VIEW — 表示</h4><div class="opts">${opt("view", "cyl", "3D CYLINDER", mode)}${opt("view", "flat", "3D UNROLLED", mode)}${opt("view", "plane", "2D PLANE", mode)}</div>
-        <p class="small">画面下部の切替と同じです。2D は全体の位置関係を一度に見るのに向いています。</p></div>`;
+        <p class="small">画面下部の切替と同じです。2D は全体の位置関係を一度に見るのに向いています。</p></div>
+      <div class="legend-block"><h4>NOTES — あなたのメモの用語</h4><div class="opts">${opt("notes", "on", "SHOW", store.get("notes", "on"))}${opt("notes", "off", "HIDE", store.get("notes", "on"))}</div>
+        <p class="small">Notionの用語集から取り込んだ用語を、地図に表示するかどうか。隠しても GLOSSARY と検索からは開けます。</p></div>`;
   },
   about() {
     return `<div class="sec-title">About</div>
