@@ -62,6 +62,7 @@ function makeControls(resetView) {
   controls.minDistance = 8;
   controls.maxDistance = 420;
   controls.target.copy(target);
+  controls.addEventListener("change", () => typeof wake === "function" && wake());
 }
 makeControls(true);
 
@@ -70,9 +71,24 @@ const SHAPES = {
   theme: new THREE.IcosahedronGeometry(1.7, 1), concept: new THREE.IcosahedronGeometry(0.75, 0),
   event: new THREE.OctahedronGeometry(0.95), actor: new THREE.BoxGeometry(1.1, 1.1, 1.1),
   theory: new THREE.DodecahedronGeometry(0.95), evidence: new THREE.TetrahedronGeometry(1.1),
-  question: new THREE.TorusGeometry(0.75, 0.001, 3, 20), method: new THREE.OctahedronGeometry(0.75, 0),
+  question: new THREE.TorusGeometry(0.75, 0.12, 4, 20), method: starGeometry(0.85),
 };
 const EDGES = Object.fromEntries(Object.entries(SHAPES).map(([k, g]) => [k, new THREE.EdgesGeometry(g)]));
+// 当たり判定は形によらず共通の見えない球で行う（細い形でもタップできるように）
+const HIT_GEOM = new THREE.SphereGeometry(1.3, 10, 8);
+const HIT_MAT = new THREE.MeshBasicMaterial({ visible: false });
+
+// 思考法：2つの正四面体を組み合わせた星形（出来事の八面体と見分けるため）
+function starGeometry(r) {
+  const a = new THREE.TetrahedronGeometry(r).toNonIndexed();
+  const b = new THREE.TetrahedronGeometry(r).toNonIndexed();
+  b.rotateY(Math.PI / 2);
+  b.rotateX(Math.PI);
+  const pa = a.getAttribute("position").array, pb = b.getAttribute("position").array;
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute([...pa, ...pb], 3));
+  return g;
+}
 
 const groups = {};
 for (const k of ["nodes", "links", "hot", "layersCyl", "layersFlat", "axis", "domains"]) { groups[k] = new THREE.Group(); scene.add(groups[k]); }
@@ -93,8 +109,9 @@ function init(g) {
   applyMode(false);
   buildMenu();
   $("#loading").classList.add("hidden");
-  const hash = decodeURIComponent(location.hash.slice(1));
-  if (byId[hash]) select(hash, true);
+  const fromHash = () => { let h = ""; try { h = decodeURIComponent(location.hash.slice(1)); } catch { h = ""; } if (byId[h] && h !== selected) select(h, true); };
+  fromHash();
+  addEventListener("hashchange", fromHash);
   animate();
 }
 
@@ -142,12 +159,12 @@ function buildNodes() {
     const col = new THREE.Color(LEVEL_COLORS[n.understanding.level] || LEVEL_COLORS[0]);
     const base = n.understanding.status === "presented" && n.understanding.level === 0 ? new THREE.Color("#a8a297") : col;
     // 当たり判定用の面（ほぼ透明）＋ワイヤーフレーム
-    const hit = new THREE.Mesh(SHAPES[n.type] || SHAPES.concept, new THREE.MeshBasicMaterial({ color: base, transparent: true, opacity: 0.08, depthWrite: false }));
+    const hit = new THREE.Mesh(HIT_GEOM, HIT_MAT);
     const wire = new THREE.LineSegments(EDGES[n.type] || EDGES.concept, new THREE.LineBasicMaterial({ color: base, transparent: true, opacity: 0.95 }));
+    wire.rotation.set((n.id.length * 0.37) % 3, (n.id.length * 0.61) % 3, 0);
     hit.add(wire);
     hit.userData = { id: n.id, wire };
     hit.position.fromArray(n.pos.cyl);
-    hit.rotation.set((n.id.length * 0.37) % 3, (n.id.length * 0.61) % 3, 0);
     groups.nodes.add(hit);
     meshes.push(hit);
     const el = document.createElement("div");
@@ -206,6 +223,7 @@ function buildHot() {
 
 // ---------------------------------------------------------------- 表示切替
 function applyMode(animateIt = true) {
+  wake();
   const from = meshes.map((m) => m.position.clone());
   const to = meshes.map((m) => new THREE.Vector3().fromArray(byId[m.userData.id].pos[mode]));
   const axFrom = groups.axis.position.clone();
@@ -264,6 +282,7 @@ function related(id) {
 }
 
 function select(id, fly) {
+  wake();
   selected = id;
   history.replaceState(null, "", "#" + encodeURIComponent(id));
   const rel = related(id);
@@ -281,6 +300,7 @@ function select(id, fly) {
 }
 
 function clearSelection() {
+  wake();
   selected = null;
   history.replaceState(null, "", location.pathname);
   meshes.forEach((m) => { m.userData.wire.material.opacity = 0.95; m.material.opacity = 0.08; m.scale.setScalar(1); });
@@ -368,10 +388,11 @@ function openMenu(sec) {
   $("#menu").classList.remove("hidden");
   if (sec) showSection(sec, false);
 }
-function closeMenu() { $("#menu").classList.add("hidden"); }
+function closeMenu() { $("#menu").classList.add("hidden"); wake(); }
 $("#btn-menu").onclick = () => openMenu(document.querySelector(".sections button.on")?.dataset.sec || "index");
 $("#menu-close").onclick = closeMenu;
 const goNode = (id) => { closeMenu(); select(id, true); };
+addEventListener("keydown", (e) => { if (e.key !== "Escape") return; if (!$("#menu").classList.contains("hidden")) closeMenu(); else if (selected) clearSelection(); });
 
 function showSection(sec, reading = true) {
   document.querySelectorAll(".sections button").forEach((b) => b.classList.toggle("on", b.dataset.sec === sec));
@@ -386,14 +407,19 @@ function showSection(sec, reading = true) {
 function buildMenu() {
   document.querySelectorAll(".sections button").forEach((b) => (b.onclick = () => showSection(b.dataset.sec, true)));
   const run = () => {
-    const q = $("#q").value.trim().toLowerCase();
-    if (!q) { $("#search-results").innerHTML = ""; return; }
-    const hits = G.nodes.filter((n) => n.title.ja.toLowerCase().includes(q) || (n.title.en || "").toLowerCase().includes(q) || n.summary.toLowerCase().includes(q)).slice(0, 30);
+    const q = $("#q").value.trim().toLowerCase(), dom = $("#f-domain").value;
+    meshes.forEach((m) => (m.visible = !dom || byId[m.userData.id].domains.includes(dom)));
+    groups.links.visible = !dom;
+    wake();
+    if (!q && !dom) { $("#search-results").innerHTML = ""; return; }
+    const hits = G.nodes.filter((n) => (!dom || n.domains.includes(dom)) && (!q || n.title.ja.toLowerCase().includes(q) || (n.title.en || "").toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.id.includes(q))).slice(0, 40);
     $("#search-results").innerHTML = hits.length ? hits.map((n) => `<li data-node="${esc(n.id)}"><span class="v">${esc(n.title.ja)}</span><span class="r">${TYPE_EN[n.type]}</span></li>`).join("")
       : `<li><span class="v small">該当なし</span></li>`;
     $("#search-results").querySelectorAll("[data-node]").forEach((el) => (el.onclick = () => goNode(el.dataset.node)));
   };
   $("#q").addEventListener("input", run);
+  G.domains.forEach((d) => $("#f-domain").insertAdjacentHTML("beforeend", `<option value="${esc(d.id)}">${esc(d.id)} ${esc(d.ja)}</option>`));
+  $("#f-domain").addEventListener("change", run);
   showSection("index", false);
 }
 
@@ -436,7 +462,7 @@ const RENDER = {
     const icon = (t) => {
       const paths = { theme: "M17 4 L29 11 L29 23 L17 30 L5 23 L5 11 Z M17 4 L17 30 M5 11 L29 23 M29 11 L5 23", concept: "M17 8 L25 13 L25 21 L17 26 L9 21 L9 13 Z",
         event: "M17 5 L29 17 L17 29 L5 17 Z M5 17 L29 17", actor: "M9 9 H25 V25 H9 Z M9 9 L14 5 H30 L25 9 M25 25 L30 21 V5",
-        theory: "M17 5 L28 13 L24 27 L10 27 L6 13 Z", evidence: "M17 5 L29 28 L5 28 Z", question: "M17 9 A8 8 0 1 1 16.9 9 Z", method: "M17 7 L26 17 L17 27 L8 17 Z" };
+        theory: "M17 5 L28 13 L24 27 L10 27 L6 13 Z", evidence: "M17 5 L29 28 L5 28 Z", question: "M17 9 A8 8 0 1 1 16.9 9 Z", method: "M17 5 L27 24 L7 24 Z M17 29 L7 10 L27 10 Z" };
       return `<svg viewBox="0 0 34 34"><path d="${paths[t]}" fill="none" stroke="#f2efe8" stroke-width="1"/></svg>`;
     };
     return `<div class="sec-title">Legend</div><p class="sec-lead">地図の読み方。</p>
@@ -472,8 +498,8 @@ const RENDER = {
 // ---------------------------------------------------------------- 意味的ズーム（DOC-03 §3.4）
 const tmp = new THREE.Vector3();
 let labelTick = 0;
-function updateLabels() {
-  if (labelTick++ % 3) return;
+function updateLabels(force) {
+  if (!force && labelTick++ % 3) return;
   const d = camera.position.distanceTo(controls.target);
   const maxLevel = d > 190 ? 1 : d > 95 ? 2 : d > 45 ? 3 : 4;
   $("#scale").textContent = SCALE_EN[maxLevel];
@@ -509,7 +535,7 @@ function updateLabels() {
   cand.sort((a, b) => a.pri - b.pri);
   const placed = [];
   for (const c of cand) {
-    if (placed.length >= 60) break;
+    if (placed.length >= 70) break;
     const [a1, b1, a2, b2] = c.r;
     // 上部の題字・下部の操作部とは重ねない
     if (b1 < 70 || b2 > innerHeight - 56) continue;
@@ -520,16 +546,23 @@ function updateLabels() {
 }
 
 // ---------------------------------------------------------------- ループ
+// 全画面メニューが開いている間と、動きのない間は描画しない（iPhoneの電池・発熱対策）
+let dirty = 8;
+const wake = () => (dirty = Math.max(dirty, 8));
 function animate(now) {
   requestAnimationFrame(animate);
+  if (!$("#menu").classList.contains("hidden")) return;
   const t = now ?? performance.now();
-  if (modeTween) modeTween(t);
-  if (camTween) camTween(t);
-  controls.update();
-  updateLabels();
+  if (modeTween) { modeTween(t); wake(); }
+  if (camTween) { camTween(t); wake(); }
+  if (controls.update()) wake();
+  if (dirty <= 0) return;
+  dirty--;
+  updateLabels(true);
   renderer.render(scene, camera);
   labelRenderer.render(scene, camera);
 }
+for (const ev of ["pointerdown", "pointermove", "wheel", "touchmove", "resize", "hashchange"]) addEventListener(ev, wake, { passive: true });
 
 addEventListener("resize", () => {
   const p = innerHeight > innerWidth;

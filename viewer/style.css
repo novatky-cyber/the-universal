@@ -1,6 +1,6 @@
 /* The Universal — viewer v2（DOC-03 §3・§7、ADR-0004） */
 :root {
-  --bg: #0b0b0b; --ink: #f2efe8; --dim: #8d887e; --faint: #4a4741; --hair: rgba(242, 239, 232, 0.14); --red: #c8402a; --cream: #e9dcc0;
+  --bg: #0b0b0b; --ink: #f2efe8; --dim: #8d887e; --faint: #75706a; --hair: rgba(242, 239, 232, 0.14); --red: #c8402a; --cream: #e9dcc0;
   --serif-en: "Instrument Serif", "Shippori Mincho B1", serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", serif;
@@ -22,7 +22,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 #hud { position: fixed; top: 0; left: 0; right: 0; z-index: 5; display: flex; justify-content: space-between; align-items: flex-start;
   padding: calc(var(--safe-t) + 16px) 18px 0; pointer-events: none; }
 #hud > * { pointer-events: auto; }
-#hud .sub { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; color: var(--dim); margin-top: 6px; }
+#hud .sub { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--dim); margin-top: 6px; }
 #btn-menu { display: flex; align-items: center; gap: 10px; }
 #btn-menu i { display: block; width: 22px; height: 7px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 
@@ -40,9 +40,9 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .lbl.l2 { font-family: var(--mincho); font-weight: 700; font-size: 13.5px; color: var(--ink); }
 .lbl.sel { color: #fff; font-weight: 700; }
 .lbl.sel::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--red); margin-right: 6px; vertical-align: 1px; }
-.dlbl { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; color: var(--dim); white-space: nowrap; pointer-events: none; }
+.dlbl { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; color: var(--dim); white-space: nowrap; pointer-events: none; }
 .dlbl b { color: var(--ink); font-weight: 500; margin-right: 6px; }
-.tick { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; color: var(--faint); white-space: nowrap; pointer-events: none; }
+.tick { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--faint); white-space: nowrap; pointer-events: none; }
 
 /* ---- ノードの詳細パネル */
 #panel { position: fixed; left: 0; right: 0; bottom: 0; max-height: 60vh; overflow-y: auto; z-index: 7; background: rgba(11, 11, 11, 0.94);
@@ -55,19 +55,19 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 #panel .grip { width: 36px; height: 2px; background: var(--faint); margin: 2px auto 12px; }
 #panel-close { position: absolute; top: 6px; right: 18px; font-size: 10px; color: var(--dim); }
 @media (min-width: 900px) { #panel-close { top: 22px; right: 30px; } }
-.kick { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.2em; color: var(--dim); text-transform: uppercase; }
+.kick { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; color: var(--dim); text-transform: uppercase; }
 .kick .ep-dot { display: inline-block; width: 7px; height: 7px; margin: 0 6px 0 2px; vertical-align: 0; }
 #panel h2 { font-family: var(--mincho); font-weight: 700; font-size: 24px; line-height: 1.4; margin: 12px 0 2px; letter-spacing: 0.02em; }
 #panel .en { font-family: var(--serif-en); font-style: italic; font-size: 17px; color: var(--dim); margin-bottom: 16px; }
 #panel p { font-size: 14px; line-height: 1.9; margin: 0 0 12px; color: #e4e0d7; }
-#panel h3 { font-family: var(--mono); font-weight: 500; font-size: 9.5px; letter-spacing: 0.24em; color: var(--dim); margin: 26px 0 10px;
+#panel h3 { font-family: var(--mono); font-weight: 500; font-size: 10.5px; letter-spacing: 0.24em; color: var(--dim); margin: 26px 0 10px;
   padding-top: 10px; border-top: 1px solid var(--hair); }
 #panel ul { list-style: none; margin: 0; padding: 0; }
 #panel li { font-size: 13.5px; line-height: 1.7; padding: 5px 0; }
 #panel a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--faint); }
 .rel { cursor: pointer; border-bottom: 1px solid var(--faint); }
 .rel:hover { border-color: var(--red); }
-.rt { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; color: var(--dim); margin-right: 8px; text-transform: uppercase; }
+.rt { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--dim); margin-right: 8px; text-transform: uppercase; }
 .note { display: block; font-size: 12px; color: var(--dim); margin-top: 2px; }
 .levels { display: flex; gap: 4px; margin: 6px 0 8px; }
 .levels i { flex: 1; height: 3px; background: #262421; }
@@ -87,7 +87,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   .menu-content { padding: 30px 48px 60px; }
 }
 .search { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--faint); padding-bottom: 6px; }
-.search span { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.22em; color: var(--dim); }
+.search span { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; color: var(--dim); }
 .search input { flex: 1; background: none; border: none; color: var(--ink); font-family: var(--gothic); font-size: 16px; outline: none; padding: 6px 0; }
 .search input::placeholder { color: var(--faint); }
 .sections { list-style: none; margin: 22px 0 0; padding: 0; }
@@ -108,9 +108,9 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .rows { list-style: none; margin: 0; padding: 0; }
 .rows li { display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14px; line-height: 1.55; cursor: pointer; }
 .rows li:active { background: #141414; }
-.rows .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; color: var(--dim); min-width: 64px; text-transform: uppercase; }
+.rows .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--dim); min-width: 64px; text-transform: uppercase; }
 .rows .v { flex: 1; }
-.rows .r { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; color: var(--dim); white-space: nowrap; }
+.rows .r { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--dim); white-space: nowrap; }
 .rows a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--red); font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; margin-left: 10px; }
 #search-results { margin-top: 6px; }
 #search-results li { font-size: 13.5px; padding: 9px 0; }
@@ -127,24 +127,32 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .theme { margin: 0 0 14px 52px; }
 .theme > .th { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; cursor: pointer; border-bottom: 1px solid var(--hair); }
 .theme > .th span { font-family: var(--mincho); font-weight: 700; font-size: 15px; }
-.theme > .th small { font-family: var(--mono); font-size: 9.5px; color: var(--dim); letter-spacing: 0.1em; }
+.theme > .th small { font-family: var(--mono); font-size: 10.5px; color: var(--dim); letter-spacing: 0.1em; }
 .tree { list-style: none; margin: 4px 0 0; padding: 0; }
 .tree li { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; font-size: 13.5px; cursor: pointer; }
 .tree li .lv { width: 7px; height: 7px; flex: none; }
-.tree li .ty { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; color: var(--faint); margin-left: auto; text-transform: uppercase; }
+.tree li .ty { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--faint); margin-left: auto; text-transform: uppercase; }
 .tree .d4 { padding-left: 18px; color: #cfcac0; }
 
 /* 凡例 */
 .legend-block { margin-bottom: 34px; }
-.legend-block h4 { font-family: var(--mono); font-weight: 500; font-size: 9.5px; letter-spacing: 0.24em; color: var(--dim); margin: 0 0 12px;
+.legend-block h4 { font-family: var(--mono); font-weight: 500; font-size: 10.5px; letter-spacing: 0.24em; color: var(--dim); margin: 0 0 12px;
   padding-top: 10px; border-top: 1px solid var(--hair); }
 .grad { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; }
 .grad i { height: 8px; display: block; }
-.grad span { font-family: var(--mono); font-size: 9.5px; color: var(--dim); }
+.grad span { font-family: var(--mono); font-size: 10.5px; color: var(--dim); }
 .legend-row { display: grid; grid-template-columns: 54px 1fr; align-items: center; gap: 14px; padding: 7px 0; font-size: 13.5px; }
 .legend-row svg { width: 34px; height: 34px; }
 .legend-block p { font-size: 13.5px; line-height: 1.9; color: #d9d4c8; margin: 0 0 10px; }
 .ep-chip { font-size: 11px; padding: 2px 7px; color: #0b0b0b; }
 
 #loading { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: var(--bg); text-align: center; padding: 0 30px; }
-#loading small { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.24em; color: var(--dim); line-height: 1.8; }
+#loading small { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.24em; color: var(--dim); line-height: 1.8; }
+
+/* v0.2.1：タップ領域（44px）と絞り込み */
+.textbtn, #btn-menu, #menu-close, #foot button, .sections button { min-height: 44px; }
+.rel, .tree li, .rows li, #search-results li { min-height: 44px; display: flex; align-items: center; }
+.search.filter { margin-top: 14px; }
+.search select { flex: 1; background: transparent; color: var(--ink); border: none; font: inherit; font-size: 16px; padding: 6px 0; -webkit-appearance: none; appearance: none; }
+html, body { overscroll-behavior: none; }
+#hud, #foot { padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); }

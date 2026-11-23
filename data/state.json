@@ -1,7 +1,7 @@
 {
   "cycle": 1,
   "map_version": "1.0",
-  "system_version": "0.1.0",
+  "system_version": "0.2.0",
   "last_run": "2026-11-23",
   "current_session": "P01-S01",
   "next_cycle_plan": "サイクル2：P01-S02（生命の起源と進化）の教材L0002。第1回の回答があれば評価結果を復習に反映。D03の詳細ノードと出典未登録ノードの調査・検証。",
@@ -21,11 +21,11 @@
     }
   ],
   "awaiting_user": [
-    "確認②：3Dビューアと教材PDFの見た目・使い心地",
-    "GitHub Pages の有効化（Settings → Pages → main / root）",
-    "第1回の回答（任意）"
+    "確認②（再）：v0.2のデザイン",
+    "第1回の回答（任意）",
+    "確認③：定期実行の曜日・時刻"
   ],
-  "phase_gate": "P2（試作）完了・確認②待ち",
+  "phase_gate": "P2（試作）v0.2・確認②（再）待ち",
   "map_refs": {
     "1.0": "9cbd08eb2e3895ab3401f278670cba2f80557376"
   }

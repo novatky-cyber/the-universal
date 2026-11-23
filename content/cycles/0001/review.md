@@ -68,3 +68,53 @@ iPhone での使い勝手（回転、マルチタッチ、importmap の非対応
 - 中：tween の分離（modeTween / camTween）、画面の向きの変化でコントロールを作り直す、importmap 非対応時の案内、ピンチ後の誤選択防止と非表示ノードの除外、URL のスキーム検査（schema と表示側の両方）、T-04 の判定、map_diff の参照エラー・既定参照・Markdown出力、相対パスの解決、見出し判定、ラベル位置（CSS2DObject.center）、フッターの発行日、書式の誤った参照の検出
 - 低：CRLF の正規化、NaN 時に graph.json を書き出さない、-webkit-backdrop-filter
 - 未対応（次版で検討）：O(N²) の探索（現規模では問題なし）、graph.json に理解レベルと問いが含まれる点（要件どおり要約のみ公開）
+
+---
+# v0.2 レビュー（独立レビュー、2026-11-23）
+# v0.2 デザイン刷新 独立レビュー（差分 0207ac9..2b4bbee：viewer / index.html / tools / templates）
+
+実行確認：`setup_fonts.sh`（取得済み）、`check_all.py` OK（教材 a 24p・b 18p、レポート 7p）、`screenshot_viewer.py`（iPhone 390×844・iPad・メニュー・デスクトップ）をエラーなしで撮影。PDF は書体5種の埋め込みを `pdffonts` で確認。
+
+| 重要度 | 場所 | 内容 | 修正案 |
+|---|---|---|---|
+| 高 | `viewer/app.js` SHAPES.question（`TorusGeometry(0.75, 0.001, 3, 20)`）と pointerup の raycast | 当たり判定に使うメッシュは管の太さ0.001の輪なので、三角形の面積がほぼゼロ。**問いのノード（15件）は地図上でタップしても選べない**（メニューからは選べる）。 | 当たり判定は形と分ける。たとえば全種類に共通の見えない球（`SphereGeometry(1.0)`）を hit にして、ワイヤーフレームを子にする。または question だけ `TorusGeometry(0.75, 0.35, …)` を hit にする。 |
+| 高 | `templates/print.css` の `@page { margin: 20mm }` と `render_pdf.pdf_from_html(cover=True)` | 表紙のPDFに上下左右20mmの白い余白が付き、黒地が縮小されて真ん中に置かれている（1ページ目を画像にし、周囲の画素が白であることを確認）。CSS の @page の余白が Playwright の `margin=0` より優先されるため。DOC-03 §4.1「表紙：余白なし・黒地」に反する。 | `cover.html.j2` に `<style>@page{size:210mm 297mm;margin:0}</style>` を css の後に足す（または `@page :first` ではなく名前付きページを使う）。`prefer_css_page_size=True` にして、表紙のテストに「1ページ目の四隅が黒」の検査を加える。 |
+| 中 | `viewer/app.js` SHAPES.method（`OctahedronGeometry(0.75)`） | DOC-03 §3.4 では「正四面体の対（星形）」なのに、出来事（event）と同じ八面体を大きさ違いで使っている。形で種類を見分けられない（凡例のアイコンも菱形でほぼ同じ）。 | 2つの `TetrahedronGeometry` を反転させて合わせ、星形八面体の EdgesGeometry を作る。凡例のアイコンも星形にする。 |
+| 中 | `index.html` / `buildMenu`（F4・DOC-02 §3-6） | v0.1 にあった**領域フィルタ（3D上の表示も絞る）がなくなった**。F4「検索とフィルタ：名称、領域、時代、認識ラベル、理解レベル、Phase」のうち、名称検索しか残っていない。ID での検索もなくなった。 | SEARCH の下に DOMAIN / LEVEL / LABEL の小さな切替を置き、`meshes[].visible` に反映する。今回の版で入れないなら、DOC-03 §3.6 に「保留」と書き、state.pending に記録する。 |
+| 中 | `docs/02_基本設計書.md` §3-6（差分の外だが、実装と矛盾） | 「上部バー：検索・フィルタ」「凡例」「エッジは選択したノードの関係のみ強調表示（全エッジを常時描くと糸くず状になるため）」が古いまま。ADR-0004 と DOC-03 §3.4（全関係を常時描く、凡例はメニュー）と食い違う。 | DOC-02 §3-6 の画面構成と線の方針を ADR-0004 に合わせて改訂し、版を上げる（設計書が先、のルール）。 |
+| 中 | `tools/figures.py`（expansion, clocks, time_origin, entropy, matter_flow, evidence, h0_chart, composition, unknown_types） | DOC-03 §4.3 にある自動生成の図は minimap / cosmic_timeline / domain_coverage の3つだけ。9つの説明図は設計書にない。さらに H₀ の値（67.4±0.5、70.39±1.9、「H0DN 2026」73.50±0.81）、38マイクロ秒、33cm、4.9/26.4/68.7% などの**数値と出典名がコードに直接書かれていて**、sources.json・認識ラベル・検証日の管理（CLAUDE.md 絶対ルール5・6）を通らない。 | DOC-03 §4.3 に「教材用の説明図」を追加する。数値は `data/`（または原稿の frontmatter）に出典IDと一緒に置き、図はそれを読み込む。Verifier の照合対象に含める。「H0DN 2026」が実在するかは再確認が必要。 |
+| 中 | `viewer/app.js` animate() | メニュー（全画面）が開いているときも、操作していないときも、毎フレーム WebGL と CSS2D の描画、`updateLabels` を回し続ける。iPhone の電池と発熱の負担になる。 | メニューが開いている間はループを止める（`#menu` が非表示のときだけ描画する）。controls の `change` イベントや tween の最中だけ描画する、要求があったときだけ描く方式にする。 |
+| 中 | `viewer/style.css`（.textbtn、#foot、#panel-close、.rel、.tree li） | タップ領域が44pxに届かない：MENU／CLOSE／CYLINDER／UNROLLED は約30px、関係の `.rel` は1行の span（約23px）、目次の行は約33px。 | `.textbtn{min-height:44px;min-width:44px;display:inline-flex;align-items:center}`。`.rel` は `display:inline-block;padding:10px 0`、`.tree li` は `min-height:44px`。 |
+| 中 | `viewer/style.css` `--faint #4a4741`、9〜9.5px の等幅文字 | `--faint` は地 #0b0b0b に対してコントラスト比が約2.1:1しかない（時間の目盛り、目次の種類 THEORY など、メニューの番号、入力欄の案内文）。`.kick`／`h3`／`.rt`／`.r`／`.tick` は 9〜9.5px で、iPhone では読みにくい。 | 情報を担う文字には `--dim`（約5.6:1）以上を使い、`--faint` は罫線専用にする。等幅のラベルは最小 10.5〜11px にする。 |
+| 低 | `viewer/app.js` init の `decodeURIComponent(location.hash…)` | 壊れたハッシュ（例：`#%E3`）で URIError が出て、地図全体が表示されない（catch で読み込み画面にエラー文が出る）。`hashchange` も監視していないため、同じページ内のリンクでは移動しない。 | try/catch で囲む。`addEventListener("hashchange", …)` を足す。 |
+| 低 | `viewer/app.js` clearSelection | `replaceState(location.pathname)` がクエリ文字列を消す。 | `location.pathname + location.search` にする。 |
+| 低 | `viewer/app.js` renderPanel / RENDER | エスケープ漏れ：`EDGE_EN[e.type] \|\| e.type`、`STATUS_EN[x] \|\| x`、`n.target_level`、`CONF_EN[...]`。今はデータがパイプライン経由なので実害はない。また `EP[e.epistemic]` が未定義だと例外になる。 | 予備の値は必ず `esc()` を通す。`EP[...] \|\| EP.unknown` のように既定値を置く。 |
+| 低 | `tools/render_pdf.py` sources_html、ヘッダーのテンプレート、Jinja `autoescape=False` | 出典の title／url、fm.title が HTML のまま埋め込まれる（`&` や `<` を含む題名で表示が崩れる）。 | `html.escape` を使う。Jinja は `autoescape=True` にし、本文だけ `|safe` で渡す。 |
+| 低 | `tools/render_pdf.py` の本文フッター | ページ番号は本文PDFの中で数えるので、表紙と結合すると「1 / 23」（実際は24ページ）とずれる。 | フッターに表紙の分の差を書く。または pypdf で結合した後にページ番号を振る。 |
+| 低 | `templates/print.css` `.box-analogy` | `linear-gradient` で背景を塗っている。ADR-0004「囲みは塗りつぶさない」、F10「グラデーションの多用を避ける」に反する。 | 背景を外し、左の生成りの罫だけにする。 |
+| 低 | `templates/cover.html.j2` | F7① の表紙要件「前提となるノード」がない（frontmatter の `prerequisites`）。レポートの表紙から「地図の版 前→後」の表示がなくなった。 | meta に PREREQUISITES を足す（空なら「—」）。レポートは MAP に `map_version_from → v…` を出す。 |
+| 低 | `viewer/app.js` updateLabels | 同時に出すラベルが最大60件（DOC-03 §3.4 は70件）。ラベルの重なり判定に時間の目盛りが入っていないので、iPhone の縦画面では領域名が過去の端（13.8 GYR）に固まって目盛りと重なり、10領域のうち3つしか見えない。`|x|<1.1` まで許すため、iPad では画面の端でラベルが切れる。 | 上限を70にそろえる（または設計を直す）。目盛りも重なり判定に入れ、縦画面では領域名の置き場所を変える。画面内の判定はラベルの幅を使って行う。 |
+| 低 | `viewer/style.css` safe-area・スクロール | 横画面の左右の safe-area（ノッチ）を考えていない。`#panel` の `max-height:60vh` は iOS のアドレスバーで高さが変わる。`overscroll-behavior` の指定がない。 | `padding-left/right: max(18px, env(safe-area-inset-left/right))`。`60dvh`（`60vh` を予備に）。`#panel, .menu-content, .menu-nav { overscroll-behavior: contain }`。 |
+| 低 | `viewer/app.js` posOf / buildLinks | `meshes.find` を辺ごとに呼ぶので O(E·N) になる。ノードを選ぶたびに全部の線を作り直している。今の136ノードなら問題ないが、地図が育つと重くなる。 | `id → mesh` の Map を持つ。選択時は線を作り直さず、material の opacity だけ変える。 |
+| 低 | `viewer/app.js` resize | 縦横が変わると `makeControls(true)` でカメラが初期位置に戻る（target は前のまま残るため、視点が飛ぶ）。 | 縦横が変わったときは target を保ち、距離だけ合わせる。 |
+| 低 | アクセシビリティ | MENU に `aria-expanded` がない。メニューにフォーカスを閉じ込める処理がなく、Esc でも閉じない。`li[data-node]` と `.rel` はキーボードで操作できない。`#panel` に付けた `aria-live` は、パネルの本文全体を毎回読み上げる。`maximum-scale=1` で拡大を止めている。 | button 要素にするか `tabindex="0"`＋Enter で動くようにする。Esc で閉じる。aria-live を外す。`maximum-scale` を削除する。 |
+| 低 | `index.html`（外部への送信） | Google Fonts と jsDelivr から読み込む（閲覧者の IP が第三者に渡る。SRI もない）。ADR-0004 で受け入れ済みの判断だが、プライバシーの観点で記録しておく。 | 将来は書体と three.js をリポジトリ内に置く（@fontsource はすでに取得済み）。 |
+| 低 | 保守性 | `check_all.py` は JS を検査しない。`build_viewer_data.py` が関数の中で import しており、`fm['report_id']` がないと KeyError になる。figures の `h0_chart` は `"70.39"` という文字列で特別扱いしている。 | `node --check viewer/app.js` を check_all に足す。import は先頭に移す。必須キーを検証する。注記はデータ側に持たせる。 |
+
+## 総評
+- 設計の方向（モノクロの線画＋朱赤、英語のナビゲーション、書体の構成、メニューの構成）は ADR-0004・DOC-03 §3.6/§7 とよく合っている。PDF に書体が埋め込まれていること、iPhone の画面で読めることも確認できた。
+- ただし「問いのノードが地図上で選べない」「表紙が全面の黒地にならない」の2点は、目に見える不具合なので、公開前に直すべき。形の重複、フィルタの消失、DOC-02 が古いまま、図に数値を直接書いていることも、設計と実装の不一致として片付けたい。
+- iPhone 向けには、描画ループを止めること、44pxのタップ領域、薄い文字のコントラストと小さすぎる文字の改善を優先するとよい。
+
+## 対応記録（Implementer）
+- 高1 問いのノードがタップできない：当たり判定を共通の見えない球（HIT_GEOM）に変更し、形はその子のワイヤーフレームに分離
+- 高2 表紙の白い余白：表紙テンプレートに `@page { margin: 0 }` を追加。四隅の画素が黒（#0b0b0b）であることを確認
+- 中 思考法の形：設計どおり正四面体の対（星形）に変更、凡例のアイコンも変更
+- 中 領域フィルタ・ID検索：メニューの SEARCH に DOMAIN の絞り込みとID検索を復活（3D上でも非該当を隠す）
+- 中 DOC-02 §3-6 の食い違い：基本設計書 v1.2 で改訂
+- 中 設計書にない図・図中の数値：詳細設計書 v2.1 §4.3 に図解9点と「図の数値は本文の出典付きの値と同一、独立検証の対象」の規則を追加（4次検証で図の数値を照合済み。H0DN 2026 は src.h0dn-2026 として実在確認済み）
+- 中 描画ループ：メニュー表示中と静止時は描画を止める（操作・遷移で再開）
+- 中 タップ領域：主要な操作部と行の最小高さを44pxに
+- 中 文字の薄さ・小ささ：--faint を #75706a（コントラスト比 約3.9:1）に、9〜9.5pxのラベルを10.5pxに
+- 低：壊れたハッシュの例外処理と hashchange、Esc で閉じる、ラベル上限70件、safe-area（左右）、overscroll-behavior、maximum-scale の削除、たとえの囲みの塗りを廃止
+- 未対応（次版で検討）：PDFのページ番号の表紙分のずれ、PDFテンプレートの autoescape、線の描画処理の計算量、縦横切替時の視点の保持、iPhone縦画面での領域名の重なり、check_all での JS 検査

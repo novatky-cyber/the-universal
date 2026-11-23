@@ -71,7 +71,7 @@ sup.cite { font-family: var(--mono); font-size: 6pt; color: var(--red); margin-l
 .box .box-title .tag { font-family: var(--mono); font-weight: 500; font-size: 6.5pt; letter-spacing: 0.22em; color: var(--red); margin-right: 3mm; vertical-align: 0.15em; }
 .box p:last-child, .box ul:last-child { margin-bottom: 1.5mm; }
 .box em { font-size: 8.4pt; }
-.box-analogy { border-left-color: var(--cream); border-left-width: 2.4pt; background: linear-gradient(90deg, #f7f2e7, #fbfaf7 70%); padding: 3mm 4mm 1.5mm 5mm; }
+.box-analogy { border-left-color: var(--cream); border-left-width: 2.4pt; background: none; padding: 3mm 4mm 1.5mm 5mm; }
 .box-caution { border-left-color: var(--red); }
 .box-exercise { border: 0.6pt solid var(--ink); padding: 3.5mm 4.5mm 1.5mm; }
 .box-background { border-left: none; border-top: 0.6pt solid var(--ink); padding: 3mm 0 0; }
