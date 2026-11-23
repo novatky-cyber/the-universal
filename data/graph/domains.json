@@ -1,0 +1,72 @@
+[
+  {
+    "id": "D01",
+    "ja": "宇宙・物理学",
+    "en": "Universe & Physics",
+    "order": 0,
+    "ai_question": "半導体はなぜ計算できるか。計算になぜ電力が必要か"
+  },
+  {
+    "id": "D02",
+    "ja": "数学・情報科学",
+    "en": "Mathematics & Information",
+    "order": 1,
+    "ai_question": "AIの学習・推論は数学的にどう成立するか"
+  },
+  {
+    "id": "D03",
+    "ja": "生命・脳科学",
+    "en": "Life & Brain Sciences",
+    "order": 2,
+    "ai_question": "人間の知能とAIの知能の共通点・相違点は何か"
+  },
+  {
+    "id": "D04",
+    "ja": "技術・産業史",
+    "en": "Technology & Industry",
+    "order": 3,
+    "ai_question": "AI革命は過去の技術革新と何が似て異なるか"
+  },
+  {
+    "id": "D05",
+    "ja": "経済・経営学",
+    "en": "Economics & Management",
+    "order": 4,
+    "ai_question": "AIで生産性・雇用・賃金・企業利益はどうなるか"
+  },
+  {
+    "id": "D06",
+    "ja": "政治・法・国際関係",
+    "en": "Politics, Law & International Relations",
+    "order": 5,
+    "ai_question": "AIを誰が開発・支配・規制するか"
+  },
+  {
+    "id": "D07",
+    "ja": "歴史・文明・宗教",
+    "en": "History, Civilization & Religion",
+    "order": 6,
+    "ai_question": "知識・技術・制度はどう蓄積・伝播したか"
+  },
+  {
+    "id": "D08",
+    "ja": "哲学・倫理・思想",
+    "en": "Philosophy, Ethics & Thought",
+    "order": 7,
+    "ai_question": "知能、意識、人間、自由、幸福、責任とは何か"
+  },
+  {
+    "id": "D09",
+    "ja": "文化・文学・芸術",
+    "en": "Culture, Literature & Arts",
+    "order": 8,
+    "ai_question": "AIが生成できる時代に創造・真正性の意味は何か"
+  },
+  {
+    "id": "D10",
+    "ja": "社会・未来研究",
+    "en": "Society & Futures",
+    "order": 9,
+    "ai_question": "AI社会はどのような仕組み・格差・機会を生むか"
+  }
+]

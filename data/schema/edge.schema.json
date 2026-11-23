@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "edges",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "from",
+      "to",
+      "type",
+      "epistemic"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^e\\.[0-9]{4,}$"
+      },
+      "from": {
+        "type": "string"
+      },
+      "to": {
+        "type": "string"
+      },
+      "type": {
+        "enum": [
+          "causes",
+          "enables",
+          "requires",
+          "part_of",
+          "precedes",
+          "supports",
+          "contradicts",
+          "analogous",
+          "instance_of",
+          "applies",
+          "evidence_for",
+          "raises",
+          "addresses"
+        ]
+      },
+      "epistemic": {
+        "enum": [
+          "fact",
+          "theory",
+          "debate",
+          "normative",
+          "hypothesis",
+          "unknown"
+        ]
+      },
+      "note": {
+        "type": "string"
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

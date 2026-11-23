@@ -1,0 +1,164 @@
+[
+  {
+    "id": "qq.0001",
+    "text": "時間そのものに起源はあるか",
+    "origin": "handoff",
+    "status": "exploring",
+    "nodes": [
+      "q.origin-of-time"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0002",
+    "text": "なぜ初期宇宙は低エントロピーだったのか",
+    "origin": "open-problem",
+    "status": "open-problem",
+    "nodes": [
+      "q.low-entropy-past"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0003",
+    "text": "ダークマターとダークエネルギーの正体は何か",
+    "origin": "open-problem",
+    "status": "open-problem",
+    "nodes": [
+      "q.nature-dark-matter-energy"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0004",
+    "text": "生命はどのように誕生したのか",
+    "origin": "open-problem",
+    "status": "open-problem",
+    "nodes": [
+      "q.origin-of-life"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0005",
+    "text": "なぜ生成AIは2020年代に急速に発展・普及したのか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.why-genai-2020s"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0006",
+    "text": "半導体はなぜ計算でき、計算にはなぜ電力が必要か",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.computation-physics"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0007",
+    "text": "AIの学習・推論は数学的にどう成り立つか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.math-of-learning"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0008",
+    "text": "人間の知能とAIの知能の共通点と相違点は何か",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.human-vs-ai-intelligence"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0009",
+    "text": "AI革命は過去の技術革新と何が似て、何が異なるか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.ai-vs-past-revolutions"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0010",
+    "text": "AIで生産性・雇用・賃金・企業利益はどうなるか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.ai-economy-effects"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0011",
+    "text": "AIを誰が開発・支配・規制するのか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.ai-control"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0012",
+    "text": "知識・技術・制度はどう蓄積・伝播したか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.knowledge-transmission"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0013",
+    "text": "知能・意識・人間・自由・責任とは何か",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.what-is-intelligence"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0014",
+    "text": "AIが生成できる時代に、創造や真正性の意味は何か",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.creativity-authenticity"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0015",
+    "text": "AI社会はどのような仕組み・格差・機会を生むか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "q.ai-society"
+    ],
+    "created": "2026-11-23"
+  },
+  {
+    "id": "qq.0016",
+    "text": "（第1回・問1）「宇宙が約138億年前に始まった」という説明から、最も正確に言えることはどれか",
+    "origin": "handoff",
+    "status": "open",
+    "nodes": [
+      "thy.hot-big-bang",
+      "q.origin-of-time"
+    ],
+    "created": "2026-11-23",
+    "notes": "ChatGPT上で提示・未回答・未採点。選択肢Bは画面の初期値であり、ユーザーの回答ではない。"
+  }
+]

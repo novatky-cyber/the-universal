@@ -1,0 +1,517 @@
+{
+  "scale": "L0未学習 L1認知 L2説明 L3専門理解 L4統合応用 L5批判的検証",
+  "nodes": {
+    "con.age-of-universe": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.ai-productivity-confounding": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.arrow-of-time": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.cosmic-composition": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.cosmic-expansion": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.dark-energy": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.dark-matter": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.entropy": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.evolving-dark-energy": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.first-cause": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.hubble-tension": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.lithium-problem": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.newtonian-time": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.path-dependence-legacy": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.planck-time": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.scenarios-2035": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.science-religion": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.singularity": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.spacetime": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "con.time-dilation": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evd.bbn-abundances": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evd.clock-tests": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evd.cmb": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evd.radiometric-dating": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evd.redshift": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.bbn": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.earliest-life": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.earth-formation": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.element-synthesis": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.first-galaxies": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.hot-dense-early": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.inflation-epoch": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.recombination": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "evt.solar-system": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.base-rate": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.bayesian-updating": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.causal-inference": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.counterfactual": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.epistemic-categories": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.feedback": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.five-maps": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.forecast-calibration": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.nine-questions": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.path-dependence": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.scenario-analysis": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.seven-steps": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "mth.twelve-axes": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "q.low-entropy-past": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "q.nature-dark-matter-energy": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "q.origin-of-time": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thm.cosmology": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thm.earth-solar": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thm.epistemology": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thm.matter": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thm.systems": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thm.time": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.big-bounce": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.emergent-time": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.general-relativity": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.hot-big-bang": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.inflation": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.lcdm": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.second-law": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    },
+    "thy.special-relativity": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "ChatGPT上で講義提示済み（2026-11-23）・理解度は未評価"
+    }
+  }
+}

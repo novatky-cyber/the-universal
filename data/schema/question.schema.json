@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "questions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "text",
+      "origin",
+      "status",
+      "nodes",
+      "created"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^qq\\.[0-9]{4}$"
+      },
+      "text": {
+        "type": "string"
+      },
+      "origin": {
+        "enum": [
+          "user",
+          "lesson",
+          "open-problem",
+          "handoff"
+        ]
+      },
+      "status": {
+        "enum": [
+          "open",
+          "exploring",
+          "answered",
+          "open-problem"
+        ]
+      },
+      "nodes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "created": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#05060f">
+<title>The Universal — 3D Map</title>
+<link rel="stylesheet" href="viewer/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="scene"></div>
+
+<header id="bar">
+  <div class="brand"><b>THE UNIVERSAL</b><span id="ver"></span></div>
+  <div class="tools">
+    <button id="btn-search" aria-label="検索">検索</button>
+    <button id="btn-mode" aria-label="表示切替">展開</button>
+    <button id="btn-legend" aria-label="凡例">凡例</button>
+  </div>
+</header>
+
+<div id="search" class="hidden">
+  <input id="q" type="search" placeholder="ノードを検索（例：エントロピー、CMB、Transformer）" autocomplete="off">
+  <select id="f-domain"><option value="">全領域</option></select>
+  <ul id="results"></ul>
+</div>
+
+<div id="legend" class="hidden">
+  <h4>色＝あなたの理解レベル</h4>
+  <div id="lg-levels"></div>
+  <h4>形＝ノードの種類</h4>
+  <div id="lg-types"></div>
+  <h4>座標</h4>
+  <p><b>円筒</b>：中心軸＝時間（左が過去、対数）／円周＝10領域／半径＝詳細度（外側ほど詳細）。中心軸の近くは時間を持たない思考法など。</p>
+  <p><b>展開</b>：奥行き＝領域のレーン／高さ＝詳細度（上ほど概観）。</p>
+  <p>ピンチで拡大、ドラッグで回転、2本指で移動。近づくほど詳しいラベルが現れます。</p>
+</div>
+
+<div id="hint">ノードをタップすると詳細が開きます</div>
+
+<section id="panel" class="hidden" aria-live="polite">
+  <div class="grip"></div>
+  <button id="panel-close" aria-label="閉じる">×</button>
+  <div id="panel-body"></div>
+</section>
+
+<div id="loading">THE UNIVERSAL<br><small>地図を読み込み中…</small></div>
+<script type="module" src="viewer/app.js"></script>
+</body>
+</html>
