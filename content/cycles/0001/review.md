@@ -154,3 +154,43 @@ iPhone での使い勝手（回転、マルチタッチ、importmap の非対応
 - 中 ライトテーマの薄さ：L0 を #9e9a92、未評価を #7a756c、選択していないノードの不透明度 0.3、関係線 0.18（DOC-03 §7.1 も改訂）
 - 低：figures.py の代替書体、古いiOSの matchMedia、向きの変更で3Dの視点を保つ、記号の代替書体を DOC-03 §7 で許容と明記
 - 未対応（次版）：2D縦画面の目盛りのはみ出し、メニュー内で表示を切り替えたときのアニメーション、旧CSS変数名の整理
+
+---
+# Reviewer 報告：v0.4 操作性（dev/v0.4-usability）
+
+確認方法：`git diff main...HEAD`、DOC-03 §3.8、DOC-01 §2・F4、`check_all.py --skip-pdf`（OK）、`screenshot_viewer.py`（13枚・エラーなし、全て目視）、独自の Playwright シナリオ（/tmp/rv4s：検索→Enter→関係→BACK、検索中のEsc、FOCUS→選択→CLOSE、FOCUS中にNOW、DOMAIN×FOCUS×2D、ズーム／FIT、iPad横、iPhone横）。
+
+| 重要度 | 場所 | 内容 | 修正案 |
+|---|---|---|---|
+| 中 | app.js `renderPanel` の crumbs ／ style.css 164行 `.rel{display:flex;min-height:44px}` | パンくずの各段に関係リストと同じ `.rel` クラスを使っているため、各段が flex の 44px ブロックとなり、パンくずが1段ずつ縦に並ぶ（iPhone撮影：「D01 宇宙・物理学 ›」の次の行に「時間と時空」）。さらに BACK（y=343〜387）がパンくず1行目（y=365）と重なる（s2_back_visible.png）。仕様「各段をタップで移動」に対し、領域（D01）の段はタップできない | パンくずの段は `.crumb` など別クラスにして `display:inline` にし、クリック処理は `[data-id]` に付ける。`.panel-bar` の高さ分（44px程度）だけ `#panel-body` に上余白を確保する。領域の段は INDEX のその領域へ（または領域ノードへ）移動させる |
+| 中 | app.js `clearSelection` | FOCUS中にノードを選んで CLOSE すると、`clearGroup(groups.hot)` で FOCUS の関係線が消え（`buildHot()` を呼ばない）、視点もノードに寄ったまま。FOCUS のチップは残るのに地図は FOCUS らしく見えない（s5_focus_after_close.png） | `clearGroup` を `buildHot()` に置き換える。FOCUS中に閉じたときは FOCUS の範囲へ戻す（`flyToCentroid` または下記のフレーミング）か、少なくとも FIT への導線を出す |
+| 中 | app.js `flyToCentroid` | FOCUS は「重心へ平行移動・距離は今のまま」なので、全体表示からは見た目がほとんど変わらず（iphone.png と s3_focus.png がほぼ同じ構図）、範囲外も淡く残るため「浮かび上がる」効果が弱い。逆に寄っている時に押すと範囲の一部しか映らない | 範囲ノードの外接球（bounding sphere）から距離を求めて画面に収める（パネル・HUD分の余白を考慮）。範囲外の不透明度をもう一段下げる |
+| 中 | app.js `updateLabels`（`b1 < 70` の除外）／ style.css `#chips`（top: safe-t+96px） | ラベルの重なり除外が上端70pxのみ。NOW（y≈55〜99）とチップ（y≈96〜128）の上にノード名・時間目盛りが重なる（iphone_focus.png で「複雑系…」がチップの下、iPhone横 s14 で NOW の文字と複数ラベルが重なり判読不能） | HUD とチップの実寸（`getBoundingClientRect().bottom`）を除外領域にする。チップに不透明の背景を付けるだけでなく、ラベル側を避けさせる |
+| 中 | style.css `#chips button{min-height:32px}`、`.lessonbar a`（実測 132×32）、`#zoom-out/#zoom-in`（36×44）、`#foot 2D`（20×44） | §3.8「タップ領域は44px以上」に反する。チップの × はチップ全体で反応するが高さ32px。教材ボタンも32px。2D は幅20px | チップ・教材リンクを `min-height:44px`（見た目は細いままで padding で拡張）。2D と − ＋ は `min-width:44px` |
+| 中 | app.js `#fq` keydown（Enter） | 日本語入力の変換確定の Enter（`isComposing`／keyCode 229）でも先頭の結果へ移動してしまう（iPad＋外付けキーボード、Mac）。日本語で探すのが主な使い方なので誤移動が起きやすい | `if (e.isComposing || e.keyCode === 229) return;` を先頭に入れる |
+| 中 | app.js `buildHot`、`buildMenu` の `run`、`setFocus` | FOCUS と DOMAIN を併用すると、範囲外の領域のノードは消えるが FOCUS の関係線（hot）は領域で絞られず、ノードのない線だけが浮かぶ（s7_dom_focus_2d.png：D03 × P01-S01 でほぼ空の地図に線だけ）。重心も非表示のノードを含めて計算 | hot の描画・重心計算・ラベルで「表示中（`m.visible`）」を条件にする。積集合が空のときはチップに「該当なし」と出す |
+| 中 | iPhone 横（844×390） | パネル（max-height 60vh）＋ HUD＋チップで地図の見える部分が約1/4、しかもそこに NOW とラベルが重なる（s14） | 横向き（`max-height:500px`）ではパネルを右側表示（iPad横と同じ）にするか、HUD の NOW・チップをパネル表示中は隠す |
+| 低 | app.js `#fq` keydown（Escape）と window の keydown | 検索欄で Esc を押すと検索が閉じた後、同じイベントで window 側の処理が走り、選択中のノードまで解除される（再現：選択→SEARCH→Esc で hash が空に） | `#fq` 側で `e.stopPropagation()`、または window 側だけで処理する |
+| 低 | app.js `#now` onclick | FOCUS中にノードを選んでいる状態で NOW を押すと、選択解除に加えて FOCUS まで解除される（利用者は「範囲の全体に戻る」を期待しやすい） | 選択中に押したときは選択だけ解除して FOCUS を維持（なければ FOCUS をオン）にする |
+| 低 | finder の選択 × DOMAIN | 領域で絞り込み中に、検索から範囲外のノードを選ぶと、ノード自体は非表示のままパネルと関係線だけ出る（s10） | 選んだときに領域の絞り込みを解除するか、検索結果に「絞り込み外」と表示する |
+| 低 | style.css `#finder .rows{max-height:52vh}` | iPhone でキーボードが出ると表示領域は約500px。52vh（≈439px）＋上部約100pxで下の数件がキーボードに隠れる。結果リストのスクロールが背後へ貫通しうる | `max-height: calc(100dvh - …)` か `visualViewport.height` で算出。`overscroll-behavior: contain` を付ける |
+| 低 | app.js `applyTheme` | 選択中・FOCUS中にテーマを切り替えると、淡くしたノードの不透明度が前のテーマの `dimOpacity` のまま（dark 0.15／light 0.3） | `applyTheme` 内で `applyEmphasis()` を呼ぶ |
+| 低 | 文言（§3.8 との差） | 教材ボタンが仕様の `LESSON 前編 ↗ / 後編 ↗` ではなく `P01-S01 VOL. A ↗`。和文の利用者には「前編・後編」の方が分かりやすい。初回の案内は仕様「3行」に対し4項目。iPhone 幅では表示の詳しさ（DETAILS 等）が非表示で、仕様「併記」と異なる。DOMAIN チップが `DOMAIN D03` で名前がない | 文言を仕様に合わせる（または設計書を改訂）。チップは `D03 生命・脳科学` のように名前を併記 |
+| 低 | app.js `initUsability` | `current_session` が無い・範囲が空のとき、NOW は「NOW」だけ出てタップしても何も起きない | `focusSet.size === 0` なら `#now` を隠す |
+| 低 | 保守性 | `.lessonbar a` の `!important`、`kick` の inline style、`select()` の `navStack.length>50` が push と別行 | クラスで上書きする。上限処理は push 直後にまとめる |
+
+## 総評
+1. 設計（§3.8）の8項目はすべて実装され、検査・撮影でエラーはなく、検索→選択→関係→BACK の基本の流れは正しく動く。
+2. 一方で、パンくずの崩れと BACK との重なり、FOCUS が「浮かび上がらない／閉じると崩れる」、ラベルが NOW・チップに重なる、タップ領域44px未満、日本語変換の Enter の誤動作など、状態の組み合わせと iPhone での見え方に「中」の指摘が8件ある。
+3. 「高」はないが、パンくず・FOCUS の後片付け・IME の Enter・タップ領域は修正の手間が小さく効果が大きいので、マージ前に直すことを勧める。
+
+## 対応記録（Implementer）
+- 中：パンくずを inline の別クラスに、領域の段は目次のその領域を開く。パネル上部に BACK/CLOSE 分の余白
+- 中：FOCUS中に閉じたとき関係線と範囲の視点を戻す
+- 中：FOCUS は範囲の外接球から距離を決めて画面に収める。範囲外をさらに淡く。霧の範囲をカメラの距離に追従（引いたときに地図が消えない）
+- 中：ラベルは HUD・NOW・チップ・下部の操作部の実寸を避ける
+- 中：タップ領域44px（チップ、教材ボタン、2D、− +）。狭い画面では下部の字間を詰めて1行に収める
+- 中：日本語の変換確定の Enter を無視
+- 中：FOCUS×DOMAIN は表示中のノードだけで線・重心を計算、空なら「該当なし」
+- 中：iPhone横向きはパネルを右側に、表示中は NOW とチップを隠す。描画の中心も横にずらす
+- 低：検索欄の Esc の伝播、選択中の NOW は FOCUS を維持、絞り込み外の検索結果は絞り込みを解除、検索結果の高さ、テーマ切替時の淡さ、文言（前編・後編、領域名つきチップ、案内4項目・狭い画面での表示の詳しさの省略は設計書を改訂）、範囲が空なら NOW を隠す、!important と inline style の整理、履歴の上限処理

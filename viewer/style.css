@@ -176,3 +176,77 @@ input, select, textarea, button { font-family: inherit; }
 .opts button.on { color: var(--ink); border-bottom-color: var(--red); }
 /* 2D・縦画面では領域名を番号だけにする（帯が細く、名前が重なるため） */
 body.plane.portrait .dlbl span { display: none; }
+
+/* ---------------- v0.4 操作性（DOC-03 §3.8） */
+#hud .hud-r { display: flex; gap: 18px; align-items: center; }
+#hud .now { display: block; margin-top: 4px; font-family: var(--en); font-size: 10.5px; letter-spacing: 0.12em; color: var(--dim);
+  max-width: min(64vw, 520px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; padding: 10px 0; }
+#hud .now::before { content: "● "; color: var(--red); }
+#hud .now b { font-weight: 500; color: var(--ink); margin-right: 6px; }
+#hud .now[aria-pressed="true"] { color: var(--ink); }
+#hud .now[aria-pressed="true"] b { border-bottom: 1px solid var(--red); }
+#chips { position: fixed; z-index: 5; left: 0; right: 0; top: calc(var(--safe-t) + 96px); display: flex; gap: 8px; flex-wrap: wrap;
+  padding: 0 max(18px, env(safe-area-inset-left)); pointer-events: none; }
+#chips button { pointer-events: auto; font-family: var(--en); font-size: 10.5px; letter-spacing: 0.14em; color: var(--ink);
+  background: var(--panel); border: 1px solid var(--hair); padding: 0 10px; min-height: 32px; }
+#chips button i { font-style: normal; margin-left: 8px; color: var(--red); }
+#finder { position: fixed; z-index: 8; left: 0; right: 0; top: 0; background: var(--panel); border-bottom: 1px solid var(--hair);
+  padding: calc(var(--safe-t) + 12px) max(18px, env(safe-area-inset-left)) 10px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+@media (min-width: 900px) { #finder { left: auto; right: 24px; top: 70px; width: 440px; border: 1px solid var(--hair); padding: 14px 18px; } }
+#finder .finder-row { display: flex; gap: 12px; align-items: center; }
+#finder input { flex: 1; font-family: var(--ja); font-size: 16px; color: var(--ink); background: transparent; border: none;
+  border-bottom: 1px solid var(--ink); padding: 10px 0; outline: none; border-radius: 0; -webkit-appearance: none; }
+#finder .rows { max-height: 52vh; overflow-y: auto; margin-top: 6px; }
+#foot .zoom { display: flex; align-items: center; gap: 4px; }
+#foot .zoom .scale { font-family: var(--en); font-size: 9.5px; letter-spacing: 0.18em; color: var(--faint); margin-right: 8px; }
+#foot .zoom .textbtn { min-width: 36px; font-size: 13px; letter-spacing: 0.05em; color: var(--ink); text-align: center; }
+#foot .zoom #zoom-fit { font-size: 10px; letter-spacing: 0.2em; min-width: 40px; }
+@media (max-width: 420px) { #foot .zoom .scale { display: none; } #foot .sep { margin: 0 5px; } }
+.panel-bar { position: absolute; top: 4px; left: 18px; right: 18px; display: flex; justify-content: space-between; }
+.panel-bar #panel-close { position: static; margin-left: auto; }
+@media (min-width: 900px) { .panel-bar { top: 18px; left: 30px; right: 30px; } }
+#panel-back { font-size: 10px; color: var(--dim); }
+.crumbs { font-family: var(--ja); font-size: 11.5px; color: var(--dim); margin: 10px 0 0; line-height: 1.8; }
+.crumbs .rel { color: var(--dim); }
+.crumbs .gt { margin: 0 6px; color: var(--faint); }
+.lessonbar { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; margin: 4px 0 14px; padding: 10px 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
+  font-family: var(--en); font-size: 10.5px; letter-spacing: 0.16em; color: var(--dim); }
+.nowcard { border: 1px solid var(--hair); padding: 14px 16px; margin: 4px 0 18px; }
+.nowcard .kick { margin-bottom: 6px; }
+.nowcard .t { font-family: var(--ja); font-weight: 700; font-size: 15px; line-height: 1.6; color: var(--ink); }
+.nowcard .links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-family: var(--en); font-size: 10.5px; letter-spacing: 0.14em; }
+.nowcard .links a, .nowcard .links button { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--red); padding: 10px 0 6px; }
+#guide { position: fixed; inset: 0; z-index: 11; display: flex; align-items: flex-end; justify-content: center; background: rgba(0, 0, 0, 0.35); }
+@media (min-width: 900px) { #guide { align-items: center; } }
+.guide-card { background: var(--bg); color: var(--ink); width: min(520px, 100%); padding: 22px 22px calc(var(--safe-b) + 18px); border-top: 1px solid var(--hair); }
+.guide-card ol { margin: 12px 0 8px; padding-left: 20px; font-size: 14px; line-height: 1.85; color: var(--ink2); }
+.guide-card li { margin-bottom: 6px; }
+.guide-card b { font-weight: 700; color: var(--ink); }
+#guide-ok { display: block; margin-left: auto; color: var(--ink); border-bottom: 1px solid var(--red); }
+@media (max-width: 420px) { #hud .sub .wide { display: none; } }
+/* v0.4 レビュー対応 */
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; }
+.crumb { font-family: var(--ja); font-size: 11.5px; color: var(--dim); min-height: 44px; padding: 0 2px; text-align: left; }
+.crumb:active { opacity: 0.6; }
+#panel-body { padding-top: 36px; }
+@media (min-width: 900px) { #panel-body { padding-top: 10px; } }
+.kick-top { margin-top: 4px; }
+#chips button { min-height: 44px; }
+.lessonbar a { color: var(--ink); border-bottom: 1px solid var(--red); padding: 13px 0; }
+#panel .lessonbar a { color: var(--ink); border-bottom-color: var(--red); }
+#foot .modes .textbtn, #foot .zoom .textbtn { min-width: 44px; }
+#finder .rows { max-height: calc(100dvh - 150px); overscroll-behavior: contain; }
+/* iPhone 横向き：パネルを右側に、パネル表示中は NOW とチップを隠す */
+@media (max-height: 500px) and (orientation: landscape) {
+  #panel { left: auto; top: 0; right: 0; bottom: 0; width: min(380px, 46vw); max-height: none; border-top: none; border-left: 1px solid var(--hair);
+    padding: calc(var(--safe-t) + 14px) max(18px, env(safe-area-inset-right)) 20px 20px; }
+  #panel .grip { display: none; }
+  body.panel-open #hud .now, body.panel-open #chips { display: none; }
+}
+@media (max-width: 420px) {
+  #foot { padding-left: 12px; padding-right: 12px; }
+  #foot .modes .textbtn { min-width: 0; padding: 0 5px; letter-spacing: 0.08em; }
+  #foot .modes .textbtn[data-mode="plane"] { padding: 0 14px; }
+  #foot .sep { margin: 0 1px; }
+  #foot .zoom .textbtn { min-width: 40px; }
+}

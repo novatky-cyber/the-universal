@@ -38,12 +38,13 @@ def main():
     base = f"http://127.0.0.1:{srv.server_address[1]}/index.html"
     errors = []
     # (名前, 幅, 高さ, ハッシュまたは ?menu=節, 端末に保存された設定)
-    D, L, P = {"theme": "dark"}, {"theme": "light"}, {"theme": "light", "view": "plane"}
+    D, L, P = {"theme": "dark", "guided": "1"}, {"theme": "light", "guided": "1"}, {"theme": "light", "view": "plane", "guided": "1"}
     shots = [("iphone", 390, 844, "", D), ("iphone_node", 390, 844, "#con.entropy", D), ("ipad", 820, 1180, "#evd.cmb", D),
              ("iphone_menu", 390, 844, "?menu=index", D), ("desktop", 1440, 900, "", D),
              ("iphone_light", 390, 844, "", L), ("iphone_light_node", 390, 844, "#con.entropy", L),
-             ("iphone_plane", 390, 844, "", P), ("desktop_plane", 1440, 900, "", {"theme": "dark", "view": "plane"}),
-             ("iphone_settings", 390, 844, "?menu=settings", L)]
+             ("iphone_plane", 390, 844, "", P), ("desktop_plane", 1440, 900, "", {"theme": "dark", "view": "plane", "guided": "1"}),
+             ("iphone_settings", 390, 844, "?menu=settings", L), ("iphone_guide", 390, 844, "", {"theme": "light"}),
+             ("iphone_finder", 390, 844, "?finder=エン", L), ("iphone_focus", 390, 844, "?focus=1", L)]
     with sync_playwright() as p:
         exe = "/usr/bin/google-chrome" if Path("/usr/bin/google-chrome").exists() else None
         b = p.chromium.launch(executable_path=exe, args=["--use-gl=swiftshader", "--enable-webgl", "--ignore-gpu-blocklist"])
@@ -69,7 +70,18 @@ def main():
                     path=str(fl / route.request.url[len("https://fonts.local/"):]), content_type="font/woff2"))
             pg.on("console", lambda m: errors.append(f"{name}: {m.text}") if m.type == "error" else None)
             pg.on("pageerror", lambda e: errors.append(f"{name}: {e}"))
-            if hash_.startswith("?menu="):
+            if hash_.startswith("?finder="):
+                pg.goto(base)
+                pg.wait_for_timeout(3000)
+                pg.click("#btn-search")
+                pg.fill("#fq", hash_.split("=", 1)[1])
+                pg.wait_for_timeout(400)
+            elif hash_ == "?focus=1":
+                pg.goto(base)
+                pg.wait_for_timeout(3000)
+                pg.click("#now")
+                pg.wait_for_timeout(800)
+            elif hash_.startswith("?menu="):
                 pg.goto(base)
                 pg.wait_for_timeout(3000)
                 pg.click("#btn-menu")

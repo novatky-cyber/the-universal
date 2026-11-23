@@ -50,6 +50,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const safeUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
 const safePdf = (f) => (/^output\/[\w./-]+\.pdf$/.test(f || "") ? f : "");
 
+let focusOn = false, focusSet = new Set(), navStack = [];   // DOC-03 §3.8
 let G, byId = {}, mode = ["cyl", "flat", "plane"].includes(store.get("view", "cyl")) ? store.get("view", "cyl") : "cyl", selected = null;
 const meshes = [], labels = {};
 let modeTween = null, camTween = null;
@@ -133,13 +134,14 @@ function init(g) {
     const [x, y, z] = n.pos.flat;
     n.pos.plane = [x, -z + (y - 7) * 0.35, 0];   // DOC-03 §3.7
   });
-  $("#ver").textContent = `MAP V${G.map_version} — ${G.stats.nodes} NODES — ${G.stats.edges} RELATIONS`;
+  $("#ver").innerHTML = `MAP V${esc(G.map_version)} — ${G.stats.nodes} NODES<span class="wide"> — ${G.stats.edges} RELATIONS</span>`;
   buildLayers();
   buildDomains();
   buildNodes();
   applyMode(false);
   if (mode === "plane") placeCamera(false);
   buildMenu();
+  initUsability();
   const mq = matchMedia("(prefers-color-scheme: light)");
   const onScheme = () => { if (store.get("theme", "auto") === "auto") applyTheme(); };
   mq.addEventListener ? mq.addEventListener("change", onScheme) : mq.addListener(onScheme);
@@ -242,6 +244,7 @@ function applyTheme() {
   matRing?.color.set(PAL.line); if (matRing) matRing.opacity = PAL.ringOpacity;
   matAxis?.color.set(PAL.line);
   meshes.forEach((m) => m.userData.wire.material.color.set(nodeColor(byId[m.userData.id])));
+  applyEmphasis();
   buildLinks();
   buildHot();
   if (selected) renderPanel(byId[selected]);
@@ -275,18 +278,21 @@ function buildLinks() {
   for (const n of G.nodes) if (n.parent && byId[n.parent]) push(posOf(n.id), posOf(n.parent));
   const g = new THREE.BufferGeometry();
   g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
-  groups.links.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: PAL.line, transparent: true, opacity: selected ? 0.04 : PAL.linkOpacity })));
+  groups.links.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: PAL.line, transparent: true, opacity: selected || focusOn ? 0.04 : PAL.linkOpacity })));
 }
 
 function buildHot() {
   clearGroup(groups.hot);
-  if (!selected) return;
+  if (!selected && !focusOn) return;
   for (const e of G.edges) {
-    if (e.from !== selected && e.to !== selected) continue;
+    // 選択中はそのノードの関係、FOCUS中は範囲内のノードどうしの関係を浮かび上がらせる
+    const hit = selected ? e.from === selected || e.to === selected : focusSet.has(e.from) && focusSet.has(e.to) && isShown(e.from) && isShown(e.to);
+    if (!hit) continue;
     const g = new THREE.BufferGeometry().setFromPoints(curvePoints(posOf(e.from), posOf(e.to), 28));
     const col = e.type === "contradicts" ? 0xc8402a : PAL.line;
-    groups.hot.add(new THREE.Line(g, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.9 })));
+    groups.hot.add(new THREE.Line(g, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: selected ? 0.9 : 0.55 })));
   }
+  if (!selected) return;
   const n = byId[selected];
   if (n.parent && byId[n.parent]) {
     const g = new THREE.BufferGeometry().setFromPoints(curvePoints(posOf(n.id), posOf(n.parent), 20));
@@ -381,17 +387,12 @@ function related(id) {
   return s;
 }
 
-function select(id, fly) {
+function select(id, fly, opts = {}) {
   wake();
+  if (selected && selected !== id && !opts.back) { navStack.push(selected); if (navStack.length > 50) navStack.shift(); }
   selected = id;
   history.replaceState(null, "", "#" + encodeURIComponent(id));
-  const rel = related(id);
-  meshes.forEach((m) => {
-    const on = rel.has(m.userData.id);
-    m.userData.wire.material.opacity = on ? 1 : PAL.dimOpacity;
-    m.material.opacity = m.userData.id === id ? 0.35 : on ? 0.08 : 0.02;
-    m.scale.setScalar(m.userData.id === id ? 1.8 : 1);
-  });
+  applyEmphasis();
   Object.entries(labels).forEach(([k, o]) => o.element.classList.toggle("sel", k === id));
   buildLinks();
   buildHot();
@@ -402,19 +403,25 @@ function select(id, fly) {
 function clearSelection() {
   wake();
   selected = null;
+  navStack = [];
   history.replaceState(null, "", location.pathname);
-  meshes.forEach((m) => { m.userData.wire.material.opacity = 0.95; m.material.opacity = 0.08; m.scale.setScalar(1); });
+  applyEmphasis();
   Object.values(labels).forEach((o) => o.element.classList.remove("sel"));
   buildLinks();
-  clearGroup(groups.hot);
+  buildHot();
   $("#panel").classList.add("hidden");
+  document.body.classList.remove("panel-open");
   setOffset(false);
+  if (focusOn) frameIds(visibleFocus());
 }
 $("#panel-close").onclick = clearSelection;
+$("#panel-back").onclick = () => { const id = navStack.pop(); if (id) select(id, true, { back: true }); };
 
 // 下からせり上がるパネルで選択ノードが隠れないよう、描画の中心を画面上部へずらす
 function setOffset(on) {
-  if (on && innerWidth < 900) camera.setViewOffset(innerWidth, innerHeight, 0, innerHeight * 0.27, innerWidth, innerHeight);
+  const sidePanel = innerWidth >= 900 || (innerHeight <= 500 && innerWidth > innerHeight);   // 右側にパネルが出る画面
+  if (on && sidePanel) camera.setViewOffset(innerWidth, innerHeight, Math.min(190, innerWidth * 0.23), 0, innerWidth, innerHeight);
+  else if (on) camera.setViewOffset(innerWidth, innerHeight, 0, innerHeight * 0.27, innerWidth, innerHeight);
   else if (on) camera.setViewOffset(innerWidth, innerHeight, 210, 0, innerWidth, innerHeight);
   else camera.clearViewOffset();
 }
@@ -457,9 +464,19 @@ function renderPanel(n) {
   }).join("");
   const time = n.time ? esc(n.time.label) : "Timeless";
   const ver = { verified: "Verified", pending: "Pending", unverified: "Unverified" }[n.verification];
+  const chain = [];
+  for (let p = n.parent; p && byId[p] && chain.length < 6; p = byId[p].parent) chain.unshift(byId[p]);
+  const dom = G.domains.find((x) => x.id === n.domains[0]);
+  const crumbs = `<div class="crumbs"><button class="crumb" data-dom="${esc(dom?.id || "")}">${esc(dom ? dom.id + " " + dom.ja : "")}</button>${chain.map((c) => `<span class="gt">›</span><button class="crumb" data-id="${esc(c.id)}">${esc(c.title.ja)}</button>`).join("")}</div>`;
+  const lessonLinks = n.curriculum.flatMap((c) => (G.sessions[c]?.lessons || []).map(safePdf).filter(Boolean).map((f, i, a) =>
+    `<a href="${esc(f)}" target="_blank" rel="noopener">${a.length > 1 ? "前編後編"[i * 2] + "編" : "PDF"} ↗</a>`));
+  const lessonbar = lessonLinks.length ? `<div class="lessonbar">LESSON ${esc(n.curriculum[0])} ${lessonLinks.join("")}</div>` : "";
+  $("#panel-back").classList.toggle("hidden", !navStack.length);
   $("#panel-body").innerHTML = `
-    <div class="kick">${TYPE_EN[n.type]} — <span class="ep-dot" style="background:${ep[1]}"></span>${ep[0]} — ${CONF_EN[n.confidence]}</div>
+    ${crumbs}
+    <div class="kick kick-top">${TYPE_EN[n.type]} — <span class="ep-dot" style="background:${ep[1]}"></span>${ep[0]} — ${CONF_EN[n.confidence]}</div>
     <h2>${esc(n.title.ja)}</h2><div class="en">${esc(n.title.en || "")}</div>
+    ${lessonbar}
     <p>${esc(n.summary)}</p>
     ${n.body ? `<p>${esc(n.body)}</p>` : ""}
     <div class="kick">${time} — ${ver}</div>
@@ -480,7 +497,150 @@ function renderPanel(n) {
   $("#panel").classList.remove("hidden");
   $("#panel").scrollTop = 0;
   setOffset(true);
-  $("#panel-body").querySelectorAll(".rel").forEach((el) => (el.onclick = () => select(el.dataset.id, true)));
+  $("#panel-body").querySelectorAll(".rel, .crumb[data-id]").forEach((el) => (el.onclick = () => select(el.dataset.id, true)));
+  $("#panel-body").querySelectorAll(".crumb[data-dom]").forEach((el) => (el.onclick = () => { openMenu("index"); openDomain(el.dataset.dom); }));
+  document.body.classList.add("panel-open");
+}
+
+// ---------------------------------------------------------------- 操作性（DOC-03 §3.8）
+// 強調の優先順位：選択中 ＞ FOCUS ＞ 通常
+function applyEmphasis() {
+  const rel = selected ? related(selected) : null;
+  meshes.forEach((m) => {
+    const id = m.userData.id;
+    const on = rel ? rel.has(id) : focusOn ? focusSet.has(id) : true;
+    m.userData.wire.material.opacity = on ? (rel || focusOn ? 1 : 0.95) : rel ? PAL.dimOpacity : PAL.dimOpacity * 0.35;
+    m.material.opacity = id === selected ? 0.35 : on ? 0.08 : 0.02;
+    m.scale.setScalar(id === selected ? 1.8 : focusOn && !rel && focusSet.has(id) ? 1.25 : 1);
+  });
+  wake();
+}
+
+function setFocus(on) {
+  focusOn = on && focusSet.size > 0;
+  $("#now").setAttribute("aria-pressed", String(focusOn));
+  applyEmphasis();
+  buildLinks();
+  buildHot();
+  renderChips();
+  if (focusOn) frameIds(visibleFocus());
+}
+const isShown = (id) => meshOf(id)?.visible !== false;
+const visibleFocus = () => [...focusSet].filter(isShown);
+
+// 複数ノードを画面に収める：外接球の半径から距離を決める（HUD・操作部の余白を見込んで1.08倍）
+function frameIds(ids) {
+  if (!ids.length) return;
+  const pts = ids.map((id) => new THREE.Vector3().fromArray(byId[id].pos[mode]));
+  const c = pts.reduce((a, p) => a.add(p), new THREE.Vector3()).divideScalar(pts.length);
+  const r = Math.max(8, ...pts.map((p) => p.distanceTo(c)));
+  const fov = THREE.MathUtils.degToRad(camera.fov) / 2;
+  const fit = Math.min(fov, Math.atan(Math.tan(fov) * camera.aspect));
+  const dist = Math.min(controls.maxDistance, (r / Math.sin(fit)) * 1.08);
+  const dir = mode === "plane" ? new THREE.Vector3(0, 0, 1) : camera.position.clone().sub(controls.target).normalize();
+  const p0 = camera.position.clone(), t0c = controls.target.clone(), t0 = performance.now();
+  const end = c.clone().add(dir.multiplyScalar(dist));
+  camTween = (now) => {
+    const k = Math.min(1, (now - t0) / 900), e = 1 - Math.pow(1 - k, 3);
+    camera.position.lerpVectors(p0, end, e);
+    controls.target.lerpVectors(t0c, c, e);
+    if (k >= 1) camTween = null;
+  };
+}
+
+// 効いている絞り込みを画面上部に表示し、× で解除できるようにする
+function renderChips() {
+  const dom = $("#f-domain").value;
+  const chips = [];
+  if (focusOn) chips.push(`<button data-chip="focus">FOCUS ${esc(G.current_session)}${visibleFocus().length ? "" : "　該当なし"}<i>×</i></button>`);
+  if (dom) chips.push(`<button data-chip="domain">${esc(dom)} ${esc(G.domains.find((d) => d.id === dom)?.ja || "")}<i>×</i></button>`);
+  $("#chips").innerHTML = chips.join("");
+  $("#chips").querySelectorAll("[data-chip]").forEach((b) => (b.onclick = () => {
+    if (b.dataset.chip === "focus") setFocus(false);
+    else { $("#f-domain").value = ""; $("#f-domain").dispatchEvent(new Event("change")); }
+  }));
+}
+
+// 目次で指定の領域を開いてそこへスクロール
+function openDomain(id) {
+  const el = [...document.querySelectorAll("#menu-content details.dom")].find((d) => d.querySelector(".id")?.textContent === id);
+  if (el) { el.open = true; el.scrollIntoView({ block: "start" }); }
+}
+
+function latestReport() {
+  return [...(G.reports || [])].sort((a, b) => (b.cycle || 0) - (a.cycle || 0))[0];
+}
+
+function renderNowCard() {
+  const s = G.sessions[G.current_session];
+  const r = latestReport();
+  const pdfs = (s?.lessons || []).map(safePdf).filter(Boolean)
+    .map((f, i, a) => `<a href="${esc(f)}" target="_blank" rel="noopener">LESSON ${a.length > 1 ? "VOL. " + "AB"[i] : ""} ↗</a>`).join("");
+  $("#nowcard").innerHTML = `<div class="kick">NOW — ${esc(G.current_session)}</div>
+    <div class="t">${esc(s?.title || "")}</div>
+    <div class="links">${pdfs}${r && safePdf(r.pdf) ? `<a href="${esc(r.pdf)}" target="_blank" rel="noopener">REPORT ${esc(r.id)} ↗</a>` : ""}
+      <button id="nowcard-focus" class="textbtn">SHOW ON MAP</button></div>`;
+  $("#nowcard-focus").onclick = () => { closeMenu(); clearSelection(); setFocus(true); };
+}
+
+// ズーム：注視点に向かってカメラを寄せる／離す
+function zoomBy(f) {
+  const p0 = camera.position.clone(), t = controls.target.clone();
+  const dist = Math.min(controls.maxDistance, Math.max(controls.minDistance, p0.distanceTo(t) * f));
+  const end = t.clone().add(p0.clone().sub(t).normalize().multiplyScalar(dist));
+  const t0 = performance.now();
+  camTween = (now) => {
+    const k = Math.min(1, (now - t0) / 350), e = 1 - Math.pow(1 - k, 3);
+    camera.position.lerpVectors(p0, end, e);
+    if (k >= 1) camTween = null;
+  };
+  wake();
+}
+
+// 地図の上の検索
+function openFinder() {
+  $("#finder").classList.remove("hidden");
+  $("#fq").focus();
+  runFinder();
+}
+function closeFinder() { $("#finder").classList.add("hidden"); $("#fq").blur(); }
+function runFinder() {
+  const q = $("#fq").value.trim().toLowerCase();
+  if (!q) { $("#finder-results").innerHTML = `<li><span class="v small">名前・英語名・説明・IDで探せます。</span></li>`; return; }
+  const score = (n) => (n.title.ja.toLowerCase().startsWith(q) ? 0 : n.title.ja.toLowerCase().includes(q) ? 1 : (n.title.en || "").toLowerCase().includes(q) ? 2 : 3);
+  const hits = G.nodes.filter((n) => n.title.ja.toLowerCase().includes(q) || (n.title.en || "").toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.id.includes(q))
+    .sort((a, b) => score(a) - score(b) || a.level - b.level).slice(0, 20);
+  $("#finder-results").innerHTML = hits.length
+    ? hits.map((n) => `<li data-node="${esc(n.id)}">${lvSwatch(n)}<span class="v">${esc(n.title.ja)}</span><span class="r">${TYPE_EN[n.type]}</span></li>`).join("")
+    : `<li><span class="v small">該当なし</span></li>`;
+  $("#finder-results").querySelectorAll("[data-node]").forEach((el) => (el.onclick = () => {
+    closeFinder();
+    if (!isShown(el.dataset.node)) { $("#f-domain").value = ""; $("#f-domain").dispatchEvent(new Event("change")); }   // 絞り込みの外なら解除
+    select(el.dataset.node, true);
+  }));
+}
+
+function initUsability() {
+  const s = G.sessions[G.current_session];
+  focusSet = new Set(G.nodes.filter((n) => n.curriculum.includes(G.current_session)).map((n) => n.id));
+  $("#now").innerHTML = `<b>NOW</b>${esc(G.current_session)}　${esc(s?.title || "")}`;
+  $("#now").onclick = () => { if (selected) { clearSelection(); if (!focusOn) setFocus(true); } else setFocus(!focusOn); };
+  if (!focusSet.size) $("#now").classList.add("hidden");
+  $("#btn-search").onclick = openFinder;
+  $("#finder-close").onclick = closeFinder;
+  $("#fq").addEventListener("input", runFinder);
+  $("#fq").addEventListener("keydown", (e) => {
+    if (e.isComposing || e.keyCode === 229) return;   // 日本語の変換確定の Enter では動かさない
+    if (e.key === "Enter") $("#finder-results [data-node]")?.click();
+    if (e.key === "Escape") { e.stopPropagation(); closeFinder(); }
+  });
+  $("#zoom-in").onclick = () => zoomBy(0.7);
+  $("#zoom-out").onclick = () => zoomBy(1.4);
+  $("#zoom-fit").onclick = () => placeCamera(true);
+  if (store.get("guided", "") !== "1") {
+    $("#guide").classList.remove("hidden");
+    $("#guide-ok").onclick = () => { $("#guide").classList.add("hidden"); store.set("guided", "1"); };
+  }
 }
 
 // ---------------------------------------------------------------- メニュー（DOC-03 §3.6）
@@ -492,7 +652,7 @@ function closeMenu() { $("#menu").classList.add("hidden"); wake(); }
 $("#btn-menu").onclick = () => openMenu(document.querySelector(".sections button.on")?.dataset.sec || "index");
 $("#menu-close").onclick = closeMenu;
 const goNode = (id) => { closeMenu(); select(id, true); };
-addEventListener("keydown", (e) => { if (e.key !== "Escape") return; if (!$("#menu").classList.contains("hidden")) closeMenu(); else if (selected) clearSelection(); });
+addEventListener("keydown", (e) => { if (e.key !== "Escape") return; if (!$("#finder").classList.contains("hidden")) closeFinder(); else if (!$("#menu").classList.contains("hidden")) closeMenu(); else if (selected) clearSelection(); });
 
 function showSection(sec, reading = true) {
   document.querySelectorAll(".sections button").forEach((b) => b.classList.toggle("on", b.dataset.sec === sec));
@@ -512,6 +672,8 @@ function buildMenu() {
     const q = $("#q").value.trim().toLowerCase(), dom = $("#f-domain").value;
     meshes.forEach((m) => (m.visible = !dom || byId[m.userData.id].domains.includes(dom)));
     groups.links.visible = !dom;
+    renderChips();
+    if (focusOn) { buildHot(); }
     wake();
     if (!q && !dom) { $("#search-results").innerHTML = ""; return; }
     const hits = G.nodes.filter((n) => (!dom || n.domains.includes(dom)) && (!q || n.title.ja.toLowerCase().includes(q) || (n.title.en || "").toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.id.includes(q))).slice(0, 40);
@@ -522,6 +684,7 @@ function buildMenu() {
   $("#q").addEventListener("input", run);
   G.domains.forEach((d) => $("#f-domain").insertAdjacentHTML("beforeend", `<option value="${esc(d.id)}">${esc(d.id)} ${esc(d.ja)}</option>`));
   $("#f-domain").addEventListener("change", run);
+  renderNowCard();
   showSection("index", false);
 }
 
@@ -625,7 +788,10 @@ function updateLabels(force) {
   for (const m of meshes) {
     const n = byId[m.userData.id], o = labels[n.id];
     o.visible = false;
-    if (!m.visible || (n.level > maxLevel && n.id !== selected)) continue;
+    // FOCUS中は範囲内のノードだけに名前を出し、1段詳しく出す
+    if (focusOn && !selected && !focusSet.has(n.id)) continue;
+    const lim = focusOn && !selected ? Math.max(maxLevel, 3) : maxLevel;
+    if (!m.visible || (n.level > lim && n.id !== selected)) continue;
     m.getWorldPosition(tmp);
     const dist = camera.position.distanceTo(tmp);
     tmp.project(camera);
@@ -650,12 +816,15 @@ function updateLabels(force) {
     }
   }
   cand.sort((a, b) => a.pri - b.pri);
+  // HUD・NOW・チップ・下部の操作部の実寸を避ける
+  const topSafe = Math.max($("#hud").getBoundingClientRect().bottom, $("#chips").children.length ? $("#chips").getBoundingClientRect().bottom : 0) + 4;
+  const bottomSafe = $("#foot").getBoundingClientRect().top - 4;
   const placed = [];
   for (const c of cand) {
     if (placed.length >= 70) break;
     const [a1, b1, a2, b2] = c.r;
     // 上部の題字・下部の操作部とは重ねない
-    if (b1 < 70 || b2 > innerHeight - 56) continue;
+    if (b1 < topSafe || b2 > bottomSafe) continue;
     if (placed.some(([x1, y1, x2, y2]) => a1 < x2 && a2 > x1 && b1 < y2 && b2 > y1)) continue;
     placed.push(c.r);
     c.o.visible = true;
@@ -675,6 +844,10 @@ function animate(now) {
   if (controls.update()) wake();
   if (dirty <= 0) return;
   dirty--;
+  // 霧（遠くを淡くする）の範囲をカメラの距離に合わせる。全体を引いて見たときに地図が消えないように
+  const cd = camera.position.distanceTo(controls.target);
+  scene.fog.near = Math.max(60, cd * 0.8);
+  scene.fog.far = Math.max(260, cd * 2.6);
   updateLabels(true);
   renderer.render(scene, camera);
   labelRenderer.render(scene, camera);
