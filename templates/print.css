@@ -1,0 +1,76 @@
+/* The Universal — PDF共通スタイル（DOC-03 §4） */
+@page { size: A4; margin: 16mm 10mm 18mm 16mm; }
+:root {
+  --ink: #1f2937; --muted: #6b7280; --line: #d1d5db; --accent: #1e3a8a; --accent2: #0e7490;
+  --fact: #15803d; --theory: #1d4ed8; --debate: #c2410c; --normative: #7e22ce; --hypothesis: #0f766e; --unknown: #4b5563;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif; font-size: 10.5pt; line-height: 1.8; color: var(--ink);
+       -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.main { width: 146mm; }
+/* 書き込み余白（MEMO列）：各ページに繰り返し表示 */
+.memo-rail { position: fixed; top: 0; bottom: 0; left: 151mm; width: 0; border-left: 0.6pt dashed #cbd5e1; }
+.memo-rail span { position: absolute; top: 0; left: 3mm; font-size: 7pt; letter-spacing: 0.2em; color: #94a3b8; }
+
+h1, h2, h3, h4 { font-family: "Noto Sans CJK JP", sans-serif; color: var(--accent); line-height: 1.45; break-after: avoid; }
+h2 { font-size: 15pt; margin: 0 0 4mm; padding: 2.5mm 0 2mm; border-bottom: 1.6pt solid var(--accent); }
+h3 { font-size: 12pt; margin: 6mm 0 2mm; padding-left: 2.5mm; border-left: 3pt solid var(--accent2); }
+h4 { font-size: 10.5pt; margin: 4mm 0 1mm; }
+p { margin: 0 0 2.6mm; text-align: justify; }
+ul, ol { margin: 0 0 2.6mm; padding-left: 6mm; }
+li { margin-bottom: 0.8mm; }
+strong { color: #111827; }
+blockquote { margin: 3mm 0; padding: 3mm 4mm; background: #eef2ff; border-left: 3pt solid var(--accent); font-size: 11.5pt; font-weight: bold; }
+blockquote p { margin: 0; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; line-height: 1.55; break-inside: auto; }
+th, td { border: 0.5pt solid var(--line); padding: 1.4mm 2mm; vertical-align: top; text-align: left; }
+th { background: #f1f5f9; color: #334155; font-weight: bold; }
+tr { break-inside: avoid; }
+code { font-family: "Noto Sans Mono CJK JP", monospace; font-size: 8.5pt; }
+pre { background: #f8fafc; border: 0.6pt solid var(--line); padding: 3mm; font-size: 8pt; line-height: 1.5; white-space: pre-wrap; break-inside: avoid; }
+.pb { break-after: page; }
+figure { margin: 3mm 0 4mm; break-inside: avoid; }
+figure svg { width: 100%; height: auto; display: block; }
+figcaption { font-size: 8pt; color: var(--muted); margin-top: 1mm; }
+
+/* 認識ラベル */
+.ep { display: inline-block; font-size: 7pt; line-height: 1; padding: 0.9mm 1.3mm 0.7mm; border-radius: 1.2mm; color: #fff; font-weight: bold;
+      vertical-align: 0.25em; margin: 0 0.6mm; letter-spacing: 0.05em; white-space: nowrap; }
+.ep-fact { background: var(--fact); } .ep-theory { background: var(--theory); } .ep-debate { background: var(--debate); }
+.ep-normative { background: var(--normative); } .ep-hypothesis { background: var(--hypothesis); } .ep-unknown { background: var(--unknown); }
+sup.cite { font-size: 6.5pt; color: var(--accent2); font-weight: bold; margin-left: 0.3mm; }
+.nref { border-bottom: 0.8pt solid var(--accent2); }
+.nref .nid { font-size: 6pt; color: var(--muted); margin-left: 0.6mm; font-family: monospace; }
+
+/* 枠 */
+.box { border: 0.9pt solid; border-radius: 2mm; padding: 2.5mm 3.5mm 1mm; margin: 3mm 0 4mm; break-inside: avoid; }
+.box .box-title { font-weight: bold; font-size: 9.5pt; margin-bottom: 1.2mm; }
+.box .box-title::before { margin-right: 1.5mm; }
+.box-point { border-color: #1d4ed8; background: #eff6ff; } .box-point .box-title { color: #1d4ed8; } .box-point .box-title::before { content: "◆ 要点"; }
+.box-analogy { border-color: #ca8a04; background: #fefce8; } .box-analogy .box-title { color: #a16207; } .box-analogy .box-title::before { content: "◎ たとえ"; }
+.box-caution { border-color: #dc2626; background: #fef2f2; } .box-caution .box-title { color: #b91c1c; } .box-caution .box-title::before { content: "⚠ 注意"; }
+.box-exercise { border-color: #15803d; background: #f0fdf4; } .box-exercise .box-title { color: #15803d; } .box-exercise .box-title::before { content: "✎ 演習"; }
+.box em { color: var(--muted); font-style: normal; font-size: 9pt; }
+.write { margin: 2mm 0 5mm; break-inside: avoid; }
+.write .write-title { font-size: 8.5pt; color: var(--muted); margin-bottom: 1mm; }
+.write .line { height: 8mm; border-bottom: 0.6pt solid #cbd5e1; }
+
+/* 表紙 */
+.cover { height: 255mm; display: flex; flex-direction: column; }
+.cover .brand { font-size: 9pt; letter-spacing: 0.3em; color: var(--accent2); font-weight: bold; }
+.cover .tagline { font-size: 8pt; color: var(--muted); margin-bottom: 14mm; }
+.cover .lid { font-size: 10pt; color: var(--muted); }
+.cover .title { font-size: 24pt; font-weight: bold; color: #0f172a; line-height: 1.35; margin: 2mm 0 3mm; }
+.cover .subtitle { font-size: 11.5pt; color: #334155; margin-bottom: 8mm; }
+.cover .cq { border: 1.2pt solid var(--accent); border-radius: 2mm; padding: 4mm 5mm; margin-bottom: 7mm; }
+.cover .cq .lbl { font-size: 8pt; color: var(--accent); font-weight: bold; letter-spacing: 0.15em; }
+.cover .cq .q { font-size: 13pt; font-weight: bold; line-height: 1.6; }
+.cover .meta { font-size: 8.5pt; }
+.cover .meta td { border: none; padding: 0.6mm 2mm 0.6mm 0; }
+.cover .legend { margin-top: auto; font-size: 8pt; color: var(--muted); border-top: 0.6pt solid var(--line); padding-top: 3mm; }
+.cover .legend .ep { vertical-align: 0; }
+.srcs { font-size: 8.5pt; line-height: 1.55; padding-left: 7mm; }
+.srcs li { margin-bottom: 1.6mm; word-break: break-all; }
+.srcs .unv { color: #b91c1c; font-weight: bold; }
+.small { font-size: 8.5pt; color: var(--muted); }

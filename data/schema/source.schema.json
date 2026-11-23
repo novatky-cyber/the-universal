@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "sources",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "title",
+      "existence"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^src\\.[a-z0-9-]+$"
+      },
+      "title": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "publisher": {
+        "type": "string"
+      },
+      "year": {
+        "type": [
+          "integer",
+          "string",
+          "null"
+        ]
+      },
+      "url": {
+        "type": "string",
+        "pattern": "^(https?://\\S+)?$"
+      },
+      "kind": {
+        "enum": [
+          "primary",
+          "review",
+          "textbook",
+          "agency",
+          "news",
+          "reference"
+        ]
+      },
+      "existence": {
+        "enum": [
+          "verified",
+          "unverified"
+        ]
+      },
+      "checked_at": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "note": {
+        "type": "string"
+      }
+    }
+  }
+}

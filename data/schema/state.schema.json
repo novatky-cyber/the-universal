@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "cycle",
+    "map_version",
+    "system_version",
+    "current_session"
+  ],
+  "properties": {
+    "cycle": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "map_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "system_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "last_run": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "current_session": {
+      "type": "string"
+    },
+    "next_cycle_plan": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "string"
+    },
+    "pending": {
+      "type": "array"
+    },
+    "awaiting_user": {
+      "type": "array"
+    },
+    "phase_gate": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,735 @@
+[
+  {
+    "id": "e.0001",
+    "from": "evt.hot-dense-early",
+    "to": "evt.bbn",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0002",
+    "from": "evt.bbn",
+    "to": "evt.recombination",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0003",
+    "from": "evt.recombination",
+    "to": "evt.first-galaxies",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0004",
+    "from": "evt.first-galaxies",
+    "to": "evt.element-synthesis",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0005",
+    "from": "evt.element-synthesis",
+    "to": "evt.solar-system",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0006",
+    "from": "evt.solar-system",
+    "to": "evt.earth-formation",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0007",
+    "from": "evt.earth-formation",
+    "to": "evt.earliest-life",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0008",
+    "from": "evt.earliest-life",
+    "to": "evt.goe",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0009",
+    "from": "evt.goe",
+    "to": "evt.cambrian",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0010",
+    "from": "evt.cambrian",
+    "to": "evt.kpg",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0011",
+    "from": "evt.kpg",
+    "to": "evt.hominin-split",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0012",
+    "from": "evt.hominin-split",
+    "to": "evt.homo-sapiens",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0013",
+    "from": "evt.homo-sapiens",
+    "to": "evt.agriculture",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0014",
+    "from": "evt.agriculture",
+    "to": "evt.early-states",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0015",
+    "from": "evt.early-states",
+    "to": "evt.writing",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0016",
+    "from": "evt.scientific-revolution",
+    "to": "evt.enlightenment",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0017",
+    "from": "evt.enlightenment",
+    "to": "evt.industrial-revolution",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0018",
+    "from": "evt.industrial-revolution",
+    "to": "evt.imperialism",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0019",
+    "from": "evt.imperialism",
+    "to": "evt.world-wars",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0020",
+    "from": "evt.world-wars",
+    "to": "evt.cold-war",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0021",
+    "from": "evt.cold-war",
+    "to": "evt.globalization",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0022",
+    "from": "evt.mechanical-calculation",
+    "to": "evt.computation-theory",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0023",
+    "from": "evt.computation-theory",
+    "to": "evt.dartmouth",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0024",
+    "from": "evt.dartmouth",
+    "to": "evt.deep-learning",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0025",
+    "from": "evt.deep-learning",
+    "to": "evt.transformer",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0026",
+    "from": "evt.transformer",
+    "to": "evt.chatgpt",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0027",
+    "from": "evt.chatgpt",
+    "to": "evt.agents-multimodal",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0028",
+    "from": "evd.redshift",
+    "to": "con.cosmic-expansion",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "距離と赤方偏移の関係",
+    "sources": [
+      "src.hubble1929"
+    ]
+  },
+  {
+    "id": "e.0029",
+    "from": "evd.cmb",
+    "to": "thy.hot-big-bang",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "高温の初期宇宙の名残",
+    "sources": [
+      "src.penzias-wilson-1965"
+    ]
+  },
+  {
+    "id": "e.0030",
+    "from": "evd.bbn-abundances",
+    "to": "thy.hot-big-bang",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "初期数分の元素合成の予測との一致",
+    "sources": [
+      "src.pdg-bbn"
+    ]
+  },
+  {
+    "id": "e.0031",
+    "from": "con.cosmic-expansion",
+    "to": "thy.hot-big-bang",
+    "type": "supports",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0032",
+    "from": "evt.recombination",
+    "to": "evd.cmb",
+    "type": "causes",
+    "epistemic": "theory",
+    "note": "再結合で光が自由に進めるようになり、その光が現在CMBとして観測される"
+  },
+  {
+    "id": "e.0033",
+    "from": "evt.bbn",
+    "to": "evd.bbn-abundances",
+    "type": "causes",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0034",
+    "from": "thy.general-relativity",
+    "to": "thy.lcdm",
+    "type": "requires",
+    "epistemic": "theory",
+    "note": "ΛCDMは一般相対論を前提とする宇宙モデル"
+  },
+  {
+    "id": "e.0035",
+    "from": "thy.general-relativity",
+    "to": "con.singularity",
+    "type": "raises",
+    "epistemic": "theory",
+    "note": "古典的な一般相対論を過去へ外挿すると現れる"
+  },
+  {
+    "id": "e.0036",
+    "from": "con.singularity",
+    "to": "q.origin-of-time",
+    "type": "raises",
+    "epistemic": "hypothesis"
+  },
+  {
+    "id": "e.0037",
+    "from": "thy.big-bounce",
+    "to": "q.origin-of-time",
+    "type": "addresses",
+    "epistemic": "hypothesis",
+    "note": "始まりの前に別の状態があった可能性"
+  },
+  {
+    "id": "e.0038",
+    "from": "thy.emergent-time",
+    "to": "q.origin-of-time",
+    "type": "addresses",
+    "epistemic": "hypothesis",
+    "note": "時間そのものが根本的でない可能性"
+  },
+  {
+    "id": "e.0039",
+    "from": "con.planck-time",
+    "to": "con.singularity",
+    "type": "supports",
+    "epistemic": "theory",
+    "note": "この尺度より前では量子重力が必要と考えられ、古典論の外挿は信頼できない"
+  },
+  {
+    "id": "e.0040",
+    "from": "thy.special-relativity",
+    "to": "con.newtonian-time",
+    "type": "contradicts",
+    "epistemic": "fact",
+    "note": "絶対時間を否定。ただし日常的な条件では近似として有効"
+  },
+  {
+    "id": "e.0041",
+    "from": "thy.special-relativity",
+    "to": "con.spacetime",
+    "type": "enables",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0042",
+    "from": "evd.clock-tests",
+    "to": "con.time-dilation",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "sources": [
+      "src.chou2010"
+    ]
+  },
+  {
+    "id": "e.0043",
+    "from": "con.time-dilation",
+    "to": "thy.general-relativity",
+    "type": "instance_of",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0044",
+    "from": "con.entropy",
+    "to": "thy.second-law",
+    "type": "part_of",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0045",
+    "from": "thy.second-law",
+    "to": "con.arrow-of-time",
+    "type": "supports",
+    "epistemic": "theory",
+    "note": "時間の矢の主要な説明枠組み"
+  },
+  {
+    "id": "e.0046",
+    "from": "con.arrow-of-time",
+    "to": "q.low-entropy-past",
+    "type": "raises",
+    "epistemic": "unknown"
+  },
+  {
+    "id": "e.0047",
+    "from": "q.origin-of-time",
+    "to": "con.arrow-of-time",
+    "type": "analogous",
+    "epistemic": "theory",
+    "note": "混同しやすいが別の問題（起源と向き）"
+  },
+  {
+    "id": "e.0048",
+    "from": "thy.lcdm",
+    "to": "con.dark-matter",
+    "type": "requires",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0049",
+    "from": "thy.lcdm",
+    "to": "con.dark-energy",
+    "type": "requires",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0050",
+    "from": "con.hubble-tension",
+    "to": "thy.lcdm",
+    "type": "contradicts",
+    "epistemic": "debate",
+    "note": "測定の系統誤差か、新しい物理か",
+    "sources": [
+      "src.h0dn-2026"
+    ]
+  },
+  {
+    "id": "e.0051",
+    "from": "con.evolving-dark-energy",
+    "to": "thy.lcdm",
+    "type": "contradicts",
+    "epistemic": "debate",
+    "note": "宇宙定数（一定）との緊張。5σ未満",
+    "sources": [
+      "src.desi-dr2-2025"
+    ]
+  },
+  {
+    "id": "e.0052",
+    "from": "con.lithium-problem",
+    "to": "thy.hot-big-bang",
+    "type": "contradicts",
+    "epistemic": "unknown",
+    "note": "理論全体の反証ではなく、未解決の食い違い"
+  },
+  {
+    "id": "e.0053",
+    "from": "con.dark-matter",
+    "to": "q.nature-dark-matter-energy",
+    "type": "raises",
+    "epistemic": "unknown"
+  },
+  {
+    "id": "e.0054",
+    "from": "con.dark-energy",
+    "to": "q.nature-dark-matter-energy",
+    "type": "raises",
+    "epistemic": "unknown"
+  },
+  {
+    "id": "e.0055",
+    "from": "thy.inflation",
+    "to": "evt.inflation-epoch",
+    "type": "supports",
+    "epistemic": "debate"
+  },
+  {
+    "id": "e.0056",
+    "from": "evd.cmb",
+    "to": "con.age-of-universe",
+    "type": "evidence_for",
+    "epistemic": "theory",
+    "note": "ΛCDMを仮定した推定",
+    "sources": [
+      "src.planck2018-vi"
+    ]
+  },
+  {
+    "id": "e.0057",
+    "from": "evd.cmb",
+    "to": "con.cosmic-composition",
+    "type": "evidence_for",
+    "epistemic": "theory",
+    "sources": [
+      "src.planck2018-vi"
+    ]
+  },
+  {
+    "id": "e.0058",
+    "from": "evd.radiometric-dating",
+    "to": "evt.earth-formation",
+    "type": "evidence_for",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0059",
+    "from": "evt.element-synthesis",
+    "to": "evt.earliest-life",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "炭素・酸素などの元素が生命の材料になった"
+  },
+  {
+    "id": "e.0060",
+    "from": "evt.earliest-life",
+    "to": "evt.goe",
+    "type": "causes",
+    "epistemic": "theory",
+    "note": "光合成をする生物が酸素を増やした"
+  },
+  {
+    "id": "e.0061",
+    "from": "con.natural-selection",
+    "to": "evt.cambrian",
+    "type": "enables",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0062",
+    "from": "q.origin-of-life",
+    "to": "evt.earliest-life",
+    "type": "raises",
+    "epistemic": "unknown"
+  },
+  {
+    "id": "e.0063",
+    "from": "con.cumulative-culture",
+    "to": "evt.agriculture",
+    "type": "enables",
+    "epistemic": "debate"
+  },
+  {
+    "id": "e.0064",
+    "from": "evt.agriculture",
+    "to": "evt.early-states",
+    "type": "enables",
+    "epistemic": "debate",
+    "note": "必然ではない。地域によって経路が異なる"
+  },
+  {
+    "id": "e.0065",
+    "from": "evt.writing",
+    "to": "q.knowledge-transmission",
+    "type": "addresses",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0066",
+    "from": "con.trade-networks",
+    "to": "q.knowledge-transmission",
+    "type": "addresses",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0067",
+    "from": "evt.printing",
+    "to": "evt.scientific-revolution",
+    "type": "enables",
+    "epistemic": "debate"
+  },
+  {
+    "id": "e.0068",
+    "from": "evt.scientific-revolution",
+    "to": "evt.industrial-revolution",
+    "type": "enables",
+    "epistemic": "debate"
+  },
+  {
+    "id": "e.0069",
+    "from": "con.industrial-revolution-causes",
+    "to": "evt.industrial-revolution",
+    "type": "addresses",
+    "epistemic": "debate"
+  },
+  {
+    "id": "e.0070",
+    "from": "evt.atlantic-colonialism",
+    "to": "evt.industrial-revolution",
+    "type": "enables",
+    "epistemic": "debate",
+    "note": "帝国と交易が資源・市場・資本の面で関わったという議論"
+  },
+  {
+    "id": "e.0071",
+    "from": "evt.industrial-revolution",
+    "to": "evt.electrification",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0072",
+    "from": "evt.electrification",
+    "to": "evt.computation-theory",
+    "type": "enables",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0073",
+    "from": "con.semiconductor",
+    "to": "evt.digital-revolution",
+    "type": "enables",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0074",
+    "from": "con.semiconductor",
+    "to": "con.gpu-compute",
+    "type": "enables",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0075",
+    "from": "evt.digital-revolution",
+    "to": "con.big-data",
+    "type": "enables",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0076",
+    "from": "con.gpu-compute",
+    "to": "evt.deep-learning",
+    "type": "enables",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0077",
+    "from": "con.big-data",
+    "to": "evt.deep-learning",
+    "type": "enables",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0078",
+    "from": "evt.transformer",
+    "to": "con.llm",
+    "type": "enables",
+    "epistemic": "fact",
+    "sources": [
+      "src.vaswani2017"
+    ]
+  },
+  {
+    "id": "e.0079",
+    "from": "con.llm",
+    "to": "evt.chatgpt",
+    "type": "enables",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0080",
+    "from": "con.gpu-compute",
+    "to": "q.why-genai-2020s",
+    "type": "addresses",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0081",
+    "from": "con.big-data",
+    "to": "q.why-genai-2020s",
+    "type": "addresses",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0082",
+    "from": "evt.transformer",
+    "to": "q.why-genai-2020s",
+    "type": "addresses",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0083",
+    "from": "con.symbolic-and-statistical-ai",
+    "to": "evt.deep-learning",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0084",
+    "from": "con.llm",
+    "to": "con.ai-energy-demand",
+    "type": "causes",
+    "epistemic": "theory",
+    "sources": [
+      "src.iea-energy-ai"
+    ]
+  },
+  {
+    "id": "e.0085",
+    "from": "q.computation-physics",
+    "to": "con.semiconductor",
+    "type": "raises",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0086",
+    "from": "con.first-cause",
+    "to": "q.origin-of-time",
+    "type": "analogous",
+    "epistemic": "debate",
+    "note": "物理学の問いと哲学の問いの接点"
+  },
+  {
+    "id": "e.0087",
+    "from": "con.science-religion",
+    "to": "con.first-cause",
+    "type": "supports",
+    "epistemic": "normative"
+  },
+  {
+    "id": "e.0088",
+    "from": "mth.causal-inference",
+    "to": "con.ai-productivity-confounding",
+    "type": "applies",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0089",
+    "from": "mth.base-rate",
+    "to": "mth.bayesian-updating",
+    "type": "part_of",
+    "epistemic": "theory",
+    "note": "基準率は事前確率にあたる"
+  },
+  {
+    "id": "e.0090",
+    "from": "mth.feedback",
+    "to": "con.ai-energy-demand",
+    "type": "applies",
+    "epistemic": "theory",
+    "note": "利用増→電力需要増→制約、の均衡ループの例"
+  },
+  {
+    "id": "e.0091",
+    "from": "mth.path-dependence",
+    "to": "con.path-dependence-legacy",
+    "type": "applies",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0092",
+    "from": "mth.counterfactual",
+    "to": "evt.transformer",
+    "type": "applies",
+    "epistemic": "hypothesis",
+    "note": "Transformerがなかったら、という思考実験"
+  },
+  {
+    "id": "e.0093",
+    "from": "mth.scenario-analysis",
+    "to": "con.scenarios-2035",
+    "type": "applies",
+    "epistemic": "hypothesis"
+  },
+  {
+    "id": "e.0094",
+    "from": "mth.forecast-calibration",
+    "to": "mth.bayesian-updating",
+    "type": "analogous",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0095",
+    "from": "mth.epistemic-categories",
+    "to": "con.disciplinary-evidence",
+    "type": "supports",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0096",
+    "from": "mth.twelve-axes",
+    "to": "con.industrial-revolution-causes",
+    "type": "applies",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0097",
+    "from": "con.periodization",
+    "to": "thm.world-history",
+    "type": "supports",
+    "epistemic": "debate"
+  }
+]

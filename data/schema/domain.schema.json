@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "domains",
+  "type": "array",
+  "minItems": 10,
+  "maxItems": 10,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "ja",
+      "en",
+      "order"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^D(0[1-9]|10)$"
+      },
+      "ja": {
+        "type": "string"
+      },
+      "en": {
+        "type": "string"
+      },
+      "order": {
+        "type": "integer"
+      },
+      "ai_question": {
+        "type": "string"
+      }
+    }
+  }
+}

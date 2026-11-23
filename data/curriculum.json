@@ -1,0 +1,337 @@
+[
+  {
+    "id": "P01",
+    "title": "世界の全体地図",
+    "goal": "宇宙から現代までを俯瞰する知識の座標軸をつくる",
+    "sessions": [
+      {
+        "id": "P01-S01",
+        "title": "宇宙・物質・地球の形成、時間の起源",
+        "goal": "宇宙の時間尺度、ビッグバンの意味、観測証拠と未解明を説明できる",
+        "status": "presented",
+        "nodes": [
+          "con.age-of-universe",
+          "con.ai-productivity-confounding",
+          "con.arrow-of-time",
+          "con.cosmic-composition",
+          "con.cosmic-expansion",
+          "con.dark-energy",
+          "con.dark-matter",
+          "con.entropy",
+          "con.evolving-dark-energy",
+          "con.first-cause",
+          "con.hubble-tension",
+          "con.lithium-problem",
+          "con.newtonian-time",
+          "con.path-dependence-legacy",
+          "con.planck-time",
+          "con.scenarios-2035",
+          "con.science-religion",
+          "con.singularity",
+          "con.spacetime",
+          "con.time-dilation",
+          "evd.bbn-abundances",
+          "evd.clock-tests",
+          "evd.cmb",
+          "evd.radiometric-dating",
+          "evd.redshift",
+          "evt.bbn",
+          "evt.earliest-life",
+          "evt.earth-formation",
+          "evt.element-synthesis",
+          "evt.first-galaxies",
+          "evt.hot-dense-early",
+          "evt.inflation-epoch",
+          "evt.recombination",
+          "evt.solar-system",
+          "mth.base-rate",
+          "mth.bayesian-updating",
+          "mth.causal-inference",
+          "mth.counterfactual",
+          "mth.epistemic-categories",
+          "mth.feedback",
+          "mth.five-maps",
+          "mth.forecast-calibration",
+          "mth.nine-questions",
+          "mth.path-dependence",
+          "mth.scenario-analysis",
+          "mth.seven-steps",
+          "mth.twelve-axes",
+          "q.low-entropy-past",
+          "q.nature-dark-matter-energy",
+          "q.origin-of-time",
+          "thm.cosmology",
+          "thm.earth-solar",
+          "thm.epistemology",
+          "thm.matter",
+          "thm.systems",
+          "thm.time",
+          "thy.big-bounce",
+          "thy.emergent-time",
+          "thy.general-relativity",
+          "thy.hot-big-bang",
+          "thy.inflation",
+          "thy.lcdm",
+          "thy.second-law",
+          "thy.special-relativity"
+        ],
+        "lessons": [
+          "output/lessons/L0001a_P01-S01.pdf",
+          "output/lessons/L0001b_P01-S01.pdf"
+        ]
+      },
+      {
+        "id": "P01-S02",
+        "title": "生命の起源と進化",
+        "goal": "生命起源と進化の違い、自然選択・絶滅・生態系を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.natural-selection",
+          "evt.cambrian",
+          "evt.earliest-life",
+          "evt.goe",
+          "evt.kpg",
+          "q.origin-of-life",
+          "thm.life"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P01-S03",
+        "title": "人類・文化・農耕・文明",
+        "goal": "累積的学習、農耕、都市、国家、文字を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.cumulative-culture",
+          "evt.agriculture",
+          "evt.early-states",
+          "evt.hominin-split",
+          "evt.homo-sapiens",
+          "evt.symbolic-behavior",
+          "evt.tools-fire",
+          "evt.writing",
+          "thm.civilization",
+          "thm.human-evolution"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P01-S04",
+        "title": "世界史・宗教・思想・文化",
+        "goal": "多地域比較、文明間交流、歴史的多様性を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.periodization",
+          "con.trade-networks",
+          "evt.atlantic-colonialism",
+          "evt.printing",
+          "q.knowledge-transmission",
+          "thm.world-history"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P01-S05",
+        "title": "近代化と産業革命",
+        "goal": "科学革命・工業化・国家・資本主義・帝国主義を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.industrial-revolution-causes",
+          "evt.atlantic-revolutions",
+          "evt.electrification",
+          "evt.enlightenment",
+          "evt.imperialism",
+          "evt.industrial-revolution",
+          "evt.scientific-revolution",
+          "thm.economy",
+          "thm.modernity",
+          "thm.tech-history"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P01-S06",
+        "title": "20世紀と現代",
+        "goal": "世界大戦・冷戦・国際制度・デジタル社会を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "evt.cold-war",
+          "evt.digital-revolution",
+          "evt.globalization",
+          "evt.world-wars",
+          "thm.modernity",
+          "thm.state-order"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P01-S07",
+        "title": "学問体系と生成AIの位置",
+        "goal": "生成AIの成立要因を5つの地図に配置できる（成果物：生成AIの成立条件マップ）",
+        "status": "not-started",
+        "nodes": [
+          "evt.agents-multimodal",
+          "evt.chatgpt",
+          "evt.dartmouth",
+          "q.human-vs-ai-intelligence",
+          "q.why-genai-2020s",
+          "thm.ai-history",
+          "thm.mind"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P01-S08",
+        "title": "総合演習・理解度検証",
+        "goal": "全体史・学問・因果・不確実性を自力で説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.disciplinary-evidence",
+          "thm.epistemology"
+        ],
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "id": "P02",
+    "title": "生成AIの成立条件と技術の深掘り",
+    "goal": "計算機・半導体・機械学習・LLMを因果的に説明する",
+    "sessions": [
+      {
+        "id": "P02-S01",
+        "title": "計算機の原理",
+        "goal": "計算とは何か、計算機がどう動くかを説明できる",
+        "status": "not-started",
+        "nodes": [
+          "evt.computation-theory",
+          "evt.mechanical-calculation",
+          "thm.computation"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P02-S02",
+        "title": "半導体・GPU・電力",
+        "goal": "計算の物理的基盤とエネルギーの制約を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.ai-energy-demand",
+          "con.gpu-compute",
+          "con.semiconductor",
+          "q.computation-physics"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P02-S03",
+        "title": "確率・統計・学習",
+        "goal": "データから学ぶことの数学的な意味を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.big-data",
+          "q.math-of-learning",
+          "thm.probability"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P02-S04",
+        "title": "機械学習・深層学習・Transformer・LLM",
+        "goal": "LLMの仕組みと限界を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.llm",
+          "con.symbolic-and-statistical-ai",
+          "evt.deep-learning",
+          "evt.transformer",
+          "thm.ai-history"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P02-S05",
+        "title": "研究開発・投資・データ・社会需要・制度の統合",
+        "goal": "生成AIが2020年代に普及した条件を因果的に説明できる",
+        "status": "not-started",
+        "nodes": [
+          "thm.ai-economy"
+        ],
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "id": "P03",
+    "title": "歴史・経済・政治・国際・哲学・宗教・文化への展開",
+    "goal": "学際的な分析・比較、異論の理解",
+    "sessions": [
+      {
+        "id": "P03-S01",
+        "title": "産業革命と雇用、AIと経済",
+        "goal": "",
+        "status": "not-started",
+        "nodes": [
+          "con.capitalism",
+          "q.ai-economy-effects",
+          "q.ai-vs-past-revolutions",
+          "thm.economy"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P03-S02",
+        "title": "国家競争・安全保障・AIガバナンス",
+        "goal": "",
+        "status": "not-started",
+        "nodes": [
+          "q.ai-control",
+          "thm.ai-governance",
+          "thm.state-order"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P03-S03",
+        "title": "倫理・意識・人間観",
+        "goal": "",
+        "status": "not-started",
+        "nodes": [
+          "q.what-is-intelligence",
+          "thm.ethics"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P03-S04",
+        "title": "芸術・真正性・文化",
+        "goal": "",
+        "status": "not-started",
+        "nodes": [
+          "q.creativity-authenticity",
+          "thm.arts"
+        ],
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "id": "P04",
+    "title": "現実の問題への応用と未来予測",
+    "goal": "根拠付きの分析、予測記録、理解度検証",
+    "sessions": [
+      {
+        "id": "P04-S01",
+        "title": "現実の問題への応用と予測",
+        "goal": "根拠つきの分析、予測の記録、理解度の検証",
+        "status": "not-started",
+        "nodes": [
+          "q.ai-society",
+          "thm.futures",
+          "thm.watch"
+        ],
+        "lessons": []
+      }
+    ]
+  }
+]

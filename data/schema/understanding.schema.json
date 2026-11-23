@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "understanding",
+  "type": "object",
+  "required": [
+    "scale",
+    "nodes"
+  ],
+  "properties": {
+    "scale": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "level",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "level": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "status": {
+            "enum": [
+              "unseen",
+              "presented",
+              "assessed"
+            ]
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "date",
+                "level",
+                "evidence"
+              ],
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "integer"
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "assessor": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "next_review": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recheck": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

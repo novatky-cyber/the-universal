@@ -1,0 +1,5255 @@
+[
+  {
+    "id": "con.age-of-universe",
+    "type": "concept",
+    "title": {
+      "ja": "宇宙の年齢",
+      "en": "Age of the universe"
+    },
+    "summary": "約138億年。Planck 2018にBAOを組み合わせ、ΛCDMを仮定した推定で137.87±0.20億年（Planck単独では137.97±0.23億年）。直接計時した値ではない。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.cosmology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "数値の前提を明記",
+        "reason": "Verifier C07"
+      }
+    ]
+  },
+  {
+    "id": "con.ai-energy-demand",
+    "type": "concept",
+    "title": {
+      "ja": "AIと電力需要",
+      "en": "AI & electricity demand"
+    },
+    "summary": "AIの利用拡大はデータセンターの電力需要を増やし、電力供給やコストが制約になり得る。",
+    "domains": [
+      "D10",
+      "D05",
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.watch",
+    "time": {
+      "start_ya": 5,
+      "end_ya": -10,
+      "label": "2020年代〜"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.iea-energy-ai"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P02-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.ai-productivity-confounding",
+    "type": "concept",
+    "title": {
+      "ja": "AI導入と生産性の交絡",
+      "en": "AI adoption & productivity (confounding)"
+    },
+    "summary": "「AI導入企業は生産性が高い」という相関だけでは因果効果は言えない。改革能力・資本・人材が両方に影響する交絡因子かもしれない。",
+    "domains": [
+      "D05",
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thm.ai-economy",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.arrow-of-time",
+    "type": "concept",
+    "title": {
+      "ja": "時間の矢",
+      "en": "Arrow of time"
+    },
+    "summary": "割れたコップが元に戻らないような、巨視的な現象の不可逆性。時間の起源とは別の問題。",
+    "domains": [
+      "D01",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.sep-time-thermo"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.big-data",
+    "type": "concept",
+    "title": {
+      "ja": "大規模データ",
+      "en": "Large-scale data"
+    },
+    "summary": "インターネットの普及で蓄積された大量のデータが、機械学習の学習材料になった。",
+    "domains": [
+      "D04",
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.capitalism",
+    "type": "concept",
+    "title": {
+      "ja": "資本主義",
+      "en": "Capitalism"
+    },
+    "summary": "私的所有・市場・資本の蓄積を軸とする経済の仕組み。定義と起源には学説の違いがある。",
+    "domains": [
+      "D05"
+    ],
+    "level": 3,
+    "parent": "thm.economy",
+    "time": {
+      "start_ya": 500,
+      "end_ya": 0,
+      "label": "近世〜現在"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P03-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.cosmic-composition",
+    "type": "concept",
+    "title": {
+      "ja": "宇宙の組成（エネルギー密度の内訳）",
+      "en": "Cosmic energy budget"
+    },
+    "summary": "Planck 2018（ΛCDMを仮定）では、通常の物質 約4.9%、ダークマター 約26%、ダークエネルギー 約69%。体積の割合ではない。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.lcdm",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.cosmic-expansion",
+    "type": "concept",
+    "title": {
+      "ja": "宇宙膨張",
+      "en": "Cosmic expansion"
+    },
+    "summary": "空間の尺度そのものが大きくなり、遠く離れた点どうしの距離が増えること。空間の一点での爆発ではなく、中心を必要としない。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.cosmology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.hubble1929",
+      "src.nasa-universe",
+      "src.nasa-webb-bigbang",
+      "src.davis-lineweaver-2004",
+      "src.cooperstock1998"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C08/C10"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "通俗的なイメージとの違い",
+        "view": "原子・地球・太陽系・重力で束縛された銀河は、それ自体は膨張しない。"
+      }
+    ]
+  },
+  {
+    "id": "con.cumulative-culture",
+    "type": "concept",
+    "title": {
+      "ja": "累積的文化・社会的学習",
+      "en": "Cumulative culture"
+    },
+    "summary": "他者から学んだ知識や技術が世代を超えて積み重なり、改良されていくこと。文化を持つのは人間だけではない。",
+    "domains": [
+      "D03",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.dark-energy",
+    "type": "concept",
+    "title": {
+      "ja": "ダークエネルギー",
+      "en": "Dark energy"
+    },
+    "summary": "宇宙の加速膨張を説明する成分。ΛCDMでは約69%。正体は不明で、時間とともに変化する可能性も議論されている。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.lcdm",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.planck2018-vi",
+      "src.nobel2011",
+      "src.desi-dr2-2025"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.dark-matter",
+    "type": "concept",
+    "title": {
+      "ja": "ダークマター",
+      "en": "Dark matter"
+    },
+    "summary": "光では見えないが重力の効果から存在が推定される物質。ΛCDMでは宇宙のエネルギー密度の約26%。正体は不明。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.lcdm",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.disciplinary-evidence",
+    "type": "concept",
+    "title": {
+      "ja": "学問ごとの証拠と方法の違い",
+      "en": "Evidence across disciplines"
+    },
+    "summary": "形式科学・自然科学・歴史学・社会科学・哲学・芸術研究では、証拠と検証の方法が異なる。",
+    "domains": [
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S08"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.entropy",
+    "type": "concept",
+    "title": {
+      "ja": "エントロピー",
+      "en": "Entropy"
+    },
+    "summary": "巨視的な状態に対応する微視的な状態の数に関わる物理量。単に「乱雑さ」と言い換えると不正確になる。",
+    "domains": [
+      "D01",
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.sep-time-thermo"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "重力系の扱いの議論を追記",
+        "reason": "Verifier C27"
+      }
+    ],
+    "body": "重力が効く系では、一様に広がった状態より構造をつくった状態の方がエントロピーが大きいとする見方が一般的だが、自己重力系のエントロピーの扱いには議論がある。"
+  },
+  {
+    "id": "con.evolving-dark-energy",
+    "type": "concept",
+    "title": {
+      "ja": "ダークエネルギーの時間変化の兆候",
+      "en": "Hints of evolving dark energy"
+    },
+    "summary": "DESIなどの観測の組み合わせで、ダークエネルギーの影響が弱まっている可能性が示された（2025年3月に2.8〜4.2σ）。超新星データの再較正後は最大約3.2σに低下。発見の基準（5σ）には未到達。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "con.dark-energy",
+    "time": {
+      "start_ya": 2,
+      "end_ya": 0,
+      "label": "2024年〜現在"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.desi-dr2-2025",
+      "src.des-recal-2025"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "最新の再較正を反映",
+        "reason": "Verifier C56（規則6）"
+      }
+    ]
+  },
+  {
+    "id": "con.first-cause",
+    "type": "concept",
+    "title": {
+      "ja": "第一原因と説明の限界",
+      "en": "First cause & the limits of explanation"
+    },
+    "summary": "宇宙に始まりがあるなら、その原因は何か、という哲学・宗教哲学の問い。因果が時間を前提にするなら、問い自体の意味が問われる。",
+    "domains": [
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.gpu-compute",
+    "type": "concept",
+    "title": {
+      "ja": "GPUと計算資源",
+      "en": "GPUs & compute"
+    },
+    "summary": "並列計算に強いGPUと大規模な計算資源が、深層学習の大規模化を可能にした。",
+    "domains": [
+      "D04",
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.hubble-tension",
+    "type": "concept",
+    "title": {
+      "ja": "ハッブル張力",
+      "en": "Hubble tension"
+    },
+    "summary": "宇宙の現在の膨張率（ハッブル定数）が、近傍の距離はしごによる測定（約73）と、CMBにΛCDMを当てはめた推定（約67）で食い違う問題。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.lcdm",
+    "time": {
+      "start_ya": 10,
+      "end_ya": 0,
+      "label": "2010年代〜現在"
+    },
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [
+      "src.h0dn-2026",
+      "src.nasa-hubble-tension",
+      "src.planck2018-vi",
+      "src.freedman-cchp-2025",
+      "src.pantos-2026"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "反対の立場を追加",
+        "reason": "Verifier C50/C53（品質基準11）"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "張力は小さいとする立場",
+        "view": "JWSTで別の距離指標（TRGBなど）を使ったCCHP（Freedmanら）はH0≈70を得て、ΛCDMと整合すると主張。",
+        "sources": [
+          "src.freedman-cchp-2025"
+        ]
+      },
+      {
+        "label": "食い違いの構図",
+        "view": "対立は初期宇宙対近傍宇宙というより、距離はしご対それ以外のほぼすべての方法だとする分析がある。",
+        "sources": [
+          "src.pantos-2026"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "con.industrial-revolution-causes",
+    "type": "concept",
+    "title": {
+      "ja": "産業革命の原因（多要因）",
+      "en": "Causes of the Industrial Revolution"
+    },
+    "summary": "蒸気機関だけでは説明できない。資源・投資・制度・市場・労働・帝国と交易など複数の要因が議論されている。",
+    "domains": [
+      "D05",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "evt.industrial-revolution",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.lithium-problem",
+    "type": "concept",
+    "title": {
+      "ja": "リチウム問題",
+      "en": "Cosmological lithium problem"
+    },
+    "summary": "古い恒星で観測されるリチウム7の量が、ビッグバン元素合成の予測の約3分の1しかない（約3倍の食い違い）問題。原因は未解決。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "evd.bbn-abundances",
+    "time": null,
+    "epistemic": "unknown",
+    "confidence": "high",
+    "sources": [
+      "src.pdg-bbn"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 1,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "「数倍」→「約3倍」",
+        "reason": "Verifier C46"
+      }
+    ]
+  },
+  {
+    "id": "con.llm",
+    "type": "concept",
+    "title": {
+      "ja": "大規模言語モデル（LLM）",
+      "en": "Large language models"
+    },
+    "summary": "大量のテキストで学習し、文章の続きを予測することを基本にして、多様な言語課題をこなすモデル。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.vaswani2017"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P02-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.natural-selection",
+    "type": "concept",
+    "title": {
+      "ja": "自然選択",
+      "en": "Natural selection"
+    },
+    "summary": "遺伝する変異のうち、生存・繁殖に有利なものが集団内に広がる過程。進化の主要な仕組みの一つ。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.newtonian-time",
+    "type": "concept",
+    "title": {
+      "ja": "ニュートンの絶対時間",
+      "en": "Newtonian absolute time"
+    },
+    "summary": "時間は宇宙のどこでも一様に流れる、という考え方。日常的な速度・重力では非常によい近似になる。",
+    "domains": [
+      "D01",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.path-dependence-legacy",
+    "type": "concept",
+    "title": {
+      "ja": "基幹システムの経路依存",
+      "en": "Path dependence of legacy systems"
+    },
+    "summary": "長年使った基幹システムは、代替技術が優れていても、教育・移行費用・連携・既存投資のために変えにくい。",
+    "domains": [
+      "D05",
+      "D04"
+    ],
+    "level": 4,
+    "parent": "thm.ai-economy",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.periodization",
+    "type": "concept",
+    "title": {
+      "ja": "時代区分の相対性",
+      "en": "Periodization is contextual"
+    },
+    "summary": "「古代→中世→近代」はヨーロッパ由来の区分であり、世界の全地域が同じ段階をたどったわけではない。",
+    "domains": [
+      "D07",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.planck-time",
+    "type": "concept",
+    "title": {
+      "ja": "プランク時間",
+      "en": "Planck time"
+    },
+    "summary": "約5.39×10⁻⁴⁴秒。量子重力の効果が重要になると考えられる時間の尺度。「宇宙最初の一瞬」を立証する数字ではない。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.codata-planck-time"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.scenarios-2035",
+    "type": "concept",
+    "title": {
+      "ja": "2035年AI社会の3シナリオ（説明用）",
+      "en": "Three AI scenarios for 2035"
+    },
+    "summary": "A：急速な自動化、B：段階的な普及、C：普及の停滞。予測確率ではなく、条件の違いを考えるための整合的な未来像。",
+    "domains": [
+      "D10",
+      "D05"
+    ],
+    "level": 4,
+    "parent": "thm.futures",
+    "time": {
+      "start_ya": -9,
+      "end_ya": null,
+      "label": "2035年"
+    },
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.science-religion",
+    "type": "concept",
+    "title": {
+      "ja": "科学・哲学・宗教の問いの区別",
+      "en": "Science, philosophy & religion"
+    },
+    "summary": "科学の未解明部分は、神の存在や不在を証明するものではない。それぞれの問いの種類と方法を区別する。",
+    "domains": [
+      "D08",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "normative",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.semiconductor",
+    "type": "concept",
+    "title": {
+      "ja": "半導体",
+      "en": "Semiconductors"
+    },
+    "summary": "電気の流れを制御できる物質。トランジスタと集積回路を通じて計算機の物理的な基盤になる。",
+    "domains": [
+      "D01",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.singularity",
+    "type": "concept",
+    "title": {
+      "ja": "特異点（初期宇宙）",
+      "en": "Initial singularity"
+    },
+    "summary": "古典的な一般相対論を過去へたどると、密度が無限大になる点が現れる。実在の証明ではなく、理論の適用限界を示している可能性が高い。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.time",
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": null,
+      "label": "約138億年前（理論上）"
+    },
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.spacetime",
+    "type": "concept",
+    "title": {
+      "ja": "時空",
+      "en": "Spacetime"
+    },
+    "summary": "時間と空間を一体のものとして扱う四次元の枠組み。相対論では、時間は宇宙の外にある普遍的な時計ではない。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.symbolic-and-statistical-ai",
+    "type": "concept",
+    "title": {
+      "ja": "記号AIと統計的機械学習",
+      "en": "Symbolic AI & statistical learning"
+    },
+    "summary": "1960〜2000年代、記号AI・探索・知識表現と、統計・機械学習が並行して発展した。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 66,
+      "end_ya": 21,
+      "label": "1960〜2000年代"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P02-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.time-dilation",
+    "type": "concept",
+    "title": {
+      "ja": "時間の遅れ",
+      "en": "Time dilation"
+    },
+    "summary": "運動している時計や、重力の強い場所にある時計は、遅れて進む。精密時計とGPSで実際に確かめられている。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.general-relativity",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.chou2010",
+      "src.ashby2003"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "con.trade-networks",
+    "type": "concept",
+    "title": {
+      "ja": "交易網による伝播",
+      "en": "Exchange networks"
+    },
+    "summary": "シルクロードやインド洋交易などの交易網は、物資だけでなく数学・紙・印刷・宗教・美術様式も運んだ。",
+    "domains": [
+      "D07",
+      "D09"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 2200,
+      "end_ya": 526,
+      "label": "古代〜近世"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.unesco-silk"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evd.bbn-abundances",
+    "type": "evidence",
+    "title": {
+      "ja": "軽元素の存在比（ビッグバン元素合成）",
+      "en": "Light-element abundances"
+    },
+    "summary": "水素・ヘリウムなどの量が、初期数分の元素合成の予測とよく一致する。リチウムには食い違いが残る。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.hot-big-bang",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.pdg-bbn"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evd.clock-tests",
+    "type": "evidence",
+    "title": {
+      "ja": "原子時計・GPSによる相対論の検証",
+      "en": "Clock & GPS tests of relativity"
+    },
+    "summary": "アルミニウムイオン光時計で高さを約33cm変えただけで時計の進み方の差が測定された実験や、GPS衛星の時計補正（約38マイクロ秒/日）が、相対論の時間の遅れを支える。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.general-relativity",
+    "time": {
+      "start_ya": 16,
+      "end_ya": null,
+      "label": "2010年の実験ほか"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.chou2010",
+      "src.ashby2003",
+      "src.nist-2010-al-clocks",
+      "src.ashby2002-physicstoday"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "時計の種類を訂正",
+        "reason": "Verifier C13"
+      }
+    ]
+  },
+  {
+    "id": "evd.cmb",
+    "type": "evidence",
+    "title": {
+      "ja": "宇宙マイクロ波背景放射（CMB）",
+      "en": "Cosmic microwave background"
+    },
+    "summary": "全天から届く約2.7Kの放射。約38万年後の宇宙の名残で、温度のわずかなゆらぎから宇宙の年齢や組成が推定される。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.hot-big-bang",
+    "time": {
+      "start_ya": 61,
+      "end_ya": null,
+      "label": "1965年に発見"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.penzias-wilson-1965",
+      "src.fixsen2009",
+      "src.planck2018-vi",
+      "src.alpher-herman-1948"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C44"
+      }
+    ]
+  },
+  {
+    "id": "evd.radiometric-dating",
+    "type": "evidence",
+    "title": {
+      "ja": "放射年代測定",
+      "en": "Radiometric dating"
+    },
+    "summary": "放射性同位体が一定の速さで壊れることを利用して、岩石や隕石の年代を測る方法。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.earth-solar",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.usgs-age-earth"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evd.redshift",
+    "type": "evidence",
+    "title": {
+      "ja": "遠方銀河の赤方偏移",
+      "en": "Redshift of distant galaxies"
+    },
+    "summary": "遠い銀河ほど光の波長が長く（赤く）ずれており、距離と赤方偏移の関係（ハッブル・ルメートルの法則）が宇宙膨張を支持する。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.hot-big-bang",
+    "time": {
+      "start_ya": 97,
+      "end_ya": null,
+      "label": "1929年（ハッブル）"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.hubble1929",
+      "src.lemaitre1927",
+      "src.iau-2018-hubble-lemaitre"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C39"
+      }
+    ]
+  },
+  {
+    "id": "evt.agents-multimodal",
+    "type": "event",
+    "title": {
+      "ja": "推論・マルチモーダル・エージェントの展開",
+      "en": "Reasoning, multimodal & agents"
+    },
+    "summary": "2024〜2026年、推論能力の向上、マルチモーダル化、ツール利用・エージェントが展開した。能力・信頼性・社会実装には分野差が大きく、用途は並存している。",
+    "domains": [
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 2,
+      "end_ya": 0,
+      "label": "2024〜2026年"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.hai-ai-index"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S07"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.agriculture",
+    "type": "event",
+    "title": {
+      "ja": "農耕・牧畜の発展（複数地域）",
+      "en": "Agriculture (multiple centers)"
+    },
+    "summary": "約1万2000年前以降、複数の地域でそれぞれ農耕・牧畜が始まった。移行は一様でなく、農耕から国家へは必然ではない。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.civilization",
+    "time": {
+      "start_ya": 12000,
+      "end_ya": null,
+      "label": "約1万2000年前以降"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.big-history"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.atlantic-colonialism",
+    "type": "event",
+    "title": {
+      "ja": "大西洋交易・植民地支配・奴隷貿易",
+      "en": "Atlantic trade, colonialism & slavery"
+    },
+    "summary": "1500年頃以降、大西洋をまたぐ交易・植民地支配・奴隷貿易が拡大した。暴力性と、利益・負担の偏った分配を含めて理解する。",
+    "domains": [
+      "D07",
+      "D05",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 526,
+      "end_ya": 146,
+      "label": "16〜19世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.atlantic-revolutions",
+    "type": "event",
+    "title": {
+      "ja": "アメリカ独立とフランス革命",
+      "en": "Atlantic revolutions"
+    },
+    "summary": "18世紀後半、市民権・憲法・主権・平等をめぐる革命が起き、近代国家の形成につながった。",
+    "domains": [
+      "D06",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.modernity",
+    "time": {
+      "start_ya": 250,
+      "end_ya": 227,
+      "label": "18世紀後半"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.bbn",
+    "type": "event",
+    "title": {
+      "ja": "ビッグバン元素合成",
+      "en": "Big Bang nucleosynthesis"
+    },
+    "summary": "誕生後の最初の数分間に、主に水素・ヘリウムの原子核がつくられた（中性の原子ができるのは約38万年後）。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.matter",
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": null,
+      "label": "誕生後数分"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.pdg-bbn"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.cambrian",
+    "type": "event",
+    "title": {
+      "ja": "カンブリア紀の動物の多様化",
+      "en": "Cambrian diversification"
+    },
+    "summary": "カンブリア紀（約5億3880万年前から）に動物が急速に多様化した。変化はエディアカラ紀から段階的に進んだ面もある。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 538800000.0,
+      "end_ya": null,
+      "label": "約5億3880万年前〜"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ics-chart-2024"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.chatgpt",
+    "type": "event",
+    "title": {
+      "ja": "ChatGPTの一般公開",
+      "en": "ChatGPT public release"
+    },
+    "summary": "2022年11月、対話型の生成AIが一般に公開され、急速に普及した。",
+    "domains": [
+      "D04",
+      "D05"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 4,
+      "end_ya": null,
+      "label": "2022年11月"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.openai-chatgpt"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S07"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.cold-war",
+    "type": "event",
+    "title": {
+      "ja": "冷戦・核兵器・国際機関・脱植民地化",
+      "en": "Cold War & decolonization"
+    },
+    "summary": "1945〜1991年、冷戦と核兵器、国際機関の形成、脱植民地化が進んだ。",
+    "domains": [
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.state-order",
+    "time": {
+      "start_ya": 81,
+      "end_ya": 35,
+      "label": "1945〜1991年"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S06"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.computation-theory",
+    "type": "event",
+    "title": {
+      "ja": "計算理論・電子計算機・情報理論",
+      "en": "Theory of computation & electronic computers"
+    },
+    "summary": "20世紀前半、計算理論、電子計算機、情報理論、神経科学が発展した。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 90,
+      "end_ya": 76,
+      "label": "20世紀前半"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.dartmouth",
+    "type": "event",
+    "title": {
+      "ja": "ダートマス会議",
+      "en": "Dartmouth workshop"
+    },
+    "summary": "1956年、「Artificial Intelligence」の研究分野が形成された。",
+    "domains": [
+      "D04",
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 70,
+      "end_ya": null,
+      "label": "1956年"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.dartmouth-ai"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S07"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.deep-learning",
+    "type": "event",
+    "title": {
+      "ja": "深層学習の進展",
+      "en": "Rise of deep learning"
+    },
+    "summary": "2010年代、GPU・データ・計算資源の進歩により深層学習が大きく進展した。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 14,
+      "end_ya": 7,
+      "label": "2010年代"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.hai-ai-index"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.digital-revolution",
+    "type": "event",
+    "title": {
+      "ja": "半導体・コンピューター・インターネットの普及",
+      "en": "Digital revolution"
+    },
+    "summary": "1970〜2000年代、情報化が進み、産業の分業と世界経済が変わった。",
+    "domains": [
+      "D04",
+      "D05"
+    ],
+    "level": 3,
+    "parent": "thm.tech-history",
+    "time": {
+      "start_ya": 56,
+      "end_ya": 21,
+      "label": "1970〜2000年代"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S06"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.earliest-life",
+    "type": "event",
+    "title": {
+      "ja": "最古の生命活動の痕跡",
+      "en": "Earliest evidence of life"
+    },
+    "summary": "約34億年前の地層に、生命の痕跡とされるもの（ストロマトライト）がある。より古い痕跡の主張もあり、解釈に議論がある。生命が誕生した時期と機構は不明。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 3430000000.0,
+      "end_ya": null,
+      "label": "約34億年前（より古い主張あり）",
+      "uncertainty": "より古い痕跡の主張もあるが議論が続く"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.allwood2006"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01",
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "ラベルと記述を訂正",
+        "reason": "Verifier C37"
+      }
+    ]
+  },
+  {
+    "id": "evt.early-states",
+    "type": "event",
+    "title": {
+      "ja": "都市と初期国家",
+      "en": "Cities & early states"
+    },
+    "summary": "紀元前4千年紀以降、一部の地域で都市・行政・初期国家が展開した。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.civilization",
+    "time": {
+      "start_ya": 6000,
+      "end_ya": null,
+      "label": "紀元前4千年紀〜"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.earth-formation",
+    "type": "event",
+    "title": {
+      "ja": "地球の形成",
+      "en": "Formation of the Earth"
+    },
+    "summary": "約45.4億年前。隕石などの放射年代測定から推定されている。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.earth-solar",
+    "time": {
+      "start_ya": 4540000000.0,
+      "end_ya": null,
+      "label": "約45.4億年前"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.usgs-age-earth"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.electrification",
+    "type": "event",
+    "title": {
+      "ja": "電化",
+      "en": "Electrification"
+    },
+    "summary": "19世紀末から20世紀にかけて電力が普及し、生産と生活を変えた。",
+    "domains": [
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.tech-history",
+    "time": {
+      "start_ya": 146,
+      "end_ya": 76,
+      "label": "19世紀末〜20世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.owid-tech"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.element-synthesis",
+    "type": "event",
+    "title": {
+      "ja": "恒星・超新星などによる元素の生成",
+      "en": "Stellar nucleosynthesis"
+    },
+    "summary": "恒星内部の核融合、超新星爆発、中性子星の合体などで、炭素・酸素・鉄などの多様な元素がつくられ、宇宙に広がった。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.matter",
+    "time": {
+      "start_ya": 13500000000.0,
+      "end_ya": 0,
+      "label": "数十億年にわたり継続"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.johnson2019-elements"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を差し替え",
+        "reason": "Verifier C33"
+      }
+    ]
+  },
+  {
+    "id": "evt.enlightenment",
+    "type": "event",
+    "title": {
+      "ja": "啓蒙思想",
+      "en": "The Enlightenment"
+    },
+    "summary": "17〜18世紀、理性・自由・統治をめぐる思想が展開した。",
+    "domains": [
+      "D08",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.modernity",
+    "time": {
+      "start_ya": 346,
+      "end_ya": 226,
+      "label": "17〜18世紀"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.first-galaxies",
+    "type": "event",
+    "title": {
+      "ja": "最初の恒星・銀河の形成",
+      "en": "First stars & galaxies"
+    },
+    "summary": "最初の数億年のうちに、重力によって恒星と銀河が形成された。JWSTは誕生後約3億年の銀河を分光で確認している。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.cosmology",
+    "time": {
+      "start_ya": 13500000000.0,
+      "end_ya": null,
+      "label": "誕生後数億年"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.jades-z14",
+      "src.nasa-webb-bigbang"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.globalization",
+    "type": "event",
+    "title": {
+      "ja": "冷戦後の秩序と経済のグローバル化",
+      "en": "Post-Cold War globalization"
+    },
+    "summary": "1991年以降、経済のグローバル化と中国の台頭が進み、相互依存と地政学が交錯している。",
+    "domains": [
+      "D06",
+      "D05"
+    ],
+    "level": 3,
+    "parent": "thm.state-order",
+    "time": {
+      "start_ya": 35,
+      "end_ya": 0,
+      "label": "1991年〜"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S06"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.goe",
+    "type": "event",
+    "title": {
+      "ja": "大酸化イベント",
+      "en": "Great Oxidation Event"
+    },
+    "summary": "約24億年前、大気中の酸素が増えた。生命（光合成）が地球環境を大きく変えた例。",
+    "domains": [
+      "D03",
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 2400000000.0,
+      "end_ya": null,
+      "label": "約24億年前"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.hominin-split",
+    "type": "event",
+    "title": {
+      "ja": "人類系統の分岐",
+      "en": "Hominin divergence"
+    },
+    "summary": "約700万〜600万年前以降、チンパンジーとの共通祖先から人類の系統が分かれた。化石から推定される年代には幅がある。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 7000000.0,
+      "end_ya": 6000000.0,
+      "label": "約700万〜600万年前",
+      "uncertainty": "推定に幅"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.smithsonian-human"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.homo-sapiens",
+    "type": "event",
+    "title": {
+      "ja": "ホモ・サピエンスの出現",
+      "en": "Emergence of Homo sapiens"
+    },
+    "summary": "約30万年前、アフリカで現生人類が現れた。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 300000,
+      "end_ya": null,
+      "label": "約30万年前"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.hublin2017",
+      "src.smithsonian-human"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.hot-dense-early",
+    "type": "event",
+    "title": {
+      "ja": "高温・高密度の初期宇宙からの膨張",
+      "en": "Expansion from the hot dense early universe"
+    },
+    "summary": "約138億年前、宇宙は高温・高密度の状態から膨張を始めた。究極の始まりは未解明。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.cosmology",
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": null,
+      "label": "約138億年前"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.planck2018-vi",
+      "src.nasa-universe"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.imperialism",
+    "type": "event",
+    "title": {
+      "ja": "鉄道・電信・世界市場と帝国主義",
+      "en": "Railways, telegraph & imperialism"
+    },
+    "summary": "19世紀、交通・通信の発達と世界市場の拡大、帝国主義による支配が進んだ。",
+    "domains": [
+      "D06",
+      "D05",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.modernity",
+    "time": {
+      "start_ya": 196,
+      "end_ya": 112,
+      "label": "19世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.industrial-revolution",
+    "type": "event",
+    "title": {
+      "ja": "産業革命・工業化",
+      "en": "Industrial Revolution"
+    },
+    "summary": "18世紀後半に英国で始まり、化石燃料・工場・労働・都市化・資本のあり方を変えた。",
+    "domains": [
+      "D04",
+      "D05",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.modernity",
+    "time": {
+      "start_ya": 266,
+      "end_ya": 176,
+      "label": "18世紀後半〜19世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.owid-tech"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.inflation-epoch",
+    "type": "event",
+    "title": {
+      "ja": "インフレーション期（仮説）",
+      "en": "Inflationary epoch"
+    },
+    "summary": "誕生直後の極めて短い時間に起きたとされる急膨張。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thy.inflation",
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": null,
+      "label": "誕生直後"
+    },
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 1,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.kpg",
+    "type": "event",
+    "title": {
+      "ja": "白亜紀末の大量絶滅",
+      "en": "K–Pg extinction"
+    },
+    "summary": "約6600万年前、非鳥類型の恐竜などが絶滅した。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 66000000.0,
+      "end_ya": null,
+      "label": "約6600万年前"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ics-chart-2024"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.mechanical-calculation",
+    "type": "event",
+    "title": {
+      "ja": "機械式計算と数理論理・統計の発展",
+      "en": "Mechanical calculation & mathematical logic"
+    },
+    "summary": "17〜19世紀、機械式計算機、数理論理、統計、確率の研究が進んだ。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 384,
+      "end_ya": 126,
+      "label": "17〜19世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P02-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.printing",
+    "type": "event",
+    "title": {
+      "ja": "印刷技術の発展と普及",
+      "en": "Printing"
+    },
+    "summary": "中国での木版・活字印刷の発展と、15世紀ヨーロッパの活版印刷の普及。知識の複製と流通を変えた。",
+    "domains": [
+      "D04",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.tech-history",
+    "time": {
+      "start_ya": 1300,
+      "end_ya": 526,
+      "label": "唐代〜15世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.recombination",
+    "type": "event",
+    "title": {
+      "ja": "再結合（宇宙の晴れ上がり）",
+      "en": "Recombination"
+    },
+    "summary": "約38万年後、電子と原子核が結びついて中性の原子ができ、光がまっすぐ進めるようになった。CMBの起源。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.cosmology",
+    "time": {
+      "start_ya": 13799620000.0,
+      "end_ya": null,
+      "label": "誕生後約38万年"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.planck2018-vi",
+      "src.nasa-webb-bigbang"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C30"
+      }
+    ]
+  },
+  {
+    "id": "evt.scientific-revolution",
+    "type": "event",
+    "title": {
+      "ja": "科学革命",
+      "en": "Scientific Revolution"
+    },
+    "summary": "16〜17世紀、観察・実験・数学による自然理解の方法が発展した。",
+    "domains": [
+      "D07",
+      "D08",
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.modernity",
+    "time": {
+      "start_ya": 483,
+      "end_ya": 326,
+      "label": "16〜17世紀"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.solar-system",
+    "type": "event",
+    "title": {
+      "ja": "太陽系の形成",
+      "en": "Formation of the Solar System"
+    },
+    "summary": "約45.67億年前、原始太陽と原始惑星系円盤から太陽系が形成された。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.earth-solar",
+    "time": {
+      "start_ya": 4567000000.0,
+      "end_ya": null,
+      "label": "約46億年前"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ics-chart-2024",
+      "src.nasa-solar-system",
+      "src.connelly2012"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "一次資料を追加",
+        "reason": "Verifier C34"
+      }
+    ]
+  },
+  {
+    "id": "evt.symbolic-behavior",
+    "type": "event",
+    "title": {
+      "ja": "言語・象徴・芸術の発展",
+      "en": "Language, symbols & art"
+    },
+    "summary": "先史時代に、言語・象徴・芸術・儀礼・広域の交流が発展した。単発の「革命」に還元しない。",
+    "domains": [
+      "D09",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.arts",
+    "time": {
+      "start_ya": 100000,
+      "end_ya": null,
+      "label": "先史時代",
+      "uncertainty": "最古の証拠の年代と解釈には諸説"
+    },
+    "epistemic": "debate",
+    "confidence": "low",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.tools-fire",
+    "type": "event",
+    "title": {
+      "ja": "道具と火の利用",
+      "en": "Tools & fire"
+    },
+    "summary": "数百万年前から石器が使われ、のちに火の利用が広がった。協力と社会的学習の発展と結びつく。",
+    "domains": [
+      "D04",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.tech-history",
+    "time": {
+      "start_ya": 3300000.0,
+      "end_ya": null,
+      "label": "数百万年前〜",
+      "uncertainty": "最古の石器・火の利用の年代は議論がある"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.transformer",
+    "type": "event",
+    "title": {
+      "ja": "Transformer論文",
+      "en": "Transformer (Attention Is All You Need)"
+    },
+    "summary": "2017年、注意機構に基づくTransformerが提案され、大規模言語モデルの基盤になった。",
+    "domains": [
+      "D02",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": {
+      "start_ya": 9,
+      "end_ya": null,
+      "label": "2017年"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.vaswani2017"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P02-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.world-wars",
+    "type": "event",
+    "title": {
+      "ja": "世界大戦・大恐慌・全体主義",
+      "en": "World wars & the Depression"
+    },
+    "summary": "1914〜1945年、二つの世界大戦、革命、大恐慌、ファシズムが国際秩序を揺るがした。",
+    "domains": [
+      "D06",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.modernity",
+    "time": {
+      "start_ya": 112,
+      "end_ya": 81,
+      "label": "1914〜1945年"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S06"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "evt.writing",
+    "type": "event",
+    "title": {
+      "ja": "初期の文字体系",
+      "en": "Early writing systems"
+    },
+    "summary": "紀元前3200年頃からメソポタミアやエジプトなどで文字が使われた。記録・税・交易・法・知識の継承と関わる。他地域でも独自に発展。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.civilization",
+    "time": {
+      "start_ya": 5226,
+      "end_ya": null,
+      "label": "紀元前3200年頃〜"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "文字の有無と文明",
+        "view": "文字を持たない文化も豊かであり、文字の有無で文明の優劣を決めない。"
+      }
+    ]
+  },
+  {
+    "id": "mth.base-rate",
+    "type": "method",
+    "title": {
+      "ja": "基準率の利用",
+      "en": "Base rates"
+    },
+    "summary": "個別の情報を見る前に、その事象が対象集団でどれほど普通かを確認する。基準率を無視すると判断を大きく誤る。",
+    "domains": [
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.bayesian-updating",
+    "type": "method",
+    "title": {
+      "ja": "ベイズ的更新",
+      "en": "Bayesian updating"
+    },
+    "summary": "新しい証拠を得たとき、事前の確信を、仮説が正しい場合と誤りの場合に証拠が出る確率の比で更新する考え方。",
+    "domains": [
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.causal-inference",
+    "type": "method",
+    "title": {
+      "ja": "因果推論",
+      "en": "Causal inference"
+    },
+    "summary": "XとYが一緒に起きることと、XがYを引き起こすことを区別し、交絡因子・反事実を検討して因果を推定する方法。",
+    "domains": [
+      "D02",
+      "D05"
+    ],
+    "level": 3,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.counterfactual",
+    "type": "method",
+    "title": {
+      "ja": "反実仮想",
+      "en": "Counterfactual reasoning"
+    },
+    "summary": "もし要因Xがなかったら結果Yはどうなったかを、変える条件と固定する条件を明示して考える。",
+    "domains": [
+      "D08",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.epistemic-categories",
+    "type": "method",
+    "title": {
+      "ja": "認識の6分類",
+      "en": "Six epistemic categories"
+    },
+    "summary": "観測された事実／強い証拠のある理論／解釈・論争／規範的判断／予測・仮説／未知・未解明を区別する。",
+    "domains": [
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.feedback",
+    "type": "method",
+    "title": {
+      "ja": "システムのフィードバック",
+      "en": "Feedback loops"
+    },
+    "summary": "結果が原因に戻る循環。変化を増幅する強化ループと、抑える均衡ループがある。時間遅れと境界の取り方に注意する。",
+    "domains": [
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.systems",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.five-maps",
+    "type": "method",
+    "title": {
+      "ja": "5種類の地図",
+      "en": "Five maps"
+    },
+    "summary": "時間・空間・学問・構造と因果・認識と限界の5つの地図を、あらゆるテーマに重ねる。",
+    "domains": [
+      "D08",
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.forecast-calibration",
+    "type": "method",
+    "title": {
+      "ja": "予測の校正",
+      "en": "Forecast calibration"
+    },
+    "summary": "70%と予測した事象が実際に約70%起きているかを検証する。校正に加えて識別力・鋭さも見る。",
+    "domains": [
+      "D10",
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.futures",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.nine-questions",
+    "type": "method",
+    "title": {
+      "ja": "9つの共通質問",
+      "en": "Nine common questions"
+    },
+    "summary": "何か／いつ・どこか／なぜか／どう機能するか／誰に関係するか／何につながるか／どう知るか／何が分からないか／今後どうなり得るか。",
+    "domains": [
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.epistemology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.path-dependence",
+    "type": "method",
+    "title": {
+      "ja": "経路依存性",
+      "en": "Path dependence"
+    },
+    "summary": "過去の選択・偶然・自己強化・切替コストが現在の選択肢を制約すること。維持の仕組みを特定して初めて説明になる。",
+    "domains": [
+      "D05",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.systems",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.scenario-analysis",
+    "type": "method",
+    "title": {
+      "ja": "シナリオ分析",
+      "en": "Scenario analysis"
+    },
+    "summary": "主要な不確実性を変えた、複数の整合的な未来を描く。予言ではない。",
+    "domains": [
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.futures",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.seven-steps",
+    "type": "method",
+    "title": {
+      "ja": "8思考法を統合した7ステップ",
+      "en": "Seven-step analysis"
+    },
+    "summary": "定義→基準率→因果・反実仮想→フィードバック・制約・経路依存→シナリオ→予測の記録→更新と校正。",
+    "domains": [
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.systems",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "mth.twelve-axes",
+    "type": "method",
+    "title": {
+      "ja": "世界を動かす12の分析軸",
+      "en": "Twelve analytical axes"
+    },
+    "summary": "物質・資源、エネルギー、自然環境、人口、技術・知識、生産・経済、政治・権力、法・制度、文化・思想、社会関係、情報・メディア、偶然・危機・選択。法則ではなくチェックリスト。",
+    "domains": [
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.systems",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.ai-control",
+    "type": "question",
+    "title": {
+      "ja": "AIを誰が開発・支配・規制するのか",
+      "en": "Who develops, controls and regulates AI?"
+    },
+    "summary": "政治・法・国際関係から生成AIへの接続の問い。",
+    "domains": [
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.ai-governance",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P03-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.ai-economy-effects",
+    "type": "question",
+    "title": {
+      "ja": "AIで生産性・雇用・賃金・企業利益はどうなるか",
+      "en": "How will AI affect productivity, jobs, wages and profits?"
+    },
+    "summary": "経済・経営学から生成AIへの接続の問い。",
+    "domains": [
+      "D05"
+    ],
+    "level": 3,
+    "parent": "thm.ai-economy",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P03-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.ai-society",
+    "type": "question",
+    "title": {
+      "ja": "AI社会はどのような仕組み・格差・機会を生むか",
+      "en": "What structures, inequalities and opportunities will an AI society create?"
+    },
+    "summary": "社会・未来研究から生成AIへの接続の問い。",
+    "domains": [
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.futures",
+    "time": null,
+    "epistemic": "hypothesis",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P04-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.ai-vs-past-revolutions",
+    "type": "question",
+    "title": {
+      "ja": "AI革命は過去の技術革新と何が似て、何が異なるか",
+      "en": "How does AI compare with past technological revolutions?"
+    },
+    "summary": "技術・産業史から生成AIへの接続の問い。",
+    "domains": [
+      "D04",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.tech-history",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P03-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.computation-physics",
+    "type": "question",
+    "title": {
+      "ja": "半導体はなぜ計算でき、計算にはなぜ電力が必要か",
+      "en": "Why can semiconductors compute, and why does computing need energy?"
+    },
+    "summary": "宇宙・物理学から生成AIへの接続の問い。",
+    "domains": [
+      "D01",
+      "D04"
+    ],
+    "level": 3,
+    "parent": "thm.matter",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.creativity-authenticity",
+    "type": "question",
+    "title": {
+      "ja": "AIが生成できる時代に、創造や真正性の意味は何か",
+      "en": "What do creativity and authenticity mean in the age of generative AI?"
+    },
+    "summary": "文化・文学・芸術から生成AIへの接続の問い。",
+    "domains": [
+      "D09"
+    ],
+    "level": 3,
+    "parent": "thm.arts",
+    "time": null,
+    "epistemic": "normative",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P03-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.human-vs-ai-intelligence",
+    "type": "question",
+    "title": {
+      "ja": "人間の知能とAIの知能の共通点と相違点は何か",
+      "en": "How do human and machine intelligence compare?"
+    },
+    "summary": "生命・脳科学から生成AIへの接続の問い。",
+    "domains": [
+      "D03",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.mind",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S07"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.knowledge-transmission",
+    "type": "question",
+    "title": {
+      "ja": "知識・技術・制度はどう蓄積・伝播したか",
+      "en": "How have knowledge, technology and institutions accumulated and spread?"
+    },
+    "summary": "歴史・文明・宗教から生成AIへの接続の問い。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.low-entropy-past",
+    "type": "question",
+    "title": {
+      "ja": "なぜ初期宇宙は低エントロピーだったのか",
+      "en": "Why was the early universe low-entropy?"
+    },
+    "summary": "時間の矢の究極の起源に関わる未解明の問い（過去仮説）。",
+    "domains": [
+      "D01",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "unknown",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.math-of-learning",
+    "type": "question",
+    "title": {
+      "ja": "AIの学習・推論は数学的にどう成り立つか",
+      "en": "How do AI learning and inference work mathematically?"
+    },
+    "summary": "数学・情報科学から生成AIへの接続の問い。",
+    "domains": [
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.probability",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.nature-dark-matter-energy",
+    "type": "question",
+    "title": {
+      "ja": "ダークマターとダークエネルギーの正体は何か",
+      "en": "What are dark matter and dark energy?"
+    },
+    "summary": "重力的な効果や加速膨張から推定されるが、根本的な正体は未解明。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thy.lcdm",
+    "time": null,
+    "epistemic": "unknown",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.origin-of-life",
+    "type": "question",
+    "title": {
+      "ja": "生命はどのように誕生したのか",
+      "en": "How did life originate?"
+    },
+    "summary": "生命の起源の時期と機構は未解明。進化の仕組みとは別の問題。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "unknown",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.origin-of-time",
+    "type": "question",
+    "title": {
+      "ja": "時間そのものに起源はあるか",
+      "en": "Did time have a beginning?"
+    },
+    "summary": "時間に過去の端があるのか、それとも「ビッグバン以前」に意味があるのか。宇宙モデルと時間観に依存し、未解明。",
+    "domains": [
+      "D01",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "unknown",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.what-is-intelligence",
+    "type": "question",
+    "title": {
+      "ja": "知能・意識・人間・自由・責任とは何か",
+      "en": "What are intelligence, consciousness and responsibility?"
+    },
+    "summary": "哲学・倫理・思想から生成AIへの接続の問い。",
+    "domains": [
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.ethics",
+    "time": null,
+    "epistemic": "normative",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P03-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "q.why-genai-2020s",
+    "type": "question",
+    "title": {
+      "ja": "なぜ生成AIは2020年代に急速に発展・普及したのか",
+      "en": "Why did generative AI take off in the 2020s?"
+    },
+    "summary": "第一の本格探究テーマ。技術的・経済的・社会的な条件と、今後の制約を問う。",
+    "domains": [
+      "D04",
+      "D05",
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.ai-history",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S07"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.ai-economy",
+    "type": "theme",
+    "title": {
+      "ja": "AIと経済",
+      "en": "AI & the economy"
+    },
+    "summary": "AIによって生産性・雇用・賃金・企業利益がどう変わるか。因果の推定が難しい領域。",
+    "domains": [
+      "D05"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 10,
+      "end_ya": -10,
+      "label": "2010年代〜近未来"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.ai-governance",
+    "type": "theme",
+    "title": {
+      "ja": "AIの開発・支配・規制",
+      "en": "AI development, power & regulation"
+    },
+    "summary": "AIを誰が開発・支配・規制するのか。国家競争・安全保障・制度設計を扱う。",
+    "domains": [
+      "D06"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 10,
+      "end_ya": -10,
+      "label": "2010年代〜近未来"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P03-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.ai-history",
+    "type": "theme",
+    "title": {
+      "ja": "計算機とAIの歴史",
+      "en": "History of computing & AI"
+    },
+    "summary": "機械式計算から電子計算機、AI研究の誕生、深層学習、Transformer、生成AIまでの流れ。",
+    "domains": [
+      "D04",
+      "D02"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 386,
+      "end_ya": 0,
+      "label": "17世紀〜現在"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.dartmouth-ai",
+      "src.vaswani2017"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 4,
+    "curriculum": [
+      "P01-S07",
+      "P02-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.arts",
+    "type": "theme",
+    "title": {
+      "ja": "文化・文学・芸術と創造",
+      "en": "Culture, literature, arts & creativity"
+    },
+    "summary": "美学・芸術史・文学・音楽・メディア。AIが生成できる時代に、創造や真正性の意味は何か。",
+    "domains": [
+      "D09"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 100000,
+      "end_ya": 0,
+      "label": "先史時代〜現在",
+      "uncertainty": "象徴的行動の最古の証拠の年代には諸説"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P03-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.civilization",
+    "type": "theme",
+    "title": {
+      "ja": "文明の成立",
+      "en": "Emergence of civilizations"
+    },
+    "summary": "農耕・牧畜、都市、初期国家、文字の発展。地域ごとに経路が異なり、必然の一本道ではない。",
+    "domains": [
+      "D07"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 12000,
+      "end_ya": 2500,
+      "label": "約1万2000年前〜古代"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.computation",
+    "type": "theme",
+    "title": {
+      "ja": "計算と情報",
+      "en": "Computation & information"
+    },
+    "summary": "論理・計算理論・情報理論。計算機とは何か、計算できることの限界は何かを扱う。",
+    "domains": [
+      "D02"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.cosmology",
+    "type": "theme",
+    "title": {
+      "ja": "宇宙論と宇宙史",
+      "en": "Cosmology & cosmic history"
+    },
+    "summary": "高温・高密度の初期宇宙から現在までの宇宙の進化と、その証拠・理論・未解明を扱う。",
+    "domains": [
+      "D01"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": 0,
+      "label": "約138億年前〜現在"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.nasa-universe",
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.earth-solar",
+    "type": "theme",
+    "title": {
+      "ja": "太陽系と地球",
+      "en": "Solar system & Earth"
+    },
+    "summary": "太陽系と地球の形成、その年代の測り方、地球環境の長期的な変化を扱う。",
+    "domains": [
+      "D01"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 4567000000.0,
+      "end_ya": 0,
+      "label": "約46億年前〜現在"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ics-chart-2024",
+      "src.usgs-age-earth"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.economy",
+    "type": "theme",
+    "title": {
+      "ja": "経済発展と資本主義",
+      "en": "Economic development & capitalism"
+    },
+    "summary": "資本主義・労働・企業・金融・イノベーションと、経済の長期的な変化を扱う。",
+    "domains": [
+      "D05"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 500,
+      "end_ya": 0,
+      "label": "近世〜現在"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05",
+      "P03-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.epistemology",
+    "type": "theme",
+    "title": {
+      "ja": "認識論・科学哲学",
+      "en": "Epistemology & philosophy of science"
+    },
+    "summary": "何を、どの根拠で知っていると言えるか。学問ごとの証拠と方法の違いを扱う。",
+    "domains": [
+      "D08"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01",
+      "P01-S08"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.ethics",
+    "type": "theme",
+    "title": {
+      "ja": "倫理・価値・人間観",
+      "en": "Ethics, values & views of humanity"
+    },
+    "summary": "知能・意識・人間・自由・幸福・責任とは何か。望ましさは観測事実だけでは決まらない。",
+    "domains": [
+      "D08"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "normative",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P03-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.futures",
+    "type": "theme",
+    "title": {
+      "ja": "未来研究",
+      "en": "Futures studies"
+    },
+    "summary": "未来を複数の条件付きの可能性として考え、予測を記録して検証する。",
+    "domains": [
+      "D10"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 0,
+      "end_ya": -30,
+      "label": "現在〜2050年代"
+    },
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.uk-futures",
+      "src.unesco-futures"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P04-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.human-evolution",
+    "type": "theme",
+    "title": {
+      "ja": "人類の進化",
+      "en": "Human evolution"
+    },
+    "summary": "人類系統の分岐からホモ・サピエンスの出現、道具・火・言語・累積的文化の発展までを扱う。",
+    "domains": [
+      "D03",
+      "D07"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 7000000.0,
+      "end_ya": 0,
+      "label": "約700万年前〜現在",
+      "uncertainty": "分岐年代に幅"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.smithsonian-human"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.life",
+    "type": "theme",
+    "title": {
+      "ja": "生命の起源と進化",
+      "en": "Origin & evolution of life"
+    },
+    "summary": "生命の起源（未解明）と、その後の進化・絶滅・生態系の変化を扱う。起源と進化は別の問題として区別する。",
+    "domains": [
+      "D03"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 4000000000.0,
+      "end_ya": 0,
+      "label": "約40億年前？〜現在",
+      "uncertainty": "生命の起源の時期は未確定"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.ics-chart-2024"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.matter",
+    "type": "theme",
+    "title": {
+      "ja": "物質・元素・エネルギー",
+      "en": "Matter, elements & energy"
+    },
+    "summary": "軽元素の合成から恒星・超新星などによる元素の生成、物質とエネルギーの性質までを扱う。",
+    "domains": [
+      "D01"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": 0,
+      "label": "約138億年前〜現在"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.pdg-bbn"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.mind",
+    "type": "theme",
+    "title": {
+      "ja": "脳・認知・知能",
+      "en": "Brain, cognition & intelligence"
+    },
+    "summary": "人間の知能はどう成り立つか。AIの知能との共通点・相違点を考える基盤。",
+    "domains": [
+      "D03",
+      "D08"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S07"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.modernity",
+    "type": "theme",
+    "title": {
+      "ja": "近代化と現代",
+      "en": "Modernization & the modern world"
+    },
+    "summary": "科学革命・啓蒙・産業革命・近代国家・帝国主義・世界大戦・冷戦・情報化までの流れ。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 426,
+      "end_ya": 0,
+      "label": "17世紀〜現在"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05",
+      "P01-S06"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.probability",
+    "type": "theme",
+    "title": {
+      "ja": "確率・統計・推論",
+      "en": "Probability, statistics & inference"
+    },
+    "summary": "不確実なことを数で扱い、証拠から結論を導く方法。AIの学習・推論の数学的な基盤でもある。",
+    "domains": [
+      "D02"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P02-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.state-order",
+    "type": "theme",
+    "title": {
+      "ja": "国家と国際秩序",
+      "en": "States & international order"
+    },
+    "summary": "国家・民主主義・権力・法・地政学・国際秩序の成り立ちと変化を扱う。",
+    "domains": [
+      "D06"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 5500,
+      "end_ya": 0,
+      "label": "初期国家〜現在"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S06",
+      "P03-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.systems",
+    "type": "theme",
+    "title": {
+      "ja": "複雑系・システム思考",
+      "en": "Complex systems & systems thinking"
+    },
+    "summary": "要素の関係・フィードバック・非線形性・創発から全体を考える。",
+    "domains": [
+      "D10"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.uk-systems"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.tech-history",
+    "type": "theme",
+    "title": {
+      "ja": "技術革新の歴史",
+      "en": "History of technological change"
+    },
+    "summary": "道具・農耕・印刷・産業革命・電化・コンピューターまで、技術の変化と社会の関係を扱う。",
+    "domains": [
+      "D04"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 3300000.0,
+      "end_ya": 0,
+      "label": "数百万年前〜現在"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.owid-tech"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S05"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.time",
+    "type": "theme",
+    "title": {
+      "ja": "時間と時空",
+      "en": "Time & spacetime"
+    },
+    "summary": "時間とは何か、時間に始まりはあるか、なぜ時間に向きがあるのかを、物理学と哲学から扱う。",
+    "domains": [
+      "D01",
+      "D08"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [
+      "src.sep-cosmology",
+      "src.sep-time-thermo"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.watch",
+    "type": "theme",
+    "title": {
+      "ja": "現代の重点観察テーマ",
+      "en": "Key contemporary issues"
+    },
+    "summary": "AI・デジタル化、国際秩序、人口構造、エネルギー・気候、生物・医療技術、民主主義、所得分配、文化と価値。",
+    "domains": [
+      "D10",
+      "D06"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 10,
+      "end_ya": -10,
+      "label": "2010年代〜近未来"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.ipcc-ar6-syr",
+      "src.un-wpp"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P04-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thm.world-history",
+    "type": "theme",
+    "title": {
+      "ja": "世界史の多地域比較",
+      "en": "Comparative world history"
+    },
+    "summary": "同じ時代の世界を地域横断で見る。帝国・宗教・交易・思想・技術・芸術の交流と、支配・暴力も含める。",
+    "domains": [
+      "D07"
+    ],
+    "level": 2,
+    "parent": null,
+    "time": {
+      "start_ya": 5500,
+      "end_ya": 276,
+      "label": "紀元前3500年頃〜1750年頃"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.unesco-silk"
+    ],
+    "verification": {
+      "status": "pending",
+      "date": null,
+      "by": null
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.big-bounce",
+    "type": "theory",
+    "title": {
+      "ja": "ビッグバウンス仮説",
+      "en": "Big Bounce"
+    },
+    "summary": "現在の膨張の前に、収縮する宇宙などの別の状態があったとする仮説群。観測による確証はない。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.emergent-time",
+    "type": "theory",
+    "title": {
+      "ja": "創発的な時間",
+      "en": "Emergent time"
+    },
+    "summary": "時間を根本的な実在とせず、より根本的な（量子重力的な）構造から現れるものとみる研究の方向。未確立。",
+    "domains": [
+      "D01",
+      "D08"
+    ],
+    "level": 4,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "hypothesis",
+    "confidence": "low",
+    "sources": [
+      "src.sep-cosmology"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.general-relativity",
+    "type": "theory",
+    "title": {
+      "ja": "一般相対性理論",
+      "en": "General relativity"
+    },
+    "summary": "重力を時空の曲がりとして説明する理論（1915年に完成）。重力の強い場所ほど時間の進み方が遅い。宇宙論の基礎になる。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": {
+      "start_ya": 111,
+      "end_ya": null,
+      "label": "1915年"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.ashby2003",
+      "src.chou2010",
+      "src.einstein1916"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C12"
+      }
+    ]
+  },
+  {
+    "id": "thy.hot-big-bang",
+    "type": "theory",
+    "title": {
+      "ja": "ビッグバン理論（高温高密度の初期宇宙）",
+      "en": "Hot Big Bang model"
+    },
+    "summary": "宇宙はかつて高温・高密度の状態にあり、そこから膨張・冷却してきたとする理論。複数の独立した証拠に支えられている。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.cosmology",
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": null,
+      "label": "約138億年前"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.nasa-webb-bigbang",
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.inflation",
+    "type": "theory",
+    "title": {
+      "ja": "インフレーション理論",
+      "en": "Cosmic inflation"
+    },
+    "summary": "誕生直後の極めて短い時間に宇宙が急膨張したとする理論的枠組み。宇宙の一様さなどを説明する有力候補だが、機構と決定的な実証は未確立。",
+    "domains": [
+      "D01"
+    ],
+    "level": 4,
+    "parent": "thm.cosmology",
+    "time": {
+      "start_ya": 13800000000.0,
+      "end_ya": null,
+      "label": "誕生直後の極短時間"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-cosmology",
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.lcdm",
+    "type": "theory",
+    "title": {
+      "ja": "ΛCDMモデル（標準宇宙モデル）",
+      "en": "ΛCDM model"
+    },
+    "summary": "宇宙定数Λ（ダークエネルギー）と冷たいダークマターを含む標準的な宇宙モデル。多くの観測をよく説明するが、緊張関係も指摘されている。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.cosmology",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.planck2018-vi"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 3,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.second-law",
+    "type": "theory",
+    "title": {
+      "ja": "熱力学第二法則",
+      "en": "Second law of thermodynamics"
+    },
+    "summary": "孤立した系のエントロピーは（統計的に）減らない。時間の矢を説明する主要な枠組み。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.sep-time-thermo"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      }
+    ]
+  },
+  {
+    "id": "thy.special-relativity",
+    "type": "theory",
+    "title": {
+      "ja": "特殊相対性理論",
+      "en": "Special relativity"
+    },
+    "summary": "光速はどの観測者にも同じであり、時間と空間は観測者の運動によって変わる。時間と空間は一体の「時空」をなす。",
+    "domains": [
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.time",
+    "time": {
+      "start_ya": 121,
+      "end_ya": null,
+      "label": "1905年"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.einstein1905",
+      "src.chou2010"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S01"
+    ],
+    "history": [
+      {
+        "map_version": "1.0",
+        "change": "作成",
+        "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を一次資料に",
+        "reason": "Verifier C12"
+      }
+    ]
+  }
+]

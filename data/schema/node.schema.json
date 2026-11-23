@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "nodes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "type",
+      "title",
+      "summary",
+      "domains",
+      "level",
+      "time",
+      "epistemic",
+      "confidence",
+      "sources",
+      "verification",
+      "target_level"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^(thm|con|evt|act|thy|evd|q|mth)\\.[a-z0-9-]+$"
+      },
+      "type": {
+        "enum": [
+          "theme",
+          "concept",
+          "event",
+          "actor",
+          "theory",
+          "evidence",
+          "question",
+          "method"
+        ]
+      },
+      "title": {
+        "type": "object",
+        "required": [
+          "ja"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "ja": {
+            "type": "string",
+            "minLength": 1
+          },
+          "en": {
+            "type": "string"
+          }
+        }
+      },
+      "summary": {
+        "type": "string",
+        "minLength": 5
+      },
+      "body": {
+        "type": "string"
+      },
+      "domains": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "pattern": "^D(0[1-9]|10)$"
+        }
+      },
+      "level": {
+        "type": "integer",
+        "minimum": 2,
+        "maximum": 4
+      },
+      "parent": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "time": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "required": [
+              "start_ya",
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "start_ya": {
+                "type": "number"
+              },
+              "end_ya": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "label": {
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "epistemic": {
+        "enum": [
+          "fact",
+          "theory",
+          "debate",
+          "normative",
+          "hypothesis",
+          "unknown"
+        ]
+      },
+      "confidence": {
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ]
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^src\\.[a-z0-9-]+$"
+        }
+      },
+      "verification": {
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "enum": [
+              "verified",
+              "unverified",
+              "pending"
+            ]
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "target_level": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 5
+      },
+      "curriculum": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "perspectives": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "label",
+            "view"
+          ],
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "view": {
+              "type": "string"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "history": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "map_version",
+            "change"
+          ],
+          "properties": {
+            "map_version": {
+              "type": "string"
+            },
+            "change": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

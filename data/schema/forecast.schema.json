@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "forecasts",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "owner",
+      "statement",
+      "deadline",
+      "probability",
+      "resolution_criteria"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^fc\\.[0-9]{4}$"
+      },
+      "owner": {
+        "enum": [
+          "user",
+          "claude"
+        ]
+      },
+      "statement": {
+        "type": "string"
+      },
+      "conditions": {
+        "type": "string"
+      },
+      "deadline": {
+        "type": "string"
+      },
+      "probability": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "resolution_criteria": {
+        "type": "string"
+      },
+      "updates": {
+        "type": "array"
+      },
+      "outcome": {
+        "type": [
+          "boolean",
+          "null",
+          "string"
+        ]
+      },
+      "resolved_at": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "nodes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
