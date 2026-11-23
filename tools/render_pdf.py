@@ -29,8 +29,8 @@ LESSON_LABELS = {0: "How to use", 1: "Recap", 2: "Map", 3: "Question", 4: "Main 
                  13: "Check", 14: "Further reading", "付録A": "Answers", "付録B": "Sources", "付録C": "Submit"}
 REPORT_LABELS = {1: "Summary", 2: "Versions", 3: "Changes", 4: "Corrections", 5: "Impact", 6: "Understanding",
                  7: "Questions", 8: "Forecasts", 9: "Pending", 10: "System", 11: "Next"}
-FONT_PKGS = [("zen-kaku-gothic-new", ["400", "500", "700"]), ("shippori-mincho-b1", ["500", "700"]),
-             ("ibm-plex-mono", ["400", "500"]), ("instrument-serif", ["400", "400-italic"])]
+FONT_PKGS = [("zen-kaku-gothic-new", ["400", "500", "700"]),  # 欧文1書体・和文1書体（ADR-0005）
+             ("ibm-plex-mono", ["300", "400", "500"])]
 
 
 def font_css():

@@ -1,11 +1,21 @@
 /* The Universal — viewer v2（DOC-03 §3・§7、ADR-0004） */
+/* 書体は欧文1種・和文1種（DOC-03 §7、ADR-0005）。旧変数名は互換のため残し、すべて2書体に割り当てる */
 :root {
-  --bg: #0b0b0b; --ink: #f2efe8; --dim: #8d887e; --faint: #75706a; --hair: rgba(242, 239, 232, 0.14); --red: #c8402a; --cream: #e9dcc0;
-  --serif-en: "Instrument Serif", "Shippori Mincho B1", serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  --mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", serif;
-  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --en: "IBM Plex Mono", "Zen Kaku Gothic New", ui-monospace, monospace;
+  --ja: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --serif-en: var(--en); --mono: var(--en); --mincho: var(--ja); --gothic: var(--ja);
+  --red: #c8402a; --cream: #e9dcc0;
   --safe-t: env(safe-area-inset-top); --safe-b: env(safe-area-inset-bottom);
+  /* DARK（既定値） */
+  --bg: #0b0b0b; --ink: #f2efe8; --ink2: #e4e0d7; --dim: #8d887e; --faint: #75706a; --hair: rgba(242, 239, 232, 0.14);
+  --panel: rgba(11, 11, 11, 0.94); --press: #141414; --empty: #262421; --lbl: #cfcac0; --chip-ink: #0b0b0b; --strong: #ffffff;
+  color-scheme: dark;
+}
+/* LIGHT（DOC-03 §7.1） */
+:root[data-theme="light"] {
+  --bg: #ffffff; --ink: #111111; --ink2: #3a3a3a; --dim: #6b6760; --faint: #8f8a82; --hair: rgba(17, 17, 17, 0.12);
+  --panel: rgba(255, 255, 255, 0.95); --press: #f0efec; --empty: #e6e3dd; --lbl: #333333; --chip-ink: #ffffff; --strong: #000000;
+  color-scheme: light;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); overflow: hidden; font-family: var(--gothic);
@@ -35,17 +45,17 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 #foot .scale b { font-weight: 500; color: var(--ink); margin-left: 6px; }
 
 /* ---- 3Dのラベル */
-.lbl { font-family: var(--gothic); font-size: 10.5px; color: #cfcac0; white-space: nowrap; pointer-events: none; letter-spacing: 0.02em;
-  text-shadow: 0 0 6px #0b0b0b, 0 0 2px #0b0b0b; }
+.lbl { font-family: var(--gothic); font-size: 10.5px; color: var(--lbl); white-space: nowrap; pointer-events: none; letter-spacing: 0.02em;
+  text-shadow: 0 0 6px var(--bg), 0 0 2px var(--bg); }
 .lbl.l2 { font-family: var(--mincho); font-weight: 700; font-size: 13.5px; color: var(--ink); }
-.lbl.sel { color: #fff; font-weight: 700; }
+.lbl.sel { color: var(--strong); font-weight: 700; }
 .lbl.sel::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--red); margin-right: 6px; vertical-align: 1px; }
 .dlbl { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; color: var(--dim); white-space: nowrap; pointer-events: none; }
 .dlbl b { color: var(--ink); font-weight: 500; margin-right: 6px; }
 .tick { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--faint); white-space: nowrap; pointer-events: none; }
 
 /* ---- ノードの詳細パネル */
-#panel { position: fixed; left: 0; right: 0; bottom: 0; max-height: 60vh; overflow-y: auto; z-index: 7; background: rgba(11, 11, 11, 0.94);
+#panel { position: fixed; left: 0; right: 0; bottom: 0; max-height: 60vh; overflow-y: auto; z-index: 7; background: var(--panel);
   border-top: 1px solid var(--hair); padding: 10px 22px calc(var(--safe-b) + 28px);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); -webkit-overflow-scrolling: touch; }
 @media (min-width: 900px) {
@@ -58,8 +68,8 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .kick { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; color: var(--dim); text-transform: uppercase; }
 .kick .ep-dot { display: inline-block; width: 7px; height: 7px; margin: 0 6px 0 2px; vertical-align: 0; }
 #panel h2 { font-family: var(--mincho); font-weight: 700; font-size: 24px; line-height: 1.4; margin: 12px 0 2px; letter-spacing: 0.02em; }
-#panel .en { font-family: var(--serif-en); font-style: italic; font-size: 17px; color: var(--dim); margin-bottom: 16px; }
-#panel p { font-size: 14px; line-height: 1.9; margin: 0 0 12px; color: #e4e0d7; }
+#panel .en { font-family: var(--en); font-style: normal; font-size: 13px; letter-spacing: 0.02em; color: var(--dim); margin-bottom: 16px; }
+#panel p { font-size: 14px; line-height: 1.9; margin: 0 0 12px; color: var(--ink2); }
 #panel h3 { font-family: var(--mono); font-weight: 500; font-size: 10.5px; letter-spacing: 0.24em; color: var(--dim); margin: 26px 0 10px;
   padding-top: 10px; border-top: 1px solid var(--hair); }
 #panel ul { list-style: none; margin: 0; padding: 0; }
@@ -70,12 +80,12 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .rt { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--dim); margin-right: 8px; text-transform: uppercase; }
 .note { display: block; font-size: 12px; color: var(--dim); margin-top: 2px; }
 .levels { display: flex; gap: 4px; margin: 6px 0 8px; }
-.levels i { flex: 1; height: 3px; background: #262421; }
+.levels i { flex: 1; height: 3px; background: var(--empty); }
 .small { font-size: 11.5px; color: var(--dim); }
-.tag { font-family: var(--gothic); font-size: 10.5px; padding: 1px 6px; margin-left: 6px; color: #0b0b0b; vertical-align: 1px; }
+.tag { font-family: var(--gothic); font-size: 10.5px; padding: 1px 6px; margin-left: 6px; color: var(--chip-ink); vertical-align: 1px; }
 
 /* ---- メニュー */
-#menu { position: fixed; inset: 0; z-index: 9; background: #0b0b0b; display: flex; flex-direction: column; }
+#menu { position: fixed; inset: 0; z-index: 9; background: var(--bg); display: flex; flex-direction: column; }
 .menu-head { display: flex; justify-content: space-between; align-items: center; padding: calc(var(--safe-t) + 14px) 18px 10px;
   border-bottom: 1px solid var(--hair); }
 .menu-body { flex: 1; display: grid; grid-template-columns: 1fr; overflow: hidden; }
@@ -91,23 +101,23 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .search input { flex: 1; background: none; border: none; color: var(--ink); font-family: var(--gothic); font-size: 16px; outline: none; padding: 6px 0; }
 .search input::placeholder { color: var(--faint); }
 .sections { list-style: none; margin: 22px 0 0; padding: 0; }
-.sections button { display: flex; align-items: baseline; gap: 14px; width: 100%; text-align: left; font-family: var(--serif-en); font-size: 40px;
-  line-height: 1.12; letter-spacing: 0.005em; color: var(--dim); padding: 4px 0; transition: color 0.2s; }
+.sections button { display: flex; align-items: baseline; gap: 14px; width: 100%; text-align: left; font-family: var(--en); font-weight: 300; font-size: 30px;
+  line-height: 1.2; letter-spacing: -0.02em; color: var(--dim); padding: 4px 0; transition: color 0.2s; }
 .sections button em { font-family: var(--mono); font-style: normal; font-size: 10px; letter-spacing: 0.2em; color: var(--faint); width: 22px; }
 .sections button.on, .sections button:hover { color: var(--ink); }
 .sections button.on em { color: var(--red); }
 @media (max-width: 899px) {
   .menu-body.reading .menu-nav { display: none; }
-  .sections button { font-size: 34px; }
+  .sections button { font-size: 26px; }
 }
 .back { display: none; }
 @media (max-width: 899px) { .menu-body.reading .back { display: inline-block; margin-bottom: 8px; color: var(--dim); } }
 
-.sec-title { font-family: var(--serif-en); font-size: 46px; line-height: 1; margin: 6px 0 4px; }
-.sec-lead { font-family: var(--mincho); font-size: 14px; color: var(--dim); margin: 0 0 26px; line-height: 1.8; }
+.sec-title { font-family: var(--en); font-weight: 300; font-size: 38px; letter-spacing: -0.03em; line-height: 1.05; margin: 6px 0 4px; }
+.sec-lead { font-family: var(--ja); font-size: 14px; color: var(--dim); margin: 0 0 26px; line-height: 1.8; }
 .rows { list-style: none; margin: 0; padding: 0; }
 .rows li { display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 14px; line-height: 1.55; cursor: pointer; }
-.rows li:active { background: #141414; }
+.rows li:active { background: var(--press); }
 .rows .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--dim); min-width: 64px; text-transform: uppercase; }
 .rows .v { flex: 1; }
 .rows .r { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--dim); white-space: nowrap; }
@@ -121,9 +131,9 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .dom > summary::-webkit-details-marker { display: none; }
 .dom > summary .id { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; color: var(--red); }
 .dom > summary .ja { font-family: var(--mincho); font-weight: 700; font-size: 18px; }
-.dom > summary .en { display: block; font-family: var(--serif-en); font-style: italic; font-size: 14px; color: var(--dim); font-weight: normal; }
+.dom > summary .en { display: block; font-family: var(--en); font-style: normal; font-size: 11.5px; letter-spacing: 0.04em; color: var(--dim); font-weight: normal; }
 .dom > summary .n { font-family: var(--mono); font-size: 10px; color: var(--dim); }
-.dom[open] > summary .ja { color: #fff; }
+.dom[open] > summary .ja { color: var(--strong); }
 .theme { margin: 0 0 14px 52px; }
 .theme > .th { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; cursor: pointer; border-bottom: 1px solid var(--hair); }
 .theme > .th span { font-family: var(--mincho); font-weight: 700; font-size: 15px; }
@@ -132,7 +142,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .tree li { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; font-size: 13.5px; cursor: pointer; }
 .tree li .lv { width: 7px; height: 7px; flex: none; }
 .tree li .ty { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--faint); margin-left: auto; text-transform: uppercase; }
-.tree .d4 { padding-left: 18px; color: #cfcac0; }
+.tree .d4 { padding-left: 18px; color: var(--lbl); }
 
 /* 凡例 */
 .legend-block { margin-bottom: 34px; }
@@ -143,8 +153,8 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .grad span { font-family: var(--mono); font-size: 10.5px; color: var(--dim); }
 .legend-row { display: grid; grid-template-columns: 54px 1fr; align-items: center; gap: 14px; padding: 7px 0; font-size: 13.5px; }
 .legend-row svg { width: 34px; height: 34px; }
-.legend-block p { font-size: 13.5px; line-height: 1.9; color: #d9d4c8; margin: 0 0 10px; }
-.ep-chip { font-size: 11px; padding: 2px 7px; color: #0b0b0b; }
+.legend-block p { font-size: 13.5px; line-height: 1.9; color: var(--ink2); margin: 0 0 10px; }
+.ep-chip { font-size: 11px; padding: 2px 7px; color: var(--chip-ink); }
 
 #loading { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: var(--bg); text-align: center; padding: 0 30px; }
 #loading small { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.24em; color: var(--dim); line-height: 1.8; }
@@ -156,3 +166,13 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .search select { flex: 1; background: transparent; color: var(--ink); border: none; font: inherit; font-size: 16px; padding: 6px 0; -webkit-appearance: none; appearance: none; }
 html, body { overscroll-behavior: none; }
 #hud, #foot { padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); }
+
+/* v0.3：入力欄・選択肢も同じ書体に（端末の標準書体を出さない） */
+input, select, textarea, button { font-family: inherit; }
+.search input, .search select { font-family: var(--ja); }
+/* SETTINGS */
+.opts { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 4px 0 6px; }
+.opts button { font-family: var(--en); font-size: 12px; letter-spacing: 0.18em; color: var(--dim); min-height: 44px; border-bottom: 1px solid transparent; }
+.opts button.on { color: var(--ink); border-bottom-color: var(--red); }
+/* 2D・縦画面では領域名を番号だけにする（帯が細く、名前が重なるため） */
+body.plane.portrait .dlbl span { display: none; }

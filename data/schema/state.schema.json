@@ -51,6 +51,10 @@
       "additionalProperties": {
         "type": "string"
       }
+    },
+    "intensive_until": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
     }
   }
 }

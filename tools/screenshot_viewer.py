@@ -37,13 +37,19 @@ def main():
     srv = serve()
     base = f"http://127.0.0.1:{srv.server_address[1]}/index.html"
     errors = []
-    shots = [("iphone", 390, 844, ""), ("iphone_node", 390, 844, "#con.entropy"), ("ipad", 820, 1180, "#evd.cmb"),
-             ("iphone_menu", 390, 844, "?menu=index"), ("desktop", 1440, 900, "")]
+    # (名前, 幅, 高さ, ハッシュまたは ?menu=節, 端末に保存された設定)
+    D, L, P = {"theme": "dark"}, {"theme": "light"}, {"theme": "light", "view": "plane"}
+    shots = [("iphone", 390, 844, "", D), ("iphone_node", 390, 844, "#con.entropy", D), ("ipad", 820, 1180, "#evd.cmb", D),
+             ("iphone_menu", 390, 844, "?menu=index", D), ("desktop", 1440, 900, "", D),
+             ("iphone_light", 390, 844, "", L), ("iphone_light_node", 390, 844, "#con.entropy", L),
+             ("iphone_plane", 390, 844, "", P), ("desktop_plane", 1440, 900, "", {"theme": "dark", "view": "plane"}),
+             ("iphone_settings", 390, 844, "?menu=settings", L)]
     with sync_playwright() as p:
         exe = "/usr/bin/google-chrome" if Path("/usr/bin/google-chrome").exists() else None
         b = p.chromium.launch(executable_path=exe, args=["--use-gl=swiftshader", "--enable-webgl", "--ignore-gpu-blocklist"])
-        for name, w, h, hash_ in shots:
+        for name, w, h, hash_, prefs in shots:
             ctx = b.new_context(viewport={"width": w, "height": h}, device_scale_factor=2, is_mobile=True, has_touch=True)
+            ctx.add_init_script("".join(f"localStorage.setItem('tu.{k}', '{v}');" for k, v in prefs.items()))
             pg = ctx.new_page()
             if a.three_local:
                 local = Path(a.three_local)
@@ -52,8 +58,7 @@ def main():
             if a.fonts_local:
                 fl = Path(a.fonts_local)
                 css = []
-                for pkg, ws in [("zen-kaku-gothic-new", ["400", "500", "700"]), ("shippori-mincho-b1", ["500", "700"]),
-                                ("ibm-plex-mono", ["400", "500"]), ("instrument-serif", ["400", "400-italic"])]:
+                for pkg, ws in [("zen-kaku-gothic-new", ["400", "500", "700"]), ("ibm-plex-mono", ["300", "400", "500"])]:
                     for w in ws:
                         f = fl / pkg / f"{w}.css"
                         if f.exists():
@@ -69,7 +74,7 @@ def main():
                 pg.wait_for_timeout(3000)
                 pg.click("#btn-menu")
                 pg.wait_for_timeout(300)
-                pg.click("[data-sec=index]")
+                pg.click(f"[data-sec={hash_.split('=')[1]}]")
                 pg.wait_for_timeout(600)
             else:
                 pg.goto(base + hash_)

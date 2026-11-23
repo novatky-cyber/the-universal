@@ -4,13 +4,32 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
 
 // ---------------------------------------------------------------- 定数
-const LEVEL_COLORS = ["#5c5c5c", "#e9dcc0", "#e6be96", "#e0966d", "#d46a45", "#c8402a"];
+// テーマごとの色（DOC-03 §7.1）。LEVEL_COLORS と EP は applyTheme() で差し替える
+const PALETTES = {
+  dark: { bg: 0x0b0b0b, line: 0xf2efe8, lineCss: "#f2efe8", presented: "#a8a297", ringOpacity: 0.07, linkOpacity: 0.13,
+    levels: ["#5c5c5c", "#e9dcc0", "#e6be96", "#e0966d", "#d46a45", "#c8402a"],
+    ep: { fact: "#e8e4da", theory: "#7f9bbf", debate: "#c8402a", normative: "#a28bbd", hypothesis: "#8fab8a", unknown: "#8d887e" } },
+  light: { bg: 0xffffff, line: 0x141414, lineCss: "#141414", presented: "#8a857c", ringOpacity: 0.09, linkOpacity: 0.12,
+    levels: ["#c4c1bb", "#c9b48a", "#d39a6c", "#d27a52", "#c95a3a", "#b8361f"],
+    ep: { fact: "#1a1a1a", theory: "#2f4b6e", debate: "#c8402a", normative: "#6b4e8a", hypothesis: "#4d6b4a", unknown: "#7a7a7a" } },
+};
+let PAL = PALETTES[document.documentElement.dataset.theme === "light" ? "light" : "dark"];
+let LEVEL_COLORS = PAL.levels;
 const LEVEL_NAMES = ["未学習", "認知", "説明できる", "専門的に理解", "統合・応用", "批判的に検証"];
 const TYPE_EN = { theme: "Theme", concept: "Concept", event: "Event", actor: "Actor", theory: "Theory", evidence: "Evidence", question: "Question", method: "Method" };
 const TYPE_JA = { theme: "テーマ", concept: "概念", event: "出来事", actor: "主体", theory: "理論", evidence: "証拠", question: "問い", method: "思考法" };
-const EP = { fact: ["事実", "#e8e4da", "観測・測定・史料で確認できる"], theory: ["理論", "#7f9bbf", "強い証拠に支えられた説明"],
-  debate: ["論争", "#c8402a", "学説・解釈が競合している"], normative: ["規範", "#a28bbd", "価値・望ましさの問題"],
-  hypothesis: ["仮説", "#8fab8a", "予測・未検証の説明"], unknown: ["未知", "#8d887e", "現時点で確定できない"] };
+const EP_TEXT = { fact: ["事実", "観測・測定・史料で確認できる"], theory: ["理論", "強い証拠に支えられた説明"],
+  debate: ["論争", "学説・解釈が競合している"], normative: ["規範", "価値・望ましさの問題"],
+  hypothesis: ["仮説", "予測・未検証の説明"], unknown: ["未知", "現時点で確定できない"] };
+let EP = {};
+const setEP = () => { EP = Object.fromEntries(Object.entries(EP_TEXT).map(([k, [ja, d]]) => [k, [ja, PAL.ep[k], d]])); };
+setEP();
+
+// 設定（端末に保存。使えない環境では保存しない）
+const store = {
+  get(k, d) { try { return localStorage.getItem("tu." + k) || d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("tu." + k, v); } catch { /* 保存できない環境 */ } },
+};
 const CONF_EN = { high: "Confidence high", medium: "Confidence medium", low: "Confidence low" };
 const EDGE_EN = { causes: "causes", enables: "enables", requires: "requires", part_of: "part of", precedes: "precedes",
   supports: "supports", contradicts: "contradicts", analogous: "analogous", instance_of: "instance of", applies: "applies",
@@ -30,18 +49,18 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const safeUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
 const safePdf = (f) => (/^output\/[\w./-]+\.pdf$/.test(f || "") ? f : "");
 
-let G, byId = {}, mode = "cyl", selected = null;
+let G, byId = {}, mode = ["cyl", "flat", "plane"].includes(store.get("view", "cyl")) ? store.get("view", "cyl") : "cyl", selected = null;
 const meshes = [], labels = {};
 let modeTween = null, camTween = null;
 
 // ---------------------------------------------------------------- シーン
 const scene = new THREE.Scene();
-scene.fog = new THREE.Fog(0x0b0b0b, 120, 420);
+scene.fog = new THREE.Fog(PAL.bg, 120, 420);
 const camera = new THREE.PerspectiveCamera(46, innerWidth / innerHeight, 0.1, 3000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
-renderer.setClearColor(0x0b0b0b);
+renderer.setClearColor(PAL.bg);
 $("#scene").appendChild(renderer.domElement);
 const labelRenderer = new CSS2DRenderer();
 labelRenderer.setSize(innerWidth, innerHeight);
@@ -62,7 +81,14 @@ function makeControls(resetView) {
   controls.minDistance = 8;
   controls.maxDistance = 420;
   controls.target.copy(target);
+  setPlaneControls(mode === "plane");
   controls.addEventListener("change", () => typeof wake === "function" && wake());
+}
+function setPlaneControls(on) {
+  controls.enableRotate = !on;
+  controls.mouseButtons.LEFT = on ? THREE.MOUSE.PAN : THREE.MOUSE.ROTATE;
+  controls.touches.ONE = on ? THREE.TOUCH.PAN : THREE.TOUCH.ROTATE;
+  controls.screenSpacePanning = true;
 }
 makeControls(true);
 
@@ -91,7 +117,7 @@ function starGeometry(r) {
 }
 
 const groups = {};
-for (const k of ["nodes", "links", "hot", "layersCyl", "layersFlat", "axis", "domains"]) { groups[k] = new THREE.Group(); scene.add(groups[k]); }
+for (const k of ["nodes", "links", "hot", "layersCyl", "layersFlat", "layersPlane", "axis", "domains"]) { groups[k] = new THREE.Group(); scene.add(groups[k]); }
 
 // ---------------------------------------------------------------- 読み込み
 fetch("viewer/data/graph.json", { cache: "no-store" })
@@ -101,13 +127,19 @@ fetch("viewer/data/graph.json", { cache: "no-store" })
 
 function init(g) {
   G = g;
-  G.nodes.forEach((n) => (byId[n.id] = n));
+  G.nodes.forEach((n) => {
+    byId[n.id] = n;
+    const [x, y, z] = n.pos.flat;
+    n.pos.plane = [x, -z + (y - 7) * 0.35, 0];   // DOC-03 §3.7
+  });
   $("#ver").textContent = `MAP V${G.map_version} — ${G.stats.nodes} NODES — ${G.stats.edges} RELATIONS`;
   buildLayers();
   buildDomains();
   buildNodes();
   applyMode(false);
+  if (mode === "plane") placeCamera(false);
   buildMenu();
+  matchMedia("(prefers-color-scheme: light)").addEventListener?.("change", () => { if (store.get("theme", "auto") === "auto") applyTheme(); });
   $("#loading").classList.add("hidden");
   const fromHash = () => { let h = ""; try { h = decodeURIComponent(location.hash.slice(1)); } catch { h = ""; } if (byId[h] && h !== selected) select(h, true); };
   fromHash();
@@ -117,8 +149,8 @@ function init(g) {
 
 // ---------------------------------------------------------------- 時間の層（ワイヤーフレームの輪／枠）と時間軸
 function buildLayers() {
-  const matRing = new THREE.LineBasicMaterial({ color: 0xf2efe8, transparent: true, opacity: 0.07 });
-  const matAxis = new THREE.LineBasicMaterial({ color: 0xf2efe8, transparent: true, opacity: 0.22 });
+  matRing = new THREE.LineBasicMaterial({ color: PAL.line, transparent: true, opacity: PAL.ringOpacity });
+  matAxis = new THREE.LineBasicMaterial({ color: PAL.line, transparent: true, opacity: 0.22 });
   groups.axis.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-106, 0, 0), new THREE.Vector3(20, 0, 0)]), matAxis));
   for (const [ya, lab] of TICKS) {
     const x = xOfYa(ya);
@@ -127,6 +159,8 @@ function buildLayers() {
     groups.layersCyl.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), matRing));
     const rect = [[-9, -46], [24, -46], [24, 46], [-9, 46], [-9, -46]].map(([y, z]) => new THREE.Vector3(x, y, z));
     groups.layersFlat.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(rect), matRing));
+    // 2D：時間の目盛りの縦線
+    groups.layersPlane.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x, -45, 0), new THREE.Vector3(x, 45, 0)]), matRing));
     const el = document.createElement("div");
     el.className = "tick";
     el.textContent = lab;
@@ -139,14 +173,25 @@ function buildLayers() {
 
 function domainAnchor(i, m) {
   const th = ((2 * Math.PI) / 10) * (i + 0.5);
+  if (m === "plane") return new THREE.Vector3(-110, -(i - 4.5) * 9, 0);
   return m === "cyl" ? new THREE.Vector3(-110, 19 * Math.cos(th), 19 * Math.sin(th)) : new THREE.Vector3(-110, 26, (i - 4.5) * 9);
+}
+let matRing, matAxis;
+
+function buildPlaneLanes() {
+  // 2D：レーンの境界線（D01〜D10）
+  for (let i = 0; i <= 10; i++) {
+    const y = 45 - i * 9;
+    groups.layersPlane.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-106, y, 0), new THREE.Vector3(20, y, 0)]), matRing));
+  }
 }
 
 function buildDomains() {
+  buildPlaneLanes();
   G.domains.forEach((d, i) => {
     const el = document.createElement("div");
     el.className = "dlbl";
-    el.innerHTML = `<b>${esc(d.id)}</b>${esc(d.ja)}`;
+    el.innerHTML = `<b>${esc(d.id)}</b><span>${esc(d.ja)}</span>`;
     const o = new CSS2DObject(el);
     o.userData = { i };
     groups.domains.add(o);
@@ -156,8 +201,7 @@ function buildDomains() {
 // ---------------------------------------------------------------- ノード
 function buildNodes() {
   for (const n of G.nodes) {
-    const col = new THREE.Color(LEVEL_COLORS[n.understanding.level] || LEVEL_COLORS[0]);
-    const base = n.understanding.status === "presented" && n.understanding.level === 0 ? new THREE.Color("#a8a297") : col;
+    const base = new THREE.Color(nodeColor(n));
     // 当たり判定用の面（ほぼ透明）＋ワイヤーフレーム
     const hit = new THREE.Mesh(HIT_GEOM, HIT_MAT);
     const wire = new THREE.LineSegments(EDGES[n.type] || EDGES.concept, new THREE.LineBasicMaterial({ color: base, transparent: true, opacity: 0.95 }));
@@ -176,6 +220,33 @@ function buildNodes() {
     labels[n.id] = o;
   }
 }
+function nodeColor(n) {
+  return n.understanding.status === "presented" && n.understanding.level === 0 ? PAL.presented : LEVEL_COLORS[n.understanding.level] || LEVEL_COLORS[0];
+}
+
+// テーマの適用（DOC-03 §7.1）：CSS変数と3Dの色を差し替える
+function applyTheme() {
+  const s = store.get("theme", "auto");
+  const dark = s === "dark" || (s === "auto" && !matchMedia("(prefers-color-scheme: light)").matches);
+  const name = dark ? "dark" : "light";
+  document.documentElement.dataset.theme = name;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#0b0b0b" : "#ffffff");
+  PAL = PALETTES[name];
+  LEVEL_COLORS = PAL.levels;
+  setEP();
+  renderer.setClearColor(PAL.bg);
+  scene.fog.color.set(PAL.bg);
+  matRing?.color.set(PAL.line); if (matRing) matRing.opacity = PAL.ringOpacity;
+  matAxis?.color.set(PAL.line);
+  meshes.forEach((m) => m.userData.wire.material.color.set(nodeColor(byId[m.userData.id])));
+  buildLinks();
+  buildHot();
+  if (selected) renderPanel(byId[selected]);
+  const on = document.querySelector(".sections button.on")?.dataset.sec;
+  if (on && !$("#menu").classList.contains("hidden")) showSection(on, $("#menu-body").classList.contains("reading"));
+  wake();
+}
+
 const meshOf = (id) => meshes.find((m) => m.userData.id === id);
 const posOf = (id) => meshOf(id).position.clone();
 
@@ -201,7 +272,7 @@ function buildLinks() {
   for (const n of G.nodes) if (n.parent && byId[n.parent]) push(posOf(n.id), posOf(n.parent));
   const g = new THREE.BufferGeometry();
   g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
-  groups.links.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0xf2efe8, transparent: true, opacity: selected ? 0.04 : 0.13 })));
+  groups.links.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: PAL.line, transparent: true, opacity: selected ? 0.04 : PAL.linkOpacity })));
 }
 
 function buildHot() {
@@ -210,13 +281,13 @@ function buildHot() {
   for (const e of G.edges) {
     if (e.from !== selected && e.to !== selected) continue;
     const g = new THREE.BufferGeometry().setFromPoints(curvePoints(posOf(e.from), posOf(e.to), 28));
-    const col = e.type === "contradicts" ? 0xc8402a : 0xf2efe8;
+    const col = e.type === "contradicts" ? 0xc8402a : PAL.line;
     groups.hot.add(new THREE.Line(g, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.9 })));
   }
   const n = byId[selected];
   if (n.parent && byId[n.parent]) {
     const g = new THREE.BufferGeometry().setFromPoints(curvePoints(posOf(n.id), posOf(n.parent), 20));
-    groups.hot.add(new THREE.Line(g, new THREE.LineDashedMaterial({ color: 0xf2efe8, dashSize: 0.8, gapSize: 0.6, transparent: true, opacity: 0.6 })));
+    groups.hot.add(new THREE.Line(g, new THREE.LineDashedMaterial({ color: PAL.line, dashSize: 0.8, gapSize: 0.6, transparent: true, opacity: 0.6 })));
     groups.hot.children.at(-1).computeLineDistances();
   }
 }
@@ -227,9 +298,13 @@ function applyMode(animateIt = true) {
   const from = meshes.map((m) => m.position.clone());
   const to = meshes.map((m) => new THREE.Vector3().fromArray(byId[m.userData.id].pos[mode]));
   const axFrom = groups.axis.position.clone();
-  const axTo = mode === "cyl" ? new THREE.Vector3(0, 0, 0) : new THREE.Vector3(0, -12, 50);
+  const axTo = mode === "cyl" ? new THREE.Vector3(0, 0, 0) : mode === "plane" ? new THREE.Vector3(0, -49, 0) : new THREE.Vector3(0, -12, 50);
   groups.layersCyl.visible = mode === "cyl";
   groups.layersFlat.visible = mode === "flat";
+  groups.layersPlane.visible = mode === "plane";
+  setPlaneControls(mode === "plane");
+  store.set("view", mode);
+  document.querySelectorAll("[data-view]").forEach((b) => b.classList.toggle("on", b.dataset.view === mode));
   groups.domains.children.forEach((c) => c.position.copy(domainAnchor(c.userData.i, mode)));
   document.querySelectorAll("#foot [data-mode]").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
   if (!animateIt) {
@@ -249,7 +324,29 @@ function applyMode(animateIt = true) {
     if (k >= 1) { modeTween = null; buildLinks(); buildHot(); }
   };
 }
-document.querySelectorAll("#foot [data-mode]").forEach((b) => (b.onclick = () => { if (mode !== b.dataset.mode) { mode = b.dataset.mode; applyMode(true); } }));
+function setView(m) {
+  if (mode === m) return;
+  const was = mode;
+  mode = m;
+  applyMode(true);
+  if (m === "plane" || was === "plane") placeCamera(true);
+}
+document.querySelectorAll("#foot [data-mode]").forEach((b) => (b.onclick = () => setView(b.dataset.mode)));
+
+// 表示に合わせた初期の視点。2Dは平面を真上から見る（DOC-03 §3.7）
+function placeCamera(animateIt) {
+  const target = new THREE.Vector3(-45, 0, 0);
+  const end = mode === "plane" ? new THREE.Vector3(-45, 0, portrait ? 290 : 165)
+    : new THREE.Vector3(...(portrait ? [-45, 80, 160] : [-42, 42, 112]));
+  if (!animateIt) { camera.position.copy(end); controls.target.copy(target); controls.update(); return; }
+  const p0 = camera.position.clone(), t0c = controls.target.clone(), t0 = performance.now();
+  camTween = (now) => {
+    const k = Math.min(1, (now - t0) / 1000), e = 1 - Math.pow(1 - k, 3);
+    camera.position.lerpVectors(p0, end, e);
+    controls.target.lerpVectors(t0c, target, e);
+    if (k >= 1) camTween = null;
+  };
+}
 
 // ---------------------------------------------------------------- 選択と詳細パネル
 const ray = new THREE.Raycaster();
@@ -322,7 +419,7 @@ function setOffset(on) {
 function flyTo(id) {
   const n = byId[id];
   const target = modeTween ? new THREE.Vector3().fromArray(n.pos[mode]) : posOf(id);
-  const dir = camera.position.clone().sub(controls.target).normalize();
+  const dir = mode === "plane" ? new THREE.Vector3(0, 0, 1) : camera.position.clone().sub(controls.target).normalize();
   const endPos = target.clone().add(dir.multiplyScalar(36));
   const p0 = camera.position.clone(), t0c = controls.target.clone(), t0 = performance.now();
   camTween = (now) => {
@@ -334,7 +431,7 @@ function flyTo(id) {
 }
 
 function levelBar(lv) {
-  return `<div class="levels">${LEVEL_COLORS.slice(1).map((c, i) => `<i style="background:${i < lv ? c : "#262421"}"></i>`).join("")}</div>`;
+  return `<div class="levels">${LEVEL_COLORS.slice(1).map((c, i) => `<i style="background:${i < lv ? c : "var(--empty)"}"></i>`).join("")}</div>`;
 }
 
 function renderPanel(n) {
@@ -348,7 +445,7 @@ function renderPanel(n) {
   const children = G.nodes.filter((x) => x.parent === n.id);
   const srcs = n.sources.map((s) => `<li>${safeUrl(s.url) ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}` +
     (s.existence === "verified" ? "" : `<span class="note">実在未確認</span>`) + "</li>").join("");
-  const persp = (n.perspectives || []).map((p) => `<li><span class="rt">${esc(p.label)}</span><span class="note" style="color:#e4e0d7">${esc(p.view)}</span></li>`).join("");
+  const persp = (n.perspectives || []).map((p) => `<li><span class="rt">${esc(p.label)}</span><span class="note" style="color:var(--ink2)">${esc(p.view)}</span></li>`).join("");
   const sess = n.curriculum.map((c) => {
     const s = G.sessions[c];
     const pdfs = (s?.lessons || []).map(safePdf).filter(Boolean)
@@ -402,6 +499,8 @@ function showSection(sec, reading = true) {
   c.scrollTop = 0;
   $("#back").onclick = () => $("#menu-body").classList.remove("reading");
   c.querySelectorAll("[data-node]").forEach((el) => (el.onclick = (ev) => { ev.stopPropagation(); goNode(el.dataset.node); }));
+  c.querySelectorAll("[data-theme]").forEach((el) => (el.onclick = () => { store.set("theme", el.dataset.theme); applyTheme(); showSection("settings", $("#menu-body").classList.contains("reading")); }));
+  c.querySelectorAll("[data-view]").forEach((el) => (el.onclick = () => { setView(el.dataset.view); showSection("settings", $("#menu-body").classList.contains("reading")); }));
 }
 
 function buildMenu() {
@@ -423,7 +522,7 @@ function buildMenu() {
   showSection("index", false);
 }
 
-const lvSwatch = (n) => `<i class="lv" style="background:${LEVEL_COLORS[n.understanding.level]};${n.understanding.status === "presented" && !n.understanding.level ? "background:#a8a297" : ""}"></i>`;
+const lvSwatch = (n) => `<i class="lv" style="background:${nodeColor(n)}"></i>`;
 const yaOf = (n) => (n.time ? n.time.start_ya : -1e12);
 
 const RENDER = {
@@ -463,7 +562,7 @@ const RENDER = {
       const paths = { theme: "M17 4 L29 11 L29 23 L17 30 L5 23 L5 11 Z M17 4 L17 30 M5 11 L29 23 M29 11 L5 23", concept: "M17 8 L25 13 L25 21 L17 26 L9 21 L9 13 Z",
         event: "M17 5 L29 17 L17 29 L5 17 Z M5 17 L29 17", actor: "M9 9 H25 V25 H9 Z M9 9 L14 5 H30 L25 9 M25 25 L30 21 V5",
         theory: "M17 5 L28 13 L24 27 L10 27 L6 13 Z", evidence: "M17 5 L29 28 L5 28 Z", question: "M17 9 A8 8 0 1 1 16.9 9 Z", method: "M17 5 L27 24 L7 24 Z M17 29 L7 10 L27 10 Z" };
-      return `<svg viewBox="0 0 34 34"><path d="${paths[t]}" fill="none" stroke="#f2efe8" stroke-width="1"/></svg>`;
+      return `<svg viewBox="0 0 34 34"><path d="${paths[t]}" fill="none" stroke="currentColor" stroke-width="1"/></svg>`;
     };
     return `<div class="sec-title">Legend</div><p class="sec-lead">地図の読み方。</p>
       <div class="legend-block"><h4>COLOR — あなたの理解レベル</h4>
@@ -478,9 +577,19 @@ const RENDER = {
       <div class="legend-block"><h4>SPACE — 座標</h4>
         <p><b>CYLINDER</b>　中心の軸が時間です（対数目盛り：1目盛りで10倍）。iPhoneの縦画面では下が過去、上が現在。円周の方向が10の領域、中心からの距離が詳細度（外側ほど詳細）。軸のすぐ近くには、時間を持たない思考法などが並びます。輪は時間の目盛りです。</p>
         <p><b>UNROLLED</b>　円筒を切り開いた表示。奥行きが領域のレーン、高さが詳細度（上ほど概観）。</p>
+        <p><b>2D</b>　平面図。時間の軸に沿って、10の領域が帯（レーン）になって並びます。帯の中では上ほど概観です。1本指で移動、ピンチで拡大・縮小。</p>
         <p><b>SCALE</b>　近づくほど詳しいラベルが現れます（DOMAINS → THEMES → CONCEPTS → DETAILS）。</p></div>
       <div class="legend-block"><h4>GESTURE — 操作</h4>
         <p>ドラッグで回転、ピンチで拡大・縮小、2本指で移動。ノードをタップすると詳細と関係線が現れます。MENU の INDEX から目次で探すこともできます。</p></div>`;
+  },
+  settings() {
+    const th = store.get("theme", "auto");
+    const opt = (attr, v, label, cur) => `<button data-${attr}="${v}" class="${cur === v ? "on" : ""}">${label}</button>`;
+    return `<div class="sec-title">Settings</div><p class="sec-lead">表示の設定。この端末に保存されます。</p>
+      <div class="legend-block"><h4>THEME — 配色</h4><div class="opts">${opt("theme", "auto", "AUTO", th)}${opt("theme", "light", "LIGHT", th)}${opt("theme", "dark", "DARK", th)}</div>
+        <p class="small">AUTO は端末のライト／ダークの設定に従います。</p></div>
+      <div class="legend-block"><h4>VIEW — 表示</h4><div class="opts">${opt("view", "cyl", "3D CYLINDER", mode)}${opt("view", "flat", "3D UNROLLED", mode)}${opt("view", "plane", "2D PLANE", mode)}</div>
+        <p class="small">画面下部の切替と同じです。2D は全体の位置関係を一度に見るのに向いています。</p></div>`;
   },
   about() {
     return `<div class="sec-title">About</div>
@@ -500,7 +609,10 @@ const tmp = new THREE.Vector3();
 let labelTick = 0;
 function updateLabels(force) {
   if (!force && labelTick++ % 3) return;
-  const d = camera.position.distanceTo(controls.target);
+  // 2Dは全体を一度に見る表示なので、同じ距離でも1段詳しく出す
+  const d = camera.position.distanceTo(controls.target) * (mode === "plane" ? 0.55 : 1);
+  document.body.classList.toggle("plane", mode === "plane");
+  document.body.classList.toggle("portrait", portrait);
   const maxLevel = d > 190 ? 1 : d > 95 ? 2 : d > 45 ? 3 : 4;
   $("#scale").textContent = SCALE_EN[maxLevel];
   groups.domains.visible = maxLevel <= 2;
@@ -566,7 +678,7 @@ for (const ev of ["pointerdown", "pointermove", "wheel", "touchmove", "resize", 
 
 addEventListener("resize", () => {
   const p = innerHeight > innerWidth;
-  if (p !== portrait) { portrait = p; makeControls(true); }
+  if (p !== portrait) { portrait = p; makeControls(true); placeCamera(false); }
   camera.aspect = innerWidth / innerHeight;
   setOffset(!$("#panel").classList.contains("hidden"));
   camera.updateProjectionMatrix();
