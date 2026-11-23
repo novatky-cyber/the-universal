@@ -1,27 +1,22 @@
 {% extends "base.html.j2" %}
-{% block cover %}
-<section class="cover">
-  <div class="brand">THE UNIVERSAL</div>
-  <div class="tagline">An intellectual production model for understanding this universe.</div>
-  <div class="lid">{{ fm.lesson_id }}{{ fm.volume or "" }}｜{{ fm.phase }}｜{{ fm.session }}</div>
-  <div class="title">{{ fm.title }}</div>
-  <div class="subtitle">{{ fm.subtitle }}</div>
-  <div class="cq"><div class="lbl">中心の問い</div><div class="q">{{ fm.central_question }}</div></div>
-  <figure>{{ minimap }}<figcaption>地図上の位置：濃い点が今回の主要ノード（横軸は対数の時間軸、縦は10領域）</figcaption></figure>
-  <table class="meta">
-    <tr><td>地図の版</td><td>v{{ fm.map_version }}</td><td>サイクル</td><td>{{ fm.cycle }}</td></tr>
-    <tr><td>発行日</td><td>{{ fm.date }}</td><td>主要ノード</td><td>{{ fm.nodes|length }} 件</td></tr>
-  </table>
+{% block intro %}
+<section class="howto">
+  <h2><span class="sec"><span class="num">—</span><span class="lab">How to read</span></span><span class="ttl">この教材の読み方</span></h2>
   <div class="legend">
-    <b>認識ラベル</b>：
-    <span class="ep ep-fact">事実</span>観測・測定で確認
-    <span class="ep ep-theory">理論</span>強い証拠に支えられた説明
-    <span class="ep ep-debate">論争</span>学説が競合
-    <span class="ep ep-normative">規範</span>価値・望ましさ
-    <span class="ep ep-hypothesis">仮説</span>予測・未検証
-    <span class="ep ep-unknown">未知</span>現時点で確定できない<br>
-    <b>使い方</b>：右側の点線より右はメモ欄です。演習の書き込み欄に回答を書き、付録Cのプロンプトで提出してください。上付きの番号は付録Bの出典、<span class="nref">下線<span class="nid">id</span></span>は3Dマップのノードです。
+    <span class="ep ep-fact">事実</span><span>観測・測定・史料で確認できること</span>
+    <span class="ep ep-theory">理論</span><span>強い証拠に支えられた説明（適用範囲がある）</span>
+    <span class="ep ep-debate">論争</span><span>複数の学説・解釈が競合していること</span>
+    <span class="ep ep-normative">規範</span><span>価値・望ましさの問題</span>
+    <span class="ep ep-hypothesis">仮説</span><span>予測や、まだ検証されていない説明</span>
+    <span class="ep ep-unknown">未知</span><span>現時点では確定できないこと</span>
   </div>
+  <div class="legend">
+    <span style="font-family:var(--mono);font-size:6.5pt;letter-spacing:.2em;color:var(--red)">BACKGROUND</span><span>その節の問題が、なぜ・どこから生まれたか</span>
+    <span style="font-family:var(--mono);font-size:6.5pt;letter-spacing:.2em;color:var(--red)">TERM</span><span>初めて出てくる重要な用語の解説</span>
+    <span style="font-family:var(--mono);font-size:6.5pt;letter-spacing:.2em;color:var(--red)">ANALOGY</span><span>たとえ（と、そのたとえの限界）</span>
+    <span style="font-family:var(--mono);font-size:6.5pt;letter-spacing:.2em;color:var(--red)">CAUTION</span><span>よくある誤解</span>
+    <span style="font-family:var(--mono);font-size:6.5pt;letter-spacing:.2em;color:var(--red)">SUMMARY</span><span>節のまとめ。復習はここから</span>
+  </div>
+  <p class="small">本文中の小さな赤い番号は巻末の出典、<span class="nref">下線の語<span class="nid">node.id</span></span>は3Dマップ上のノードです。答えは付録A、回答の提出方法は付録Cにあります。</p>
 </section>
-<div class="pb"></div>
 {% endblock %}

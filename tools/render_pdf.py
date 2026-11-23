@@ -22,6 +22,27 @@ TEMPLATES = ROOT / "templates"
 LESSON_REQUIRED = [str(i) for i in range(1, 15)] + ["付録A", "付録B", "付録C"]
 REPORT_REQUIRED = [str(i) for i in range(1, 12)]
 LIMITS = {"lesson": (16, 24), "report": (4, 8)}
+BOX_TAGS = {"point": "POINT", "analogy": "ANALOGY", "caution": "CAUTION", "exercise": "EXERCISE",
+            "background": "BACKGROUND", "term": "TERM", "summary": "SUMMARY"}
+LESSON_LABELS = {0: "How to use", 1: "Recap", 2: "Map", 3: "Question", 4: "Main text", 5: "Evidence", 6: "Debates",
+                 7: "Unknowns", 8: "Connections", 9: "Thinking tools", 10: "Now", 11: "Glossary", 12: "Explain",
+                 13: "Check", 14: "Further reading", "付録A": "Answers", "付録B": "Sources", "付録C": "Submit"}
+REPORT_LABELS = {1: "Summary", 2: "Versions", 3: "Changes", 4: "Corrections", 5: "Impact", 6: "Understanding",
+                 7: "Questions", 8: "Forecasts", 9: "Pending", 10: "System", 11: "Next"}
+FONT_PKGS = [("zen-kaku-gothic-new", ["400", "500", "700"]), ("shippori-mincho-b1", ["500", "700"]),
+             ("ibm-plex-mono", ["400", "500"]), ("instrument-serif", ["400", "400-italic"])]
+
+
+def font_css():
+    """@fontsource の CSS（file://）。未取得なら空（Noto CJK で代替）。DOC-03 §7。"""
+    base = ROOT / ".cache" / "fonts" / "node_modules" / "@fontsource"
+    out = []
+    for pkg, ws in FONT_PKGS:
+        for w in ws:
+            f = base / pkg / f"{w}.css"
+            if f.exists():
+                out.append(f.as_uri())
+    return out
 
 md = MarkdownIt("commonmark", {"html": True, "typographer": False}).enable("table")
 
@@ -75,6 +96,7 @@ class Renderer:
         self.sources = {s["id"]: s for s in data["sources"]}
         self.cited = []          # 出典の出現順
         self.errors, self.warnings = [], []
+        self.fig_no = 0
 
     # ---- インライン記法（Markdown変換の前に処理）
     def inline(self, text):
@@ -112,14 +134,23 @@ class Renderer:
         return outside_code_html(html, lambda h: re.sub(r"\{(事実|理論|論争|規範|仮説|未知)\}", rep, h))
 
     def figure(self, name, highlight):
-        if name == "minimap":
-            return f"<figure>{figures.minimap(self.data, highlight)}<figcaption>図：知識の地図の全体（濃い点が今回の主要ノード）</figcaption></figure>"
-        if name == "cosmic_timeline":
-            return f"<figure>{figures.cosmic_timeline(self.data, highlight)}<figcaption>図：宇宙・地球・生命・人類の主な出来事（対数の時間軸）</figcaption></figure>"
-        if name == "domain_coverage":
-            return f"<figure>{figures.domain_coverage(self.data)}<figcaption>図：領域ごとのノード数（色は理解レベル）</figcaption></figure>"
-        self.errors.append(f"未知の図 {name}")
-        return ""
+        if name not in figures.FIGURES:
+            self.errors.append(f"未知の図 {name}")
+            return ""
+        fn, cap = figures.FIGURES[name]
+        self.fig_no += 1
+        return (f"<figure>{fn(self.data, highlight)}<figcaption><span class='fig'>FIG. {self.fig_no:02d}</span>{cap}</figcaption></figure>")
+
+    def heading(self, key, title):
+        labels = LESSON_LABELS if self.kind == "lesson" else REPORT_LABELS
+        if key.startswith("付録"):
+            num, lab = key[-1], labels.get(key, "APPENDIX")
+            title = re.sub(r"^[\s　]*", "", title)
+        else:
+            num, lab = f"{int(key):02d}", labels.get(int(key), "")
+        title = self.badges(self.inline(title))
+        return (f"<h2 id='sec-{num}'><span class='sec'><span class='num'>{num}</span><span class='lab'>{lab}</span></span>"
+                f"<span class='ttl'>{title}</span></h2>")
 
     def sources_html(self):
         items = []
@@ -127,7 +158,7 @@ class Renderer:
             s = self.sources[sid]
             meta = "．".join(x for x in [s.get("author"), s.get("publisher"), str(s["year"]) if s.get("year") else ""] if x)
             unv = "" if s["existence"] == "verified" else " <span class='unv'>［実在未確認］</span>"
-            url = f"<br><span class='small'>{s['url']}</span>" if s.get("url") else ""
+            url = f"<br><span class='url'>{s['url']}</span>" if s.get("url") else ""
             items.append(f"<li>{s['title']}．{meta}{unv}{url}</li>")
         return "<ol class='srcs'>" + "".join(items) + "</ol>" if items else "<p class='small'>（参照なし）</p>"
 
@@ -149,7 +180,7 @@ class Renderer:
                 buf.append(line)
                 i += 1
                 continue
-            m = re.match(r"^:::(point|analogy|caution|exercise|write)\s*(.*)$", line)
+            m = re.match(r"^:::(point|analogy|caution|exercise|write|background|term|summary)\s*(.*)$", line)
             if m:
                 flush()
                 kind, title = m.group(1), m.group(2).strip()
@@ -164,10 +195,22 @@ class Renderer:
                     lm = re.search(r"lines=(\d+)", title)
                     n = int(lm.group(1)) if lm else 6
                     title = re.sub(r"\s*lines=\d+", "", title)
-                    out.append(f"<div class='write'><div class='write-title'>✍ {title}</div>" + "<div class='line'></div>" * n + "</div>")
+                    out.append(f"<div class='write'><div class='write-title'>ANSWER — {title}</div>" + "<div class='line'></div>" * n + "</div>")
                 else:
                     inner_html = self.badges(md.render(self.inline("\n".join(inner))))
-                    out.append(f"<div class='box box-{kind}'><div class='box-title'>{(' ' + title) if title else ''}</div>{inner_html}</div>")
+                    tag = BOX_TAGS[kind]
+                    if kind == "term" and "｜" in title:
+                        ja, en = title.split("｜", 1)
+                        head = f"<span class='tag'>{tag}</span>{ja}<span class='en'>{en}</span>"
+                    else:
+                        head = f"<span class='tag'>{tag}</span>{title}"
+                    out.append(f"<div class='box box-{kind}'><div class='box-title'>{head}</div>{inner_html}</div>")
+                i += 1
+                continue
+            hm = re.match(r"^## (\d+|付録[A-Z])[.．]?\s*(.*)$", line)
+            if hm:
+                flush()
+                out.append(self.heading(hm.group(1), hm.group(2)))
                 i += 1
                 continue
             fm = re.match(r"^\{\{figure:([a-z_]+)\}\}\s*$", line)
@@ -214,20 +257,39 @@ def check_sections(bodies, kind):
     return [f"[T-07] 必須セクション「{r}」がない" for r in req if r not in heads]
 
 
-def pdf_from_html(html, out_pdf, header, date=""):
+def _browser(p):
+    exe = "/usr/bin/google-chrome"
+    return p.chromium.launch(executable_path=exe) if Path(exe).exists() else p.chromium.launch()
+
+
+def pdf_from_html(html_path, out_pdf, header, date="", cover=False):
+    """HTMLファイル → PDF。表紙は余白・ヘッダーなし。"""
     from playwright.sync_api import sync_playwright
-    head = (f"<div style='font-size:7pt;width:100%;padding:0 10mm 0 16mm;color:#64748b;font-family:Noto Sans CJK JP'>"
-            f"{header}</div>")
-    foot = ("<div style='font-size:7pt;width:100%;padding:0 10mm 0 16mm;color:#64748b;font-family:Noto Sans CJK JP;"
-            "display:flex;justify-content:space-between'><span>The Universal｜発行 " + str(date) + "</span>"
+    style = "font-family:'IBM Plex Mono','Noto Sans Mono CJK JP',monospace;font-size:6.5px;letter-spacing:1.2px;color:#8a8a8a;width:100%;padding:0 20mm;display:flex;justify-content:space-between"
+    head = f"<div style=\"{style}\"><span>THE UNIVERSAL</span><span>{header}</span></div>"
+    foot = (f"<div style=\"{style}\"><span>ISSUED {date}</span>"
             "<span><span class='pageNumber'></span> / <span class='totalPages'></span></span></div>")
     with sync_playwright() as p:
-        b = p.chromium.launch(executable_path="/usr/bin/google-chrome") if Path("/usr/bin/google-chrome").exists() else p.chromium.launch()
+        b = _browser(p)
         pg = b.new_page()
-        pg.set_content(html, wait_until="load")
-        pg.pdf(path=str(out_pdf), format="A4", print_background=True, display_header_footer=True,
-               header_template=head, footer_template=foot, prefer_css_page_size=True)
+        pg.goto(Path(html_path).as_uri(), wait_until="networkidle")
+        pg.evaluate("document.fonts.ready")
+        if cover:
+            pg.pdf(path=str(out_pdf), width="210mm", height="297mm", print_background=True,
+                   margin={"top": "0", "bottom": "0", "left": "0", "right": "0"}, prefer_css_page_size=False)
+        else:
+            pg.pdf(path=str(out_pdf), format="A4", print_background=True, display_header_footer=True,
+                   header_template=head, footer_template=foot, prefer_css_page_size=True)
         b.close()
+
+
+def merge_pdfs(parts, out_pdf):
+    from pypdf import PdfWriter
+    w = PdfWriter()
+    for p in parts:
+        w.append(str(p))
+    with open(out_pdf, "wb") as f:
+        w.write(f)
 
 
 def build(path, kind, allow_unverified=False):
@@ -241,14 +303,33 @@ def build(path, kind, allow_unverified=False):
     html_body = r.render_body(body, highlight)
     env = Environment(loader=FileSystemLoader(str(TEMPLATES)), autoescape=False)
     css = (TEMPLATES / "print.css").read_text(encoding="utf-8")
+    fonts = font_css()
+    if not fonts:
+        r.warnings.append("書体（@fontsource）が未取得のため Noto CJK で代替（tools/setup_fonts.sh を実行）")
     tpl = env.get_template(f"{kind}.html.j2")
-    html = tpl.render(fm=fm, body=html_body, css=css,
-                      minimap=figures.minimap(data, highlight) if kind == "lesson" else "")
-    debug = ROOT / "output" / "debug"
-    debug.mkdir(parents=True, exist_ok=True)
+    html = tpl.render(fm=fm, body=html_body, css=css, font_css=fonts)
     vol = fm.get("volume", "")
     stem = f"{fm['lesson_id']}{vol}_{fm['session']}" if kind == "lesson" else f"{fm['report_id']}_{str(fm['date']).replace('-', '')}"
-    (debug / f"{stem}.html").write_text(html, encoding="utf-8")
+    # 表紙
+    if kind == "lesson":
+        vol_en = {"a": "VOLUME A", "b": "VOLUME B"}.get(vol, "")
+        kicker = f"{fm.get('phase_en', '')} · {fm['session']} · {vol_en}".strip(" ·")
+        meta = [("LESSON", f"{fm['lesson_id']}{vol.upper()}"), ("SESSION", fm["session"]),
+                ("MAP", f"v{fm['map_version']}"), ("ISSUED", fm["date"])]
+        right = f"LESSON {fm['lesson_id']}{vol.upper()}"
+    else:
+        kicker = f"CHANGE REPORT · CYCLE {int(fm['cycle']):04d}"
+        meta = [("REPORT", fm["report_id"]), ("MAP", f"v{fm['map_version']}"),
+                ("SYSTEM", fm["system_version"]), ("ISSUED", fm["date"])]
+        right = f"REPORT {fm['report_id']}"
+    cover_html = env.get_template("cover.html.j2").render(
+        fm=fm, css=css, font_css=fonts, art=figures.cover_art(data, highlight), kicker=kicker,
+        kicker_right=right, en_title=fm.get("en_title", ""), meta=meta)
+    debug = ROOT / "output" / "debug"
+    debug.mkdir(parents=True, exist_ok=True)
+    body_html_path, cover_html_path = debug / f"{stem}.html", debug / f"{stem}_cover.html"
+    body_html_path.write_text(html, encoding="utf-8")
+    cover_html_path.write_text(cover_html, encoding="utf-8")
     if allow_unverified:
         r.errors = [e for e in r.errors if not e.startswith("[T-10]")]
     out_dir = ROOT / "output" / ("lessons" if kind == "lesson" else "reports")
@@ -256,9 +337,12 @@ def build(path, kind, allow_unverified=False):
     out_pdf = out_dir / f"{stem}.pdf"
     if r.errors:
         return r, None, 0
-    vol_ja = {"a": "（前編）", "b": "（後編）"}.get(vol, "")
-    header = (f"The Universal｜{fm.get('lesson_id', fm.get('report_id'))}{vol} {fm['title']}{vol_ja}｜地図 v{fm['map_version']}")
-    pdf_from_html(html, out_pdf, header, fm.get("date", ""))
+    vol_ja = {"a": "前編", "b": "後編"}.get(vol, "")
+    header = f"{fm.get('lesson_id', fm.get('report_id'))}{vol.upper()}　{fm['title']}　{vol_ja}".strip()
+    tmp_body, tmp_cover = debug / f"{stem}_body.pdf", debug / f"{stem}_cover.pdf"
+    pdf_from_html(cover_html_path, tmp_cover, header, fm.get("date", ""), cover=True)
+    pdf_from_html(body_html_path, tmp_body, header, fm.get("date", ""))
+    merge_pdfs([tmp_cover, tmp_body], out_pdf)
     pages = len(PdfReader(str(out_pdf)).pages)
     lo, hi = LIMITS[kind]
     if pages < lo:

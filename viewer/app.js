@@ -1,62 +1,61 @@
-// The Universal — 3Dビューア（DOC-02 §3-6、DOC-03 §3）
+// The Universal — 3Dビューア v2（DOC-02 §3-6、DOC-03 §3・§3.6・§7、ADR-0004）
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
 
-const LEVEL_COLORS = ["#6b7280", "#60a5fa", "#22d3ee", "#34d399", "#facc15", "#fb923c"];
-const LEVEL_NAMES = ["L0 未学習", "L1 認知", "L2 説明", "L3 専門理解", "L4 統合応用", "L5 批判的検証"];
+// ---------------------------------------------------------------- 定数
+const LEVEL_COLORS = ["#5c5c5c", "#e9dcc0", "#e6be96", "#e0966d", "#d46a45", "#c8402a"];
+const LEVEL_NAMES = ["未学習", "認知", "説明できる", "専門的に理解", "統合・応用", "批判的に検証"];
+const TYPE_EN = { theme: "Theme", concept: "Concept", event: "Event", actor: "Actor", theory: "Theory", evidence: "Evidence", question: "Question", method: "Method" };
 const TYPE_JA = { theme: "テーマ", concept: "概念", event: "出来事", actor: "主体", theory: "理論", evidence: "証拠", question: "問い", method: "思考法" };
-const EP_JA = { fact: "事実", theory: "理論", debate: "論争", normative: "規範", hypothesis: "仮説", unknown: "未知" };
-const CONF_JA = { high: "確信度 高", medium: "確信度 中", low: "確信度 低" };
+const EP = { fact: ["事実", "#e8e4da", "観測・測定・史料で確認できる"], theory: ["理論", "#7f9bbf", "強い証拠に支えられた説明"],
+  debate: ["論争", "#c8402a", "学説・解釈が競合している"], normative: ["規範", "#a28bbd", "価値・望ましさの問題"],
+  hypothesis: ["仮説", "#8fab8a", "予測・未検証の説明"], unknown: ["未知", "#8d887e", "現時点で確定できない"] };
+const CONF_EN = { high: "Confidence high", medium: "Confidence medium", low: "Confidence low" };
+const EDGE_EN = { causes: "causes", enables: "enables", requires: "requires", part_of: "part of", precedes: "precedes",
+  supports: "supports", contradicts: "contradicts", analogous: "analogous", instance_of: "instance of", applies: "applies",
+  evidence_for: "evidence for", raises: "raises", addresses: "addresses" };
 const EDGE_JA = { causes: "原因となる", enables: "可能にする", requires: "前提とする", part_of: "部分である", precedes: "先行する",
   supports: "支持する", contradicts: "対立する", analogous: "類比", instance_of: "事例である", applies: "適用する",
   evidence_for: "証拠となる", raises: "問いを生む", addresses: "答えようとする" };
-const EDGE_COLORS = { causes: "#f87171", enables: "#fbbf24", requires: "#a78bfa", precedes: "#64748b", supports: "#34d399",
-  contradicts: "#fb7185", evidence_for: "#22d3ee", raises: "#f0abfc", addresses: "#93c5fd", applies: "#facc15" };
-const TICKS = [[13.8e9, "138億年前"], [1e9, "10億年前"], [1e8, "1億年前"], [1e7, "1000万年前"], [1e6, "100万年前"],
-  [1e5, "10万年前"], [1e4, "1万年前"], [1e3, "1000年前"], [1e2, "100年前"], [0, "現在"], [-30, "30年後"]];
+const STATUS_EN = { "not-started": "Not started", presented: "Presented", "in-progress": "In progress", assessed: "Assessed", done: "Done",
+  open: "Open", exploring: "Exploring", answered: "Answered", "open-problem": "Open problem" };
+const SCALE_EN = { 1: "DOMAINS", 2: "THEMES", 3: "CONCEPTS", 4: "DETAILS" };
+const TICKS = [[13.8e9, "13.8 GYR"], [1e9, "1 GYR"], [1e8, "100 MYR"], [1e7, "10 MYR"], [1e6, "1 MYR"],
+  [1e5, "100 KYR"], [1e4, "10 KYR"], [1e3, "1 KYR"], [1e2, "100 YR"], [0, "NOW"], [-30, "+30 YR"]];
 const xOfYa = (ya) => (ya >= 0 ? -10 * Math.log10(1 + ya) : 10 * Math.log10(1 + Math.abs(ya)));
 
 const $ = (s) => document.querySelector(s);
-const safeUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const safeUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
+const safePdf = (f) => (/^output\/[\w./-]+\.pdf$/.test(f || "") ? f : "");
 
 let G, byId = {}, mode = "cyl", selected = null;
 const meshes = [], labels = {};
 let modeTween = null, camTween = null;
 
-// グループ内の線を外すとき、GPUメモリも解放する（iPhoneでのメモリ不足を防ぐ）
-function clearGroup(g) {
-  for (const c of [...g.children]) {
-    c.geometry?.dispose();
-    c.material?.dispose();
-    g.remove(c);
-  }
-}
-
 // ---------------------------------------------------------------- シーン
 const scene = new THREE.Scene();
-scene.fog = new THREE.FogExp2(0x05060f, 0.0035);
-const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 3000);
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+scene.fog = new THREE.Fog(0x0b0b0b, 120, 420);
+const camera = new THREE.PerspectiveCamera(46, innerWidth / innerHeight, 0.1, 3000);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
-renderer.setClearColor(0x05060f);
+renderer.setClearColor(0x0b0b0b);
 $("#scene").appendChild(renderer.domElement);
 const labelRenderer = new CSS2DRenderer();
 labelRenderer.setSize(innerWidth, innerHeight);
 Object.assign(labelRenderer.domElement.style, { position: "absolute", top: "0", left: "0", pointerEvents: "none" });
 $("#scene").appendChild(labelRenderer.domElement);
 
-// 縦長の画面（iPhone）では時間軸を縦に置く（下が過去、上が現在）。横長では横（左が過去）。
-// OrbitControls は作成時の camera.up を使うため、向きが変わったら作り直す。
+// 縦長の画面（iPhone）では時間軸を縦に置く（下が過去、上が現在）。OrbitControls は作成時の camera.up を使うため、向きが変わったら作り直す。
 let portrait = innerHeight > innerWidth;
 let controls;
 function makeControls(resetView) {
   const target = controls ? controls.target.clone() : new THREE.Vector3(-45, 0, 0);
   controls?.dispose();
   camera.up.set(...(portrait ? [1, 0, 0] : [0, 1, 0]));
-  if (resetView) camera.position.set(...(portrait ? [-45, 70, 150] : [-40, 55, 150]));
+  if (resetView) camera.position.set(...(portrait ? [-45, 80, 160] : [-42, 42, 112]));
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.08;
@@ -66,178 +65,175 @@ function makeControls(resetView) {
 }
 makeControls(true);
 
-scene.add(new THREE.AmbientLight(0xffffff, 0.75));
-const dl = new THREE.DirectionalLight(0xffffff, 0.9);
-dl.position.set(30, 80, 60);
-scene.add(dl);
-
-// 星空
-{
-  const g = new THREE.BufferGeometry();
-  const n = 1800, p = new Float32Array(n * 3);
-  for (let i = 0; i < n; i++) {
-    const r = 600 + Math.random() * 900, t = Math.random() * Math.PI * 2, u = Math.acos(2 * Math.random() - 1);
-    p.set([r * Math.sin(u) * Math.cos(t) - 50, r * Math.sin(u) * Math.sin(t), r * Math.cos(u)], i * 3);
-  }
-  g.setAttribute("position", new THREE.BufferAttribute(p, 3));
-  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0x8899bb, size: 1.6, sizeAttenuation: true, fog: false })));
-}
-
-const GEOMS = {
-  theme: new THREE.SphereGeometry(1.5, 24, 16), concept: new THREE.SphereGeometry(0.8, 18, 12),
-  event: new THREE.OctahedronGeometry(1.0), actor: new THREE.BoxGeometry(1.2, 1.2, 1.2),
-  theory: new THREE.IcosahedronGeometry(1.0), evidence: new THREE.TetrahedronGeometry(1.15),
-  question: new THREE.TorusGeometry(0.75, 0.26, 10, 24), method: new THREE.DodecahedronGeometry(0.85),
+// 種類ごとのワイヤーフレームの形
+const SHAPES = {
+  theme: new THREE.IcosahedronGeometry(1.7, 1), concept: new THREE.IcosahedronGeometry(0.75, 0),
+  event: new THREE.OctahedronGeometry(0.95), actor: new THREE.BoxGeometry(1.1, 1.1, 1.1),
+  theory: new THREE.DodecahedronGeometry(0.95), evidence: new THREE.TetrahedronGeometry(1.1),
+  question: new THREE.TorusGeometry(0.75, 0.001, 3, 20), method: new THREE.OctahedronGeometry(0.75, 0),
 };
+const EDGES = Object.fromEntries(Object.entries(SHAPES).map(([k, g]) => [k, new THREE.EdgesGeometry(g)]));
 
-const worldGroup = new THREE.Group();
-scene.add(worldGroup);
-const axisGroup = new THREE.Group();
-scene.add(axisGroup);
-const edgeGroup = new THREE.Group();
-scene.add(edgeGroup);
-const treeGroup = new THREE.Group();
-scene.add(treeGroup);
-const domainGroup = new THREE.Group();
-scene.add(domainGroup);
+const groups = {};
+for (const k of ["nodes", "links", "hot", "layersCyl", "layersFlat", "axis", "domains"]) { groups[k] = new THREE.Group(); scene.add(groups[k]); }
 
 // ---------------------------------------------------------------- 読み込み
 fetch("viewer/data/graph.json", { cache: "no-store" })
   .then((r) => r.json())
   .then(init)
-  .catch((e) => { $("#loading").innerHTML = "読み込みに失敗しました<br><small>" + esc(e.message) + "</small>"; });
+  .catch((e) => { $("#loading").innerHTML = '<div class="wordmark">THE UNIVERSAL</div><small>' + esc(e.message) + "</small>"; });
 
 function init(g) {
   G = g;
   G.nodes.forEach((n) => (byId[n.id] = n));
-  $("#ver").textContent = `地図 v${G.map_version}｜${G.stats.nodes} ノード｜${G.stats.edges} 関係`;
-  buildAxis();
+  $("#ver").textContent = `MAP V${G.map_version} — ${G.stats.nodes} NODES — ${G.stats.edges} RELATIONS`;
+  buildLayers();
   buildDomains();
   buildNodes();
-  buildTree();
-  buildLegend();
-  buildSearch();
   applyMode(false);
+  buildMenu();
   $("#loading").classList.add("hidden");
-  setTimeout(() => ($("#hint").style.opacity = 0), 6000);
   const hash = decodeURIComponent(location.hash.slice(1));
   if (byId[hash]) select(hash, true);
   animate();
 }
 
-function buildAxis() {
-  const mat = new THREE.LineBasicMaterial({ color: 0x334155 });
-  const geo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(xOfYa(13.8e9) - 4, 0, 0), new THREE.Vector3(xOfYa(-30) + 2, 0, 0)]);
-  axisGroup.add(new THREE.Line(geo, mat));
+// ---------------------------------------------------------------- 時間の層（ワイヤーフレームの輪／枠）と時間軸
+function buildLayers() {
+  const matRing = new THREE.LineBasicMaterial({ color: 0xf2efe8, transparent: true, opacity: 0.07 });
+  const matAxis = new THREE.LineBasicMaterial({ color: 0xf2efe8, transparent: true, opacity: 0.22 });
+  groups.axis.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-106, 0, 0), new THREE.Vector3(20, 0, 0)]), matAxis));
   for (const [ya, lab] of TICKS) {
+    const x = xOfYa(ya);
+    const pts = [];
+    for (let k = 0; k <= 96; k++) { const a = (k / 96) * Math.PI * 2; pts.push(new THREE.Vector3(x, 17 * Math.cos(a), 17 * Math.sin(a))); }
+    groups.layersCyl.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), matRing));
+    const rect = [[-9, -46], [24, -46], [24, 46], [-9, 46], [-9, -46]].map(([y, z]) => new THREE.Vector3(x, y, z));
+    groups.layersFlat.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(rect), matRing));
     const el = document.createElement("div");
     el.className = "tick";
     el.textContent = lab;
     const o = new CSS2DObject(el);
-    o.position.set(xOfYa(ya), 0, 0);
-    o.center.set(0.5, -0.6);
-    axisGroup.add(o);
-    const ring = new THREE.Mesh(new THREE.RingGeometry(0.0, 0.25, 12), new THREE.MeshBasicMaterial({ color: 0x64748b }));
-    ring.position.set(xOfYa(ya), 0, 0);
-    ring.rotation.y = Math.PI / 2;
-    axisGroup.add(ring);
+    o.position.set(x, 0, 0);
+    o.center.set(0.5, -0.8);
+    groups.axis.add(o);
   }
 }
 
 function domainAnchor(i, m) {
-  const sector = (2 * Math.PI) / 10, th = sector * (i + 0.5);
-  return m === "cyl" ? new THREE.Vector3(-108, 18 * Math.cos(th), 18 * Math.sin(th)) : new THREE.Vector3(-108, 22, (i - 4.5) * 9);
+  const th = ((2 * Math.PI) / 10) * (i + 0.5);
+  return m === "cyl" ? new THREE.Vector3(-110, 19 * Math.cos(th), 19 * Math.sin(th)) : new THREE.Vector3(-110, 26, (i - 4.5) * 9);
 }
 
 function buildDomains() {
   G.domains.forEach((d, i) => {
     const el = document.createElement("div");
     el.className = "dlbl";
-    el.textContent = `${d.id} ${d.ja}`;
+    el.innerHTML = `<b>${esc(d.id)}</b>${esc(d.ja)}`;
     const o = new CSS2DObject(el);
     o.userData = { i };
-    domainGroup.add(o);
+    groups.domains.add(o);
   });
-  // 円筒モードの領域の境界線
-  const mat = new THREE.LineBasicMaterial({ color: 0x1e293b, transparent: true, opacity: 0.6 });
-  for (let i = 0; i < 10; i++) {
-    const th = ((2 * Math.PI) / 10) * i;
-    const pts = [new THREE.Vector3(-104, 16 * Math.cos(th), 16 * Math.sin(th)), new THREE.Vector3(18, 16 * Math.cos(th), 16 * Math.sin(th))];
-    const l = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), mat);
-    l.userData.cylOnly = true;
-    domainGroup.add(l);
-  }
 }
 
+// ---------------------------------------------------------------- ノード
 function buildNodes() {
   for (const n of G.nodes) {
     const col = new THREE.Color(LEVEL_COLORS[n.understanding.level] || LEVEL_COLORS[0]);
-    const mat = new THREE.MeshStandardMaterial({ color: col, emissive: col, emissiveIntensity: n.understanding.status === "presented" ? 0.55 : 0.3,
-      roughness: 0.5, metalness: 0.1, transparent: true, opacity: 1 });
-    const m = new THREE.Mesh(GEOMS[n.type] || GEOMS.concept, mat);
-    m.userData.id = n.id;
-    m.position.fromArray(n.pos.cyl);
-    worldGroup.add(m);
-    meshes.push(m);
+    const base = n.understanding.status === "presented" && n.understanding.level === 0 ? new THREE.Color("#a8a297") : col;
+    // 当たり判定用の面（ほぼ透明）＋ワイヤーフレーム
+    const hit = new THREE.Mesh(SHAPES[n.type] || SHAPES.concept, new THREE.MeshBasicMaterial({ color: base, transparent: true, opacity: 0.08, depthWrite: false }));
+    const wire = new THREE.LineSegments(EDGES[n.type] || EDGES.concept, new THREE.LineBasicMaterial({ color: base, transparent: true, opacity: 0.95 }));
+    hit.add(wire);
+    hit.userData = { id: n.id, wire };
+    hit.position.fromArray(n.pos.cyl);
+    hit.rotation.set((n.id.length * 0.37) % 3, (n.id.length * 0.61) % 3, 0);
+    groups.nodes.add(hit);
+    meshes.push(hit);
     const el = document.createElement("div");
     el.className = "lbl l" + n.level;
     el.textContent = n.title.ja;
     const o = new CSS2DObject(el);
-    o.center.set(0.5, 1.6);   // ノードの少し上に表示（CSSのtransformは上書きされるため center で指定）
-    m.add(o);
+    o.center.set(0.5, 1.7);
+    hit.add(o);
     labels[n.id] = o;
   }
 }
+const meshOf = (id) => meshes.find((m) => m.userData.id === id);
+const posOf = (id) => meshOf(id).position.clone();
 
-function buildTree() {
-  clearGroup(treeGroup);
-  const pts = [];
-  for (const n of G.nodes) {
-    if (!n.parent || !byId[n.parent]) continue;
-    pts.push(posOf(n.id), posOf(n.parent));
-  }
-  const g = new THREE.BufferGeometry().setFromPoints(pts);
-  treeGroup.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0x1e3a5f, transparent: true, opacity: 0.35 })));
+// グループ内の線を外すとき、GPUメモリも解放する
+function clearGroup(g) {
+  for (const c of [...g.children]) { c.geometry?.dispose(); c.material?.dispose(); g.remove(c); }
 }
 
-const posOf = (id) => meshes.find((m) => m.userData.id === id).position.clone();
+function curvePoints(a, b, segs = 14) {
+  const mid = a.clone().add(b).multiplyScalar(0.5);
+  const off = mid.clone().setX(0);
+  if (off.lengthSq() < 1e-6) off.set(0, 1, 0);
+  mid.add(off.normalize().multiplyScalar(3 + a.distanceTo(b) * 0.08));
+  return new THREE.QuadraticBezierCurve3(a, mid, b).getPoints(segs);
+}
+
+// すべての関係と親子関係を、極細・低不透明度の線で描く（密度で構造を見せる）
+function buildLinks() {
+  clearGroup(groups.links);
+  const pos = [];
+  const push = (a, b) => { const p = curvePoints(a, b); for (let i = 0; i < p.length - 1; i++) pos.push(p[i].x, p[i].y, p[i].z, p[i + 1].x, p[i + 1].y, p[i + 1].z); };
+  for (const e of G.edges) push(posOf(e.from), posOf(e.to));
+  for (const n of G.nodes) if (n.parent && byId[n.parent]) push(posOf(n.id), posOf(n.parent));
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+  groups.links.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0xf2efe8, transparent: true, opacity: selected ? 0.04 : 0.13 })));
+}
+
+function buildHot() {
+  clearGroup(groups.hot);
+  if (!selected) return;
+  for (const e of G.edges) {
+    if (e.from !== selected && e.to !== selected) continue;
+    const g = new THREE.BufferGeometry().setFromPoints(curvePoints(posOf(e.from), posOf(e.to), 28));
+    const col = e.type === "contradicts" ? 0xc8402a : 0xf2efe8;
+    groups.hot.add(new THREE.Line(g, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.9 })));
+  }
+  const n = byId[selected];
+  if (n.parent && byId[n.parent]) {
+    const g = new THREE.BufferGeometry().setFromPoints(curvePoints(posOf(n.id), posOf(n.parent), 20));
+    groups.hot.add(new THREE.Line(g, new THREE.LineDashedMaterial({ color: 0xf2efe8, dashSize: 0.8, gapSize: 0.6, transparent: true, opacity: 0.6 })));
+    groups.hot.children.at(-1).computeLineDistances();
+  }
+}
 
 // ---------------------------------------------------------------- 表示切替
 function applyMode(animateIt = true) {
   const from = meshes.map((m) => m.position.clone());
   const to = meshes.map((m) => new THREE.Vector3().fromArray(byId[m.userData.id].pos[mode]));
-  const axFrom = axisGroup.position.clone();
+  const axFrom = groups.axis.position.clone();
   const axTo = mode === "cyl" ? new THREE.Vector3(0, 0, 0) : new THREE.Vector3(0, -12, 50);
-  domainGroup.children.forEach((c) => { if (c.userData.cylOnly) c.visible = mode === "cyl"; });
-  domainGroup.children.filter((c) => c.isCSS2DObject).forEach((c) => c.position.copy(domainAnchor(c.userData.i, mode)));
-  $("#btn-mode").textContent = mode === "cyl" ? "展開" : "円筒";
+  groups.layersCyl.visible = mode === "cyl";
+  groups.layersFlat.visible = mode === "flat";
+  groups.domains.children.forEach((c) => c.position.copy(domainAnchor(c.userData.i, mode)));
+  document.querySelectorAll("#foot [data-mode]").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
   if (!animateIt) {
     meshes.forEach((m, i) => m.position.copy(to[i]));
-    axisGroup.position.copy(axTo);
-    buildTree();
-    refreshEdges();
+    groups.axis.position.copy(axTo);
+    buildLinks();
+    buildHot();
     return;
   }
+  clearGroup(groups.links);
+  clearGroup(groups.hot);
   const t0 = performance.now();
   modeTween = (now) => {
     const k = Math.min(1, (now - t0) / 1000), e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
     meshes.forEach((m, i) => m.position.lerpVectors(from[i], to[i], e));
-    axisGroup.position.lerpVectors(axFrom, axTo, e);
-    if (k >= 1) { modeTween = null; buildTree(); refreshEdges(); }
+    groups.axis.position.lerpVectors(axFrom, axTo, e);
+    if (k >= 1) { modeTween = null; buildLinks(); buildHot(); }
   };
-  clearGroup(treeGroup);
-  clearGroup(edgeGroup);
 }
+document.querySelectorAll("#foot [data-mode]").forEach((b) => (b.onclick = () => { if (mode !== b.dataset.mode) { mode = b.dataset.mode; applyMode(true); } }));
 
-$("#btn-mode").onclick = () => { mode = mode === "cyl" ? "flat" : "cyl"; applyMode(true); };
-$("#btn-legend").onclick = () => { $("#legend").classList.toggle("hidden"); $("#search").classList.add("hidden"); };
-$("#btn-search").onclick = () => {
-  $("#search").classList.toggle("hidden");
-  $("#legend").classList.add("hidden");
-  if (!$("#search").classList.contains("hidden")) $("#q").focus();
-};
-
-// ---------------------------------------------------------------- 選択・詳細パネル
+// ---------------------------------------------------------------- 選択と詳細パネル
 const ray = new THREE.Raycaster();
 const ptr = new THREE.Vector2();
 let down = null, activePointers = 0, multiTouch = false;
@@ -246,10 +242,9 @@ renderer.domElement.addEventListener("pointerdown", (e) => {
   if (activePointers > 1) multiTouch = true;
   down = { x: e.clientX, y: e.clientY, t: performance.now() };
 });
-const pointerEnd = () => { activePointers = Math.max(0, activePointers - 1); };
-renderer.domElement.addEventListener("pointercancel", () => { pointerEnd(); multiTouch = activePointers > 0; });
+renderer.domElement.addEventListener("pointercancel", () => { activePointers = Math.max(0, activePointers - 1); multiTouch = activePointers > 0; });
 renderer.domElement.addEventListener("pointerup", (e) => {
-  pointerEnd();
+  activePointers = Math.max(0, activePointers - 1);
   const wasMulti = multiTouch;
   if (activePointers === 0) multiTouch = false;
   if (wasMulti || !down || performance.now() - down.t > 600 || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 8) return;
@@ -259,16 +254,28 @@ renderer.domElement.addEventListener("pointerup", (e) => {
   if (hit) select(hit.object.userData.id, false);
 });
 
+function related(id) {
+  const s = new Set([id]);
+  for (const e of G.edges) { if (e.from === id) s.add(e.to); if (e.to === id) s.add(e.from); }
+  const n = byId[id];
+  if (n.parent) s.add(n.parent);
+  G.nodes.forEach((x) => { if (x.parent === id) s.add(x.id); });
+  return s;
+}
+
 function select(id, fly) {
   selected = id;
   history.replaceState(null, "", "#" + encodeURIComponent(id));
+  const rel = related(id);
   meshes.forEach((m) => {
-    const rel = id === m.userData.id || G.edges.some((e) => (e.from === id && e.to === m.userData.id) || (e.to === id && e.from === m.userData.id));
-    m.material.opacity = rel ? 1 : 0.25;
-    m.scale.setScalar(m.userData.id === id ? 1.7 : 1);
+    const on = rel.has(m.userData.id);
+    m.userData.wire.material.opacity = on ? 1 : 0.15;
+    m.material.opacity = m.userData.id === id ? 0.35 : on ? 0.08 : 0.02;
+    m.scale.setScalar(m.userData.id === id ? 1.8 : 1);
   });
   Object.entries(labels).forEach(([k, o]) => o.element.classList.toggle("sel", k === id));
-  refreshEdges();
+  buildLinks();
+  buildHot();
   renderPanel(byId[id]);
   if (fly) flyTo(id);
 }
@@ -276,132 +283,202 @@ function select(id, fly) {
 function clearSelection() {
   selected = null;
   history.replaceState(null, "", location.pathname);
-  meshes.forEach((m) => { m.material.opacity = 1; m.scale.setScalar(1); });
+  meshes.forEach((m) => { m.userData.wire.material.opacity = 0.95; m.material.opacity = 0.08; m.scale.setScalar(1); });
   Object.values(labels).forEach((o) => o.element.classList.remove("sel"));
-  clearGroup(edgeGroup);
+  buildLinks();
+  clearGroup(groups.hot);
   $("#panel").classList.add("hidden");
   setOffset(false);
 }
+$("#panel-close").onclick = clearSelection;
 
 // 下からせり上がるパネルで選択ノードが隠れないよう、描画の中心を画面上部へずらす
 function setOffset(on) {
-  if (on && innerWidth < 900) camera.setViewOffset(innerWidth, innerHeight, 0, innerHeight * 0.28, innerWidth, innerHeight);
+  if (on && innerWidth < 900) camera.setViewOffset(innerWidth, innerHeight, 0, innerHeight * 0.27, innerWidth, innerHeight);
+  else if (on) camera.setViewOffset(innerWidth, innerHeight, 210, 0, innerWidth, innerHeight);
   else camera.clearViewOffset();
-}
-$("#panel-close").onclick = clearSelection;
-
-function refreshEdges() {
-  clearGroup(edgeGroup);
-  if (!selected) return;
-  for (const e of G.edges) {
-    if (e.from !== selected && e.to !== selected) continue;
-    const a = posOf(e.from), b = posOf(e.to);
-    const mid = a.clone().add(b).multiplyScalar(0.5);
-    mid.add(mid.clone().setX(0).normalize().multiplyScalar(4));
-    const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
-    const g = new THREE.BufferGeometry().setFromPoints(curve.getPoints(24));
-    const mat = new THREE.LineBasicMaterial({ color: EDGE_COLORS[e.type] || 0x94a3b8, transparent: true, opacity: 0.9 });
-    edgeGroup.add(new THREE.Line(g, mat));
-  }
 }
 
 function flyTo(id) {
-  // 表示切替の途中なら、移動先の座標で飛ぶ
   const n = byId[id];
   const target = modeTween ? new THREE.Vector3().fromArray(n.pos[mode]) : posOf(id);
   const dir = camera.position.clone().sub(controls.target).normalize();
-  const endPos = target.clone().add(dir.multiplyScalar(38));
+  const endPos = target.clone().add(dir.multiplyScalar(36));
   const p0 = camera.position.clone(), t0c = controls.target.clone(), t0 = performance.now();
   camTween = (now) => {
-    const k = Math.min(1, (now - t0) / 900), e = 1 - Math.pow(1 - k, 3);
+    const k = Math.min(1, (now - t0) / 1000), e = 1 - Math.pow(1 - k, 3);
     camera.position.lerpVectors(p0, endPos, e);
     controls.target.lerpVectors(t0c, target, e);
     if (k >= 1) camTween = null;
   };
 }
 
+function levelBar(lv) {
+  return `<div class="levels">${LEVEL_COLORS.slice(1).map((c, i) => `<i style="background:${i < lv ? c : "#262421"}"></i>`).join("")}</div>`;
+}
+
 function renderPanel(n) {
+  const ep = EP[n.epistemic];
   const lv = n.understanding.level;
-  const bars = LEVEL_COLORS.slice(1).map((c, i) => `<i style="background:${i < lv ? c : "#1f2937"}"></i>`).join("");
-  const doms = n.domains.map((d) => G.domains.find((x) => x.id === d)).map((d) => `<span class="chip">${d.id} ${esc(d.ja)}</span>`).join("");
   const out = G.edges.filter((e) => e.from === n.id), inc = G.edges.filter((e) => e.to === n.id);
-  const relItem = (e, other, dir) => `<li><span class="rel-type">${dir === "out" ? "→" : "←"} ${EDGE_JA[e.type] || e.type}</span>` +
-    `<span class="rel" data-id="${other}">${esc(byId[other]?.title.ja || other)}</span>` +
-    ` <span class="chip ep ep-${e.epistemic}" style="font-size:10px;padding:1px 6px">${EP_JA[e.epistemic]}</span>` +
-    (e.note ? `<div class="small">${esc(e.note)}</div>` : "") + "</li>";
+  const relItem = (e, other, dir) => `<li><span class="rt">${dir === "out" ? "→" : "←"} ${EDGE_EN[e.type] || e.type}</span>` +
+    `<span class="rel" data-id="${esc(other)}">${esc(byId[other]?.title.ja || other)}</span>` +
+    `<span class="tag" style="background:${EP[e.epistemic][1]}">${EP[e.epistemic][0]}</span>` +
+    `<span class="note">${esc(EDGE_JA[e.type] || "")}${e.note ? "　" + esc(e.note) : ""}</span></li>`;
   const children = G.nodes.filter((x) => x.parent === n.id);
   const srcs = n.sources.map((s) => `<li>${safeUrl(s.url) ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}` +
-    (s.existence === "verified" ? "" : ` <span class="small">［実在未確認］</span>`) + "</li>").join("");
-  const persp = (n.perspectives || []).map((p) => `<li><b>${esc(p.label)}</b>：${esc(p.view)}</li>`).join("");
+    (s.existence === "verified" ? "" : `<span class="note">実在未確認</span>`) + "</li>").join("");
+  const persp = (n.perspectives || []).map((p) => `<li><span class="rt">${esc(p.label)}</span><span class="note" style="color:#e4e0d7">${esc(p.view)}</span></li>`).join("");
   const sess = n.curriculum.map((c) => {
     const s = G.sessions[c];
-    const pdfs = (s?.lessons || []).filter((f) => /^output\/[\w./-]+\.pdf$/.test(f))
-      .map((f, i, a) => ` <a href="${esc(f)}" target="_blank" rel="noopener">PDF${a.length > 1 ? "（" + "前後"[i] + "編）" : ""}</a>`).join("");
-    return `<li>${esc(c)} ${esc(s?.title || "")}${pdfs}</li>`;
+    const pdfs = (s?.lessons || []).map(safePdf).filter(Boolean)
+      .map((f, i, a) => ` <a href="${esc(f)}" target="_blank" rel="noopener">${a.length > 1 ? "VOL. " + "AB"[i] : "PDF"}</a>`).join("");
+    return `<li><span class="rt">${esc(c)}</span>${esc(s?.title || "")}${pdfs}</li>`;
   }).join("");
+  const time = n.time ? esc(n.time.label) : "Timeless";
+  const ver = { verified: "Verified", pending: "Pending", unverified: "Unverified" }[n.verification];
   $("#panel-body").innerHTML = `
+    <div class="kick">${TYPE_EN[n.type]} — <span class="ep-dot" style="background:${ep[1]}"></span>${ep[0]} — ${CONF_EN[n.confidence]}</div>
     <h2>${esc(n.title.ja)}</h2><div class="en">${esc(n.title.en || "")}</div>
-    <div class="chips">
-      <span class="chip">${TYPE_JA[n.type]}</span>
-      <span class="chip ep ep-${n.epistemic}">${EP_JA[n.epistemic]}</span>
-      <span class="chip">${CONF_JA[n.confidence]}</span>
-      ${n.time ? `<span class="chip">${esc(n.time.label)}</span>` : `<span class="chip">時間を持たない</span>`}
-      <span class="chip">${n.verification === "verified" ? "検証済み" : n.verification === "pending" ? "検証待ち" : "未検証"}</span>
-    </div>
     <p>${esc(n.summary)}</p>
-    ${n.time?.uncertainty ? `<p class="small">不確実性：${esc(n.time.uncertainty)}</p>` : ""}
     ${n.body ? `<p>${esc(n.body)}</p>` : ""}
-    ${persp ? `<h3>別の見方</h3><ul>${persp}</ul>` : ""}
-    <h3>あなたの理解</h3>
-    <div class="ulevel">${bars}</div>
-    <div class="small">${LEVEL_NAMES[lv]}（目標 L${n.target_level}）${n.understanding.status === "presented" ? "｜講義提示済み・未評価" : n.understanding.status === "assessed" ? "｜評価済み" : ""}</div>
-    <h3>領域</h3><div class="chips">${doms}</div>
-    ${n.parent ? `<h3>上位</h3><ul><li><span class="rel" data-id="${n.parent}">${esc(byId[n.parent]?.title.ja)}</span></li></ul>` : ""}
-    ${children.length ? `<h3>下位（${children.length}）</h3><ul>${children.map((c) => `<li><span class="rel" data-id="${c.id}">${esc(c.title.ja)}</span></li>`).join("")}</ul>` : ""}
-    ${out.length + inc.length ? `<h3>関係（${out.length + inc.length}）</h3><ul>${out.map((e) => relItem(e, e.to, "out")).join("")}${inc.map((e) => relItem(e, e.from, "in")).join("")}</ul>` : ""}
-    ${srcs ? `<h3>出典</h3><ul>${srcs}</ul>` : `<h3>出典</h3><p class="small">未登録（今後のサイクルで調査・検証）</p>`}
-    ${sess ? `<h3>カリキュラム</h3><ul>${sess}</ul>` : ""}
-    <p class="small">ID：${esc(n.id)}</p>`;
+    <div class="kick">${time} — ${ver}</div>
+    ${n.time?.uncertainty ? `<p class="small" style="margin-top:6px">不確実性：${esc(n.time.uncertainty)}</p>` : ""}
+    <h3>UNDERSTANDING</h3>
+    ${levelBar(lv)}
+    <div class="small">L${lv} ${LEVEL_NAMES[lv]}　／　目標 L${n.target_level}${n.understanding.status === "presented" ? "　／　講義提示済み・未評価" : n.understanding.status === "assessed" ? "　／　評価済み" : ""}</div>
+    ${persp ? `<h3>PERSPECTIVES</h3><ul>${persp}</ul>` : ""}
+    <h3>LOCATION</h3><ul>
+      <li><span class="rt">Domain</span>${n.domains.map((d) => esc(d + " " + (G.domains.find((x) => x.id === d)?.ja || ""))).join("、")}</li>
+      ${n.parent ? `<li><span class="rt">Parent</span><span class="rel" data-id="${esc(n.parent)}">${esc(byId[n.parent]?.title.ja)}</span></li>` : ""}
+    </ul>
+    ${children.length ? `<h3>CHILDREN — ${children.length}</h3><ul>${children.map((c) => `<li><span class="rt">${TYPE_EN[c.type]}</span><span class="rel" data-id="${esc(c.id)}">${esc(c.title.ja)}</span></li>`).join("")}</ul>` : ""}
+    ${out.length + inc.length ? `<h3>RELATIONS — ${out.length + inc.length}</h3><ul>${out.map((e) => relItem(e, e.to, "out")).join("")}${inc.map((e) => relItem(e, e.from, "in")).join("")}</ul>` : ""}
+    <h3>SOURCES</h3>${srcs ? `<ul>${srcs}</ul>` : `<p class="small">未登録（今後のサイクルで調査・検証）</p>`}
+    ${sess ? `<h3>LESSONS</h3><ul>${sess}</ul>` : ""}
+    <p class="small" style="margin-top:22px;font-family:var(--mono);letter-spacing:.1em">${esc(n.id)}</p>`;
   $("#panel").classList.remove("hidden");
   $("#panel").scrollTop = 0;
   setOffset(true);
   $("#panel-body").querySelectorAll(".rel").forEach((el) => (el.onclick = () => select(el.dataset.id, true)));
 }
 
-// ---------------------------------------------------------------- 検索・凡例
-function buildSearch() {
-  const sel = $("#f-domain");
-  G.domains.forEach((d) => sel.insertAdjacentHTML("beforeend", `<option value="${d.id}">${d.id} ${esc(d.ja)}</option>`));
+// ---------------------------------------------------------------- メニュー（DOC-03 §3.6）
+function openMenu(sec) {
+  $("#menu").classList.remove("hidden");
+  if (sec) showSection(sec, false);
+}
+function closeMenu() { $("#menu").classList.add("hidden"); }
+$("#btn-menu").onclick = () => openMenu(document.querySelector(".sections button.on")?.dataset.sec || "index");
+$("#menu-close").onclick = closeMenu;
+const goNode = (id) => { closeMenu(); select(id, true); };
+
+function showSection(sec, reading = true) {
+  document.querySelectorAll(".sections button").forEach((b) => b.classList.toggle("on", b.dataset.sec === sec));
+  $("#menu-body").classList.toggle("reading", reading);
+  const c = $("#menu-content");
+  c.innerHTML = `<button class="textbtn back" id="back">← MENU</button>` + RENDER[sec]();
+  c.scrollTop = 0;
+  $("#back").onclick = () => $("#menu-body").classList.remove("reading");
+  c.querySelectorAll("[data-node]").forEach((el) => (el.onclick = (ev) => { ev.stopPropagation(); goNode(el.dataset.node); }));
+}
+
+function buildMenu() {
+  document.querySelectorAll(".sections button").forEach((b) => (b.onclick = () => showSection(b.dataset.sec, true)));
   const run = () => {
-    const q = $("#q").value.trim().toLowerCase(), dom = sel.value;
-    const hits = G.nodes.filter((n) => (!dom || n.domains.includes(dom)) &&
-      (!q || n.title.ja.toLowerCase().includes(q) || (n.title.en || "").toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.id.includes(q)))
-      .slice(0, 40);
-    $("#results").innerHTML = hits.map((n) => `<li data-id="${n.id}">${esc(n.title.ja)}<small>${TYPE_JA[n.type]}・${EP_JA[n.epistemic]}</small></li>`).join("");
-    $("#results").querySelectorAll("li").forEach((li) => (li.onclick = () => { $("#search").classList.add("hidden"); select(li.dataset.id, true); }));
-    // 領域フィルタは3D上でも反映
-    meshes.forEach((m) => (m.visible = !dom || byId[m.userData.id].domains.includes(dom)));
+    const q = $("#q").value.trim().toLowerCase();
+    if (!q) { $("#search-results").innerHTML = ""; return; }
+    const hits = G.nodes.filter((n) => n.title.ja.toLowerCase().includes(q) || (n.title.en || "").toLowerCase().includes(q) || n.summary.toLowerCase().includes(q)).slice(0, 30);
+    $("#search-results").innerHTML = hits.length ? hits.map((n) => `<li data-node="${esc(n.id)}"><span class="v">${esc(n.title.ja)}</span><span class="r">${TYPE_EN[n.type]}</span></li>`).join("")
+      : `<li><span class="v small">該当なし</span></li>`;
+    $("#search-results").querySelectorAll("[data-node]").forEach((el) => (el.onclick = () => goNode(el.dataset.node)));
   };
   $("#q").addEventListener("input", run);
-  sel.addEventListener("change", run);
-  run();
+  showSection("index", false);
 }
 
-function buildLegend() {
-  $("#lg-levels").innerHTML = LEVEL_NAMES.map((t, i) => `<div class="lg-row"><span class="sw" style="background:${LEVEL_COLORS[i]}"></span>${t}</div>`).join("") +
-    `<div class="small">明るく光るノード＝講義提示済み・未評価</div>`;
-  const shapes = { theme: "大きい球", concept: "球", event: "八面体", actor: "立方体", theory: "二十面体", evidence: "四面体", question: "リング", method: "十二面体" };
-  $("#lg-types").innerHTML = Object.entries(shapes).map(([k, v]) => `<div class="lg-row"><span class="chip">${TYPE_JA[k]}</span>${v}</div>`).join("");
-}
+const lvSwatch = (n) => `<i class="lv" style="background:${LEVEL_COLORS[n.understanding.level]};${n.understanding.status === "presented" && !n.understanding.level ? "background:#a8a297" : ""}"></i>`;
+const yaOf = (n) => (n.time ? n.time.start_ya : -1e12);
+
+const RENDER = {
+  index() {
+    const kids = {};
+    G.nodes.forEach((n) => { if (n.parent) (kids[n.parent] ||= []).push(n); });
+    const sortT = (a, b) => yaOf(b) - yaOf(a) || a.title.ja.localeCompare(b.title.ja, "ja");
+    const tree = (id, depth) => (kids[id] || []).sort(sortT).map((c) =>
+      `<li class="d${Math.min(depth, 4)}" data-node="${esc(c.id)}">${lvSwatch(c)}<span>${esc(c.title.ja)}</span><span class="ty">${TYPE_EN[c.type]}</span></li>` + tree(c.id, depth + 1)).join("");
+    const doms = G.domains.map((d) => {
+      const themes = G.nodes.filter((n) => n.type === "theme" && n.domains[0] === d.id).sort(sortT);
+      const count = G.nodes.filter((n) => n.domains[0] === d.id).length;
+      return `<details class="dom"${d.id === "D01" ? " open" : ""}><summary><span class="id">${esc(d.id)}</span>
+        <span class="ja">${esc(d.ja)}<span class="en">${esc(d.en)}</span></span><span class="n">${count}</span></summary>
+        ${themes.map((t) => `<div class="theme"><div class="th" data-node="${esc(t.id)}"><span>${esc(t.title.ja)}</span><small>${esc(t.time ? t.time.label : "TIMELESS")}</small></div>
+          <ul class="tree">${tree(t.id, 3)}</ul></div>`).join("")}</details>`;
+    }).join("");
+    return `<div class="sec-title">Index</div><p class="sec-lead">領域 → テーマ → 概念・出来事 → 詳細。行を選ぶと、地図のその場所へ移動します。左の小さな四角は理解レベルです。</p>${doms}`;
+  },
+  lessons() {
+    return `<div class="sec-title">Lessons</div><p class="sec-lead">カリキュラムと教材。教材は前編・後編のPDFで届きます。</p>` +
+      G.phases.map((ph) => `<div class="legend-block"><h4>${esc(ph.id)} — ${esc(ph.title)}</h4><ul class="rows">` +
+        ph.sessions.map((s) => `<li><span class="k">${esc(s.id.split("-")[1])}</span><span class="v">${esc(s.title)}${s.lessons.map(safePdf).filter(Boolean).map((f, i, a) =>
+          `<a href="${esc(f)}" target="_blank" rel="noopener">${a.length > 1 ? "VOL. " + "AB"[i] : "PDF"} ↗</a>`).join("")}</span><span class="r">${STATUS_EN[s.status] || s.status}</span></li>`).join("") +
+        `</ul></div>`).join("");
+  },
+  reports() {
+    return `<div class="sec-title">Reports</div><p class="sec-lead">サイクルごとの変更点レポート。知識の追加・訂正と、あなたの理解への影響をまとめています。</p><ul class="rows">` +
+      G.reports.map((r) => `<li><span class="k">${esc(r.id)}</span><span class="v">${esc(r.title)}${safePdf(r.pdf) ? `<a href="${esc(r.pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}</span><span class="r">${esc(r.date)}</span></li>`).join("") + `</ul>`;
+  },
+  questions() {
+    return `<div class="sec-title">Questions</div><p class="sec-lead">問いの在庫。あなたの疑問と未解明の問題が、学習計画の出発点になります。</p><ul class="rows">` +
+      G.questions.map((q) => `<li${q.nodes[0] ? ` data-node="${esc(q.nodes[0])}"` : ""}><span class="k">${esc(q.id.replace("qq.", "Q"))}</span><span class="v">${esc(q.text)}</span><span class="r">${STATUS_EN[q.status] || q.status}</span></li>`).join("") + `</ul>`;
+  },
+  legend() {
+    const icon = (t) => {
+      const paths = { theme: "M17 4 L29 11 L29 23 L17 30 L5 23 L5 11 Z M17 4 L17 30 M5 11 L29 23 M29 11 L5 23", concept: "M17 8 L25 13 L25 21 L17 26 L9 21 L9 13 Z",
+        event: "M17 5 L29 17 L17 29 L5 17 Z M5 17 L29 17", actor: "M9 9 H25 V25 H9 Z M9 9 L14 5 H30 L25 9 M25 25 L30 21 V5",
+        theory: "M17 5 L28 13 L24 27 L10 27 L6 13 Z", evidence: "M17 5 L29 28 L5 28 Z", question: "M17 9 A8 8 0 1 1 16.9 9 Z", method: "M17 7 L26 17 L17 27 L8 17 Z" };
+      return `<svg viewBox="0 0 34 34"><path d="${paths[t]}" fill="none" stroke="#f2efe8" stroke-width="1"/></svg>`;
+    };
+    return `<div class="sec-title">Legend</div><p class="sec-lead">地図の読み方。</p>
+      <div class="legend-block"><h4>COLOR — あなたの理解レベル</h4>
+        <div class="grad">${LEVEL_COLORS.map((c) => `<i style="background:${c}"></i>`).join("")}</div>
+        <div class="grad" style="margin-top:6px">${LEVEL_NAMES.map((t, i) => `<span>L${i}<br>${t}</span>`).join("")}</div>
+        <p style="margin-top:14px">色が濃い（赤い）ほど理解が深いことを表します。明るい灰色は「講義を受けたが、まだ評価していない」ノードです。レベルは、あなたの回答を評価したときだけ上がります。</p></div>
+      <div class="legend-block"><h4>SHAPE — ノードの種類</h4>
+        ${Object.keys(TYPE_EN).map((t) => `<div class="legend-row">${icon(t)}<span>${TYPE_JA[t]}　<span class="small">${TYPE_EN[t]}</span></span></div>`).join("")}</div>
+      <div class="legend-block"><h4>LABEL — 認識の種類</h4>
+        ${Object.values(EP).map(([ja, c, d]) => `<div class="legend-row"><span class="ep-chip" style="background:${c}">${ja}</span><span>${d}</span></div>`).join("")}
+        <p style="margin-top:10px">関係の線のうち、赤は「対立する」関係です。</p></div>
+      <div class="legend-block"><h4>SPACE — 座標</h4>
+        <p><b>CYLINDER</b>　中心の軸が時間です（対数目盛り：1目盛りで10倍）。iPhoneの縦画面では下が過去、上が現在。円周の方向が10の領域、中心からの距離が詳細度（外側ほど詳細）。軸のすぐ近くには、時間を持たない思考法などが並びます。輪は時間の目盛りです。</p>
+        <p><b>UNROLLED</b>　円筒を切り開いた表示。奥行きが領域のレーン、高さが詳細度（上ほど概観）。</p>
+        <p><b>SCALE</b>　近づくほど詳しいラベルが現れます（DOMAINS → THEMES → CONCEPTS → DETAILS）。</p></div>
+      <div class="legend-block"><h4>GESTURE — 操作</h4>
+        <p>ドラッグで回転、ピンチで拡大・縮小、2本指で移動。ノードをタップすると詳細と関係線が現れます。MENU の INDEX から目次で探すこともできます。</p></div>`;
+  },
+  about() {
+    return `<div class="sec-title">About</div>
+      <p class="sec-lead">An intellectual production model for understanding this universe.</p>
+      <div class="legend-block"><h4>PURPOSE</h4><p>宇宙・自然・生命・人間・文明・政治・経済・技術・思想・文化・芸術を、相互につながった一つの地図として学ぶための、個人用のシステムです。地図はClaudeが調べ、独立した検証を経て毎週更新します。あなたの理解の深さは、あなたの回答の評価だけで更新されます。</p>
+      <p>目標は「何でも分かる人」になることではなく、「どこまで分かっていて、何が分かっていないか」を理解し、自分の言葉で説明・分析・予測できるようになることです。</p></div>
+      <div class="legend-block"><h4>VERSION</h4><ul class="rows">
+        <li><span class="k">Map</span><span class="v">v${esc(G.map_version)}</span></li>
+        <li><span class="k">System</span><span class="v">${esc(G.system_version)}</span></li>
+        <li><span class="k">Session</span><span class="v">${esc(G.current_session)}</span></li>
+        <li><span class="k">Updated</span><span class="v">${esc(G.generated_at.slice(0, 10))}</span></li></ul></div>`;
+  },
+};
 
 // ---------------------------------------------------------------- 意味的ズーム（DOC-03 §3.4）
-// 距離で表示する詳細度を決め、さらに画面上で重なるラベルは優先度の低いものから隠す。
 const tmp = new THREE.Vector3();
 let labelTick = 0;
 function updateLabels() {
-  if (labelTick++ % 3) return;            // 3フレームに1回で十分
+  if (labelTick++ % 3) return;
   const d = camera.position.distanceTo(controls.target);
   const maxLevel = d > 190 ? 1 : d > 95 ? 2 : d > 45 ? 3 : 4;
+  $("#scale").textContent = SCALE_EN[maxLevel];
+  groups.domains.visible = maxLevel <= 2;
+  if (!groups.domains.visible) groups.domains.children.forEach((c) => (c.visible = false));
   const cand = [];
   for (const m of meshes) {
     const n = byId[m.userData.id], o = labels[n.id];
@@ -411,17 +488,31 @@ function updateLabels() {
     const dist = camera.position.distanceTo(tmp);
     tmp.project(camera);
     if (tmp.z > 1 || Math.abs(tmp.x) > 1.1 || Math.abs(tmp.y) > 1.1) continue;
-    const sx = (tmp.x + 1) / 2 * innerWidth, sy = (1 - tmp.y) / 2 * innerHeight - 16;
-    const fs = n.level === 2 ? 13 : 11;
-    const w = Math.min(n.title.ja.length, 22) * fs, h = fs + 5;
+    const sx = ((tmp.x + 1) / 2) * innerWidth, sy = ((1 - tmp.y) / 2) * innerHeight - 16;
+    const fs = n.level === 2 ? 14 : 11;
+    const w = Math.min(n.title.ja.length, 22) * fs, h = fs + 6;
     const pri = (n.id === selected ? -100 : 0) + n.level * 10 + dist / 50;
     cand.push({ o, pri, r: [sx - w / 2, sy - h / 2, sx + w / 2, sy + h / 2] });
+  }
+  // 領域名も重なり判定に含める（優先度は高め）
+  if (maxLevel <= 2) {
+    for (const c of groups.domains.children) {
+      c.visible = false;
+      c.getWorldPosition(tmp);
+      tmp.project(camera);
+      if (tmp.z > 1 || Math.abs(tmp.x) > 1.05 || Math.abs(tmp.y) > 1.05) continue;
+      const sx = ((tmp.x + 1) / 2) * innerWidth, sy = ((1 - tmp.y) / 2) * innerHeight;
+      const w = c.element.textContent.length * 9;
+      cand.push({ o: c, pri: -50, r: [sx - w / 2, sy - 9, sx + w / 2, sy + 9] });
+    }
   }
   cand.sort((a, b) => a.pri - b.pri);
   const placed = [];
   for (const c of cand) {
-    if (placed.length >= 70) break;
+    if (placed.length >= 60) break;
     const [a1, b1, a2, b2] = c.r;
+    // 上部の題字・下部の操作部とは重ねない
+    if (b1 < 70 || b2 > innerHeight - 56) continue;
     if (placed.some(([x1, y1, x2, y2]) => a1 < x2 && a2 > x1 && b1 < y2 && b2 > y1)) continue;
     placed.push(c.r);
     c.o.visible = true;

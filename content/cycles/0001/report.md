@@ -3,6 +3,7 @@ kind: report
 report_id: R0001
 cycle: 1
 title: 初版（地図 v1.0）の作成と、第1回教材の発行
+en_title: The First Edition of the Map
 date: 2026-11-23
 map_version: "1.0"
 map_version_from: "（なし）"

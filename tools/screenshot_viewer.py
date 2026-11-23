@@ -30,13 +30,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("out", nargs="?", default=str(ROOT / "output" / "debug" / "viewer"))
     ap.add_argument("--three-local")
+    ap.add_argument("--fonts-local", help="@fontsource のディレクトリ（Google Fonts の代わりに使う）")
     a = ap.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     srv = serve()
     base = f"http://127.0.0.1:{srv.server_address[1]}/index.html"
     errors = []
-    shots = [("iphone", 390, 844, ""), ("iphone_node", 390, 844, "#con.entropy"), ("ipad", 820, 1180, "#evd.cmb")]
+    shots = [("iphone", 390, 844, ""), ("iphone_node", 390, 844, "#con.entropy"), ("ipad", 820, 1180, "#evd.cmb"),
+             ("iphone_menu", 390, 844, "?menu=index"), ("desktop", 1440, 900, "")]
     with sync_playwright() as p:
         exe = "/usr/bin/google-chrome" if Path("/usr/bin/google-chrome").exists() else None
         b = p.chromium.launch(executable_path=exe, args=["--use-gl=swiftshader", "--enable-webgl", "--ignore-gpu-blocklist"])
@@ -47,10 +49,31 @@ def main():
                 local = Path(a.three_local)
                 pg.route(CDN + "**", lambda route: route.fulfill(
                     path=str(local / route.request.url[len(CDN):]), content_type="application/javascript"))
+            if a.fonts_local:
+                fl = Path(a.fonts_local)
+                css = []
+                for pkg, ws in [("zen-kaku-gothic-new", ["400", "500", "700"]), ("shippori-mincho-b1", ["500", "700"]),
+                                ("ibm-plex-mono", ["400", "500"]), ("instrument-serif", ["400", "400-italic"])]:
+                    for w in ws:
+                        f = fl / pkg / f"{w}.css"
+                        if f.exists():
+                            css.append(f.read_text().replace("url(./files/", f"url(https://fonts.local/{pkg}/files/"))
+                body = "\n".join(css)
+                pg.route("https://fonts.googleapis.com/**", lambda route: route.fulfill(body=body, content_type="text/css"))
+                pg.route("https://fonts.local/**", lambda route: route.fulfill(
+                    path=str(fl / route.request.url[len("https://fonts.local/"):]), content_type="font/woff2"))
             pg.on("console", lambda m: errors.append(f"{name}: {m.text}") if m.type == "error" else None)
             pg.on("pageerror", lambda e: errors.append(f"{name}: {e}"))
-            pg.goto(base + hash_)
-            pg.wait_for_timeout(3500)
+            if hash_.startswith("?menu="):
+                pg.goto(base)
+                pg.wait_for_timeout(3000)
+                pg.click("#btn-menu")
+                pg.wait_for_timeout(300)
+                pg.click("[data-sec=index]")
+                pg.wait_for_timeout(600)
+            else:
+                pg.goto(base + hash_)
+                pg.wait_for_timeout(3500)
             pg.screenshot(path=str(out / f"{name}.png"))
             ctx.close()
         b.close()

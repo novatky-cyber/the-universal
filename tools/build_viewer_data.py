@@ -45,12 +45,27 @@ def main():
             "target_level": n["target_level"], "curriculum": n.get("curriculum", []),
             "pos": {"cyl": [round(v, 3) for v in cyl], "flat": [round(v, 3) for v in flat]},
         })
+    # 変更点レポートの一覧（content/cycles/*/report.md の frontmatter と output/reports の PDF）
+    import re, yaml
+    reports = []
+    for rp in sorted((ROOT / "content" / "cycles").glob("*/report.md")):
+        m = re.match(r"^---\n(.*?)\n---\n", rp.read_text(encoding="utf-8"), re.S)
+        if not m:
+            continue
+        fm = yaml.safe_load(m.group(1))
+        pdf = f"output/reports/{fm['report_id']}_{str(fm['date']).replace('-', '')}.pdf"
+        reports.append({"id": fm["report_id"], "title": fm["title"], "date": str(fm["date"]), "cycle": fm["cycle"],
+                        "map_version": fm["map_version"], "pdf": pdf if (ROOT / pdf).exists() else ""})
+    phases = [{"id": ph["id"], "title": ph["title"], "goal": ph.get("goal", ""),
+               "sessions": [{"id": s["id"], "title": s["title"], "goal": s.get("goal", ""), "status": s["status"],
+                             "lessons": [f for f in s.get("lessons", []) if (ROOT / f).exists()]} for s in ph["sessions"]]}
+              for ph in d["curriculum"]]
     graph = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "map_version": d["state"]["map_version"], "system_version": d["state"]["system_version"],
         "current_session": d["state"]["current_session"],
         "domains": d["domains"], "nodes": out_nodes, "edges": d["edges"], "sessions": lessons,
-        "questions": d["questions"],
+        "questions": d["questions"], "phases": phases, "reports": reports,
         "stats": {"nodes": len(out_nodes), "edges": len(d["edges"]),
                   "assessed": sum(1 for v in und.values() if v.get("status") == "assessed")},
     }

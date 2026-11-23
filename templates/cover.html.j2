@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+{% block page %}
+<section class="cover-page">
+  <div class="art">{{ art }}</div>
+  <div class="top"><span>THE UNIVERSAL</span><span>{{ kicker_right }}</span></div>
+  <div class="block">
+    <div class="kicker">{{ kicker }}</div>
+    {% if en_title %}<div class="en-title">{{ en_title }}</div>{% endif %}
+    <div class="title">{{ fm.title }}</div>
+    {% if fm.subtitle %}<div class="sub">{{ fm.subtitle }}</div>{% endif %}
+    {% if fm.central_question %}<div class="cq"><div class="lbl">CENTRAL<br>QUESTION</div><div class="q">{{ fm.central_question }}</div></div>{% endif %}
+    <div class="meta">
+      {% for k, v in meta %}<div>{{ k }}<b>{{ v }}</b></div>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
