@@ -1,14 +1,1 @@
 {% extends "base.html.j2" %}
-{% block cover %}
-<section style="margin-bottom:6mm">
-  <div class="cover" style="height:auto">
-    <div class="brand">THE UNIVERSAL — CHANGE REPORT</div>
-    <div class="tagline">An intellectual production model for understanding this universe.</div>
-    <div class="lid">{{ fm.report_id }}｜サイクル {{ fm.cycle }}｜{{ fm.date }}</div>
-    <div class="title" style="font-size:20pt">{{ fm.title }}</div>
-    <table class="meta">
-      <tr><td>地図の版</td><td>{{ fm.map_version_from }} → <b>v{{ fm.map_version }}</b></td><td>システムの版</td><td>{{ fm.system_version }}</td></tr>
-    </table>
-  </div>
-</section>
-{% endblock %}

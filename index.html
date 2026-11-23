@@ -2,10 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#05060f">
-<title>The Universal — 3D Map</title>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0b0b0b">
+<title>The Universal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="viewer/style.css">
 <script type="importmap">
 { "imports": {
@@ -17,48 +21,58 @@
 <body>
 <div id="scene"></div>
 
-<header id="bar">
-  <div class="brand"><b>THE UNIVERSAL</b><span id="ver"></span></div>
-  <div class="tools">
-    <button id="btn-search" aria-label="検索">検索</button>
-    <button id="btn-mode" aria-label="表示切替">展開</button>
-    <button id="btn-legend" aria-label="凡例">凡例</button>
+<header id="hud">
+  <div class="brand">
+    <div class="wordmark">THE UNIVERSAL</div>
+    <div class="sub" id="ver">—</div>
   </div>
+  <button id="btn-menu" class="textbtn" aria-label="Menu"><span>MENU</span><i></i></button>
 </header>
 
-<div id="search" class="hidden">
-  <input id="q" type="search" placeholder="ノードを検索（例：エントロピー、CMB、Transformer）" autocomplete="off">
-  <select id="f-domain"><option value="">全領域</option></select>
-  <ul id="results"></ul>
-</div>
-
-<div id="legend" class="hidden">
-  <h4>色＝あなたの理解レベル</h4>
-  <div id="lg-levels"></div>
-  <h4>形＝ノードの種類</h4>
-  <div id="lg-types"></div>
-  <h4>座標</h4>
-  <p><b>円筒</b>：中心軸＝時間（左が過去、対数）／円周＝10領域／半径＝詳細度（外側ほど詳細）。中心軸の近くは時間を持たない思考法など。</p>
-  <p><b>展開</b>：奥行き＝領域のレーン／高さ＝詳細度（上ほど概観）。</p>
-  <p>ピンチで拡大、ドラッグで回転、2本指で移動。近づくほど詳しいラベルが現れます。</p>
-</div>
-
-<div id="hint">ノードをタップすると詳細が開きます</div>
+<footer id="foot">
+  <div class="modes" role="group" aria-label="View">
+    <button class="textbtn on" data-mode="cyl">CYLINDER</button><span class="sep">/</span><button class="textbtn" data-mode="flat">UNROLLED</button>
+  </div>
+  <div class="scale">SCALE <b id="scale">—</b></div>
+</footer>
 
 <section id="panel" class="hidden" aria-live="polite">
   <div class="grip"></div>
-  <button id="panel-close" aria-label="閉じる">×</button>
+  <button id="panel-close" class="textbtn" aria-label="Close">CLOSE</button>
   <div id="panel-body"></div>
 </section>
 
-<div id="loading">THE UNIVERSAL<br><small>地図を読み込み中…</small></div>
+<nav id="menu" class="hidden" aria-label="Menu">
+  <div class="menu-head">
+    <div class="wordmark">THE UNIVERSAL</div>
+    <button id="menu-close" class="textbtn">CLOSE</button>
+  </div>
+  <div class="menu-body" id="menu-body">
+    <div class="menu-nav">
+      <label class="search"><span>SEARCH</span><input id="q" type="search" placeholder="エントロピー、CMB、Transformer…" autocomplete="off"></label>
+      <label class="search filter"><span>DOMAIN</span><select id="f-domain" aria-label="領域で絞り込む"><option value="">All domains（全領域）</option></select></label>
+      <ul id="search-results" class="rows"></ul>
+      <ol class="sections">
+        <li><button data-sec="index"><em>01</em>Index</button></li>
+        <li><button data-sec="lessons"><em>02</em>Lessons</button></li>
+        <li><button data-sec="reports"><em>03</em>Reports</button></li>
+        <li><button data-sec="questions"><em>04</em>Questions</button></li>
+        <li><button data-sec="legend"><em>05</em>Legend</button></li>
+        <li><button data-sec="about"><em>06</em>About</button></li>
+      </ol>
+    </div>
+    <div class="menu-content" id="menu-content"></div>
+  </div>
+</nav>
+
+<div id="loading"><div class="wordmark">THE UNIVERSAL</div><small>LOADING THE MAP</small></div>
 <script type="module" src="viewer/app.js"></script>
 <script>
   // importmap 非対応（iOS 16.4 未満）や、CDN に届かない場合の案内
   setTimeout(function () {
     var l = document.getElementById("loading");
     if (l && !l.classList.contains("hidden")) {
-      l.innerHTML = "THE UNIVERSAL<br><small>地図を表示できませんでした。<br>iOS 16.4 以降の Safari で、通信状態を確認して再読み込みしてください。</small>";
+      l.innerHTML = '<div class="wordmark">THE UNIVERSAL</div><small>地図を表示できませんでした。iOS 16.4 以降の Safari で、通信状態を確認して再読み込みしてください。</small>';
     }
   }, 15000);
 </script>
