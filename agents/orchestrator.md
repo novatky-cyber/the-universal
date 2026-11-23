@@ -4,6 +4,7 @@
 前提：`CLAUDE.md` を読み終えていること。
 
 ## 0. 準備
+0. 環境の準備：`bash tools/setup_fonts.sh`（PDFの書体）。ビューアの撮影確認には three.js のローカルコピーが必要（`mkdir -p /tmp/threepkg && cd /tmp/threepkg && npm init -y && npm install three@0.160.0`）。
 1. `data/state.json` を読み、`cycle` を +1 した番号 NNNN（4桁）を今回のサイクル番号とする。
 2. `git checkout -b cycle/NNNN`
 3. `content/cycles/NNNN/` を作る。
@@ -12,6 +13,7 @@
 
 ## 1. 計画（Planner：`agents/planner.md`）
 - 入力：`state.json`、`curriculum.json`、`understanding.json`、`questions.json`、前回のレポート。
+- 集中期間（`state.intensive_until` 以前）は DOC-04 §4.1 に従い、毎回次のセッションへ進む。
 - 出力：`content/cycles/NNNN/plan.md`（中心の問い、扱うノード、調査の分担、訂正候補、拡張の上限）。
 
 ## 2. 調査（Researcher：`agents/researcher.md`）

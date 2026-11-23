@@ -4,9 +4,9 @@
   --ink: #141414; --ink2: #3d3d3d; --muted: #7a7a7a; --hair: #cfcac0; --paper: #fbfaf7; --warm: #f3efe6;
   --red: #c8402a; --cream: #e9dcc0;
   --fact: #1a1a1a; --theory: #2f4b6e; --debate: #c8402a; --normative: #6b4e8a; --hypothesis: #4d6b4a; --unknown: #8a8a8a;
-  --serif-en: "Instrument Serif", "Shippori Mincho B1", serif;
-  --mono: "IBM Plex Mono", "Noto Sans Mono CJK JP", monospace;
-  --mincho: "Shippori Mincho B1", "Noto Serif CJK JP", serif;
+  --serif-en: var(--mono);
+  --mono: "IBM Plex Mono", "Zen Kaku Gothic New", "Noto Sans CJK JP", monospace;
+  --mincho: var(--gothic);
   --gothic: "Zen Kaku Gothic New", "Noto Sans CJK JP", sans-serif;
 }
 * { box-sizing: border-box; }
@@ -21,7 +21,7 @@ h2 { margin: 9mm 0 5mm; padding: 0 0 3mm; border-bottom: 0.6pt solid var(--ink);
 h2::after, h3::after { content: ""; display: block; height: 45mm; margin-bottom: -45mm; }
 h3::after { height: 30mm; margin-bottom: -30mm; }
 h2 .sec { display: flex; align-items: baseline; gap: 3mm; }
-h2 .num { font-family: var(--serif-en); font-size: 34pt; line-height: 1; color: var(--red); letter-spacing: -0.01em; }
+h2 .num { font-family: var(--mono); font-weight: 300; font-size: 30pt; line-height: 1; color: var(--red); letter-spacing: -0.04em; }
 h2 .lab { font-family: var(--mono); font-size: 7pt; letter-spacing: 0.22em; color: var(--muted); text-transform: uppercase; }
 h2 .ttl { display: block; font-family: var(--mincho); font-weight: 700; font-size: 16.5pt; line-height: 1.45; margin-top: 2mm; color: var(--ink); }
 h3 { font-family: var(--mincho); font-weight: 700; font-size: 12.2pt; line-height: 1.5; margin: 7mm 0 2.5mm; break-after: avoid; }
@@ -79,7 +79,7 @@ sup.cite { font-family: var(--mono); font-size: 6pt; color: var(--red); margin-l
 .box-summary { border-left: none; border-top: 1.6pt solid var(--ink); border-bottom: 0.4pt solid var(--ink); padding: 3mm 0 1mm; }
 .box-term { border-left: 0.6pt solid var(--hair); padding: 1mm 0 0.5mm 4.5mm; margin: 3mm 0 4mm; }
 .box-term .box-title { font-size: 10.5pt; }
-.box-term .box-title .en { font-family: var(--serif-en); font-style: italic; font-weight: normal; font-size: 11pt; color: var(--ink2); margin-left: 2.5mm; }
+.box-term .box-title .en { font-family: var(--mono); font-style: normal; font-weight: 400; font-size: 8.5pt; letter-spacing: 0.02em; color: var(--ink2); margin-left: 2.5mm; }
 .box-term p { font-size: 9pt; }
 
 .write { margin: 2mm 0 6mm; break-inside: avoid; }
@@ -94,23 +94,23 @@ sup.cite { font-family: var(--mono); font-size: 6pt; color: var(--red); margin-l
 .srcs .unv { color: var(--red); font-weight: 700; }
 .small { font-size: 8pt; color: var(--muted); }
 
-/* ---- 表紙（別PDF：余白なし） */
-.cover-page { width: 210mm; height: 297mm; background: #0b0b0b; color: #f2efe8; position: relative; overflow: hidden; }
+/* ---- 表紙（別PDF：余白なし。白地のライトテーマ、ADR-0005） */
+.cover-page { width: 210mm; height: 297mm; background: #ffffff; color: var(--ink); position: relative; overflow: hidden; }
 .cover-page .art { position: absolute; inset: 0; }
 .cover-page .art svg { width: 100%; height: 100%; display: block; }
 .cover-page .top { position: absolute; top: 18mm; left: 20mm; right: 20mm; display: flex; justify-content: space-between;
-                   font-family: var(--mono); font-size: 7pt; letter-spacing: 0.3em; color: #bdb8ad; }
+                   font-family: var(--mono); font-weight: 500; font-size: 7pt; letter-spacing: 0.3em; color: var(--ink); }
 .cover-page .block { position: absolute; left: 20mm; right: 20mm; bottom: 24mm; }
 .cover-page .kicker { font-family: var(--mono); font-size: 7.5pt; letter-spacing: 0.25em; color: var(--red); margin-bottom: 5mm; }
-.cover-page .en-title { font-family: var(--serif-en); font-style: italic; font-size: 15pt; color: #bdb8ad; margin-bottom: 2mm; }
-.cover-page .title { font-family: var(--mincho); font-weight: 700; font-size: 26pt; line-height: 1.35; margin: 0 0 4mm; }
-.cover-page .sub { font-family: var(--mincho); font-size: 11pt; color: #d9d4c8; margin-bottom: 9mm; }
-.cover-page .cq { border-top: 0.5pt solid #5c5a55; padding-top: 4mm; display: grid; grid-template-columns: 34mm 1fr; gap: 4mm; }
-.cover-page .cq .lbl { font-family: var(--mono); font-size: 6.5pt; letter-spacing: 0.25em; color: #8d887e; padding-top: 1.2mm; }
-.cover-page .cq .q { font-family: var(--mincho); font-size: 12.5pt; line-height: 1.65; }
-.cover-page .meta { margin-top: 7mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; border-top: 0.5pt solid #5c5a55; padding-top: 3mm;
-                    font-family: var(--mono); font-size: 6.5pt; letter-spacing: 0.12em; color: #8d887e; }
-.cover-page .meta b { display: block; font-weight: 500; color: #f2efe8; font-size: 8.5pt; letter-spacing: 0.04em; margin-top: 1mm; }
+.cover-page .en-title { font-family: var(--mono); font-weight: 300; font-size: 12pt; letter-spacing: -0.01em; color: var(--muted); margin-bottom: 2.5mm; }
+.cover-page .title { font-family: var(--gothic); font-weight: 700; font-size: 25pt; line-height: 1.35; margin: 0 0 4mm; letter-spacing: 0.02em; }
+.cover-page .sub { font-family: var(--gothic); font-size: 10.5pt; color: var(--ink2); margin-bottom: 9mm; }
+.cover-page .cq { border-top: 0.5pt solid var(--ink); padding-top: 4mm; display: grid; grid-template-columns: 34mm 1fr; gap: 4mm; }
+.cover-page .cq .lbl { font-family: var(--mono); font-size: 6.5pt; letter-spacing: 0.25em; color: var(--muted); padding-top: 1.2mm; }
+.cover-page .cq .q { font-family: var(--gothic); font-weight: 700; font-size: 12pt; line-height: 1.7; }
+.cover-page .meta { margin-top: 7mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; border-top: 0.5pt solid var(--hair); padding-top: 3mm;
+                    font-family: var(--mono); font-size: 6.5pt; letter-spacing: 0.12em; color: var(--muted); }
+.cover-page .meta b { display: block; font-weight: 500; color: var(--ink); font-size: 8.5pt; letter-spacing: 0.04em; margin-top: 1mm; }
 
 /* ---- 使い方 */
 .howto .legend { display: grid; grid-template-columns: 22mm 1fr; gap: 1.8mm 3mm; align-items: baseline; margin: 2mm 0 5mm; font-size: 8.8pt; }

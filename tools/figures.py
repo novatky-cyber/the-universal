@@ -6,7 +6,7 @@ from common import x_of_ya
 
 INK, MUTED, HAIR, RED, CREAM = "#141414", "#7a7a7a", "#cfcac0", "#c8402a", "#e9dcc0"
 GOTHIC = "Zen Kaku Gothic New, Noto Sans CJK JP, sans-serif"
-MONO = "IBM Plex Mono, Noto Sans Mono CJK JP, monospace"
+MONO = "IBM Plex Mono, Zen Kaku Gothic New, monospace"
 LEVEL_COLORS = ["#bdbdbd", "#e9dcc0", "#e6be96", "#e0966d", "#d46a45", "#c8402a"]
 TICKS = [(13.8e9, "13.8 Gyr"), (1e9, "1 Gyr"), (1e8, "100 Myr"), (1e7, "10 Myr"), (1e6, "1 Myr"),
          (1e5, "100 kyr"), (1e4, "10 kyr"), (1e3, "1 kyr"), (1e2, "100 yr"), (0, "NOW")]
@@ -71,6 +71,7 @@ def _curve(pos, a, b):
 
 # ---------------------------------------------------------------- 表紙の線画（黒地）
 def cover_art(data, highlight):
+    """表紙の線画（白地に墨の線、強調は朱赤）。ADR-0005。"""
     W, H = 210, 297
     X = _X(22, 166, 176, 2.0)
     doms, rowh, pos = _layout(data, X, 40, 160)
@@ -78,25 +79,25 @@ def cover_art(data, highlight):
     out = []
     for ya, lab in TICKS:
         x = X(x_of_ya(ya))
-        out.append(f'<line x1="{x:.2f}" x2="{x:.2f}" y1="36" y2="164" stroke="#262626" stroke-width="0.15"/>')
-        out.append(_t(x, 169, lab, 2.1, "#6b6760", "middle", MONO, ls=0.2))
-    out.append(f'<line x1="172" x2="172" y1="36" y2="164" stroke="#262626" stroke-width="0.15" stroke-dasharray="0.6 0.8"/>')
-    out.append(_t(183, 169, "TIMELESS", 2.1, "#6b6760", "middle", MONO, ls=0.2))
+        out.append(f'<line x1="{x:.2f}" x2="{x:.2f}" y1="36" y2="164" stroke="#d9d6cf" stroke-width="0.15"/>')
+        out.append(_t(x, 169, lab, 2.1, "#8a857c", "middle", MONO, ls=0.2))
+    out.append(f'<line x1="172" x2="172" y1="36" y2="164" stroke="#d9d6cf" stroke-width="0.15" stroke-dasharray="0.6 0.8"/>')
+    out.append(_t(183, 169, "TIMELESS", 2.1, "#8a857c", "middle", MONO, ls=0.2))
     for i, d in enumerate(doms):
-        out.append(_t(20, 40 + rowh * i + 2.4, d["id"], 1.9, "#55524c", "end", MONO, ls=0.2))
+        out.append(_t(20, 40 + rowh * i + 2.4, d["id"], 1.9, "#8a857c", "end", MONO, ls=0.2))
     for n in data["nodes"]:
         if n.get("parent") in pos:
-            out.append(f'<path d="{_curve(pos, n["parent"], n["id"])}" fill="none" stroke="#f2efe8" stroke-opacity="0.16" stroke-width="0.12"/>')
+            out.append(f'<path d="{_curve(pos, n["parent"], n["id"])}" fill="none" stroke="#141414" stroke-opacity="0.14" stroke-width="0.12"/>')
     for e in data["edges"]:
         if e["from"] in pos and e["to"] in pos:
             hot = e["from"] in hl and e["to"] in hl
-            out.append(f'<path d="{_curve(pos, e["from"], e["to"])}" fill="none" stroke="{RED if hot else "#f2efe8"}" '
-                       f'stroke-opacity="{0.8 if hot else 0.26}" stroke-width="{0.24 if hot else 0.14}"/>')
+            out.append(f'<path d="{_curve(pos, e["from"], e["to"])}" fill="none" stroke="{RED if hot else "#141414"}" '
+                       f'stroke-opacity="{0.85 if hot else 0.22}" stroke-width="{0.24 if hot else 0.14}"/>')
     for nid, (x, y) in pos.items():
         if nid in hl:
             out.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="0.85" fill="{RED}"/>')
         else:
-            out.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="0.45" fill="#f2efe8" fill-opacity="0.75"/>')
+            out.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="0.45" fill="#141414" fill-opacity="0.7"/>')
     return _svg(W, H, "".join(out))
 
 
