@@ -118,3 +118,39 @@ iPhone での使い勝手（回転、マルチタッチ、importmap の非対応
 - 中 文字の薄さ・小ささ：--faint を #75706a（コントラスト比 約3.9:1）に、9〜9.5pxのラベルを10.5pxに
 - 低：壊れたハッシュの例外処理と hashchange、Esc で閉じる、ラベル上限70件、safe-area（左右）、overscroll-behavior、maximum-scale の削除、たとえの囲みの塗りを廃止
 - 未対応（次版で検討）：PDFのページ番号の表紙分のずれ、PDFテンプレートの autoescape、線の描画処理の計算量、縦横切替時の視点の保持、iPhone縦画面での領域名の重なり、check_all での JS 検査
+
+---
+# Reviewer：v0.3（dev/v0.3-theme-2d-fonts）独立レビュー
+
+確認方法：`git diff main...HEAD`、ADR-0005、DOC-03 §3.7・§7・§7.1、DOC-01 F4・F10、DOC-04 §4.1 を読んだ。`check_all.py` は OK。screenshot_viewer で 10 枚撮影して目視。PDF は pdffonts と pdfplumber で、どの文字がどの書体かを確認した。
+
+| 重要度 | 場所 | 内容 | 修正案 |
+|---|---|---|---|
+| 高 | tools/render_pdf.py `pdf_from_html`（header/footer の style） | 全 PDF の全ページで、ヘッダーとフッター（`THE UNIVERSAL`、`L0001A　宇宙‧物質…`、`ISSUED …`、ページ番号）が **NotoSansMonoCJKjp-Regular** で埋め込まれている（L0001a/b、R0001 すべて）。Chromium のヘッダー／フッターのテンプレートからは、ページ内で読み込んだ @fontsource の書体を参照できない。そのため IBM Plex Mono が使われず、和文も Zen Kaku Gothic New ではない。「2書体だけ」に反している | ヘッダーとフッターをやめて本文側で組む（CSS の `@page` margin box か、position: fixed の要素）。または setup_fonts.sh で2書体を `~/.local/share/fonts` に入れて `fc-cache` を実行し、style の代替書体を `'IBM Plex Mono','Zen Kaku Gothic New'` にする。T-07〜T-10 に「pdffonts の結果が IBMPlexMono* と ZenKakuGothicNew* 以外なら警告」という検査を足す |
+| 中 | viewer/app.js `applyTheme` と `store` | localStorage が使えない環境では `store.set` が何もしない。そのあと `applyTheme` が `store.get("theme","auto")` を読み直すので、LIGHT／DARK を押しても**何も変わらない**。DOC-03 §7.1 は「使えない場合は保存しない」で、切替そのものはできる前提 | `store` にメモリ上の控え（`const mem = {}`）を持たせ、get/set はまず mem を使う。または `applyTheme(s)` が選んだ値を引数で受け取るようにする |
+| 中 | index.html の meta / 先頭のインライン script | `theme-color` が `#0b0b0b` 固定で、起動時にはどこからも更新されない（`applyTheme` は切替のときだけ呼ばれる）。ライトテーマで起動すると、iPhone Safari のツールバーやステータスバーの領域が黒のまま。さらに `apple-mobile-web-app-status-bar-style=black-translucent` のため、ホーム画面アプリでは白地の上に白い時刻の文字が載って読めない | 先頭のインライン script で meta theme-color も設定する。ステータスバーの style は `default` にするか、テーマに合わせて差し替える（後者は再起動後に反映） |
+| 中 | viewer/app.js `updateLabels`（2D）と DOC-03 §3.7「レーンの左端に領域名」 | 2D の初期表示で領域名がほぼ出ない。デスクトップでは距離 165×0.55 から maxLevel=3（CONCEPTS）になり、`groups.domains.visible=false` で D01〜D10 がまったく表示されない（desktop_plane.png）。iPhone 縦では重なり判定で D01/D04/D07 の3つしか残らない（iphone_plane.png） | 2D では領域ラベルを maxLevel に関係なく常に出す。重なり判定の対象からも外すか、優先度を最も高くする。縦長の画面では番号だけにする今のやり方を維持し、文字の幅の見積もり（`textContent.length*9`）も、表示されている部分だけで計算する |
+| 中 | viewer/app.js PALETTES.light（L0 `#c4c1bb`、links 0.12、選択していないノードの opacity 0.15） | ライトテーマでは、L0（現在ほとんどのノード）のワイヤーフレームと関係線が白地の上でかなり薄い。iphone_plane.png と iphone_light_node.png では、ノードの形がほとんど判別できない。ダークと比べて地図の情報量が落ちる | ライトの L0 をもう一段濃くする（例：`#9e9a92` 前後）。ライト用に、選択していないノードの opacity を別に持つ（例：0.3）。DOC-03 §7.1 の表も同じ値に更新する |
+| 低 | PDF 本文（L0001a p4・7・10・17〜19・23 など） | Λ・σ・≈ が NotoSansCJKjp に、₀・⁻ が Inter に、ṁ・ā が NotoSansCJKjp にフォールバックしている。2書体に該当する字形がないためで、避けにくい | 許容するなら DOC-03 §7 に「2書体にない記号だけは代替書体」と明記する。避けるなら、ギリシャ文字を含む Plex Mono の subset（または IBM Plex Sans の greek）を追加するか、下付き・上付きは `<sub>`/`<sup>` で組む |
+| 低 | tools/figures.py `MONO` | 代替書体が `Noto Sans Mono CJK JP` になっている。SVG の等幅テキストに和文が混ざると Noto になる（現状は英数字だけなので表に出ていない） | `"IBM Plex Mono, Zen Kaku Gothic New, sans-serif"` にして CSS と揃える |
+| 低 | viewer/app.js `init` の matchMedia 監視 | `addEventListener?.` のため、iOS 13 以前では AUTO の追従が黙って無効になる | `mq.addEventListener ? mq.addEventListener("change", f) : mq.addListener(f)` |
+| 低 | viewer/app.js resize ハンドラ | 向きを変えると `placeCamera(false)` が呼ばれ、3D でも利用者のパン／ズームと選択中ノードへの視点がリセットされる（v0.2 では target を維持していた） | 2D のときだけ呼ぶ。または選択中なら `flyTo(selected)` で戻す |
+| 低 | 2D 縦画面 | 右端の時間目盛り（`13.8 GYR`、`100 KYR` など）が画面の外にはみ出して切れる。地図が画面の中央の一部しか使っておらず、上下に大きな余白がある（距離 290） | 縦画面では軸の位置を内側に寄せるか、カメラの x を少しずらす。距離は画面比から計算する |
+| 低 | 2D／SETTINGS から表示を切り替えたとき | メニューを開いている間は `animate` が止まっている。そのため、メニュー内で VIEW を切り替えると、閉じたときに tween の経過時間が1秒を超えていて、アニメーションなしで切り替わる | 閉じるときに切り替える、または t0 をメニューを閉じた時点で起点にする |
+| 低 | viewer/style.css | `--serif-en`／`--mincho` などの旧変数名を互換のため残しているので、後のセッションが「明朝がある」と誤読するおそれがある | 次の版で `--en`／`--ja` に置き換えて旧名を削除する（print.css も同様） |
+
+エスケープ：新しく追加された innerHTML（領域ラベル、SETTINGS）は esc 済みか定数だけで、問題なし。設計書との一致：§3.7 の座標式・操作（回転停止、1本指でパン、ピンチ）・真上からの視点・縦長での時間軸縦置きは、実装と撮影の両方で確認した。保存した表示で起動したとき（plane）の初期視点、ノード選択時の flyTo（2D は真上から）も問題なし。
+
+## 総評
+- Web 側の書体統一、テーマ切替（3D の色、パネル、凡例のアイコン、選択中の線の再描画）、2D の基本動作は設計どおりで、見た目も整っている。
+- ただし PDF のヘッダーとフッターがすべてのページで Noto になっており、「2書体だけ」は PDF では未達成（高）。
+- ライトテーマについて：保存できない環境で切り替えられない、起動直後の theme-color、ノードが薄い。2D について：領域名が出ない。この4点（中）は運用開始前に直すことを推奨する。
+
+## 対応記録（Implementer）
+- 高 PDFのヘッダー・フッターの書体：ヘッダー・フッターを欧文だけで組み、IBM Plex Mono を端末の書体として入れる（setup_fonts.sh が woff2 → TTF に変換して ~/.local/share/fonts に配置）。pdffonts でヘッダー・フッターが IBMPlexMono になったことを確認。PDF生成時に「2書体以外の埋め込み」を警告する検査を追加
+- 中 保存できない環境でのテーマ切替：store にメモリ上の控えを追加
+- 中 theme-color：起動時のインライン script で設定、ステータスバーの指定を default に
+- 中 2Dの領域名：2Dでは常に表示し、重なり判定で最優先。縦画面では番号だけの幅で判定
+- 中 ライトテーマの薄さ：L0 を #9e9a92、未評価を #7a756c、選択していないノードの不透明度 0.3、関係線 0.18（DOC-03 §7.1 も改訂）
+- 低：figures.py の代替書体、古いiOSの matchMedia、向きの変更で3Dの視点を保つ、記号の代替書体を DOC-03 §7 で許容と明記
+- 未対応（次版）：2D縦画面の目盛りのはみ出し、メニュー内で表示を切り替えたときのアニメーション、旧CSS変数名の整理

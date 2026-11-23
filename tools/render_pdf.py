@@ -265,7 +265,8 @@ def _browser(p):
 def pdf_from_html(html_path, out_pdf, header, date="", cover=False):
     """HTMLファイル → PDF。表紙は余白・ヘッダーなし。"""
     from playwright.sync_api import sync_playwright
-    style = "font-family:'IBM Plex Mono','Noto Sans Mono CJK JP',monospace;font-size:6.5px;letter-spacing:1.2px;color:#8a8a8a;width:100%;padding:0 20mm;display:flex;justify-content:space-between"
+    # ヘッダー・フッターは欧文だけで組む（ページ内の書体を参照できないため。端末に入れた IBM Plex Mono を使う）
+    style = "font-family:'IBM Plex Mono',monospace;font-size:6.5px;letter-spacing:1.2px;color:#8a8a8a;width:100%;padding:0 20mm;display:flex;justify-content:space-between"
     head = f"<div style=\"{style}\"><span>THE UNIVERSAL</span><span>{header}</span></div>"
     foot = (f"<div style=\"{style}\"><span>ISSUED {date}</span>"
             "<span><span class='pageNumber'></span> / <span class='totalPages'></span></span></div>")
@@ -338,12 +339,22 @@ def build(path, kind, allow_unverified=False):
     if r.errors:
         return r, None, 0
     vol_ja = {"a": "前編", "b": "後編"}.get(vol, "")
-    header = f"{fm.get('lesson_id', fm.get('report_id'))}{vol.upper()}　{fm['title']}　{vol_ja}".strip()
+    vol_en = {"a": "VOL. A", "b": "VOL. B"}.get(vol, "")
+    header = " — ".join(x for x in [f"{fm.get('lesson_id', fm.get('report_id'))}{vol.upper()}", (fm.get("en_title") or "").upper(), vol_en] if x)
     tmp_body, tmp_cover = debug / f"{stem}_body.pdf", debug / f"{stem}_cover.pdf"
     pdf_from_html(cover_html_path, tmp_cover, header, fm.get("date", ""), cover=True)
     pdf_from_html(body_html_path, tmp_body, header, fm.get("date", ""))
     merge_pdfs([tmp_cover, tmp_body], out_pdf)
     pages = len(PdfReader(str(out_pdf)).pages)
+    # 2書体以外が埋め込まれていないか（DOC-03 §7。Λ・σ などの記号は2書体に字形がなく代替されるため警告にとどめる）
+    try:
+        import subprocess
+        names = {l.split()[0].split("+")[-1] for l in subprocess.run(["pdffonts", str(out_pdf)], capture_output=True, text=True).stdout.splitlines()[2:] if l.strip()}
+        other = sorted(n for n in names if not n.startswith(("IBMPlexMono", "ZenKakuGothicNew")))
+        if other:
+            r.warnings.append(f"[書体] 2書体以外が埋め込まれている：{', '.join(other)}（記号の代替なら許容）")
+    except FileNotFoundError:
+        pass
     lo, hi = LIMITS[kind]
     if pages < lo:
         r.warnings.append(f"[T-08] {pages}ページ（標準 {lo}〜{hi}）：内容が不足していないか確認")

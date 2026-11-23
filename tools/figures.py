@@ -6,7 +6,7 @@ from common import x_of_ya
 
 INK, MUTED, HAIR, RED, CREAM = "#141414", "#7a7a7a", "#cfcac0", "#c8402a", "#e9dcc0"
 GOTHIC = "Zen Kaku Gothic New, Noto Sans CJK JP, sans-serif"
-MONO = "IBM Plex Mono, Noto Sans Mono CJK JP, monospace"
+MONO = "IBM Plex Mono, Zen Kaku Gothic New, monospace"
 LEVEL_COLORS = ["#bdbdbd", "#e9dcc0", "#e6be96", "#e0966d", "#d46a45", "#c8402a"]
 TICKS = [(13.8e9, "13.8 Gyr"), (1e9, "1 Gyr"), (1e8, "100 Myr"), (1e7, "10 Myr"), (1e6, "1 Myr"),
          (1e5, "100 kyr"), (1e4, "10 kyr"), (1e3, "1 kyr"), (1e2, "100 yr"), (0, "NOW")]

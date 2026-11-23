@@ -6,11 +6,11 @@ import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer
 // ---------------------------------------------------------------- 定数
 // テーマごとの色（DOC-03 §7.1）。LEVEL_COLORS と EP は applyTheme() で差し替える
 const PALETTES = {
-  dark: { bg: 0x0b0b0b, line: 0xf2efe8, lineCss: "#f2efe8", presented: "#a8a297", ringOpacity: 0.07, linkOpacity: 0.13,
+  dark: { bg: 0x0b0b0b, line: 0xf2efe8, lineCss: "#f2efe8", presented: "#a8a297", ringOpacity: 0.07, linkOpacity: 0.13, dimOpacity: 0.15,
     levels: ["#5c5c5c", "#e9dcc0", "#e6be96", "#e0966d", "#d46a45", "#c8402a"],
     ep: { fact: "#e8e4da", theory: "#7f9bbf", debate: "#c8402a", normative: "#a28bbd", hypothesis: "#8fab8a", unknown: "#8d887e" } },
-  light: { bg: 0xffffff, line: 0x141414, lineCss: "#141414", presented: "#8a857c", ringOpacity: 0.09, linkOpacity: 0.12,
-    levels: ["#c4c1bb", "#c9b48a", "#d39a6c", "#d27a52", "#c95a3a", "#b8361f"],
+  light: { bg: 0xffffff, line: 0x141414, lineCss: "#141414", presented: "#7a756c", ringOpacity: 0.10, linkOpacity: 0.18, dimOpacity: 0.3,
+    levels: ["#9e9a92", "#c9b48a", "#d39a6c", "#d27a52", "#c95a3a", "#b8361f"],
     ep: { fact: "#1a1a1a", theory: "#2f4b6e", debate: "#c8402a", normative: "#6b4e8a", hypothesis: "#4d6b4a", unknown: "#7a7a7a" } },
 };
 let PAL = PALETTES[document.documentElement.dataset.theme === "light" ? "light" : "dark"];
@@ -26,9 +26,10 @@ const setEP = () => { EP = Object.fromEntries(Object.entries(EP_TEXT).map(([k, [
 setEP();
 
 // 設定（端末に保存。使えない環境では保存しない）
+const memo = {};   // 保存できない環境でも、開いている間は設定を保つ
 const store = {
-  get(k, d) { try { return localStorage.getItem("tu." + k) || d; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem("tu." + k, v); } catch { /* 保存できない環境 */ } },
+  get(k, d) { if (k in memo) return memo[k]; try { return localStorage.getItem("tu." + k) || d; } catch { return d; } },
+  set(k, v) { memo[k] = v; try { localStorage.setItem("tu." + k, v); } catch { /* 保存できない環境 */ } },
 };
 const CONF_EN = { high: "Confidence high", medium: "Confidence medium", low: "Confidence low" };
 const EDGE_EN = { causes: "causes", enables: "enables", requires: "requires", part_of: "part of", precedes: "precedes",
@@ -139,7 +140,9 @@ function init(g) {
   applyMode(false);
   if (mode === "plane") placeCamera(false);
   buildMenu();
-  matchMedia("(prefers-color-scheme: light)").addEventListener?.("change", () => { if (store.get("theme", "auto") === "auto") applyTheme(); });
+  const mq = matchMedia("(prefers-color-scheme: light)");
+  const onScheme = () => { if (store.get("theme", "auto") === "auto") applyTheme(); };
+  mq.addEventListener ? mq.addEventListener("change", onScheme) : mq.addListener(onScheme);
   $("#loading").classList.add("hidden");
   const fromHash = () => { let h = ""; try { h = decodeURIComponent(location.hash.slice(1)); } catch { h = ""; } if (byId[h] && h !== selected) select(h, true); };
   fromHash();
@@ -385,7 +388,7 @@ function select(id, fly) {
   const rel = related(id);
   meshes.forEach((m) => {
     const on = rel.has(m.userData.id);
-    m.userData.wire.material.opacity = on ? 1 : 0.15;
+    m.userData.wire.material.opacity = on ? 1 : PAL.dimOpacity;
     m.material.opacity = m.userData.id === id ? 0.35 : on ? 0.08 : 0.02;
     m.scale.setScalar(m.userData.id === id ? 1.8 : 1);
   });
@@ -615,7 +618,8 @@ function updateLabels(force) {
   document.body.classList.toggle("portrait", portrait);
   const maxLevel = d > 190 ? 1 : d > 95 ? 2 : d > 45 ? 3 : 4;
   $("#scale").textContent = SCALE_EN[maxLevel];
-  groups.domains.visible = maxLevel <= 2;
+  const showDomains = mode === "plane" || maxLevel <= 2;   // 2Dでは領域名を常に出す（DOC-03 §3.7）
+  groups.domains.visible = showDomains;
   if (!groups.domains.visible) groups.domains.children.forEach((c) => (c.visible = false));
   const cand = [];
   for (const m of meshes) {
@@ -633,15 +637,16 @@ function updateLabels(force) {
     cand.push({ o, pri, r: [sx - w / 2, sy - h / 2, sx + w / 2, sy + h / 2] });
   }
   // 領域名も重なり判定に含める（優先度は高め）
-  if (maxLevel <= 2) {
+  if (showDomains) {
     for (const c of groups.domains.children) {
       c.visible = false;
       c.getWorldPosition(tmp);
       tmp.project(camera);
       if (tmp.z > 1 || Math.abs(tmp.x) > 1.05 || Math.abs(tmp.y) > 1.05) continue;
       const sx = ((tmp.x + 1) / 2) * innerWidth, sy = ((1 - tmp.y) / 2) * innerHeight;
-      const w = c.element.textContent.length * 9;
-      cand.push({ o: c, pri: -50, r: [sx - w / 2, sy - 9, sx + w / 2, sy + 9] });
+      const shown = mode === "plane" && portrait ? c.element.querySelector("b").textContent : c.element.textContent;
+      const w = shown.length * 9;
+      cand.push({ o: c, pri: mode === "plane" ? -200 : -50, r: [sx - w / 2, sy - 9, sx + w / 2, sy + 9] });
     }
   }
   cand.sort((a, b) => a.pri - b.pri);
@@ -678,7 +683,7 @@ for (const ev of ["pointerdown", "pointermove", "wheel", "touchmove", "resize", 
 
 addEventListener("resize", () => {
   const p = innerHeight > innerWidth;
-  if (p !== portrait) { portrait = p; makeControls(true); placeCamera(false); }
+  if (p !== portrait) { portrait = p; makeControls(mode !== "plane" && !selected); if (mode === "plane") placeCamera(false); }
   camera.aspect = innerWidth / innerHeight;
   setOffset(!$("#panel").classList.contains("hidden"));
   camera.updateProjectionMatrix();
