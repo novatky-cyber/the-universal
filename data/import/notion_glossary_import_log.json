@@ -1,0 +1,22 @@
+{
+  "fetched_at": "2026-11-24",
+  "term_nodes": 216,
+  "excluded_by_category": {
+    "duplicate": 2,
+    "news-snapshot": 1,
+    "not-a-term": 1,
+    "privacy": 6
+  },
+  "excluded_ids": {
+    "11d547f0bbfd824a": "privacy",
+    "123b5dd45d3d25a5": "privacy",
+    "17c1eaef92eddfaf": "privacy",
+    "4f34322c263249f9": "privacy",
+    "539e270057fe591f": "news-snapshot",
+    "5b08f887cdf16fed": "privacy",
+    "5b29c7a9e6aab8e2": "duplicate",
+    "cd0827deb6a33f08": "not-a-term",
+    "cead362c8f1143b4": "duplicate",
+    "d8b710aaad42a74d": "privacy"
+  }
+}

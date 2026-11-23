@@ -1,5 +1,46 @@
 [
   {
+    "id": "P00",
+    "title": "はじめに",
+    "goal": "プロジェクトの目的・地図・確かさの区別・思考法という土台をそろえる",
+    "sessions": [
+      {
+        "id": "P00-S01",
+        "title": "世界の地図と、その歩き方",
+        "goal": "6つの能力と理解の段階、10領域・3軸・5種類の地図、認識の6分類、8つの思考法を説明し、例題に当てはめられる",
+        "status": "presented",
+        "nodes": [
+          "con.ai-productivity-confounding",
+          "con.disciplinary-evidence",
+          "con.path-dependence-legacy",
+          "con.periodization",
+          "con.scenarios-2035",
+          "mth.base-rate",
+          "mth.bayesian-updating",
+          "mth.causal-inference",
+          "mth.counterfactual",
+          "mth.epistemic-categories",
+          "mth.feedback",
+          "mth.five-maps",
+          "mth.forecast-calibration",
+          "mth.nine-questions",
+          "mth.path-dependence",
+          "mth.scenario-analysis",
+          "mth.seven-steps",
+          "mth.twelve-axes",
+          "q.why-genai-2020s",
+          "thm.epistemology",
+          "thm.futures",
+          "thm.systems"
+        ],
+        "lessons": [
+          "output/lessons/L0000a_P00-S01.pdf",
+          "output/lessons/L0000b_P00-S01.pdf"
+        ]
+      }
+    ]
+  },
+  {
     "id": "P01",
     "title": "世界の全体地図",
     "goal": "宇宙から現代までを俯瞰する知識の座標軸をつくる",
@@ -11,7 +52,6 @@
         "status": "presented",
         "nodes": [
           "con.age-of-universe",
-          "con.ai-productivity-confounding",
           "con.arrow-of-time",
           "con.cosmic-composition",
           "con.cosmic-expansion",
@@ -23,9 +63,7 @@
           "con.hubble-tension",
           "con.lithium-problem",
           "con.newtonian-time",
-          "con.path-dependence-legacy",
           "con.planck-time",
-          "con.scenarios-2035",
           "con.science-religion",
           "con.singularity",
           "con.spacetime",
@@ -44,19 +82,6 @@
           "evt.inflation-epoch",
           "evt.recombination",
           "evt.solar-system",
-          "mth.base-rate",
-          "mth.bayesian-updating",
-          "mth.causal-inference",
-          "mth.counterfactual",
-          "mth.epistemic-categories",
-          "mth.feedback",
-          "mth.five-maps",
-          "mth.forecast-calibration",
-          "mth.nine-questions",
-          "mth.path-dependence",
-          "mth.scenario-analysis",
-          "mth.seven-steps",
-          "mth.twelve-axes",
           "q.low-entropy-past",
           "q.nature-dark-matter-energy",
           "q.origin-of-time",
@@ -329,6 +354,75 @@
           "q.ai-society",
           "thm.futures",
           "thm.watch"
+        ],
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "id": "P05",
+    "title": "深掘りシリーズ（問いと要望から）",
+    "goal": "Phase 04以降、あなたの問いと要望をもとに、テーマを深く掘り下げる。終わりはない",
+    "sessions": [
+      {
+        "id": "P05-S01",
+        "title": "進化の単位と「利己的な遺伝子」",
+        "goal": "遺伝子中心の見方・血縁選択・マルチレベル選択の論争を、証拠と限界まで説明できる",
+        "status": "not-started",
+        "nodes": [
+          "con.natural-selection"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P05-S02",
+        "title": "宇宙の誕生の最前線",
+        "goal": "インフレーション・量子重力・観測の最前線を、確立・有力・推測に分けて説明できる",
+        "status": "not-started",
+        "nodes": [
+          "q.origin-of-time",
+          "thy.inflation"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P05-S03",
+        "title": "哲学史（1）古代：ギリシア・インド・中国",
+        "goal": "古代の主要な問いと思想を、地域を横断して比較できる",
+        "status": "not-started",
+        "nodes": [
+          "thm.ethics"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P05-S04",
+        "title": "哲学史（2）中世：信仰と理性、イスラーム世界の哲学",
+        "goal": "中世の哲学を、ヨーロッパ中心にならずに位置づけられる",
+        "status": "not-started",
+        "nodes": [
+          "thm.ethics"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P05-S05",
+        "title": "哲学史（3）近代：認識論と科学革命",
+        "goal": "合理論・経験論・カントの問題設定を、科学革命と関連づけて説明できる",
+        "status": "not-started",
+        "nodes": [
+          "thm.epistemology"
+        ],
+        "lessons": []
+      },
+      {
+        "id": "P05-S06",
+        "title": "哲学史（4）現代：分析哲学・大陸哲学・東アジアの哲学",
+        "goal": "20世紀以降の主要な潮流と、AI・心の哲学への接続を説明できる",
+        "status": "not-started",
+        "nodes": [
+          "thm.epistemology",
+          "q.what-is-intelligence"
         ],
         "lessons": []
       }

@@ -42,7 +42,8 @@
           "textbook",
           "agency",
           "news",
-          "reference"
+          "reference",
+          "user-note"
         ]
       },
       "existence": {
@@ -59,6 +60,14 @@
       },
       "note": {
         "type": "string"
+      },
+      "glossary": {
+        "enum": [
+          "ai",
+          "business",
+          "general"
+        ],
+        "description": "kind が user-note の場合の用語集（DOC-01 F11）"
       }
     }
   }

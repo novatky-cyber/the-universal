@@ -175,7 +175,9 @@ def cosmic_timeline(data, highlight):
 
 # ---------------------------------------------------------------- 説明図
 _ARROW = (f'<defs><marker id="ar" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">'
-          f'<path d="M0,0 L4,2 L0,4" fill="none" stroke="{INK}" stroke-width="0.5"/></marker></defs>')
+          f'<path d="M0,0 L4,2 L0,4" fill="none" stroke="{INK}" stroke-width="0.5"/></marker>'
+          f'<marker id="arr" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">'
+          f'<path d="M0,0 L4,2 L0,4" fill="none" stroke="{RED}" stroke-width="0.5"/></marker></defs>')
 
 
 def expansion(data=None, highlight=None):
@@ -394,6 +396,96 @@ def domain_coverage(data, highlight=None):
     return _svg(W, H, "".join(out))
 
 
+# ---------------------------------------------------------------- L0000（方法）の図
+def five_maps(data=None, highlight=None):
+    W, H = 170, 50
+    maps = [("TIME", "時間の地図", "いつ・どう変化したか"), ("SPACE", "空間の地図", "どこで・どの規模か"),
+            ("DISCIPLINE", "学問の地図", "どの方法・証拠か"), ("STRUCTURE", "構造・因果の地図", "どんな仕組みか"),
+            ("EPISTEMIC", "認識・限界の地図", "どこまで確かか")]
+    out = []
+    for k, (en, ja, q) in enumerate(maps):
+        last = k == len(maps) - 1
+        c = RED if last else INK
+        x, y = 8 + k * 3, 6 + k * 6.5
+        out.append(f'<path d="M{x},{y+7} L{x+48},{y} L{x+76},{y+4} L{x+28},{y+11} Z" fill="#fbfaf7" fill-opacity="0.9" stroke="{c}" stroke-width="{0.45 if last else 0.3}"/>')
+        ly = 6 + k * 8
+        out.append(f'<line x1="{x+76}" y1="{y+4}" x2="112" y2="{ly+1.5}" stroke="{HAIR}" stroke-width="0.2"/>')
+        out.append(_t(114, ly, f"{k+1:02d}  {en}", 2.1, RED if last else MUTED, font=MONO, ls=0.3))
+        out.append(_t(114, ly + 3.4, f"{ja}｜{q}", 2.3, INK))
+    out.append(_t(8, H - 1.5, "同じテーマに5枚の地図を重ねる。最後の「認識・限界」は、ほかの4枚のどこが確かかを書き込む層。", 2.1, MUTED))
+    return _svg(W, H, "".join(out))
+
+
+def confounding(data=None, highlight=None):
+    W, H = 170, 46
+    out = [_ARROW]
+    boxes = {"c": (85, 8, "企業の改革能力・資金・人材", "交絡因子（第三の要因）"),
+             "x": (35, 34, "生成AIの導入", "原因と考えている要因"),
+             "y": (135, 34, "生産性", "結果")}
+    for k, (x, y, ja, sub) in boxes.items():
+        c = RED if k == "c" else INK
+        out.append(f'<rect x="{x-25}" y="{y-5}" width="50" height="11" fill="#fbfaf7" stroke="{c}" stroke-width="0.35"/>')
+        out.append(_t(x, y, ja, 2.5, INK, "middle", weight="bold"))
+        out.append(_t(x, y + 4, sub, 2.0, MUTED, "middle"))
+    out.append(f'<path d="M72,14 L48,28" stroke="{RED}" stroke-width="0.35" marker-end="url(#arr)"/>')
+    out.append(f'<path d="M98,14 L122,28" stroke="{RED}" stroke-width="0.35" marker-end="url(#arr)"/>')
+    out.append(f'<path d="M61,34 L108,34" stroke="{INK}" stroke-width="0.35" stroke-dasharray="1.2 0.9" marker-end="url(#ar)"/>')
+    out.append(_t(85, 32, "確かめたい矢印（？）", 2.2, INK, "middle"))
+    out.append(_t(85, 44.5, "赤い2本の矢印だけでも、導入と生産性のあいだに「見かけの関連」が生まれる。", 2.1, MUTED, "middle"))
+    return _svg(W, H, "".join(out))
+
+
+def base_rate_tree(data=None, highlight=None):
+    W, H = 170, 60
+    out = []
+
+    def node(x, y, n, lab, c=INK, bold=False):
+        out.append(_t(x, y, f"{n:,}", 3.0, c, "middle", MONO, "bold" if bold else "normal"))
+        out.append(_t(x, y + 3.6, lab, 2.1, MUTED, "middle"))
+
+    def edge(x1, y1, x2, y2, lab, c=HAIR):
+        out.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{c}" stroke-width="0.3"/>')
+        out.append(_t((x1 + x2) / 2 + (3 if x2 > x1 else -3), (y1 + y2) / 2, lab, 2.0, MUTED, "start" if x2 > x1 else "end", MONO))
+    node(85, 6, 1000, "プロジェクト全体")
+    edge(80, 11, 45, 20, "10%"); edge(90, 11, 125, 20, "90%")
+    node(45, 24, 100, "成功する"); node(125, 24, 900, "失敗する")
+    edge(41, 29, 25, 38, "80%", RED); edge(49, 29, 63, 38, "20%")
+    edge(121, 29, 107, 38, "20%", RED); edge(129, 29, 145, 38, "80%")
+    node(25, 42, 80, "成功・「有望」", RED, True); node(63, 42, 20, "成功・「見込み薄」")
+    node(107, 42, 180, "失敗・「有望」", RED, True); node(145, 42, 720, "失敗・「見込み薄」")
+    out.append(f'<rect x="30" y="50" width="110" height="8" fill="#141414"/>')
+    out.append(_t(85, 55, "「有望」260件のうち成功は80件 → 80 ÷ 260 ≒ 31%（架空の数値）", 2.4, "#fbfaf7", "middle", weight="bold"))
+    return _svg(W, H, "".join(out))
+
+
+def feedback_loops(data=None, highlight=None):
+    W, H = 170, 62
+    out = [_ARROW]
+
+    def loop(cx, cy, r, items, sign, title, sub, c):
+        out.append(_t(cx, 5, title, 2.2, c, "middle", MONO, ls=0.3))
+        out.append(_t(cx, 8.6, sub, 2.2, INK, "middle", weight="bold"))
+        n = len(items)
+        for k, it in enumerate(items):
+            a = -math.pi / 2 + 2 * math.pi * k / n
+            x, y = cx + r * 1.25 * math.cos(a), cy + r * math.sin(a)
+            out.append(_t(x, y + 0.8, it, 2.2, INK, "middle"))
+            a1, a2 = a + 0.42, a + 2 * math.pi / n - 0.42
+            x1, y1 = cx + r * 1.25 * math.cos(a1), cy + r * math.sin(a1)
+            x2, y2 = cx + r * 1.25 * math.cos(a2), cy + r * math.sin(a2)
+            mk = "arr" if c == RED else "ar"
+            out.append(f'<path d="M{x1:.2f},{y1:.2f} A{r*1.25:.2f},{r:.2f} 0 0 1 {x2:.2f},{y2:.2f}" fill="none" stroke="{c}" stroke-width="0.3" marker-end="url(#{mk})"/>')
+            sign_k = "−" if (sign == "B" and k == n - 1) else "+"
+            am = (a1 + a2) / 2
+            out.append(_t(cx + r * 1.42 * math.cos(am), cy + r * 1.18 * math.sin(am) + 0.8, sign_k, 2.6, c, "middle", MONO, "bold"))
+        out.append(_t(cx, cy + 1.4, sign, 5, c, "middle", MONO, "bold"))
+    loop(44, 34, 17, ["利用者が増える", "改善・データが増える", "価値が上がる"], "R", "REINFORCING", "強化ループ：増幅する", RED)
+    loop(126, 34, 17, ["AI利用が増える", "電力需要が増える", "供給制約・価格上昇"], "B", "BALANCING", "均衡ループ：抑える", INK)
+    out.append(_t(126, 59.5, "（＋は同じ向き、−は逆向きに働く。「−」の矢印が利用を減らす）", 2.0, MUTED, "middle"))
+    out.append(_t(44, 59.5, "（どちらも、そうなる場合がある条件つきの例）", 2.0, MUTED, "middle"))
+    return _svg(W, H, "".join(out))
+
+
 FIGURES = {
     "minimap": (minimap, "今回の範囲（赤）と、知識の地図全体（横：対数の時間、縦：10領域）"),
     "cosmic_timeline": (cosmic_timeline, "宇宙・地球・生命・人類の主な出来事（対数の時間軸）"),
@@ -407,4 +499,8 @@ FIGURES = {
     "composition": (composition, "宇宙のエネルギー密度の内訳（Planck 2018、ΛCDMを仮定）"),
     "unknown_types": (unknown_types, "未解明の問いの3つの種類"),
     "domain_coverage": (domain_coverage, "領域ごとのノード数（色は理解レベル）"),
+    "five_maps": (five_maps, "どんなテーマにも重ねる5種類の地図"),
+    "confounding": (confounding, "交絡因子：導入と生産性の両方に影響する第三の要因"),
+    "base_rate_tree": (base_rate_tree, "基準率の問題を件数で解く（1,000件で考える。架空の数値）"),
+    "feedback_loops": (feedback_loops, "強化ループと均衡ループ（条件つきの例）"),
 }

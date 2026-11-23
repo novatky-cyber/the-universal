@@ -160,5 +160,40 @@
     ],
     "created": "2026-11-23",
     "notes": "ChatGPT上で提示・未回答・未採点。選択肢Bは画面の初期値であり、ユーザーの回答ではない。"
+  },
+  {
+    "id": "qq.0017",
+    "text": "「利己的な遺伝子」とは何を主張し、何を主張していないのか。進化の単位は遺伝子か、個体か、集団か",
+    "origin": "user",
+    "status": "open",
+    "nodes": [
+      "con.natural-selection"
+    ],
+    "created": "2026-11-24",
+    "notes": "ユーザーの要望（2026-11-24）。Phase 05の深掘りシリーズで扱う（DOC-01 v1.3）。"
+  },
+  {
+    "id": "qq.0018",
+    "text": "宇宙の誕生について、いま何が確立し、何が最前線の論争なのか",
+    "origin": "user",
+    "status": "open",
+    "nodes": [
+      "q.origin-of-time",
+      "thy.inflation"
+    ],
+    "created": "2026-11-24",
+    "notes": "ユーザーの要望（2026-11-24）。Phase 05の深掘りシリーズで扱う（DOC-01 v1.3）。"
+  },
+  {
+    "id": "qq.0019",
+    "text": "哲学は、地域と時代をまたいで、どんな問いを受け継ぎ、どう変えてきたのか（哲学史）",
+    "origin": "user",
+    "status": "open",
+    "nodes": [
+      "thm.epistemology",
+      "thm.ethics"
+    ],
+    "created": "2026-11-24",
+    "notes": "ユーザーの要望（2026-11-24）。Phase 05の深掘りシリーズで扱う（DOC-01 v1.3）。"
   }
 ]

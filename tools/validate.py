@@ -35,6 +35,8 @@ def main():
             if x["id"] in seen:
                 errors.append(f"[T-02] {key}: ID重複 {x['id']}")
             seen.add(x["id"])
+    src_kind = {x["id"]: x.get("kind") for x in d["sources"]}
+    src_glossary = {x["id"]: x.get("glossary") for x in d["sources"] if x.get("kind") == "user-note"}
     for n in d["nodes"]:
         if TYPE_PREFIX[n["type"]] != n["id"].split(".")[0]:
             errors.append(f"[T-02] {n['id']}: 接頭辞が種類 {n['type']} と一致しない")
@@ -51,6 +53,15 @@ def main():
         # T-03 は必須属性としてスキーマで検査済み。T-04：
         if not n["sources"] and n["verification"]["status"] != "unverified":
             errors.append(f"[T-04] {n['id']}: 出典が空なのに verification.status が unverified でない")
+        # T-11 あなたのメモの用語（DOC-01 F11）：用語ノードは user-note 由来で、出典は user-note の資料だけ
+        is_term, is_note = n["type"] == "term", n.get("origin") == "user-note"
+        if is_term != is_note:
+            errors.append(f"[T-11] {n['id']}: type term と origin user-note は対応していなければならない")
+        if is_term and (not n.get("glossary") or not n["sources"]
+                        or any(src_glossary.get(s) != n["glossary"] for s in n["sources"])):
+            errors.append(f"[T-11] {n['id']}: 用語ノードには glossary と、同じ用語集の user-note の出典が必要")
+        if not is_term and any(src_kind.get(s) == "user-note" for s in n["sources"]):
+            errors.append(f"[T-11] {n['id']}: user-note の資料はClaude由来のノードの根拠にしない")
         t = n.get("time")
         if t and t.get("end_ya") is not None and t["end_ya"] > t["start_ya"]:
             errors.append(f"[T-02] {n['id']}: end_ya が start_ya より過去")

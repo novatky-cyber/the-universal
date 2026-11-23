@@ -1,0 +1,164 @@
+[
+  {
+    "id": "src.christian2004",
+    "existence": "verified",
+    "checked_url": "https://openlibrary.org/works/OL279973W",
+    "note": "University of California Press, 2004（California World History Library、ISBN 9780520235007）をOpen Library・UC Pressで確認。第2版は2011年。Wikipediaは刊行年を2005年とするが、初版の奥付は2004年。クリスチャンが最初のビッグヒストリーの講義を始めたのは1989年（Wikipedia）。"
+  },
+  {
+    "id": "src.korzybski1933",
+    "existence": "verified",
+    "checked_url": "https://en.wikipedia.org/wiki/Science_and_Sanity",
+    "note": "初版1933年、International Non-Aristotelian Library Publishing Company（Lancaster, PA / New York）。『地図は現地ではない』は1931年のAAAS（ニューオーリンズ）での発表が初出で、本書に再録（Wikipedia『Map–territory relation』）。出版社名を正式名に修正。"
+  },
+  {
+    "id": "src.meadows2008",
+    "existence": "verified",
+    "checked_url": "https://www.wikiwand.com/en/Thinking_In_Systems:_A_Primer",
+    "note": "Donella H. Meadows著、Diana Wright編、Chelsea Green Publishing、2008年（著者没後の刊行。1993年の草稿をもとに編集）をWikiwand（Wikipedia）で確認。出版社サイト・WorldCatは取得できなかった。"
+  },
+  {
+    "id": "src.holland1986",
+    "existence": "verified",
+    "checked_url": "https://www.cs.columbia.edu/~blei/fogm/2020F/readings/Holland1986.pdf",
+    "note": "JASA Vol.81, No.396 (Dec. 1986), pp.945–960（JSTOR 2289064）を本文PDFで確認。『Fundamental Problem of Causal Inference』（同じ単位で処置あり・なしの両方を観測できない）の記述あり。ETSの書誌は討論を含め945–970。DOIの解決先は直接取得できなかった。"
+  },
+  {
+    "id": "src.angrist-pischke2009",
+    "existence": "verified",
+    "checked_url": "https://en.wikipedia.org/wiki/Mostly_Harmless_Econometrics",
+    "note": "Angrist & Pischke、Princeton University Press、2009年（De Gruyter の電子版 DOI 10.1515/9781400829828）。差の差分析を扱う章があることを確認。平行トレンド（common trends）の記述は本文を直接取得して確認したものではない。"
+  },
+  {
+    "id": "src.pearl-mackenzie2018",
+    "existence": "verified",
+    "checked_url": "https://wikiwand.com/en/The_Book_of_Why",
+    "note": "Judea Pearl & Dana Mackenzie、Basic Books（英国は Penguin/Allen Lane）、2018年をWikiwandと出版社の書誌で確認。"
+  },
+  {
+    "id": "src.sep-bayes",
+    "existence": "verified",
+    "checked_url": "https://plato.stanford.edu/entries/bayes-theorem/",
+    "note": "SEP『Bayes' Theorem』、著者 James Joyce、初出 2003-06-28（substantive revision 2003-09-30）を確認。式(1.2) P_E(H)=[P(H)/P(E)]P_H(E) は教材の式と同値。"
+  },
+  {
+    "id": "src.kahneman-tversky1973",
+    "existence": "verified",
+    "checked_url": "https://sites.stat.washington.edu/peter/498.Sp16/Tversky.pdf",
+    "note": "Psychological Review 80(4), 237–251 (1973)。Tversky & Kahneman (1974, Science 185) の文献表で『Psychol. Rev. 80, 237 (1973)』、ONR技術報告（DTIC AD0767426）で『On the psychology of prediction』がPsychological Review掲載予定と確認。エンジニア・弁護士問題で基準率が無視されることを報告。DOIの解決先は直接取得できなかった。"
+  },
+  {
+    "id": "src.gigerenzer-hoffrage1995",
+    "existence": "verified",
+    "checked_url": "https://pages.ucsd.edu/~scoulson/203/GG_How_1995.pdf",
+    "note": "Psychological Review 102(4), 684–704 (1995) を本文PDFで確認。研究1でベイズ的な解き方の割合は確率形式16%/28%、頻度形式46%/50%。"
+  },
+  {
+    "id": "src.david1985",
+    "existence": "verified",
+    "checked_url": "https://bibbase.org/network/publication/david-clioandtheeconomicsofqwerty-1985",
+    "note": "American Economic Review 75(2), 332–337 (1985)、JSTOR 1805621 を確認。"
+  },
+  {
+    "id": "src.arthur1989",
+    "existence": "verified",
+    "checked_url": "https://ideas.repec.org/a/ecj/econjl/v99y1989i394p116-31.html",
+    "note": "The Economic Journal 99(394), 116–131 (March 1989) をRePEcで確認。収穫逓増の下で歴史上の小さな出来事が非効率でもありうる技術へのロックインを生むことを示すモデル。DOIの解決先は直接取得できなかった。"
+  },
+  {
+    "id": "src.liebowitz-margolis1990",
+    "existence": "verified",
+    "checked_url": "https://ideas.repec.org/a/ucp/jlawec/v33y1990i1p1-25.html",
+    "note": "Journal of Law and Economics 33(1), 1–25 (April 1990)、DOI 10.1086/467198 をRePEcで確認。"
+  },
+  {
+    "id": "src.sep-counterfactual",
+    "existence": "verified",
+    "checked_url": "https://plato.stanford.edu/entries/causation-counterfactual/",
+    "note": "SEP『Counterfactual Theories of Causation』、初出 2001-01-10、substantive revision 2024-04-01。著作権表示は Peter Menzies と Helen Beebee。『cが起きなかったならeも起きなかった』という形で因果を説明する理論を扱う。"
+  },
+  {
+    "id": "src.wack1985",
+    "existence": "verified",
+    "checked_url": "https://wiki.santafe.edu/images/d/d9/Wack.pdf",
+    "note": "Harvard Business Review, September–October 1985（Reprint 85516）の本文PDFで確認。Shellの経営陣は『1973年の石油危機の、時期はともかく起こりうること』に備えていたとある。hbr.org のURL自体は取得していない。"
+  },
+  {
+    "id": "src.brier1950",
+    "existence": "verified",
+    "checked_url": "https://www.nssl.noaa.gov/users/brooks/public_html/verification/bibliography.html",
+    "note": "Monthly Weather Review 78, 1–3 (1950) をNOAA/NSSLの検証文献表と Stephenson らの資料で確認。DOIの解決先は直接取得できなかった。"
+  },
+  {
+    "id": "src.tetlock-gardner2015",
+    "existence": "verified",
+    "checked_url": "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/9780804136709/",
+    "note": "Crown、2015-09-29刊を出版社ページで確認。Good Judgment Projectの結果と、確率で考え・記録し・誤りを認めて更新する習慣を扱う。"
+  },
+  {
+    "id": "src.roediger-karpicke2006",
+    "existence": "verified",
+    "checked_url": "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+    "note": "Psychological Science 17(3), 249–255 (2006)、DOI 10.1111/j.1467-9280.2006.01693.x をPubMedで確認。5分後は再学習が上回り、2日後・1週間後はテストを受けた群が上回った。"
+  },
+  {
+    "id": "src.larson2014",
+    "existence": "verified",
+    "checked_url": "https://escholarship.org/content/qt6sd6f5bc/qt6sd6f5bc.pdf",
+    "note": "[2次検証 2026-11-24] PNAS 111(17), 6139–6146（2014年4月29日）、Larson, Piperno, Allaby, Purugganan, Andersson ほか計25名を本文PDF（eScholarship）で確認。「少なくとも11の地域が独立の起源地」「栽培化・家畜化は約1万2000〜1万1000年前に世界的に始まった」と記述。DOIそのものの解決は未確認（pnas.orgの取得は許可されず）。"
+  },
+  {
+    "id": "src.scott2017",
+    "existence": "verified",
+    "checked_url": "https://en.wikipedia.org/wiki/Against_the_Grain:_A_Deep_History_of_the_Earliest_States",
+    "note": "[2次検証 2026-11-24] Yale University Press, 2017（2017年9月19日刊、ISBN 9780300182910、312ページ）をWikipedia・Yale University Pressのページで確認。栽培化と最初の国家の間の約4000年の「隔たり」を扱い、定住・農耕が自動的に国家を生んだわけではないと論じる。URLは出版社の書籍ページ（ISBNから構成、ページ自体は未取得）。"
+  },
+  {
+    "id": "src.allen2009",
+    "existence": "verified",
+    "checked_url": "https://www.cambridge.org/core/books/the-british-industrial-revolution-in-global-perspective/29A277672CCD093D152846CE7ED82BD9",
+    "note": "[2次検証 2026-11-24] Cambridge University Press, 2009（New Approaches to Economic and Social History、印刷版2009年4月9日、DOI 10.1017/CBO9780511816680）をCambridge Coreで確認。要旨（RePEc）：英国では欧州・アジアの他国に比べ賃金が高く資本とエネルギーが安かったため、蒸気機関・綿紡績工場・石炭の利用が英国でとくに発明・利用する利益があった。"
+  },
+  {
+    "id": "src.mokyr2009",
+    "existence": "verified",
+    "checked_url": "https://faculty.econ.ucdavis.edu/faculty/gclark/Book_Reviews/Mokyr%20JEL%202012.pdf",
+    "note": "[2次検証 2026-11-24] Yale University Press, New Haven, 2009（x+564ページ、ISBN 9780300124552）をBusiness History Review の書評の書誌、Gregory Clark の書評（Journal of Economic Literature 50(1), 2012）で確認（Clark は刊行年を2010と記す）。主張：産業革命の原因として、啓蒙（とくに「産業的啓蒙」）による知識・信念・制度の変化を重視。URLはISBNから構成した出版社ページ（未取得）。"
+  },
+  {
+    "id": "src.pomeranz2000",
+    "existence": "verified",
+    "checked_url": "https://press.princeton.edu/node/43934",
+    "note": "[2次検証 2026-11-24] Princeton University Press, 2000（電子版 DOI 10.1515/9781400823499、2021年にPrinceton Classics版）をPrinceton University Press・De Gruyterで確認。要旨：1750年頃まで欧州と東アジアの生活水準・市場は同程度で、欧州の分岐は石炭の有利な立地と新大陸との交易（地下と海外の資源）による。"
+  },
+  {
+    "id": "src.goody2006",
+    "existence": "verified",
+    "checked_url": "https://www.cambridge.org/core/books/theft-of-history/0C3D5786889D40D05F7AD53101A01996",
+    "note": "[2次検証 2026-11-24] Cambridge University Press, 2006（x+342ページ、ISBN 9780521870696／9780521691055、DOI 10.1017/CBO9780511819841）をCiNii Books・Cambridge Coreで確認（Cambridge Coreは印刷版の刊行日を2007年1月11日と表示）。序章で、古代・封建制・資本主義という欧州の時代区分が世界の他地域に押しつけられたと批判。"
+  },
+  {
+    "id": "src.sep-hume-moral",
+    "existence": "verified",
+    "checked_url": "https://plato.stanford.edu/entries/hume-moral/",
+    "note": "[2次検証 2026-11-24] SEP「Hume’s Moral Philosophy」（Rachel Cohon、初出2004年10月29日、最新の実質改訂2018年8月20日）を本体で確認。第5節「Is and ought」：この一節ほど解釈上の論争を生んだ箇所は少ないとし、「事実から当為は導けない」とする20世紀の主流の読み（Hume’s Law）と、より限定的な認知主義的な読みを並べる。yearは最新改訂年。"
+  },
+  {
+    "id": "src.walters-wilder2023",
+    "existence": "verified",
+    "checked_url": "https://www.nature.com/articles/s41598-023-41032-5.pdf",
+    "note": "[2次検証 2026-11-24] Scientific Reports 13, article 14045 (2023) を本文PDFで確認。ChatGPTが作った文献リストのうち、GPT-3.5では55%、GPT-4では18%が実在しない（捏造）。実在する文献でも実質的な誤りがGPT-3.5で43%、GPT-4で24%。"
+  },
+  {
+    "id": "src.nilsson2009",
+    "existence": "verified",
+    "checked_url": "https://www.cambridge.org/core/books/quest-for-artificial-intelligence/speed-bumps/2B4303A939E15295F05FF2AA4FB58873",
+    "note": "[2次検証 2026-11-24] Cambridge University Press, 2009（2009年10月30日、DOI 10.1017/CBO9780511819346）をCambridge Coreで確認。第21章「Boomtimes」（1975〜1985年頃の高揚、1980年代半ばに頂点）、第24章「Speed Bumps」（外部からの批判と失望が「AIの冬」を招いた）など、期待と失望の繰り返しを扱う。"
+  },
+  {
+    "id": "src.comin-hobijn2010",
+    "existence": "verified",
+    "checked_url": "https://econpapers.repec.org/RePEc:aea:aecrev:v:100:y:2010:i:5:p:2031-59",
+    "note": "[2次検証 2026-11-24] AER 100(5), 2031–59 (2010) をRePEcで確認。15の技術・166か国・過去200年のデータで、各国は発明から平均45年後に技術を導入（adopt）。新しい技術ほど速く導入。注意：ここでの導入の遅れ（adoption lag）は、その国で技術が初めて使われ始めるまでの年数で、「広く使われるまで」ではない（NBER WP 16379 の定義で確認）。"
+  }
+]
