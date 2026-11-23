@@ -75,7 +75,10 @@
           "thy.second-law",
           "thy.special-relativity"
         ],
-        "lessons": []
+        "lessons": [
+          "output/lessons/L0001a_P01-S01.pdf",
+          "output/lessons/L0001b_P01-S01.pdf"
+        ]
       },
       {
         "id": "P01-S02",

@@ -49,8 +49,8 @@ def main():
             if s not in src_ids:
                 errors.append(f"[T-02] {n['id']}: 出典 {s} が sources.json にない")
         # T-03 は必須属性としてスキーマで検査済み。T-04：
-        if not n["sources"] and n["verification"]["status"] == "verified":
-            errors.append(f"[T-04] {n['id']}: 出典が空なのに verified")
+        if not n["sources"] and n["verification"]["status"] != "unverified":
+            errors.append(f"[T-04] {n['id']}: 出典が空なのに verification.status が unverified でない")
         t = n.get("time")
         if t and t.get("end_ya") is not None and t["end_ya"] > t["start_ya"]:
             errors.append(f"[T-02] {n['id']}: end_ya が start_ya より過去")
@@ -94,9 +94,6 @@ def main():
         if nid not in ids:
             errors.append(f"[T-05] understanding: {nid} が存在しない")
     # 警告
-    for n in d["nodes"]:
-        if n["verification"]["status"] != "verified" and n["sources"]:
-            pass
     unv = sum(1 for n in d["nodes"] if n["verification"]["status"] != "verified")
     warnings.append(f"未検証のノード {unv}/{len(ids)} 件（verification.status != verified）")
     return report(errors, warnings, d)

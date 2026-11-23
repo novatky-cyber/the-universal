@@ -1,15 +1,29 @@
 {
-  "cycle": 0,
+  "cycle": 1,
   "map_version": "1.0",
   "system_version": "0.1.0",
-  "last_run": null,
+  "last_run": "2026-11-23",
   "current_session": "P01-S01",
-  "next_cycle_plan": "サイクル1：P01-S01（宇宙・時間の起源）の教材L0001と初回レポートR0001を作成",
+  "next_cycle_plan": "サイクル2：P01-S02（生命の起源と進化）の教材L0002。第1回の回答があれば評価結果を復習に反映。D03の詳細ノードと出典未登録ノードの調査・検証。",
   "schedule": "未設定（確認③で決定）",
-  "pending": [],
-  "awaiting_user": [
-    "確認②：試作の見た目・使い心地",
-    "GitHub Pagesの有効化"
+  "pending": [
+    {
+      "item": "出典未登録ノードの調査・検証",
+      "count": 69
+    },
+    {
+      "item": "要約文の独立検証待ちノード",
+      "count": 22
+    },
+    {
+      "item": "src.unesco-silk の実在確認",
+      "count": 1
+    }
   ],
-  "phase_gate": "P2（試作）"
+  "awaiting_user": [
+    "確認②：3Dビューアと教材PDFの見た目・使い心地",
+    "GitHub Pages の有効化（Settings → Pages → main / root）",
+    "第1回の回答（任意）"
+  ],
+  "phase_gate": "P2（試作）完了・確認②待ち"
 }

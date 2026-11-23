@@ -1,0 +1,382 @@
+[
+  {
+    "id": "src.ai100",
+    "existence": "verified",
+    "note": "https://ai100.stanford.edu/ を取得。ページ題名『AI100 | One Hundred Year Study on Artificial Intelligence』。本教材では未使用。"
+  },
+  {
+    "id": "src.ashby2003",
+    "existence": "verified",
+    "note": "Living Reviews in Relativity 6, 1 (2003-01-28) をPMC5253894で確認。分数周波数ずれ（GR予測 +446.5×10^-12 等）から約38.6μs/日が導けるが、『1日で何km』の数値は本文に無い（Ashby 2002 Physics Today 側に『1日で11km超』の記述あり）。"
+  },
+  {
+    "id": "src.augustine-civ-dei-11",
+    "existence": "verified",
+    "note": "New Advent 英訳『The City of God』Book XI を取得。第6章に 'the world was made, not in time, but simultaneously with time' を確認。"
+  },
+  {
+    "id": "src.bicep-planck-2015",
+    "existence": "verified",
+    "note": "arXiv:1502.00612 / PRL 114, 101301 (2015) を確認。'strong evidence for dust and no statistically significant evidence for tensor modes', r<0.12。題名は正式には 'A Joint Analysis of BICEP2/Keck Array and Planck Data'（先頭の'A'が欠落）。"
+  },
+  {
+    "id": "src.big-history",
+    "existence": "verified",
+    "note": "https://www.bighistoryproject.com/ を取得（'Big History Project: For Lifelong Learners'）。本教材では未使用。"
+  },
+  {
+    "id": "src.cern-antimatter",
+    "existence": "verified",
+    "note": "CERNの同名ページ（'The matter-antimatter asymmetry problem'）を home.cern 経由で取得。'The Big Bang should have created equal amounts of matter and antimatter.' を確認。指定URLへの直接取得は失敗したが、同題のページの存在は確認。"
+  },
+  {
+    "id": "src.chou2010",
+    "existence": "verified",
+    "note": "ADS 2010Sci...329.1630C、NIST 2010年9月発表で確認。Science 329, 1630、Chou/Hume/Rosenband/Wineland。33cmの高低差を確認。ただし使用した時計はアルミニウムイオン光時計（量子論理時計）であり、教材の『光格子時計』は誤り。DOIリンクは取得ツール側で遮断。"
+  },
+  {
+    "id": "src.codata-planck-time",
+    "existence": "verified",
+    "note": "NISTのCODATAサーバは応答したが、取得ツール経由ではクエリが不正扱いとなり値ページを表示できず。CODATA 2022の公表値 5.391 247(60)×10^-44 s を NIST の CODATA 2022 資料の検索結果で確認。URLは手動で確認することを推奨。"
+  },
+  {
+    "id": "src.dartmouth-ai",
+    "existence": "verified",
+    "note": "ページ題名『Artificial Intelligence (AI) Coined at Dartmouth』を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.desi-dr2-2025",
+    "existence": "verified",
+    "note": "LBLのURLは取得失敗（client_error）、検索結果では同URLが存在。同内容のUCSC発表で '2.8 to 4.2 sigma'、3年分のデータ、5σ未達を確認。なお2025年11月のDES-SN再解析（arXiv:2511.07517）で最大値は3.2σに低下。"
+  },
+  {
+    "id": "src.dunlosky2013",
+    "existence": "verified",
+    "note": "APS（psychologicalscience.org）の論文ページ・Duke等の書誌で確認。PSPI 14(1), 2013。本教材では未使用。"
+  },
+  {
+    "id": "src.esa-planck",
+    "existence": "verified",
+    "note": "ESAのPlanckミッションページの取得に成功（内容は 'Planck on course for safe retirement' 等の記事を含む）。本教材では未使用。"
+  },
+  {
+    "id": "src.fixsen2009",
+    "existence": "verified",
+    "note": "arXiv:0911.1955 / DOI 10.1088/0004-637X/707/2/916。T0 = 2.72548 ± 0.00057 K を確認。"
+  },
+  {
+    "id": "src.h0dn-2026",
+    "existence": "verified",
+    "note": "ICC-UB の発表ページを取得。H0 = 73.50 ± 0.81、約1%の精度、初期宇宙の推定とは約5〜7σの差、A&A掲載予定を確認。ページに公開日の明記なし。"
+  },
+  {
+    "id": "src.hai-ai-index",
+    "existence": "verified",
+    "note": "ページ題名『AI Index | Stanford HAI』を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.hubble1929",
+    "existence": "verified",
+    "note": "ADS 1929PNAS...15..168H で確認（PNAS 15, 168, 1929年3月）。"
+  },
+  {
+    "id": "src.iau-2018-hubble-lemaitre",
+    "existence": "verified",
+    "note": "IAUの発表ページを取得。2018年10月26日に締め切った電子投票で 'Hubble–Lemaître law' と呼ぶよう推奨。ページ内に『1927年』の記述は無い。"
+  },
+  {
+    "id": "src.ics-chart-2024",
+    "existence": "verified",
+    "note": "v2024/12 のPDFを取得。著者表示 Cohen, Finney, Gibbard & Fan (2013; updated) を確認。最下部（冥王代の基底）に 4567 Ma の表示はあるが、『太陽系の形成』とは明記されていない。"
+  },
+  {
+    "id": "src.iea-energy-ai",
+    "existence": "verified",
+    "note": "IEA『Energy and AI』のページを取得。ページ上に年の表示は無い（2025年刊行とされる）。本教材では未使用。"
+  },
+  {
+    "id": "src.ipcc-ar6-syr",
+    "existence": "verified",
+    "note": "直接の取得は失敗（client_error）。検索結果で同URLが『AR6 Synthesis Report』として存在することを確認。本教材では未使用。"
+  },
+  {
+    "id": "src.jades-z14",
+    "existence": "verified",
+    "note": "Nature 633, 318–322 (2024)、筆頭著者 Carniani を確認。JADES-GS-z14-0 は z=14.32、宇宙誕生から約3億年後。ただし sources.json の題名はarXiv版のもの。掲載版の題名は 'Spectroscopic confirmation of two luminous galaxies at a redshift of 14'。"
+  },
+  {
+    "id": "src.nasa-hubble-tension",
+    "existence": "verified",
+    "note": "2024年3月11日の記事を取得（最終更新 2026-09-21）。Riessの 'rule out a measurement error ... with very high confidence' を確認。"
+  },
+  {
+    "id": "src.nasa-solar-system",
+    "existence": "verified",
+    "note": "『Solar System Facts』ページを取得（約46億年前に形成）。本教材では未使用。"
+  },
+  {
+    "id": "src.nasa-universe",
+    "existence": "verified",
+    "note": "ページは存在する（題名『Overview』、見出し『Cosmic History』）。ただし、教材4.6節が引用している『超新星・中性子星合体による重元素の生成』は、このページに書かれていない。"
+  },
+  {
+    "id": "src.nasa-webb-bigbang",
+    "existence": "unverified",
+    "note": "指定URLの取得は2回とも失敗（client_error）。検索でも同名のページを確認できなかった。近い内容のNASAページとして『Webb Telescope & The Big Bang』（https://science.nasa.gov/mission/webb/big-bang-q-and-a/）が存在する。URLを差し替えたうえで再確認が必要。"
+  },
+  {
+    "id": "src.nobel2011",
+    "existence": "verified",
+    "note": "2011年ノーベル物理学賞のプレスリリースを取得。受賞理由 'for the discovery of the accelerating expansion of the Universe through observations of distant supernovae' を確認。"
+  },
+  {
+    "id": "src.openai-chatgpt",
+    "existence": "verified",
+    "note": "『Introducing ChatGPT』（2022年11月30日）を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.opera-2012",
+    "existence": "verified",
+    "note": "arXiv:1109.4897v4 / JHEP 10 (2012) 093。修正後の値 (v−c)/c = (2.7±3.1+3.4−3.3)×10^-6 で、光速と矛盾しない。ただし光ファイバー接続不良などの原因は、この論文の要旨には書かれていない。"
+  },
+  {
+    "id": "src.owid-tech",
+    "existence": "verified",
+    "note": "Our World in Data の『Technology over the long run』を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.pantos-2026",
+    "existence": "verified",
+    "note": "arXiv:2601.00650（2026-01-02投稿、v2は1月25日）を確認。『距離はしごと、それ以外のすべての方法の食い違い』（6.5σ、相関を考慮すると3.9σ）。査読前のプレプリント。"
+  },
+  {
+    "id": "src.pdg-bbn",
+    "existence": "verified",
+    "note": "PDG RPP 2024 第24章（Fields, Molaro, Sarkar、2023年8月改訂）。Yp = 0.245±0.003、Li/H の予測は観測値の約3.1倍（4.4σ）を確認。"
+  },
+  {
+    "id": "src.penzias-wilson-1965",
+    "existence": "verified",
+    "note": "ADS 1965ApJ...142..419P で確認。超過温度は 'isotropic, unpolarized, and free from seasonal variations'。"
+  },
+  {
+    "id": "src.planck2018-vi",
+    "existence": "verified",
+    "note": "arXiv:1807.06209、A&A 641, A6 (2020)。H0=67.4±0.5、Ωm=0.315±0.007。表2では、年齢 13.797±0.023 Gyr（Planck単独）、13.787±0.020 Gyr（Planck+BAO）、ΩΛ=0.6847、Ωbh²=0.02237、Ωch²=0.1200。"
+  },
+  {
+    "id": "src.rovelli-order-of-time",
+    "existence": "verified",
+    "note": "Riverhead Books 2018年（英訳：Segre & Carnell。原著はイタリア語『L'ordine del tempo』2017年）。邦訳『時間は存在しない』NHK出版、冨永星訳、2019年8月、ISBN 9784140817902 を紀伊國屋の書誌で確認。sources.json は英訳の年のみで、原著の情報と訳者名が無い。"
+  },
+  {
+    "id": "src.sep-cosmology",
+    "existence": "verified",
+    "note": "SEP『Philosophy of Cosmology』（Smeenk & Ellis）を確認。特異点＝一般相対論の欠陥とみなされること、インフレーションの柔軟性への批判、bounce、創発的な時空の議論を確認。定常宇宙論と無境界仮説は本文で扱われていない（無境界仮説は文献表のみ）。"
+  },
+  {
+    "id": "src.sep-time-thermo",
+    "existence": "verified",
+    "note": "SEP『Thermodynamic Asymmetry in Time』（Callender、2026-06-12に実質的な改訂）。Past Hypothesis（Albert 2000）、ボルツマンのエントロピー、時間反転不変性を確認。過去仮説を説明する必要があるかどうか自体に争いがあることも記載されている。"
+  },
+  {
+    "id": "src.shannon1948",
+    "existence": "verified",
+    "note": "MIT掲載のPDFで確認。'The form of H will be recognized as that of entropy as defined in certain formulations of statistical mechanics' と、ボルツマンのH定理への言及がある。"
+  },
+  {
+    "id": "src.smithsonian-human",
+    "existence": "verified",
+    "note": "ページ題名『Introduction to Human Evolution』を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.uk-futures",
+    "existence": "verified",
+    "note": "gov.uk の『Futures toolkit for policymakers and analysts』を確認。ページの初出は2014年7月8日と表示され、sources.json の2017年（Toolkit第1版の発行年と思われる）と食い違う。題名表記も異なる。本教材では未使用。"
+  },
+  {
+    "id": "src.uk-systems",
+    "existence": "verified",
+    "note": "『Systems thinking for civil servants』（2022年5月24日公開）を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.un-wpp",
+    "existence": "verified",
+    "note": "『World Population Prospects』を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.unesco-futures",
+    "existence": "verified",
+    "note": "ページを確認。現在の題名は『Futures Literacy & Foresight』。本教材では未使用。"
+  },
+  {
+    "id": "src.unesco-silk",
+    "existence": "unverified",
+    "note": "指定URL（unesco.org/en/silk-roads）の取得に失敗。検索では en.unesco.org/silkroad 配下にSilk Roads Programmeが存在するが、指定URLそのものは確認できず。本教材では未使用。"
+  },
+  {
+    "id": "src.usgs-age-earth",
+    "existence": "verified",
+    "note": "USGSの『Age of the Earth』を確認。4.54 billion years（誤差1%未満）。隕石と月の岩石の放射年代にもとづく。"
+  },
+  {
+    "id": "src.vaswani2017",
+    "existence": "verified",
+    "note": "arXiv:1706.03762『Attention Is All You Need』を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.weinberg-first-three-minutes",
+    "existence": "verified",
+    "note": "Basic Books、1977年（Kirkusの書評で1977年3月18日発売、OCLC 2633464）。副題も一致。"
+  },
+  {
+    "id": "src.allwood2006",
+    "existence": "verified",
+    "note": "[2次] Nature 441, 714–718 (2006)、Allwood, Walter, Kamber, Marshall, Burch（RePEc）。Strelley Pool Chert は '3,430-million-year-old'（34.3億年前）、'probable biological origin (stromatolites)'。教材の『約35億〜34億年前』のうち35億はこの出典では支えられない。"
+  },
+  {
+    "id": "src.alpher-herman-1948",
+    "existence": "verified",
+    "note": "[2次] Nature 162, 774–775 (1948)『Evolution of the Universe』（Peebles 2013, arXiv:1310.2146 の引用で確認）。現在の放射温度を約5Kと見積もった。Peebles は、この値は当時のバリオン密度が不確かだったため決定的ではないと注記している。"
+  },
+  {
+    "id": "src.ashby2002-physicstoday",
+    "existence": "verified",
+    "note": "[2次] Physics Today 55(5), 41 (2002)。'navigational errors of more than 11 km' を確認（1次検証で取得済み）。"
+  },
+  {
+    "id": "src.bondi-gold-1948",
+    "existence": "verified",
+    "note": "[2次] ADS 1948MNRAS.108..252B で確認。"
+  },
+  {
+    "id": "src.britannica-kalpa",
+    "existence": "unverified",
+    "note": "[2次] 指定URL（/topic/kalpa）は取得に失敗。同じ内容の項目は https://www.britannica.com/topic/kalpa-Indian-chronology（題名『Indian chronology』）にあり、『ヒンドゥー教・仏教の宇宙論で、生成と破壊を繰り返す大周期。プラーナ文献ではブラフマーの1日』を確認。URLの差し替えが必要。"
+  },
+  {
+    "id": "src.britannica-samsara",
+    "existence": "verified",
+    "note": "[2次] ページは実在する（輪廻＝metempsychosis の中心概念）。ただし『輪廻に始まりがない（無始）』という記述はなく、教材 §6.5 の仏教についての主張は支えられない。"
+  },
+  {
+    "id": "src.connelly2012",
+    "existence": "verified",
+    "note": "[2次] Science 338, 651 (2012)、Connelly, Bizzarro, Krot, Nordlund, Wielandt, Ivanova。CAI の年代 4567.30±0.16 Ma を、引用している論文（PMC4946626）で確認。DOI先は取得ツールで遮断。"
+  },
+  {
+    "id": "src.davis-lineweaver-2004",
+    "existence": "verified",
+    "note": "[2次] arXiv:astro-ph/0310808、DOI 10.1071/AS03040、PASA 21, 97 (2004)。全文（ar5iv）を確認したが、『束縛系は膨張しない』という記述はない。『the velocity is due to the rate of expansion of space, not movement through space』はある。"
+  },
+  {
+    "id": "src.des-recal-2025",
+    "existence": "verified",
+    "note": "[2次] 実在するが書誌が誤っている。正しい題名は 'The Dark Energy Survey Supernova Program: A Reanalysis Of Cosmology Results And Evidence For Evolving Dark Energy With An Updated Type Ia Supernova Calibration'。著者は Popovic, B., Shah, P., Kenworthy, W. D., Kessler, R., Davis, T. M. ほか（『DES Collaboration』は著者欄にない）。arXiv:2511.07517（2025-11-10投稿）、DOI 10.1093/mnras/stag632（MNRAS）。DESI DR2＋CMB＋DES-SN は 4.2σ→3.2σ。"
+  },
+  {
+    "id": "src.einstein1905",
+    "existence": "verified",
+    "note": "[2次] Annalen der Physik 17, 891 (1905)『Zur Elektrodynamik bewegter Körper』を Zenodo・MPIWG の書誌で確認。"
+  },
+  {
+    "id": "src.einstein1916",
+    "existence": "verified",
+    "note": "[2次] Annalen der Physik 49, 769 (1916)『Die Grundlage der allgemeinen Relativitätstheorie』を Zenodo（1916年3月20日）・Einstein Papers で確認。"
+  },
+  {
+    "id": "src.freedman-cchp-2025",
+    "existence": "verified",
+    "note": "[2次] 掲載誌は The Astrophysical Journal 985(2), 203 (2025)（DOAJ）。著者は Freedman, Madore, Hoyt, Jang, Lee, Owens。H0 = 70.39±1.22(stat)±1.33(sys)±0.70（TRGB）。publisher 欄を『ApJ 985, 203』に直す。"
+  },
+  {
+    "id": "src.hartle-hawking-1983",
+    "existence": "verified",
+    "note": "[2次] Phys. Rev. D 28, 2960 (1983) を INSPIRE・doi.org で確認。"
+  },
+  {
+    "id": "src.hoyle1948",
+    "existence": "verified",
+    "note": "[2次] ADS 1948MNRAS.108..372H で確認。"
+  },
+  {
+    "id": "src.johnson2019-elements",
+    "existence": "verified",
+    "note": "[2次] Science 363, 474 (2019)『Populating the periodic table: Nucleosynthesis of the elements』（J. A. Johnson、OSU の発表と書誌DBで確認）。"
+  },
+  {
+    "id": "src.lemaitre1927",
+    "existence": "verified",
+    "note": "[2次] ADS は取得できず（robots）。Annales de la Société Scientifique de Bruxelles A47, 49 (1927) であることは、英訳（MNRAS 91, 483, 1931）と研究史の論文（arXiv:1305.6470）で確認。題名は周知の書誌と一致。"
+  },
+  {
+    "id": "src.nasa-wmap-cmb",
+    "existence": "unverified",
+    "note": "[2次] 指定URLは https://science.nasa.gov/mission/wmap/wmap-overview/ に転送され、『Tests of Big Bang: The CMB』のページは現存しない。改訂版の教材では引用されていない。削除するか、アーカイブURLにする。"
+  },
+  {
+    "id": "src.nature-opera-2012",
+    "existence": "verified",
+    "note": "[2次] 実在するが題名が誤っている。正しくは 'Timing glitches dog neutrino claim'（E. S. Reich、Nature 483, 17, 2012）。『GPS同期信号を基準時計に入れる光ファイバーの faulty connection』と『基準時計内の発振器』の二つの問題を確認。修正後の測定結果はこの記事には書かれていない。"
+  },
+  {
+    "id": "src.nist-2010-al-clocks",
+    "existence": "verified",
+    "note": "[2次] NIST 2010年9月の発表を確認（33cm、アルミニウムイオンの量子論理時計）。"
+  },
+  {
+    "id": "src.sep-cosmological-argument",
+    "existence": "verified",
+    "note": "[2次] SEP『Cosmological Argument』（Reichenbach、2026-07-01に実質的な改訂）。時間的な形の論証の起源を中世イスラームの mutakallimūn とガザーリーに求め、『始まりを持つものには原因がある／宇宙には始まりがある』という三段論法は Craig による現代の定式化として紹介している。"
+  },
+  {
+    "id": "src.nasa-webb-bigbang",
+    "existence": "verified",
+    "note": "[2次] 差し替え後のURL（big-bang-q-and-a）は1次検証で取得済み（'The universe doesn't have a center'、約38万年）。ただし lesson_b §14 の文献表は旧題名『Big Bang and the Evolution of the Universe』のまま。"
+  },
+  {
+    "id": "src.unesco-silk",
+    "existence": "unverified",
+    "note": "[2次] 差し替え後のURL（en.unesco.org/silkroad）の直下ページは未取得。配下のページ（/silkroad/publications など）は検索で存在を確認。本教材では未使用。"
+  },
+  {
+    "id": "src.hublin2017",
+    "existence": "verified",
+    "note": "[3次] Nature 546, 289–292（2017年6月7日）を PubMed 28593953 で確認。Jebel Irhoud の化石は 315±34 ka（熱ルミネッセンス法）で、H. sapiens の系統の初期段階とされる。教材の『約30万年』を支える。"
+  },
+  {
+    "id": "src.cooperstock1998",
+    "existence": "verified",
+    "note": "[3次] arXiv:astro-ph/9803097、DOI 10.1086/305956（ApJ 503, 61）。膨張の局所系への影響は、太陽系・銀河・銀河団の規模でも無視できる（原子・分子ではさらに小さい）。ただし著者は『膨張はすべての規模で進むと考えるのが最も妥当で、その影響が無視できる』と述べており、『束縛系はそれ自体は膨張しない』と断定してはいない。"
+  },
+  {
+    "id": "src.sn15-anamatagga",
+    "existence": "verified",
+    "note": "[3次] SuttaCentral 本体は JavaScript で描画されるため取得できず。Sujato 英訳の転載版で SN 15.1 の 'Mendicants, transmigration has no known beginning. No first point is found...' を確認。Sujato 訳での章題は 'Linked Discourses on the Unknowable Beginning'。"
+  },
+  {
+    "id": "src.des-recal-2025",
+    "existence": "verified",
+    "note": "[3次] 題名・著者・掲載先が修正済みで、出典と一致。"
+  },
+  {
+    "id": "src.nature-opera-2012",
+    "existence": "verified",
+    "note": "[3次] 題名・著者が修正済みで、出典と一致。"
+  },
+  {
+    "id": "src.freedman-cchp-2025",
+    "existence": "verified",
+    "note": "[3次] publisher が 'The Astrophysical Journal 985, 203'（2025）に修正済み。"
+  },
+  {
+    "id": "src.britannica-kalpa",
+    "existence": "verified",
+    "note": "[3次] URLは kalpa-Indian-chronology に修正済み。軽微な点として、sources.json の題名『kalpa』と、ページの見出し『Indian chronology』が異なる。"
+  },
+  {
+    "id": "src.nasa-wmap-cmb",
+    "existence": "unverified",
+    "note": "[3次] sources.json から削除済み（ページは現存しない）。"
+  }
+]

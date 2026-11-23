@@ -53,5 +53,14 @@
 
 <div id="loading">THE UNIVERSAL<br><small>地図を読み込み中…</small></div>
 <script type="module" src="viewer/app.js"></script>
+<script>
+  // importmap 非対応（iOS 16.4 未満）や、CDN に届かない場合の案内
+  setTimeout(function () {
+    var l = document.getElementById("loading");
+    if (l && !l.classList.contains("hidden")) {
+      l.innerHTML = "THE UNIVERSAL<br><small>地図を表示できませんでした。<br>iOS 16.4 以降の Safari で、通信状態を確認して再読み込みしてください。</small>";
+    }
+  }, 15000);
+</script>
 </body>
 </html>

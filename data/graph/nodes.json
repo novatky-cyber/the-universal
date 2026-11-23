@@ -6,7 +6,7 @@
       "ja": "宇宙の年齢",
       "en": "Age of the universe"
     },
-    "summary": "約138億年（Planck 2018、ΛCDMを仮定した推定で137.87±0.20億年）。直接計時した値ではなく、観測とモデルから推定した値。",
+    "summary": "約138億年。Planck 2018にBAOを組み合わせ、ΛCDMを仮定した推定で137.87±0.20億年（Planck単独では137.97±0.23億年）。直接計時した値ではない。",
     "domains": [
       "D01"
     ],
@@ -19,9 +19,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -32,6 +32,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "数値の前提を明記",
+        "reason": "Verifier C07"
       }
     ]
   },
@@ -133,9 +138,9 @@
       "src.sep-time-thermo"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -242,9 +247,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -276,12 +281,15 @@
     "confidence": "high",
     "sources": [
       "src.hubble1929",
-      "src.nasa-universe"
+      "src.nasa-universe",
+      "src.nasa-webb-bigbang",
+      "src.davis-lineweaver-2004",
+      "src.cooperstock1998"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -292,6 +300,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C08/C10"
       }
     ],
     "perspectives": [
@@ -358,9 +371,9 @@
       "src.desi-dr2-2025"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -394,9 +407,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -465,9 +478,9 @@
       "src.sep-time-thermo"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -478,8 +491,14 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "重力系の扱いの議論を追記",
+        "reason": "Verifier C27"
       }
-    ]
+    ],
+    "body": "重力が効く系では、一様に広がった状態より構造をつくった状態の方がエントロピーが大きいとする見方が一般的だが、自己重力系のエントロピーの扱いには議論がある。"
   },
   {
     "id": "con.evolving-dark-energy",
@@ -488,7 +507,7 @@
       "ja": "ダークエネルギーの時間変化の兆候",
       "en": "Hints of evolving dark energy"
     },
-    "summary": "DESIなどの観測を組み合わせると、ダークエネルギーの影響が時間とともに弱まっている可能性が示唆されている。発見の基準（5σ）には未到達。",
+    "summary": "DESIなどの観測の組み合わせで、ダークエネルギーの影響が弱まっている可能性が示された（2025年3月に2.8〜4.2σ）。超新星データの再較正後は最大約3.2σに低下。発見の基準（5σ）には未到達。",
     "domains": [
       "D01"
     ],
@@ -502,12 +521,13 @@
     "epistemic": "debate",
     "confidence": "medium",
     "sources": [
-      "src.desi-dr2-2025"
+      "src.desi-dr2-2025",
+      "src.des-recal-2025"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -518,6 +538,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "最新の再較正を反映",
+        "reason": "Verifier C56（規則6）"
       }
     ]
   },
@@ -541,9 +566,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -615,12 +640,14 @@
     "sources": [
       "src.h0dn-2026",
       "src.nasa-hubble-tension",
-      "src.planck2018-vi"
+      "src.planck2018-vi",
+      "src.freedman-cchp-2025",
+      "src.pantos-2026"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -631,6 +658,27 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "反対の立場を追加",
+        "reason": "Verifier C50/C53（品質基準11）"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "張力は小さいとする立場",
+        "view": "JWSTで別の距離指標（TRGBなど）を使ったCCHP（Freedmanら）はH0≈70を得て、ΛCDMと整合すると主張。",
+        "sources": [
+          "src.freedman-cchp-2025"
+        ]
+      },
+      {
+        "label": "食い違いの構図",
+        "view": "対立は初期宇宙対近傍宇宙というより、距離はしご対それ以外のほぼすべての方法だとする分析がある。",
+        "sources": [
+          "src.pantos-2026"
+        ]
       }
     ]
   },
@@ -676,7 +724,7 @@
       "ja": "リチウム問題",
       "en": "Cosmological lithium problem"
     },
-    "summary": "古い恒星で観測されるリチウム7の量が、ビッグバン元素合成の予測より数倍少ない問題。原因は未解決。",
+    "summary": "古い恒星で観測されるリチウム7の量が、ビッグバン元素合成の予測の約3分の1しかない（約3倍の食い違い）問題。原因は未解決。",
     "domains": [
       "D01"
     ],
@@ -689,9 +737,9 @@
       "src.pdg-bbn"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 1,
     "curriculum": [
@@ -702,6 +750,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "「数倍」→「約3倍」",
+        "reason": "Verifier C46"
       }
     ]
   },
@@ -797,9 +850,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -903,9 +956,9 @@
       "src.codata-planck-time"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -979,9 +1032,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1054,9 +1107,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -1090,9 +1143,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1166,9 +1219,9 @@
       "src.ashby2003"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1243,9 +1296,9 @@
       "src.pdg-bbn"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1266,7 +1319,7 @@
       "ja": "原子時計・GPSによる相対論の検証",
       "en": "Clock & GPS tests of relativity"
     },
-    "summary": "高さを33cm変えただけで時計の進み方の差が測定された実験や、GPS衛星の時計補正が、相対論の時間の遅れを支える。",
+    "summary": "アルミニウムイオン光時計で高さを約33cm変えただけで時計の進み方の差が測定された実験や、GPS衛星の時計補正（約38マイクロ秒/日）が、相対論の時間の遅れを支える。",
     "domains": [
       "D01"
     ],
@@ -1281,12 +1334,14 @@
     "confidence": "high",
     "sources": [
       "src.chou2010",
-      "src.ashby2003"
+      "src.ashby2003",
+      "src.nist-2010-al-clocks",
+      "src.ashby2002-physicstoday"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1297,6 +1352,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "時計の種類を訂正",
+        "reason": "Verifier C13"
       }
     ]
   },
@@ -1323,12 +1383,13 @@
     "sources": [
       "src.penzias-wilson-1965",
       "src.fixsen2009",
-      "src.planck2018-vi"
+      "src.planck2018-vi",
+      "src.alpher-herman-1948"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1339,6 +1400,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C44"
       }
     ]
   },
@@ -1362,9 +1428,9 @@
       "src.usgs-age-earth"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1385,7 +1451,7 @@
       "ja": "遠方銀河の赤方偏移",
       "en": "Redshift of distant galaxies"
     },
-    "summary": "遠い銀河ほど光の波長が長く（赤く）ずれており、距離と赤方偏移の関係が宇宙膨張を支持する。",
+    "summary": "遠い銀河ほど光の波長が長く（赤く）ずれており、距離と赤方偏移の関係（ハッブル・ルメートルの法則）が宇宙膨張を支持する。",
     "domains": [
       "D01"
     ],
@@ -1399,12 +1465,14 @@
     "epistemic": "fact",
     "confidence": "high",
     "sources": [
-      "src.hubble1929"
+      "src.hubble1929",
+      "src.lemaitre1927",
+      "src.iau-2018-hubble-lemaitre"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1415,6 +1483,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C39"
       }
     ]
   },
@@ -1601,9 +1674,9 @@
       "src.pdg-bbn"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1903,25 +1976,27 @@
       "ja": "最古の生命活動の痕跡",
       "en": "Earliest evidence of life"
     },
-    "summary": "遅くとも約35億年前には生命活動の痕跡がある。生命が誕生した時期と機構は不明。",
+    "summary": "約34億年前の地層に、生命の痕跡とされるもの（ストロマトライト）がある。より古い痕跡の主張もあり、解釈に議論がある。生命が誕生した時期と機構は不明。",
     "domains": [
       "D03"
     ],
     "level": 3,
     "parent": "thm.life",
     "time": {
-      "start_ya": 3500000000.0,
+      "start_ya": 3430000000.0,
       "end_ya": null,
-      "label": "遅くとも約35億年前",
+      "label": "約34億年前（より古い主張あり）",
       "uncertainty": "より古い痕跡の主張もあるが議論が続く"
     },
-    "epistemic": "theory",
+    "epistemic": "debate",
     "confidence": "medium",
-    "sources": [],
+    "sources": [
+      "src.allwood2006"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1933,6 +2008,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "ラベルと記述を訂正",
+        "reason": "Verifier C37"
       }
     ]
   },
@@ -1999,9 +2079,9 @@
       "src.usgs-age-earth"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2076,12 +2156,12 @@
     "epistemic": "theory",
     "confidence": "high",
     "sources": [
-      "src.nasa-universe"
+      "src.johnson2019-elements"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2092,6 +2172,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を差し替え",
+        "reason": "Verifier C33"
       }
     ]
   },
@@ -2159,9 +2244,9 @@
       "src.nasa-webb-bigbang"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2315,6 +2400,7 @@
     "epistemic": "theory",
     "confidence": "high",
     "sources": [
+      "src.hublin2017",
       "src.smithsonian-human"
     ],
     "verification": {
@@ -2359,9 +2445,9 @@
       "src.nasa-universe"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2481,9 +2567,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 1,
     "curriculum": [
@@ -2640,9 +2726,9 @@
       "src.nasa-webb-bigbang"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2653,6 +2739,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C30"
       }
     ]
   },
@@ -2718,12 +2809,13 @@
     "confidence": "high",
     "sources": [
       "src.ics-chart-2024",
-      "src.nasa-solar-system"
+      "src.nasa-solar-system",
+      "src.connelly2012"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2734,6 +2826,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "一次資料を追加",
+        "reason": "Verifier C34"
       }
     ]
   },
@@ -4160,9 +4257,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -4201,9 +4298,9 @@
       "src.usgs-age-earth"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -4276,9 +4373,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -4475,9 +4572,9 @@
       "src.pdg-bbn"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -4659,9 +4756,9 @@
       "src.uk-systems"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -4737,9 +4834,9 @@
       "src.sep-time-thermo"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -4855,9 +4952,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -4892,9 +4989,9 @@
       "src.sep-cosmology"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -4915,7 +5012,7 @@
       "ja": "一般相対性理論",
       "en": "General relativity"
     },
-    "summary": "重力を時空の曲がりとして説明する理論。重力の強い場所ほど時間の進み方が遅い。宇宙論の基礎になる。",
+    "summary": "重力を時空の曲がりとして説明する理論（1915年に完成）。重力の強い場所ほど時間の進み方が遅い。宇宙論の基礎になる。",
     "domains": [
       "D01"
     ],
@@ -4930,12 +5027,13 @@
     "confidence": "high",
     "sources": [
       "src.ashby2003",
-      "src.chou2010"
+      "src.chou2010",
+      "src.einstein1916"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -4946,6 +5044,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を追加",
+        "reason": "Verifier C12"
       }
     ]
   },
@@ -4974,9 +5077,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -5015,9 +5118,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -5051,9 +5154,9 @@
       "src.planck2018-vi"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 3,
     "curriculum": [
@@ -5087,9 +5190,9 @@
       "src.sep-time-thermo"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -5124,12 +5227,13 @@
     "epistemic": "theory",
     "confidence": "high",
     "sources": [
+      "src.einstein1905",
       "src.chou2010"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-23",
+      "by": "verifier（L0001の主張照合・3次）"
     },
     "target_level": 2,
     "curriculum": [
@@ -5140,6 +5244,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.0",
+        "change": "出典を一次資料に",
+        "reason": "Verifier C12"
       }
     ]
   }

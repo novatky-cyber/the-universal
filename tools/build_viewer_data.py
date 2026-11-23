@@ -56,6 +56,11 @@ def main():
     }
     out = ROOT / "viewer" / "data" / "graph.json"
     out.parent.mkdir(parents=True, exist_ok=True)
+    if errors:
+        for e in errors:
+            print("ERROR", e)
+        print("build_viewer_data: NG（graph.json は更新しない）")
+        return 1
     out.write_text(json.dumps(graph, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     for e in errors:
         print("ERROR", e)

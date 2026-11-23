@@ -33,6 +33,41 @@ def split_frontmatter(text):
     return yaml.safe_load(m.group(1)), m.group(2)
 
 
+FENCE = re.compile(r"^(```|~~~)")
+
+
+def outside_code_md(text, fn):
+    """Markdown のフェンス・インラインコードの外側だけに fn を適用する。"""
+    out, in_fence, chunk = [], False, []
+    for line in text.split("\n"):
+        if FENCE.match(line.strip()):
+            if not in_fence:
+                out.append(_apply_inline_code(("\n".join(chunk)), fn)) if chunk else None
+                chunk = []
+            in_fence = not in_fence
+            out.append(line)
+            continue
+        if in_fence:
+            out.append(line)
+        else:
+            chunk.append(line)
+            continue
+    if chunk:
+        out.append(_apply_inline_code("\n".join(chunk), fn))
+    return "\n".join(out)
+
+
+def _apply_inline_code(text, fn):
+    parts = re.split(r"(`[^`\n]*`)", text)
+    return "".join(p if p.startswith("`") and p.endswith("`") and len(p) > 1 else fn(p) for p in parts)
+
+
+def outside_code_html(html, fn):
+    """HTML の <pre>…</pre> と <code>…</code> の外側だけに fn を適用する。"""
+    parts = re.split(r"(<pre[\s\S]*?</pre>|<code[\s\S]*?</code>)", html)
+    return "".join(p if p.startswith("<pre") or p.startswith("<code") else fn(p) for p in parts)
+
+
 class Renderer:
     def __init__(self, data, kind):
         self.data, self.kind = data, kind
@@ -60,15 +95,21 @@ class Renderer:
             label = label or self.nodes[nid]["title"]["ja"]
             return f"<span class='nref'>{label}<span class='nid'>{nid}</span></span>"
 
-        text = re.sub(r"\[\[src:([a-z0-9-]+)\]\]", src, text)
-        text = re.sub(r"\[\[node:([a-z]+\.[a-z0-9-]+)(?:\|([^\]]+))?\]\]", node, text)
-        return text
+        def apply(t):
+            t = re.sub(r"\[\[src:([a-z0-9-]+)\]\]", src, t)
+            t = re.sub(r"\[\[node:([a-z]+\.[a-z0-9-]+)(?:\|([^\]]+))?\]\]", node, t)
+            # 日本語の約物（「」など）に隣接する **太字** は CommonMark の規則で無効になるため、先に変換する
+            t = re.sub(r"\*\*([^*\n]+?)\*\*", r"<strong>\1</strong>", t)
+            for bad in re.findall(r"\[\[[^\]]*\]\]", t):
+                self.errors.append(f"[T-09] 書式の誤った参照 {bad}")
+            return t
+        return outside_code_md(text, apply)
 
     def badges(self, html):
         def rep(m):
             ja = m.group(1)
             return f"<span class='ep ep-{EPISTEMIC_FROM_JA[ja]}'>{ja}</span>"
-        return re.sub(r"\{(事実|理論|論争|規範|仮説|未知)\}", rep, html)
+        return outside_code_html(html, lambda h: re.sub(r"\{(事実|理論|論争|規範|仮説|未知)\}", rep, h))
 
     def figure(self, name, highlight):
         if name == "minimap":
@@ -86,8 +127,6 @@ class Renderer:
             s = self.sources[sid]
             meta = "．".join(x for x in [s.get("author"), s.get("publisher"), str(s["year"]) if s.get("year") else ""] if x)
             unv = "" if s["existence"] == "verified" else " <span class='unv'>［実在未確認］</span>"
-            if s["existence"] != "verified" and self.kind == "lesson":
-                self.errors.append(f"[T-10] 教材が実在未確認の出典 {sid} を参照している")
             url = f"<br><span class='small'>{s['url']}</span>" if s.get("url") else ""
             items.append(f"<li>{s['title']}．{meta}{unv}{url}</li>")
         return "<ol class='srcs'>" + "".join(items) + "</ol>" if items else "<p class='small'>（参照なし）</p>"
@@ -101,8 +140,15 @@ class Renderer:
                 out.append(self.badges(md.render(self.inline("\n".join(buf)))))
                 buf.clear()
 
+        in_fence = False
         while i < len(lines):
             line = lines[i]
+            if FENCE.match(line.strip()):
+                in_fence = not in_fence
+            if in_fence or FENCE.match(line.strip()):
+                buf.append(line)
+                i += 1
+                continue
             m = re.match(r"^:::(point|analogy|caution|exercise|write)\s*(.*)$", line)
             if m:
                 flush()
@@ -139,12 +185,26 @@ class Renderer:
             i += 1
         flush()
         html = "\n".join(out)
+        if self.kind == "lesson":
+            for sid in self.cited:
+                if self.sources[sid]["existence"] != "verified":
+                    self.errors.append(f"[T-10] 教材が実在未確認の出典 {sid} を参照している")
         return html.replace("@@SOURCES@@", self.sources_html())
 
 
 
 def section_heads(body):
-    return set(re.findall(r"^## (\S+?)[.．\s]", body, re.M))
+    heads, in_fence = set(), False
+    for line in body.split("\n"):
+        if FENCE.match(line.strip()):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        m = re.match(r"^## (\d+)[.．]", line) or re.match(r"^## (付録[A-Z])", line)
+        if m:
+            heads.add(m.group(1))
+    return heads
 
 
 def check_sections(bodies, kind):
@@ -154,12 +214,12 @@ def check_sections(bodies, kind):
     return [f"[T-07] 必須セクション「{r}」がない" for r in req if r not in heads]
 
 
-def pdf_from_html(html, out_pdf, header):
+def pdf_from_html(html, out_pdf, header, date=""):
     from playwright.sync_api import sync_playwright
     head = (f"<div style='font-size:7pt;width:100%;padding:0 10mm 0 16mm;color:#64748b;font-family:Noto Sans CJK JP'>"
             f"{header}</div>")
     foot = ("<div style='font-size:7pt;width:100%;padding:0 10mm 0 16mm;color:#64748b;font-family:Noto Sans CJK JP;"
-            "display:flex;justify-content:space-between'><span>The Universal</span>"
+            "display:flex;justify-content:space-between'><span>The Universal｜発行 " + str(date) + "</span>"
             "<span><span class='pageNumber'></span> / <span class='totalPages'></span></span></div>")
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path="/usr/bin/google-chrome") if Path("/usr/bin/google-chrome").exists() else p.chromium.launch()
@@ -172,7 +232,7 @@ def pdf_from_html(html, out_pdf, header):
 
 def build(path, kind, allow_unverified=False):
     data = load_all()
-    fm, body = split_frontmatter(path.read_text(encoding="utf-8"))
+    fm, body = split_frontmatter(path.read_text(encoding="utf-8").replace("\r\n", "\n"))
     r = Renderer(data, kind)
     highlight = fm.get("nodes", [])
     for nid in highlight:
@@ -198,7 +258,7 @@ def build(path, kind, allow_unverified=False):
         return r, None, 0
     vol_ja = {"a": "（前編）", "b": "（後編）"}.get(vol, "")
     header = (f"The Universal｜{fm.get('lesson_id', fm.get('report_id'))}{vol} {fm['title']}{vol_ja}｜地図 v{fm['map_version']}")
-    pdf_from_html(html, out_pdf, header)
+    pdf_from_html(html, out_pdf, header, fm.get("date", ""))
     pages = len(PdfReader(str(out_pdf)).pages)
     lo, hi = LIMITS[kind]
     if pages < lo:
@@ -216,7 +276,8 @@ def main():
     a = ap.parse_args()
     d = Path(a.cycle_dir)
     if not d.is_absolute():
-        d = ROOT / d
+        d = (Path.cwd() / d) if (Path.cwd() / d).exists() else (ROOT / d)
+    d = d.resolve()
     ok = True
     jobs = []
     if (d / "lesson.md").exists():
@@ -229,7 +290,7 @@ def main():
         print("ERROR lesson: lesson.md または lesson_a.md がない")
         ok = False
     for kind, paths in jobs:
-        bodies = [split_frontmatter(p.read_text(encoding="utf-8"))[1] for p in paths]
+        bodies = [split_frontmatter(p.read_text(encoding="utf-8").replace("\r\n", "\n"))[1] for p in paths]
         for e in check_sections(bodies, kind):
             print("ERROR", kind, e)
             ok = False

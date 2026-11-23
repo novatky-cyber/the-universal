@@ -18,11 +18,21 @@ const TICKS = [[13.8e9, "138億年前"], [1e9, "10億年前"], [1e8, "1億年前
 const xOfYa = (ya) => (ya >= 0 ? -10 * Math.log10(1 + ya) : 10 * Math.log10(1 + Math.abs(ya)));
 
 const $ = (s) => document.querySelector(s);
+const safeUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 let G, byId = {}, mode = "cyl", selected = null;
 const meshes = [], labels = {};
-let tween = null;
+let modeTween = null, camTween = null;
+
+// グループ内の線を外すとき、GPUメモリも解放する（iPhoneでのメモリ不足を防ぐ）
+function clearGroup(g) {
+  for (const c of [...g.children]) {
+    c.geometry?.dispose();
+    c.material?.dispose();
+    g.remove(c);
+  }
+}
 
 // ---------------------------------------------------------------- シーン
 const scene = new THREE.Scene();
@@ -39,16 +49,22 @@ Object.assign(labelRenderer.domElement.style, { position: "absolute", top: "0", 
 $("#scene").appendChild(labelRenderer.domElement);
 
 // 縦長の画面（iPhone）では時間軸を縦に置く（下が過去、上が現在）。横長では横（左が過去）。
-const PORTRAIT = innerHeight > innerWidth;
-if (PORTRAIT) camera.up.set(1, 0, 0);
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.08;
-controls.minDistance = 8;
-controls.maxDistance = 420;
-controls.target.set(-45, 0, 0);
-if (PORTRAIT) camera.position.set(-45, 70, 150);
-else camera.position.set(-40, 55, 150);
+// OrbitControls は作成時の camera.up を使うため、向きが変わったら作り直す。
+let portrait = innerHeight > innerWidth;
+let controls;
+function makeControls(resetView) {
+  const target = controls ? controls.target.clone() : new THREE.Vector3(-45, 0, 0);
+  controls?.dispose();
+  camera.up.set(...(portrait ? [1, 0, 0] : [0, 1, 0]));
+  if (resetView) camera.position.set(...(portrait ? [-45, 70, 150] : [-40, 55, 150]));
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.minDistance = 8;
+  controls.maxDistance = 420;
+  controls.target.copy(target);
+}
+makeControls(true);
 
 scene.add(new THREE.AmbientLight(0xffffff, 0.75));
 const dl = new THREE.DirectionalLight(0xffffff, 0.9);
@@ -119,6 +135,7 @@ function buildAxis() {
     el.textContent = lab;
     const o = new CSS2DObject(el);
     o.position.set(xOfYa(ya), 0, 0);
+    o.center.set(0.5, -0.6);
     axisGroup.add(o);
     const ring = new THREE.Mesh(new THREE.RingGeometry(0.0, 0.25, 12), new THREE.MeshBasicMaterial({ color: 0x64748b }));
     ring.position.set(xOfYa(ya), 0, 0);
@@ -166,13 +183,14 @@ function buildNodes() {
     el.className = "lbl l" + n.level;
     el.textContent = n.title.ja;
     const o = new CSS2DObject(el);
+    o.center.set(0.5, 1.6);   // ノードの少し上に表示（CSSのtransformは上書きされるため center で指定）
     m.add(o);
     labels[n.id] = o;
   }
 }
 
 function buildTree() {
-  treeGroup.clear();
+  clearGroup(treeGroup);
   const pts = [];
   for (const n of G.nodes) {
     if (!n.parent || !byId[n.parent]) continue;
@@ -201,14 +219,14 @@ function applyMode(animateIt = true) {
     return;
   }
   const t0 = performance.now();
-  tween = (now) => {
+  modeTween = (now) => {
     const k = Math.min(1, (now - t0) / 1000), e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
     meshes.forEach((m, i) => m.position.lerpVectors(from[i], to[i], e));
     axisGroup.position.lerpVectors(axFrom, axTo, e);
-    if (k >= 1) { tween = null; buildTree(); refreshEdges(); }
+    if (k >= 1) { modeTween = null; buildTree(); refreshEdges(); }
   };
-  treeGroup.clear();
-  edgeGroup.clear();
+  clearGroup(treeGroup);
+  clearGroup(edgeGroup);
 }
 
 $("#btn-mode").onclick = () => { mode = mode === "cyl" ? "flat" : "cyl"; applyMode(true); };
@@ -222,13 +240,22 @@ $("#btn-search").onclick = () => {
 // ---------------------------------------------------------------- 選択・詳細パネル
 const ray = new THREE.Raycaster();
 const ptr = new THREE.Vector2();
-let down = null;
-renderer.domElement.addEventListener("pointerdown", (e) => (down = { x: e.clientX, y: e.clientY }));
+let down = null, activePointers = 0, multiTouch = false;
+renderer.domElement.addEventListener("pointerdown", (e) => {
+  activePointers++;
+  if (activePointers > 1) multiTouch = true;
+  down = { x: e.clientX, y: e.clientY, t: performance.now() };
+});
+const pointerEnd = () => { activePointers = Math.max(0, activePointers - 1); };
+renderer.domElement.addEventListener("pointercancel", () => { pointerEnd(); multiTouch = activePointers > 0; });
 renderer.domElement.addEventListener("pointerup", (e) => {
-  if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 8) return;
+  pointerEnd();
+  const wasMulti = multiTouch;
+  if (activePointers === 0) multiTouch = false;
+  if (wasMulti || !down || performance.now() - down.t > 600 || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 8) return;
   ptr.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
   ray.setFromCamera(ptr, camera);
-  const hit = ray.intersectObjects(meshes, false)[0];
+  const hit = ray.intersectObjects(meshes.filter((m) => m.visible), false)[0];
   if (hit) select(hit.object.userData.id, false);
 });
 
@@ -251,7 +278,7 @@ function clearSelection() {
   history.replaceState(null, "", location.pathname);
   meshes.forEach((m) => { m.material.opacity = 1; m.scale.setScalar(1); });
   Object.values(labels).forEach((o) => o.element.classList.remove("sel"));
-  edgeGroup.clear();
+  clearGroup(edgeGroup);
   $("#panel").classList.add("hidden");
   setOffset(false);
 }
@@ -264,7 +291,7 @@ function setOffset(on) {
 $("#panel-close").onclick = clearSelection;
 
 function refreshEdges() {
-  edgeGroup.clear();
+  clearGroup(edgeGroup);
   if (!selected) return;
   for (const e of G.edges) {
     if (e.from !== selected && e.to !== selected) continue;
@@ -279,15 +306,17 @@ function refreshEdges() {
 }
 
 function flyTo(id) {
-  const target = posOf(id);
+  // 表示切替の途中なら、移動先の座標で飛ぶ
+  const n = byId[id];
+  const target = modeTween ? new THREE.Vector3().fromArray(n.pos[mode]) : posOf(id);
   const dir = camera.position.clone().sub(controls.target).normalize();
   const endPos = target.clone().add(dir.multiplyScalar(38));
   const p0 = camera.position.clone(), t0c = controls.target.clone(), t0 = performance.now();
-  tween = (now) => {
+  camTween = (now) => {
     const k = Math.min(1, (now - t0) / 900), e = 1 - Math.pow(1 - k, 3);
     camera.position.lerpVectors(p0, endPos, e);
     controls.target.lerpVectors(t0c, target, e);
-    if (k >= 1) tween = null;
+    if (k >= 1) camTween = null;
   };
 }
 
@@ -301,12 +330,13 @@ function renderPanel(n) {
     ` <span class="chip ep ep-${e.epistemic}" style="font-size:10px;padding:1px 6px">${EP_JA[e.epistemic]}</span>` +
     (e.note ? `<div class="small">${esc(e.note)}</div>` : "") + "</li>";
   const children = G.nodes.filter((x) => x.parent === n.id);
-  const srcs = n.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}` +
+  const srcs = n.sources.map((s) => `<li>${safeUrl(s.url) ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}` +
     (s.existence === "verified" ? "" : ` <span class="small">［実在未確認］</span>`) + "</li>").join("");
   const persp = (n.perspectives || []).map((p) => `<li><b>${esc(p.label)}</b>：${esc(p.view)}</li>`).join("");
   const sess = n.curriculum.map((c) => {
     const s = G.sessions[c];
-    const pdfs = (s?.lessons || []).map((f) => ` <a href="${esc(f)}" target="_blank">PDF</a>`).join("");
+    const pdfs = (s?.lessons || []).filter((f) => /^output\/[\w./-]+\.pdf$/.test(f))
+      .map((f, i, a) => ` <a href="${esc(f)}" target="_blank" rel="noopener">PDF${a.length > 1 ? "（" + "前後"[i] + "編）" : ""}</a>`).join("");
     return `<li>${esc(c)} ${esc(s?.title || "")}${pdfs}</li>`;
   }).join("");
   $("#panel-body").innerHTML = `
@@ -381,7 +411,7 @@ function updateLabels() {
     const dist = camera.position.distanceTo(tmp);
     tmp.project(camera);
     if (tmp.z > 1 || Math.abs(tmp.x) > 1.1 || Math.abs(tmp.y) > 1.1) continue;
-    const sx = (tmp.x + 1) / 2 * innerWidth, sy = (1 - tmp.y) / 2 * innerHeight - 14;
+    const sx = (tmp.x + 1) / 2 * innerWidth, sy = (1 - tmp.y) / 2 * innerHeight - 16;
     const fs = n.level === 2 ? 13 : 11;
     const w = Math.min(n.title.ja.length, 22) * fs, h = fs + 5;
     const pri = (n.id === selected ? -100 : 0) + n.level * 10 + dist / 50;
@@ -401,7 +431,9 @@ function updateLabels() {
 // ---------------------------------------------------------------- ループ
 function animate(now) {
   requestAnimationFrame(animate);
-  if (tween) tween(now ?? performance.now());
+  const t = now ?? performance.now();
+  if (modeTween) modeTween(t);
+  if (camTween) camTween(t);
   controls.update();
   updateLabels();
   renderer.render(scene, camera);
@@ -409,6 +441,8 @@ function animate(now) {
 }
 
 addEventListener("resize", () => {
+  const p = innerHeight > innerWidth;
+  if (p !== portrait) { portrait = p; makeControls(true); }
   camera.aspect = innerWidth / innerHeight;
   setOffset(!$("#panel").classList.contains("hidden"));
   camera.updateProjectionMatrix();

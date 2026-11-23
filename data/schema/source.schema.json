@@ -32,7 +32,8 @@
         ]
       },
       "url": {
-        "type": "string"
+        "type": "string",
+        "pattern": "^(https?://\\S+)?$"
       },
       "kind": {
         "enum": [
