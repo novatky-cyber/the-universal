@@ -7,6 +7,7 @@
 """
 import argparse
 import re
+from html import escape
 import sys
 from pathlib import Path
 
@@ -158,8 +159,8 @@ class Renderer:
             s = self.sources[sid]
             meta = "．".join(x for x in [s.get("author"), s.get("publisher"), str(s["year"]) if s.get("year") else ""] if x)
             unv = "" if s["existence"] == "verified" else " <span class='unv'>［実在未確認］</span>"
-            url = f"<br><span class='url'>{s['url']}</span>" if s.get("url") else ""
-            items.append(f"<li>{s['title']}．{meta}{unv}{url}</li>")
+            url = f" <span class='url'>{escape(s['url'])}</span>" if s.get("url") else ""
+            items.append(f"<li>{escape(s['title'])}．{escape(meta)}{unv}{url}</li>")
         return "<ol class='srcs'>" + "".join(items) + "</ol>" if items else "<p class='small'>（参照なし）</p>"
 
     def render_body(self, body, highlight):
