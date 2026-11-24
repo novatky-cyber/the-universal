@@ -731,5 +731,301 @@
     "to": "thm.world-history",
     "type": "supports",
     "epistemic": "debate"
+  },
+  {
+    "id": "e.0098",
+    "from": "evt.earth-formation",
+    "to": "evt.earliest-life",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0099",
+    "from": "con.luca",
+    "to": "evt.earliest-life",
+    "type": "precedes",
+    "epistemic": "hypothesis",
+    "note": "分子時計による推定。岩石の証拠との差は未解決",
+    "sources": [
+      "src.moody2024"
+    ]
+  },
+  {
+    "id": "e.0100",
+    "from": "evt.miller-urey",
+    "to": "q.origin-of-life",
+    "type": "addresses",
+    "epistemic": "fact",
+    "sources": [
+      "src.nasa-miller-urey-2008"
+    ]
+  },
+  {
+    "id": "e.0101",
+    "from": "thy.rna-world",
+    "to": "q.origin-of-life",
+    "type": "addresses",
+    "epistemic": "hypothesis",
+    "sources": [
+      "src.joyce2002"
+    ]
+  },
+  {
+    "id": "e.0102",
+    "from": "con.origin-settings",
+    "to": "q.origin-of-life",
+    "type": "addresses",
+    "epistemic": "hypothesis",
+    "sources": [
+      "src.jackson2016",
+      "src.damer-deamer2020"
+    ]
+  },
+  {
+    "id": "e.0103",
+    "from": "evd.extraterrestrial-organics",
+    "to": "q.origin-of-life",
+    "type": "addresses",
+    "epistemic": "fact",
+    "note": "材料の存在は生命誕生の十分条件ではない",
+    "sources": [
+      "src.nasa-bennu-2025"
+    ]
+  },
+  {
+    "id": "e.0104",
+    "from": "evd.extraterrestrial-organics",
+    "to": "thy.rna-world",
+    "type": "supports",
+    "epistemic": "hypothesis",
+    "note": "整合的というにとどまる",
+    "sources": [
+      "src.nasa-bennu-sugars-2025"
+    ]
+  },
+  {
+    "id": "e.0105",
+    "from": "con.definition-of-life",
+    "to": "q.origin-of-life",
+    "type": "raises",
+    "epistemic": "debate",
+    "sources": [
+      "src.nasa-life-definition"
+    ]
+  },
+  {
+    "id": "e.0106",
+    "from": "con.natural-selection",
+    "to": "thy.darwinian-evolution",
+    "type": "part_of",
+    "epistemic": "theory",
+    "sources": [
+      "src.ue-natural-selection"
+    ]
+  },
+  {
+    "id": "e.0107",
+    "from": "thy.modern-synthesis",
+    "to": "thy.darwinian-evolution",
+    "type": "requires",
+    "epistemic": "theory",
+    "note": "遺伝学と統合して拡張",
+    "sources": [
+      "src.mizzou-modern-synthesis"
+    ]
+  },
+  {
+    "id": "e.0108",
+    "from": "con.genetic-drift",
+    "to": "thy.modern-synthesis",
+    "type": "part_of",
+    "epistemic": "theory",
+    "sources": [
+      "src.openstax-mechanisms"
+    ]
+  },
+  {
+    "id": "e.0109",
+    "from": "thy.neutral-theory",
+    "to": "con.genetic-drift",
+    "type": "applies",
+    "epistemic": "theory",
+    "sources": [
+      "src.soken-ohta-interview"
+    ]
+  },
+  {
+    "id": "e.0110",
+    "from": "thy.neutral-theory",
+    "to": "con.natural-selection",
+    "type": "contradicts",
+    "epistemic": "debate",
+    "note": "分子レベルでの相対的重要性をめぐる論争。形態の適応は否定しない",
+    "sources": [
+      "src.kernhahn2018",
+      "src.jensen2019"
+    ]
+  },
+  {
+    "id": "e.0111",
+    "from": "con.natural-selection",
+    "to": "q.origin-of-life",
+    "type": "requires",
+    "epistemic": "theory",
+    "note": "自然選択は複製し遺伝する存在を前提にするため、起源の説明にならない",
+    "sources": [
+      "src.ue-natural-selection"
+    ]
+  },
+  {
+    "id": "e.0112",
+    "from": "evd.fossil-record",
+    "to": "con.common-descent",
+    "type": "evidence_for",
+    "epistemic": "theory",
+    "sources": [
+      "src.ue-lines-of-evidence"
+    ]
+  },
+  {
+    "id": "e.0113",
+    "from": "evd.observed-evolution",
+    "to": "con.natural-selection",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "sources": [
+      "src.grant2006",
+      "src.blount2008"
+    ]
+  },
+  {
+    "id": "e.0114",
+    "from": "thy.endosymbiosis",
+    "to": "evt.eukaryotes",
+    "type": "causes",
+    "epistemic": "theory",
+    "note": "ミトコンドリアの獲得。時期と順序は論争",
+    "sources": [
+      "src.sloan2018"
+    ]
+  },
+  {
+    "id": "e.0115",
+    "from": "con.luca",
+    "to": "con.common-descent",
+    "type": "part_of",
+    "epistemic": "hypothesis",
+    "sources": [
+      "src.moody2024"
+    ]
+  },
+  {
+    "id": "e.0116",
+    "from": "evt.earliest-life",
+    "to": "evt.goe",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0117",
+    "from": "evt.goe",
+    "to": "evt.eukaryotes",
+    "type": "precedes",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0118",
+    "from": "evt.eukaryotes",
+    "to": "evt.snowball-earth",
+    "type": "precedes",
+    "epistemic": "theory"
+  },
+  {
+    "id": "e.0119",
+    "from": "evt.snowball-earth",
+    "to": "evt.cambrian",
+    "type": "precedes",
+    "epistemic": "theory",
+    "sources": [
+      "src.ics-chart-2024"
+    ]
+  },
+  {
+    "id": "e.0120",
+    "from": "evt.cambrian",
+    "to": "evt.land-colonization",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0121",
+    "from": "evt.land-colonization",
+    "to": "evt.kpg",
+    "type": "precedes",
+    "epistemic": "fact"
+  },
+  {
+    "id": "e.0122",
+    "from": "evt.kpg",
+    "to": "con.mass-extinction",
+    "type": "instance_of",
+    "epistemic": "theory",
+    "sources": [
+      "src.owid-mass-extinctions"
+    ]
+  },
+  {
+    "id": "e.0123",
+    "from": "con.mass-extinction",
+    "to": "con.biodiversity-crisis",
+    "type": "analogous",
+    "epistemic": "debate",
+    "note": "「第6の大量絶滅」と呼ぶかは論争",
+    "sources": [
+      "src.marshall2023",
+      "src.cowie2022"
+    ]
+  },
+  {
+    "id": "e.0124",
+    "from": "evd.fossil-record",
+    "to": "evt.cambrian",
+    "type": "evidence_for",
+    "epistemic": "theory",
+    "sources": [
+      "src.zhang-shu2021"
+    ]
+  },
+  {
+    "id": "e.0125",
+    "from": "q.units-of-selection",
+    "to": "con.natural-selection",
+    "type": "raises",
+    "epistemic": "debate",
+    "sources": [
+      "src.sep-units-selection"
+    ]
+  },
+  {
+    "id": "e.0126",
+    "from": "evd.radiometric-dating",
+    "to": "con.mass-extinction",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "ペルム紀末の絶滅の継続期間の測定",
+    "sources": [
+      "src.burgess2014"
+    ]
+  },
+  {
+    "id": "e.0127",
+    "from": "evt.kpg",
+    "to": "thm.human-evolution",
+    "type": "enables",
+    "epistemic": "debate",
+    "note": "哺乳類の生態的多様化を促した可能性。分岐の時期は論争",
+    "sources": [
+      "src.springer2019"
+    ]
   }
 ]
