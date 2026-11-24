@@ -87,10 +87,10 @@ sup.cite { font-family: var(--mono); font-size: 6pt; color: var(--red); margin-l
 .write .line { height: 8.5mm; border-bottom: 0.5pt dotted #b8b2a6; }
 
 /* ---- 出典一覧 */
-.srcs { font-size: 8pt; line-height: 1.6; padding-left: 6mm; }
-.srcs li { margin-bottom: 1.8mm; word-break: break-all; }
+.srcs { font-size: 7pt; line-height: 1.38; padding-left: 6mm; }
+.srcs li { margin-bottom: 0.7mm; overflow-wrap: anywhere; }
 .srcs li::marker { font-family: var(--mono); color: var(--red); }
-.srcs .url { font-family: var(--mono); font-size: 6.6pt; color: var(--muted); }
+.srcs .url { font-family: var(--mono); font-size: 6.2pt; color: var(--ink2, #555); margin-left: 1.5mm; word-break: break-all; }
 .srcs .unv { color: var(--red); font-weight: 700; }
 .small { font-size: 8pt; color: var(--muted); }
 
