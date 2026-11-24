@@ -215,7 +215,7 @@
       "history": [],
       "next_review": null,
       "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
     },
     "evt.earth-formation": {
       "level": 0,
@@ -544,6 +544,214 @@
       "next_review": null,
       "recheck": false,
       "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.biodiversity-crisis": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.common-descent": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.definition-of-life": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.genetic-drift": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.luca": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.mass-extinction": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.natural-selection": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "con.origin-settings": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evd.extraterrestrial-organics": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evd.fossil-record": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evd.observed-evolution": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.cambrian": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.eukaryotes": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.goe": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.kpg": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.land-colonization": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.miller-urey": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "evt.snowball-earth": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "q.origin-of-life": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "q.units-of-selection": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thm.life": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thy.darwinian-evolution": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thy.endosymbiosis": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thy.modern-synthesis": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thy.neutral-theory": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thy.rna-world": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false,
+      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
     }
   }
 }

@@ -803,7 +803,7 @@
       "ja": "自然選択",
       "en": "Natural selection"
     },
-    "summary": "遺伝する変異のうち、生存・繁殖に有利なものが集団内に広がる過程。進化の主要な仕組みの一つ。",
+    "summary": "変異・遺伝・繁殖成功の差の3条件がそろうと、その環境で子を多く残せる形質が世代を重ねて集団に広がる過程。目的や先見性はない。進化を動かす主な力の一つ（ほかに突然変異・遺伝的浮動・遺伝子流動）。",
     "domains": [
       "D03"
     ],
@@ -812,11 +812,15 @@
     "time": null,
     "epistemic": "theory",
     "confidence": "high",
-    "sources": [],
+    "sources": [
+      "src.ue-natural-selection",
+      "src.ue-misconceptions",
+      "src.openstax-mechanisms"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 3,
     "curriculum": [
@@ -827,6 +831,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.2",
+        "change": "summary、sourcesを更新",
+        "reason": "出典の登録。「生存」より「繁殖成功の差」を中心にした表現へ（Researcher R2の指摘）"
       }
     ]
   },
@@ -1699,7 +1708,7 @@
       "ja": "カンブリア紀の動物の多様化",
       "en": "Cambrian diversification"
     },
-    "summary": "カンブリア紀（約5億3880万年前から）に動物が急速に多様化した。変化はエディアカラ紀から段階的に進んだ面もある。",
+    "summary": "カンブリア紀（538.8±0.6 Ma から）の最初の約2000万年で、左右相称動物の主な系統の多くが化石記録に現れた。動物らしい大型の化石はエディアカラ生物群（約5.74億年前〜）から。原因は単一ではなく、分子時計は動物の起源をより古く推定する（論争）。",
     "domains": [
       "D03"
     ],
@@ -1713,12 +1722,18 @@
     "epistemic": "fact",
     "confidence": "high",
     "sources": [
-      "src.ics-chart-2024"
+      "src.ics-chart-2024",
+      "src.zhang-shu2021",
+      "src.wood2019",
+      "src.matthews2020",
+      "src.iucn-chengjiang",
+      "src.canadian-enc-burgess",
+      "src.durbin2026"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1729,6 +1744,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.2",
+        "change": "summary、sourcesを更新",
+        "reason": "年代を再確認（ICS v2024/12）。原因の多元性と分子時計との食い違いを追記"
       }
     ]
   },
@@ -1978,7 +1998,7 @@
       "ja": "最古の生命活動の痕跡",
       "en": "Earliest evidence of life"
     },
-    "summary": "約34億年前の地層に、生命の痕跡とされるもの（ストロマトライト）がある。より古い痕跡の主張もあり、解釈に議論がある。生命が誕生した時期と機構は不明。",
+    "summary": "比較的広く受け入れられている最古の生命の痕跡は、約34.3億年前のストロマトライト（豪州ピルバラ）。約37億年前（イスア）、37.7億年前以上（ヌブアギトゥク）、約41億年前（ジルコン中の炭素）の主張はいずれも論争中で、形や化学だけでは生物起源と決められない。",
     "domains": [
       "D03"
     ],
@@ -1993,12 +2013,18 @@
     "epistemic": "debate",
     "confidence": "medium",
     "sources": [
-      "src.allwood2006"
+      "src.allwood2006",
+      "src.javaux2019",
+      "src.nutman2016",
+      "src.allwood2018",
+      "src.dodd2017",
+      "src.mcmahon2019",
+      "src.bell2015"
     ],
     "verification": {
       "status": "verified",
-      "date": "2026-11-23",
-      "by": "verifier（L0001の主張照合・3次）"
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2015,6 +2041,11 @@
         "map_version": "1.0",
         "change": "ラベルと記述を訂正",
         "reason": "Verifier C37"
+      },
+      {
+        "map_version": "1.2",
+        "change": "summary、sourcesを更新",
+        "reason": "出典の追加と、より古い主張（いずれも論争中）の明記"
       }
     ]
   },
@@ -2308,7 +2339,7 @@
       "ja": "大酸化イベント",
       "en": "Great Oxidation Event"
     },
-    "summary": "約24億年前、大気中の酸素が増えた。生命（光合成）が地球環境を大きく変えた例。",
+    "summary": "約24.3億年前に大気の酸素の増加が始まり、約2億年にわたって増減を繰り返したのち約22.2億年前に定着した長い移行。酸素発生型光合成は必要条件だが十分条件ではなく、その開始は数億年早かった可能性がある。主因が供給の増加か消費の減少かは論争中。",
     "domains": [
       "D03",
       "D01"
@@ -2316,17 +2347,23 @@
     "level": 3,
     "parent": "thm.life",
     "time": {
-      "start_ya": 2400000000.0,
-      "end_ya": null,
-      "label": "約24億年前"
+      "start_ya": 2430000000.0,
+      "end_ya": 2220000000.0,
+      "label": "約24.3億〜22.2億年前",
+      "uncertainty": "開始・定着の年代は硫黄同位体による推定"
     },
     "epistemic": "theory",
     "confidence": "high",
-    "sources": [],
+    "sources": [
+      "src.poulton2021",
+      "src.lyons2014",
+      "src.planavsky2014",
+      "src.luo2022"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2337,6 +2374,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.2",
+        "change": "time、summary、sourcesを更新",
+        "reason": "【訂正・中】一点の出来事ではなく約2億年の揺れ動く移行。光合成の開始とは数億年の差があり、原因は供給と消費のつり合い（Poulton 2021、Lyons 2014）"
       }
     ]
   },
@@ -2592,7 +2634,7 @@
       "ja": "白亜紀末の大量絶滅",
       "en": "K–Pg extinction"
     },
-    "summary": "約6600万年前、非鳥類型の恐竜などが絶滅した。",
+    "summary": "6600万年前、非鳥類型の恐竜などが絶滅した。チクシュルーブ衝突が主因であることに強い合意があり（イリジウム層、クレーター、絶滅との同時性）、インドのデカン・トラップの火山活動の関与の程度は論争中。",
     "domains": [
       "D03"
     ],
@@ -2606,12 +2648,18 @@
     "epistemic": "fact",
     "confidence": "high",
     "sources": [
-      "src.ics-chart-2024"
+      "src.ics-chart-2024",
+      "src.alvarez1980",
+      "src.smit1980",
+      "src.schulte2010",
+      "src.renne2013",
+      "src.natgeo-deccan-2019",
+      "src.hull2020"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2622,6 +2670,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.2",
+        "change": "summary、sourcesを更新",
+        "reason": "原因の記述を追加（衝突が主因であることへの強い合意、デカン・トラップの関与は論争）"
       }
     ]
   },
@@ -3872,7 +3925,7 @@
       "ja": "生命はどのように誕生したのか",
       "en": "How did life originate?"
     },
-    "summary": "生命の起源の時期と機構は未解明。進化の仕組みとは別の問題。",
+    "summary": "生命の起源（化学から最初の生命へ）の時期・場所・仕組みは未解明。RNAワールド、代謝先行、熱水噴出孔、陸上温泉などの仮説はいずれも未検証。自然選択は複製し遺伝する存在を前提にするため、進化の理論とは別の問題。",
     "domains": [
       "D03"
     ],
@@ -3881,11 +3934,15 @@
     "time": null,
     "epistemic": "unknown",
     "confidence": "high",
-    "sources": [],
+    "sources": [
+      "src.uchicago-origin-explainer",
+      "src.ue-natural-selection",
+      "src.nasa-life-definition"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 3,
     "curriculum": [
@@ -3896,6 +3953,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.2",
+        "change": "summary、sourcesを更新",
+        "reason": "出典の登録（独立検証済み）"
       }
     ]
   },
@@ -4613,27 +4675,30 @@
       "ja": "生命の起源と進化",
       "en": "Origin & evolution of life"
     },
-    "summary": "生命の起源（未解明）と、その後の進化・絶滅・生態系の変化を扱う。起源と進化は別の問題として区別する。",
+    "summary": "生命の起源（未解明）と、その後の進化・絶滅・地球環境との共進化・現在の生物多様性の喪失を扱う。起源と進化は別の問題として区別する。",
     "domains": [
       "D03"
     ],
     "level": 2,
     "parent": null,
     "time": {
-      "start_ya": 4000000000.0,
+      "start_ya": 4200000000.0,
       "end_ya": 0,
-      "label": "約40億年前？〜現在",
-      "uncertainty": "生命の起源の時期は未確定"
+      "label": "約42億年前（推定）〜現在",
+      "uncertainty": "確かな痕跡は約34億年前。LUCAの分子時計による推定は約42億年前。生命の誕生の時期は未確定"
     },
     "epistemic": "theory",
     "confidence": "high",
     "sources": [
-      "src.ics-chart-2024"
+      "src.ics-chart-2024",
+      "src.javaux2019",
+      "src.moody2024",
+      "src.ue-lines-of-evidence"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -4644,6 +4709,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.2",
+        "change": "time、summary、sourcesを更新",
+        "reason": "「約40億年前？」の根拠が曖昧（Researcher R1・R3の指摘）。確かな痕跡と推定を区別"
       }
     ]
   },
@@ -5728,7 +5798,9 @@
       "src.notion-ai-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -5944,7 +6016,9 @@
       "src.notion-ai-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -6196,7 +6270,9 @@
       "src.notion-ai-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -6268,7 +6344,9 @@
       "src.notion-ai-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -6987,7 +7065,9 @@
       "src.notion-ai-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -9503,7 +9583,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -9608,7 +9690,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -10138,7 +10222,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -13043,6 +13129,833 @@
         "map_version": "1.1",
         "change": "取り込み",
         "reason": "あなたのNotionメモから（2026-11-23、DOC-01 F11）"
+      }
+    ]
+  },
+  {
+    "id": "con.definition-of-life",
+    "type": "concept",
+    "title": {
+      "ja": "生命の定義",
+      "en": "Definition of life"
+    },
+    "summary": "生命の定義に単一の合意はない。よく引用される「ダーウィン型進化が可能な自己維持的な化学系」はNASAの作業部会に由来する作業定義で、ウイルスの扱いなどに限界がある。",
+    "domains": [
+      "D03",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [
+      "src.nasa-life-definition"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.miller-urey",
+    "type": "event",
+    "title": {
+      "ja": "ミラー＝ユーリー実験",
+      "en": "Miller–Urey experiment"
+    },
+    "summary": "1953年、原始大気を模した気体に放電を加え、アミノ酸ができることを示した実験（同定は5種）。2008年の再分析では火山型装置の試料から22種。前提とした大気組成は現在は支持されていない。",
+    "domains": [
+      "D03",
+      "D01"
+    ],
+    "level": 4,
+    "parent": "q.origin-of-life",
+    "time": {
+      "start_ya": 73,
+      "end_ya": null,
+      "label": "1953年"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.nasa-miller-urey-2008",
+      "src.johnson2008",
+      "src.uchicago-origin-explainer"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "thy.rna-world",
+    "type": "theory",
+    "title": {
+      "ja": "RNAワールド仮説",
+      "en": "RNA world hypothesis"
+    },
+    "summary": "DNAとタンパク質の分業の前に、RNAが遺伝情報と触媒の両方を担う段階があったとする仮説（名称はGilbert 1986）。部品の一部の前生物的合成は示されたが、全体の経路は未解決。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "q.origin-of-life",
+    "time": null,
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.gilbert1986",
+      "src.joyce2002",
+      "src.robinson2005-plos",
+      "src.powner2009"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.origin-settings",
+    "type": "concept",
+    "title": {
+      "ja": "生命起源の場と順序の仮説",
+      "en": "Hypotheses on the setting and sequence of life's origin"
+    },
+    "summary": "代謝先行説（鉱物表面の代謝）、アルカリ性熱水噴出孔仮説（天然のpH勾配）、陸上温泉仮説（乾湿の繰り返し）など。いずれも未検証で、それぞれに強い反論がある。",
+    "domains": [
+      "D03",
+      "D01"
+    ],
+    "level": 3,
+    "parent": "q.origin-of-life",
+    "time": null,
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.robinson2005-plos",
+      "src.vasas2010",
+      "src.jackson2016",
+      "src.hudson2020",
+      "src.damer-deamer2020"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.luca",
+    "type": "concept",
+    "title": {
+      "ja": "LUCA（全生物の最後の共通祖先）",
+      "en": "Last Universal Common Ancestor"
+    },
+    "summary": "現在のすべての生物の最も新しい共通祖先。分子時計による推定で約42億年前（95%の範囲で約40.9億〜43.3億年前）、原核生物並みの複雑さとされる。最初の生命ではない。年代は仮定に依存し論争がある。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 4200000000.0,
+      "end_ya": null,
+      "label": "約42億年前（推定）",
+      "uncertainty": "95%の範囲で約40.9億〜43.3億年前。分子時計の仮定に依存"
+    },
+    "epistemic": "hypothesis",
+    "confidence": "medium",
+    "sources": [
+      "src.moody2024",
+      "src.goldman-becerra2024"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evd.extraterrestrial-organics",
+    "type": "evidence",
+    "title": {
+      "ja": "地球外の有機物（隕石・小惑星試料）",
+      "en": "Extraterrestrial organics"
+    },
+    "summary": "マーチソン隕石の地球外起源の核酸塩基、リュウグウ試料のウラシル、ベンヌ試料のアミノ酸14種・核酸塩基5種・リボース。生命の材料が初期太陽系に広く存在したことを示すが、生命の証拠ではない。",
+    "domains": [
+      "D03",
+      "D01"
+    ],
+    "level": 4,
+    "parent": "q.origin-of-life",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.martins2008",
+      "src.oba2023",
+      "src.nasa-bennu-2025",
+      "src.nasa-bennu-sugars-2025"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "thy.darwinian-evolution",
+    "type": "theory",
+    "title": {
+      "ja": "ダーウィンとウォレスの進化論",
+      "en": "Darwin–Wallace theory of evolution"
+    },
+    "summary": "1858年のリンネ協会での発表と1859年の『種の起源』。種の変化という考えはそれ以前からあり、新しさは自然選択という仕組みと証拠の提示にあった。",
+    "domains": [
+      "D03",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 167,
+      "end_ya": null,
+      "label": "1858〜1859年"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.linnean-1858",
+      "src.darwin-online-origin",
+      "src.sep-evolution-before-darwin"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "thy.modern-synthesis",
+    "type": "theory",
+    "title": {
+      "ja": "現代的総合（進化の総合説）",
+      "en": "Modern Synthesis"
+    },
+    "summary": "1930〜50年代に自然選択とメンデル遺伝学を統合した理論。進化を対立遺伝子の頻度の変化ととらえ、自然選択・突然変異・遺伝的浮動・遺伝子流動を主な力とする。拡張の要否（EES）は論争。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thy.darwinian-evolution",
+    "time": {
+      "start_ya": 95,
+      "end_ya": 70,
+      "label": "1930〜50年代"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.mizzou-modern-synthesis",
+      "src.openstax-mechanisms",
+      "src.asu-mendel",
+      "src.laland2014"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.genetic-drift",
+    "type": "concept",
+    "title": {
+      "ja": "遺伝的浮動",
+      "en": "Genetic drift"
+    },
+    "summary": "有利・不利と無関係に、偶然によって対立遺伝子の割合が変わること。小さな集団で強く働く（ボトルネック効果、創始者効果）。",
+    "domains": [
+      "D03",
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thy.modern-synthesis",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.openstax-mechanisms"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "thy.neutral-theory",
+    "type": "theory",
+    "title": {
+      "ja": "分子進化の中立説",
+      "en": "Neutral theory of molecular evolution"
+    },
+    "summary": "木村資生（1968）：分子レベルの変化の多くは中立な突然変異が浮動で固定したもの。太田朋子のほぼ中立説（1973）。形態の適応が自然選択によることは否定しない。ゲノムでの選択の広がりをめぐり論争がある。",
+    "domains": [
+      "D03",
+      "D02"
+    ],
+    "level": 4,
+    "parent": "thy.modern-synthesis",
+    "time": {
+      "start_ya": 58,
+      "end_ya": null,
+      "label": "1968年〜"
+    },
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.soken-ohta-interview",
+      "src.kimura1977",
+      "src.ohta1973",
+      "src.senckenberg-kimura",
+      "src.kernhahn2018",
+      "src.jensen2019"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.common-descent",
+    "type": "concept",
+    "title": {
+      "ja": "共通祖先と生命の木",
+      "en": "Common descent and the tree of life"
+    },
+    "summary": "すべての生物は共通の祖先から枝分かれした。細菌・古細菌・真核生物の3ドメイン（Woese）が基本の整理で、真核生物は古細菌の内側から生じたとする2ドメイン説が有力。遺伝子の水平伝播により一部は網目状になる。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.woese-fox1977",
+      "src.woese1990",
+      "src.williams2020",
+      "src.doolittle1999",
+      "src.ncbi-genetic-codes",
+      "src.ue-lines-of-evidence"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "thy.endosymbiosis",
+    "type": "theory",
+    "title": {
+      "ja": "細胞内共生説",
+      "en": "Endosymbiotic theory"
+    },
+    "summary": "ミトコンドリアと葉緑体は、細胞にすみ着いた細菌（アルファプロテオバクテリア、シアノバクテリア）に由来するという説。1967年にリン・セーガン（マーギュリス）が提唱し、現在は広く受け入れられている。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "con.common-descent",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "high",
+    "sources": [
+      "src.asu-sagan1967",
+      "src.sloan2018",
+      "src.openstax-eukaryotic-origins"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.eukaryotes",
+    "type": "event",
+    "title": {
+      "ja": "真核生物の出現と多細胞化",
+      "en": "Emergence of eukaryotes and multicellularity"
+    },
+    "summary": "議論の余地のない最古の真核生物の化石は約16.5億年前、多細胞とされる化石は約16.3億年前（中国華北）。分子時計の推定には大きな幅がある。複雑な多細胞化は6つの系統で独立に生じた。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 1650000000.0,
+      "end_ya": null,
+      "label": "約16.5億年前（化石）",
+      "uncertainty": "分子時計による推定はより古い"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.nigpas-2024",
+      "src.kay2025",
+      "src.knoll2011",
+      "src.spang2015",
+      "src.eme2023"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.snowball-earth",
+    "type": "event",
+    "title": {
+      "ja": "全球凍結（クリオジェニアン紀）",
+      "en": "Snowball Earth (Cryogenian)"
+    },
+    "summary": "約7.2億〜6.35億年前に、赤道近くまで氷が達した氷河期が少なくとも2回あった（スターティアン、マリノアン）。スターティアン氷期は約5500万年続いた。",
+    "domains": [
+      "D01",
+      "D03"
+    ],
+    "level": 4,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 717000000.0,
+      "end_ya": 635000000.0,
+      "label": "約7.2億〜6.35億年前"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.rooney2014"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.land-colonization",
+    "type": "event",
+    "title": {
+      "ja": "陸上への進出",
+      "en": "Colonization of land"
+    },
+    "summary": "陸上植物の最古の確実な証拠は約4.7億年前の胞子化石（アルゼンチン）。四肢動物は約3.95億年前の足跡（ポーランド）と、約3.75億年前の中間形ティクターリク（カナダ）。",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 473000000.0,
+      "end_ya": 375000000.0,
+      "label": "約4.7億〜3.75億年前"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.rubinstein2010",
+      "src.niedzwiedzki2010",
+      "src.daeschler2006",
+      "src.uchicago-tiktaalik-2006"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.mass-extinction",
+    "type": "concept",
+    "title": {
+      "ja": "大量絶滅（ビッグファイブ）",
+      "en": "Mass extinctions (Big Five)"
+    },
+    "summary": "オルドビス紀末・デボン紀後期・ペルム紀末・三畳紀末・白亜紀末の5大絶滅。原因は寒冷化・火山活動・天体衝突など様々。絶滅の強さは連続的で「5つ」の特別扱いには再検討がある。",
+    "domains": [
+      "D03",
+      "D01"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 445000000.0,
+      "end_ya": 66000000.0,
+      "label": "約4.45億〜6600万年前"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.owid-mass-extinctions",
+      "src.marshall2023",
+      "src.burgess2014",
+      "src.burgess2017",
+      "src.blackburn2013",
+      "src.eos-ordovician-2022",
+      "src.barnosky2011"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evd.fossil-record",
+    "type": "evidence",
+    "title": {
+      "ja": "化石記録",
+      "en": "Fossil record"
+    },
+    "summary": "過去の生物の直接の記録。残りやすさに偏りがあり、澄江・バージェスのような特別な産地が軟体部を保存する。ティクターリクのように、理論からの予測で探して見つかる例がある。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "con.common-descent",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ue-lines-of-evidence",
+      "src.daeschler2006",
+      "src.uchicago-tiktaalik-2006",
+      "src.iucn-chengjiang",
+      "src.canadian-enc-burgess"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evd.observed-evolution",
+    "type": "evidence",
+    "title": {
+      "ja": "観察された進化",
+      "en": "Observed evolution"
+    },
+    "summary": "大腸菌の長期進化実験（1988年〜、約3.1万世代目にクエン酸利用が進化）、ガラパゴスのフィンチのくちばしの選択（向きが環境で逆転）、薬剤耐性菌の広がり。",
+    "domains": [
+      "D03"
+    ],
+    "level": 4,
+    "parent": "con.natural-selection",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.blount2008",
+      "src.msu-ltee-2025",
+      "src.grant2006",
+      "src.who-amr-2025"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "q.units-of-selection",
+    "type": "question",
+    "title": {
+      "ja": "進化（選択）の単位はどこか",
+      "en": "Units and levels of selection"
+    },
+    "summary": "選択は遺伝子・個体・集団のどこにかかるのか。遺伝子中心の見方（ドーキンス）、血縁選択、多レベル選択などの論争。Phase 05 第1回（あなたのリクエスト qq.0017）で扱う。",
+    "domains": [
+      "D03",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [
+      "src.sep-units-selection",
+      "src.abbot2011"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.biodiversity-crisis",
+    "type": "concept",
+    "title": {
+      "ja": "生物多様性の危機",
+      "en": "Biodiversity crisis"
+    },
+    "summary": "IPBES（2019）は約100万種が絶滅の危機にあると評価。Living Planet Index は1970〜2022年に平均73%減少（個体群の変化率の平均で、動物の73%が消えた意味ではない）。「第6の大量絶滅」と呼ぶかは論争。",
+    "domains": [
+      "D03",
+      "D10"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": {
+      "start_ya": 56,
+      "end_ya": 0,
+      "label": "1970年〜現在"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ipbes-2019",
+      "src.owid-lpi-2026",
+      "src.cowie2022",
+      "src.marshall2023"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-24",
+      "by": "verifier（L0002の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S02"
+    ],
+    "history": [
+      {
+        "map_version": "1.2",
+        "change": "作成",
+        "reason": "サイクル0002（L0002）の調査・独立検証"
       }
     ]
   }

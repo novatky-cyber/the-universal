@@ -109,17 +109,40 @@
         "id": "P01-S02",
         "title": "生命の起源と進化",
         "goal": "生命起源と進化の違い、自然選択・絶滅・生態系を説明できる",
-        "status": "not-started",
+        "status": "presented",
         "nodes": [
+          "con.biodiversity-crisis",
+          "con.common-descent",
+          "con.definition-of-life",
+          "con.genetic-drift",
+          "con.luca",
+          "con.mass-extinction",
           "con.natural-selection",
+          "con.origin-settings",
+          "evd.extraterrestrial-organics",
+          "evd.fossil-record",
+          "evd.observed-evolution",
           "evt.cambrian",
           "evt.earliest-life",
+          "evt.eukaryotes",
           "evt.goe",
           "evt.kpg",
+          "evt.land-colonization",
+          "evt.miller-urey",
+          "evt.snowball-earth",
           "q.origin-of-life",
-          "thm.life"
+          "q.units-of-selection",
+          "thm.life",
+          "thy.darwinian-evolution",
+          "thy.endosymbiosis",
+          "thy.modern-synthesis",
+          "thy.neutral-theory",
+          "thy.rna-world"
         ],
-        "lessons": []
+        "lessons": [
+          "output/lessons/L0002a_P01-S02.pdf",
+          "output/lessons/L0002b_P01-S02.pdf"
+        ]
       },
       {
         "id": "P01-S03",
