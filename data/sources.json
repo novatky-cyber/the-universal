@@ -4824,7 +4824,7 @@
     "kind": "primary",
     "existence": "verified",
     "checked_at": "2026-11-25",
-    "note": "サイクル0003 の Verifier が実在と内容を確認（主張 X17）。"
+    "note": "サイクル0003 の Verifier が実在と著者を確認（内容は未照合。教材では「コメントが出ている」ことのみに使用）。"
   },
   {
     "id": "src.takahashi2023",

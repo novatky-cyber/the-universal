@@ -1027,5 +1027,382 @@
     "sources": [
       "src.springer2019"
     ]
+  },
+  {
+    "id": "e.0128",
+    "from": "evt.hominin-split",
+    "to": "con.bipedalism",
+    "type": "precedes",
+    "epistemic": "debate",
+    "note": "二足歩行の最古の証拠をどこに置くかは最古の候補化石の解釈しだい",
+    "sources": [
+      "src.daver2022",
+      "src.cazenave2024"
+    ]
+  },
+  {
+    "id": "e.0129",
+    "from": "con.bipedalism",
+    "to": "con.encephalization",
+    "type": "precedes",
+    "epistemic": "theory",
+    "note": "二足歩行は脳の大型化よりずっと先に進化した",
+    "sources": [
+      "src.sciam-lucy2024"
+    ]
+  },
+  {
+    "id": "e.0130",
+    "from": "con.australopiths",
+    "to": "evt.genus-homo",
+    "type": "precedes",
+    "epistemic": "fact",
+    "note": "LD 350-1（約280万年前）はアウストラロピテクスとホモの特徴を併せ持つ",
+    "sources": [
+      "src.villmoare2015"
+    ]
+  },
+  {
+    "id": "e.0131",
+    "from": "evt.genus-homo",
+    "to": "evt.out-of-africa",
+    "type": "precedes",
+    "epistemic": "fact",
+    "note": "ホモ・エレクトスは約180万年前までにアフリカの外（ドマニシ）へ広がっていた",
+    "sources": [
+      "src.ferring2011"
+    ]
+  },
+  {
+    "id": "e.0132",
+    "from": "evt.genus-homo",
+    "to": "con.encephalization",
+    "type": "part_of",
+    "epistemic": "theory",
+    "note": "脳の増大は200万〜80万年前に体の大型化とともに進み、80万〜20万年前に最も急速",
+    "sources": [
+      "src.si-brains"
+    ]
+  },
+  {
+    "id": "e.0133",
+    "from": "evd.molecular-clock",
+    "to": "evt.hominin-split",
+    "type": "evidence_for",
+    "epistemic": "theory",
+    "note": "分岐年代の推定は突然変異率と世代時間の仮定に依存",
+    "sources": [
+      "src.langergraber2012",
+      "src.scally-durbin2012"
+    ]
+  },
+  {
+    "id": "e.0134",
+    "from": "evd.fossil-record",
+    "to": "evt.hominin-split",
+    "type": "evidence_for",
+    "epistemic": "debate",
+    "note": "最古の候補（サヘラントロプス等）が人類系統に属するかは論争",
+    "sources": [
+      "src.scitable-earliest-hominins"
+    ]
+  },
+  {
+    "id": "e.0135",
+    "from": "evt.homo-sapiens",
+    "to": "evt.out-of-africa",
+    "type": "precedes",
+    "epistemic": "fact",
+    "note": "アフリカで現れたサピエンスが世界へ拡散",
+    "sources": [
+      "src.richter2017",
+      "src.nobel2022"
+    ]
+  },
+  {
+    "id": "e.0136",
+    "from": "evt.out-of-africa",
+    "to": "evt.archaic-admixture",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "アフリカの外でネアンデルタール人・デニソワ人と出会い交雑",
+    "sources": [
+      "src.iasi2024"
+    ]
+  },
+  {
+    "id": "e.0137",
+    "from": "evd.ancient-dna",
+    "to": "evt.archaic-admixture",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "古代型人類のゲノム解読が交雑を示した",
+    "sources": [
+      "src.nobel2022"
+    ]
+  },
+  {
+    "id": "e.0138",
+    "from": "evd.ancient-dna",
+    "to": "evt.agriculture",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "ヨーロッパへの農耕は人の移動を伴って広がった",
+    "sources": [
+      "src.hofmanova2016"
+    ]
+  },
+  {
+    "id": "e.0139",
+    "from": "evt.archaic-admixture",
+    "to": "con.hominin-diversity",
+    "type": "part_of",
+    "epistemic": "fact",
+    "note": "複数の人類が共存し、交雑していた",
+    "sources": [
+      "src.nobel2022"
+    ]
+  },
+  {
+    "id": "e.0140",
+    "from": "evt.out-of-africa",
+    "to": "evt.japan-arrival",
+    "type": "precedes",
+    "epistemic": "theory",
+    "note": "日本列島への到達は約4万年前",
+    "sources": [
+      "src.nakazawa2017"
+    ]
+  },
+  {
+    "id": "e.0141",
+    "from": "con.stone-tool-industries",
+    "to": "evt.genus-homo",
+    "type": "precedes",
+    "epistemic": "debate",
+    "note": "最古の石器の候補（約330万年前）はホモ属より古い可能性",
+    "sources": [
+      "src.harmand2015",
+      "src.dominguez-rodrigo2016"
+    ]
+  },
+  {
+    "id": "e.0142",
+    "from": "evt.tools-fire",
+    "to": "con.encephalization",
+    "type": "enables",
+    "epistemic": "hypothesis",
+    "note": "調理が大きな脳を支えたとする料理仮説（考古学的な時期と合わないとする批判あり）",
+    "sources": [
+      "src.wrangham2009",
+      "src.roebroeks-villa2011"
+    ]
+  },
+  {
+    "id": "e.0143",
+    "from": "evt.symbolic-behavior",
+    "to": "q.origin-of-language",
+    "type": "raises",
+    "epistemic": "unknown",
+    "note": "象徴行動の証拠は言語の存在を直接は示さない",
+    "sources": [
+      "src.hauser2014"
+    ]
+  },
+  {
+    "id": "e.0144",
+    "from": "evd.rock-art",
+    "to": "evt.symbolic-behavior",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "ビーズ・線刻・岩壁画が象徴行動の長い歴史を示す",
+    "sources": [
+      "src.sehasseh2021",
+      "src.henshilwood2009",
+      "src.oktaviana2026"
+    ]
+  },
+  {
+    "id": "e.0145",
+    "from": "con.human-revolution-debate",
+    "to": "evt.symbolic-behavior",
+    "type": "addresses",
+    "epistemic": "debate",
+    "note": "象徴行動は約5万年前に突然そろったのか、漸進的に現れたのか",
+    "sources": [
+      "src.mcbrearty-brooks2000",
+      "src.klein-stanford2002"
+    ]
+  },
+  {
+    "id": "e.0146",
+    "from": "con.cumulative-culture",
+    "to": "evt.agriculture",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "知識の累積が、栽培・家畜化の長い試行を支えた（本教材の整理。単一原因ではない）",
+    "sources": [
+      "src.tennie2009"
+    ]
+  },
+  {
+    "id": "e.0147",
+    "from": "thy.gene-culture-coevolution",
+    "to": "con.natural-selection",
+    "type": "instance_of",
+    "epistemic": "theory",
+    "note": "文化（酪農）が自然選択の向きを変えた例（ラクターゼ持続）",
+    "sources": [
+      "src.evershed2022"
+    ]
+  },
+  {
+    "id": "e.0148",
+    "from": "con.cumulative-culture",
+    "to": "q.knowledge-transmission",
+    "type": "addresses",
+    "epistemic": "theory",
+    "note": "知識の蓄積と伝達の最初の仕組み",
+    "sources": [
+      "src.tennie2009"
+    ]
+  },
+  {
+    "id": "e.0149",
+    "from": "con.cumulative-culture",
+    "to": "q.units-of-selection",
+    "type": "raises",
+    "epistemic": "debate",
+    "note": "文化的群淘汰をめぐる論争（Phase 05 第1回へ）",
+    "sources": [
+      "src.boyd-richerson1985",
+      "src.pinker2012"
+    ]
+  },
+  {
+    "id": "e.0150",
+    "from": "con.domestication",
+    "to": "evt.agriculture",
+    "type": "part_of",
+    "epistemic": "theory",
+    "note": "栽培化は数千年かかるゆっくりした過程",
+    "sources": [
+      "src.fuller2007"
+    ]
+  },
+  {
+    "id": "e.0151",
+    "from": "evt.agriculture",
+    "to": "evt.neolithic-demographic-transition",
+    "type": "causes",
+    "epistemic": "theory",
+    "note": "農耕への移行期に出生率が上がり人口が増え始めた（身長の低下・感染症の増加も）",
+    "sources": [
+      "src.bocquet-appel2011",
+      "src.mummert2011"
+    ]
+  },
+  {
+    "id": "e.0152",
+    "from": "evt.gobekli-tepe",
+    "to": "evt.agriculture",
+    "type": "precedes",
+    "epistemic": "fact",
+    "note": "農耕以前の狩猟採集民による巨石建造物",
+    "sources": [
+      "src.unesco-gobekli",
+      "src.banning2023"
+    ]
+  },
+  {
+    "id": "e.0153",
+    "from": "evt.jomon",
+    "to": "evt.agriculture",
+    "type": "contradicts",
+    "epistemic": "fact",
+    "note": "定住は農耕を必要としない例（穀物の本格的な農耕なしの長い定住）",
+    "sources": [
+      "src.unesco-jomon2021"
+    ]
+  },
+  {
+    "id": "e.0154",
+    "from": "evt.agriculture",
+    "to": "evt.early-states",
+    "type": "enables",
+    "epistemic": "debate",
+    "note": "農耕は国家の必要条件の候補だが十分条件ではない。国家なしの農耕社会も多い",
+    "sources": [
+      "src.larson2014",
+      "src.yale-scott2017"
+    ]
+  },
+  {
+    "id": "e.0155",
+    "from": "con.state-formation-theories",
+    "to": "evt.early-states",
+    "type": "addresses",
+    "epistemic": "debate",
+    "note": "灌漑・戦争と環境の限定・穀物と収奪などの諸説",
+    "sources": [
+      "src.carneiro1970",
+      "src.yale-scott2017"
+    ]
+  },
+  {
+    "id": "e.0156",
+    "from": "evt.early-states",
+    "to": "evt.writing",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "メソポタミアでは文字は行政（会計）の必要から生まれたと論じられる",
+    "sources": [
+      "src.englund2011"
+    ]
+  },
+  {
+    "id": "e.0157",
+    "from": "evt.writing",
+    "to": "q.knowledge-transmission",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "情報を身体の外に保存し、時空を越えて伝える",
+    "sources": [
+      "src.uchicago-visible-language2010"
+    ]
+  },
+  {
+    "id": "e.0158",
+    "from": "evt.archaic-admixture",
+    "to": "evt.homo-sapiens",
+    "type": "contradicts",
+    "epistemic": "debate",
+    "note": "完全な置換説への反証。ただし祖先の大部分はアフリカ起源（多地域進化説の勝利でもない）",
+    "sources": [
+      "src.wolpoff2000",
+      "src.nobel2022"
+    ]
+  },
+  {
+    "id": "e.0160",
+    "from": "con.hominin-diversity",
+    "to": "con.human-revolution-debate",
+    "type": "raises",
+    "epistemic": "debate",
+    "note": "ネアンデルタール人を「劣った敗者」とする前提への批判",
+    "sources": [
+      "src.villa-roebroeks2014"
+    ]
+  },
+  {
+    "id": "e.0161",
+    "from": "evt.writing",
+    "to": "con.periodization",
+    "type": "raises",
+    "epistemic": "theory",
+    "note": "文字の有無で「先史」「歴史」を分ける区分の相対性",
+    "sources": [
+      "src.childe1950"
+    ]
   }
 ]
