@@ -13958,5 +13958,754 @@
         "reason": "サイクル0002（L0002）の調査・独立検証"
       }
     ]
+  },
+  {
+    "id": "con.bipedalism",
+    "type": "concept",
+    "title": {
+      "ja": "二足歩行",
+      "en": "Bipedalism"
+    },
+    "summary": "二足歩行（統合前の仮登録）",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.australopiths",
+    "type": "concept",
+    "title": {
+      "ja": "アウストラロピテクス類",
+      "en": "Australopiths"
+    },
+    "summary": "アウストラロピテクス類（統合前の仮登録）",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 4200000,
+      "end_ya": 1200000,
+      "label": "約420万〜120万年前"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.genus-homo",
+    "type": "event",
+    "title": {
+      "ja": "ホモ属の出現とホモ・エレクトス",
+      "en": "Emergence of the genus Homo"
+    },
+    "summary": "ホモ属の出現とホモ・エレクトス（統合前の仮登録）",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 2800000,
+      "end_ya": 100000,
+      "label": "約280万年前〜"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.encephalization",
+    "type": "concept",
+    "title": {
+      "ja": "脳の大型化",
+      "en": "Encephalization"
+    },
+    "summary": "脳の大型化（統合前の仮登録）",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 2000000,
+      "end_ya": 0,
+      "label": "約200万年前〜"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.out-of-africa",
+    "type": "event",
+    "title": {
+      "ja": "出アフリカと世界への拡散",
+      "en": "Dispersals out of Africa"
+    },
+    "summary": "出アフリカと世界への拡散（統合前の仮登録）",
+    "domains": [
+      "D03",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 70000,
+      "end_ya": 15000,
+      "label": "約7万〜1.5万年前（主要な拡散）"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.archaic-admixture",
+    "type": "event",
+    "title": {
+      "ja": "ネアンデルタール人・デニソワ人との交雑",
+      "en": "Archaic admixture"
+    },
+    "summary": "ネアンデルタール人・デニソワ人との交雑（統合前の仮登録）",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 50000,
+      "end_ya": 43000,
+      "label": "約5万〜4.3万年前（ネアンデルタール人）"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.hominin-diversity",
+    "type": "concept",
+    "title": {
+      "ja": "多様な人類の共存",
+      "en": "Coexisting hominin species"
+    },
+    "summary": "多様な人類の共存（統合前の仮登録）",
+    "domains": [
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 300000,
+      "end_ya": 40000,
+      "label": "約30万〜4万年前"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.japan-arrival",
+    "type": "event",
+    "title": {
+      "ja": "日本列島への到達",
+      "en": "Arrival of humans in the Japanese archipelago"
+    },
+    "summary": "日本列島への到達（統合前の仮登録）",
+    "domains": [
+      "D07",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": {
+      "start_ya": 38000,
+      "end_ya": 30000,
+      "label": "約3.8万年前〜"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evd.ancient-dna",
+    "type": "evidence",
+    "title": {
+      "ja": "古代DNA",
+      "en": "Ancient DNA"
+    },
+    "summary": "古代DNA（統合前の仮登録）",
+    "domains": [
+      "D03",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": null,
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evd.molecular-clock",
+    "type": "evidence",
+    "title": {
+      "ja": "分子時計",
+      "en": "Molecular clock"
+    },
+    "summary": "分子時計（統合前の仮登録）",
+    "domains": [
+      "D03",
+      "D02"
+    ],
+    "level": 3,
+    "parent": "thm.life",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.stone-tool-industries",
+    "type": "concept",
+    "title": {
+      "ja": "石器技術の段階",
+      "en": "Stone tool industries"
+    },
+    "summary": "石器技術の段階（統合前の仮登録）",
+    "domains": [
+      "D04",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "evt.tools-fire",
+    "time": {
+      "start_ya": 3300000,
+      "end_ya": 10000,
+      "label": "約330万年前（論争）／約290万年前〜"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "q.origin-of-language",
+    "type": "question",
+    "title": {
+      "ja": "言語はいつ・どのように生まれたのか",
+      "en": "Origin of language"
+    },
+    "summary": "言語はいつ・どのように生まれたのか（統合前の仮登録）",
+    "domains": [
+      "D03",
+      "D09"
+    ],
+    "level": 3,
+    "parent": "thm.human-evolution",
+    "time": null,
+    "epistemic": "unknown",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "thy.gene-culture-coevolution",
+    "type": "theory",
+    "title": {
+      "ja": "遺伝子と文化の共進化",
+      "en": "Gene–culture coevolution"
+    },
+    "summary": "遺伝子と文化の共進化（統合前の仮登録）",
+    "domains": [
+      "D03",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "con.cumulative-culture",
+    "time": null,
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.human-revolution-debate",
+    "type": "concept",
+    "title": {
+      "ja": "「人間革命」論争",
+      "en": "The 'human revolution' debate"
+    },
+    "summary": "「人間革命」論争（統合前の仮登録）",
+    "domains": [
+      "D07",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "evt.symbolic-behavior",
+    "time": {
+      "start_ya": 100000,
+      "end_ya": 40000,
+      "label": "約10万〜4万年前をめぐる論争"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evd.rock-art",
+    "type": "evidence",
+    "title": {
+      "ja": "最古級の岩壁画と象徴の証拠",
+      "en": "Earliest rock art and symbolic evidence"
+    },
+    "summary": "最古級の岩壁画と象徴の証拠（統合前の仮登録）",
+    "domains": [
+      "D09",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "evt.symbolic-behavior",
+    "time": {
+      "start_ya": 100000,
+      "end_ya": 15000,
+      "label": "約10万年前（線刻）〜"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.domestication",
+    "type": "concept",
+    "title": {
+      "ja": "栽培化・家畜化",
+      "en": "Domestication"
+    },
+    "summary": "栽培化・家畜化（統合前の仮登録）",
+    "domains": [
+      "D07",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "evt.agriculture",
+    "time": {
+      "start_ya": 15000,
+      "end_ya": 4000,
+      "label": "約1.5万年前（イヌ）〜"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.neolithic-demographic-transition",
+    "type": "event",
+    "title": {
+      "ja": "新石器時代の人口転換と健康",
+      "en": "Neolithic demographic transition"
+    },
+    "summary": "新石器時代の人口転換と健康（統合前の仮登録）",
+    "domains": [
+      "D07",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "evt.agriculture",
+    "time": {
+      "start_ya": 11000,
+      "end_ya": 3000,
+      "label": "約1.1万年前〜（地域ごと）"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.gobekli-tepe",
+    "type": "event",
+    "title": {
+      "ja": "ギョベクリ・テペ",
+      "en": "Göbekli Tepe"
+    },
+    "summary": "ギョベクリ・テペ（統合前の仮登録）",
+    "domains": [
+      "D07",
+      "D09"
+    ],
+    "level": 3,
+    "parent": "thm.civilization",
+    "time": {
+      "start_ya": 11600,
+      "end_ya": 9800,
+      "label": "約1.16万〜0.98万年前"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.jomon",
+    "type": "event",
+    "title": {
+      "ja": "縄文文化",
+      "en": "Jōmon culture"
+    },
+    "summary": "縄文文化（統合前の仮登録）",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.civilization",
+    "time": {
+      "start_ya": 16500,
+      "end_ya": 2900,
+      "label": "約1.6万年前〜約2900年前"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.state-formation-theories",
+    "type": "concept",
+    "title": {
+      "ja": "国家の成立をめぐる諸説",
+      "en": "Theories of state formation"
+    },
+    "summary": "国家の成立をめぐる諸説（統合前の仮登録）",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "evt.early-states",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [],
+    "verification": {
+      "status": "unverified",
+      "date": "2026-11-25",
+      "by": "cartographer（L0003、統合前の仮登録）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S03"
+    ],
+    "history": [
+      {
+        "map_version": "1.3",
+        "change": "作成",
+        "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
   }
 ]
