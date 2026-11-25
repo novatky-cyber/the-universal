@@ -148,20 +148,43 @@
         "id": "P01-S03",
         "title": "人類・文化・農耕・文明",
         "goal": "累積的学習、農耕、都市、国家、文字を説明できる",
-        "status": "not-started",
+        "status": "presented",
         "nodes": [
+          "con.australopiths",
+          "con.bipedalism",
           "con.cumulative-culture",
+          "con.domestication",
+          "con.encephalization",
+          "con.hominin-diversity",
+          "con.human-revolution-debate",
+          "con.state-formation-theories",
+          "con.stone-tool-industries",
+          "evd.ancient-dna",
+          "evd.molecular-clock",
+          "evd.rock-art",
           "evt.agriculture",
+          "evt.archaic-admixture",
           "evt.early-states",
+          "evt.genus-homo",
+          "evt.gobekli-tepe",
           "evt.hominin-split",
           "evt.homo-sapiens",
+          "evt.japan-arrival",
+          "evt.jomon",
+          "evt.neolithic-demographic-transition",
+          "evt.out-of-africa",
           "evt.symbolic-behavior",
           "evt.tools-fire",
           "evt.writing",
+          "q.origin-of-language",
           "thm.civilization",
-          "thm.human-evolution"
+          "thm.human-evolution",
+          "thy.gene-culture-coevolution"
         ],
-        "lessons": []
+        "lessons": [
+          "output/lessons/L0003a_P01-S03.pdf",
+          "output/lessons/L0003b_P01-S03.pdf"
+        ]
       },
       {
         "id": "P01-S04",

@@ -752,6 +752,216 @@
       "next_review": null,
       "recheck": false,
       "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+    },
+    "thm.human-evolution": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.hominin-split": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.bipedalism": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.australopiths": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.genus-homo": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.encephalization": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.homo-sapiens": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.out-of-africa": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.archaic-admixture": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.hominin-diversity": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.japan-arrival": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evd.ancient-dna": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evd.molecular-clock": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.tools-fire": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.stone-tool-industries": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.symbolic-behavior": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "q.origin-of-language": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evd.rock-art": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.human-revolution-debate": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.cumulative-culture": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "thy.gene-culture-coevolution": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "thm.civilization": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.agriculture": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.domestication": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.neolithic-demographic-transition": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.gobekli-tepe": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.jomon": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.early-states": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.state-formation-theories": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.writing": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
     }
   }
 }
