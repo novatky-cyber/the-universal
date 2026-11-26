@@ -190,16 +190,39 @@
         "id": "P01-S04",
         "title": "世界史・宗教・思想・文化",
         "goal": "多地域比較、文明間交流、歴史的多様性を説明できる",
-        "status": "not-started",
+        "status": "presented",
         "nodes": [
+          "con.african-states",
+          "con.americas-states",
+          "con.axial-age",
+          "con.big-gods-debate",
+          "con.classical-empires",
+          "con.early-modern-empires",
+          "con.hindu-arabic-numerals",
           "con.periodization",
           "con.trade-networks",
           "evt.atlantic-colonialism",
+          "evt.black-death",
+          "evt.bronze-age-collapse",
+          "evt.buddhism-spread",
+          "evt.christianity-spread",
+          "evt.columbian-exchange",
+          "evt.indian-ocean-trade",
+          "evt.islam-rise",
+          "evt.japan-ritsuryo",
+          "evt.mongol-empire",
+          "evt.paper-transmission",
           "evt.printing",
+          "evt.reformation",
+          "evt.silk-roads",
+          "evt.translation-movement",
           "q.knowledge-transmission",
           "thm.world-history"
         ],
-        "lessons": []
+        "lessons": [
+          "output/lessons/L0004a_P01-S04.pdf",
+          "output/lessons/L0004b_P01-S04.pdf"
+        ]
       },
       {
         "id": "P01-S05",

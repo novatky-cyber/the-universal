@@ -10425,7 +10425,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -11027,7 +11029,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -11063,7 +11067,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -11731,7 +11737,9 @@
       "src.notion-general-glossary"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（あなたのメモの確認）"
     },
     "target_level": 1,
     "curriculum": [],
@@ -15661,9 +15669,9 @@
     "level": 3,
     "parent": "thm.world-history",
     "time": {
-      "start_ya": 680,
-      "end_ya": 673,
-      "label": "1346〜1353年頃（起源は1338〜39年の天山周辺）"
+      "start_ya": 688,
+      "end_ya": 670,
+      "label": "14世紀（起源は1338〜39年の天山周辺）"
     },
     "epistemic": "fact",
     "confidence": "high",
