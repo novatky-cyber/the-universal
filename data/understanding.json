@@ -962,6 +962,181 @@
       "history": [],
       "next_review": null,
       "recheck": false
+    },
+    "evt.bronze-age-collapse": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.classical-empires": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.axial-age": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.buddhism-spread": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.christianity-spread": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.islam-rise": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.big-gods-debate": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.silk-roads": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.indian-ocean-trade": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.paper-transmission": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.hindu-arabic-numerals": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.translation-movement": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.mongol-empire": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.black-death": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.african-states": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.americas-states": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.columbian-exchange": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.reformation": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.japan-ritsuryo": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.early-modern-empires": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "thm.world-history": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "con.trade-networks": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.atlantic-colonialism": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "evt.printing": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
+    },
+    "q.knowledge-transmission": {
+      "level": 0,
+      "status": "presented",
+      "history": [],
+      "next_review": null,
+      "recheck": false
     }
   }
 }

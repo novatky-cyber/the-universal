@@ -1404,5 +1404,418 @@
     "sources": [
       "src.childe1950"
     ]
+  },
+  {
+    "id": "e.0162",
+    "from": "evt.early-states",
+    "to": "con.classical-empires",
+    "type": "precedes",
+    "epistemic": "fact",
+    "note": "初期国家から広域の帝国へ（地域ごとに時期は異なる）",
+    "sources": [
+      "src.scheidel2009"
+    ]
+  },
+  {
+    "id": "e.0163",
+    "from": "evt.writing",
+    "to": "con.classical-empires",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "文字による法勅・文書行政が広域支配を支えた（アショーカの法勅、秦の文字の統一）",
+    "sources": [
+      "src.britannica-india-ashoka",
+      "src.met-qin"
+    ]
+  },
+  {
+    "id": "e.0164",
+    "from": "evt.bronze-age-collapse",
+    "to": "con.trade-networks",
+    "type": "raises",
+    "epistemic": "debate",
+    "note": "交易網に依存した宮廷経済の脆さ（システム崩壊説）",
+    "sources": [
+      "src.whe-bronze-age-collapse",
+      "src.knapp-manning2016"
+    ]
+  },
+  {
+    "id": "e.0165",
+    "from": "con.classical-empires",
+    "to": "evt.buddhism-spread",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "アショーカやクシャーナ朝の保護が仏教の拡大を助けた",
+    "sources": [
+      "src.britannica-ashoka",
+      "src.met-kushan"
+    ]
+  },
+  {
+    "id": "e.0166",
+    "from": "con.classical-empires",
+    "to": "evt.christianity-spread",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "ローマ帝国の勅令（313年、380年）がキリスト教の地位を変えた",
+    "sources": [
+      "src.britannica-milan",
+      "src.britannica-theodosius"
+    ]
+  },
+  {
+    "id": "e.0167",
+    "from": "con.axial-age",
+    "to": "evt.buddhism-spread",
+    "type": "addresses",
+    "epistemic": "debate",
+    "note": "仏教の成立は「軸の時代」論の主要な事例の一つ",
+    "sources": [
+      "src.bowersock2013"
+    ]
+  },
+  {
+    "id": "e.0168",
+    "from": "evt.silk-roads",
+    "to": "evt.buddhism-spread",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "中央アジア経由の仏教の東伝（ガンダーラ、鳩摩羅什）",
+    "sources": [
+      "src.met-kushan",
+      "src.britannica-kumarajiva"
+    ]
+  },
+  {
+    "id": "e.0169",
+    "from": "evt.silk-roads",
+    "to": "evt.paper-transmission",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "中央アジアでは征服以前から紙が使われ、そこからイスラーム世界へ",
+    "sources": [
+      "src.bloom2005-paper",
+      "src.si-sogdian-letters"
+    ]
+  },
+  {
+    "id": "e.0170",
+    "from": "evt.islam-rise",
+    "to": "evt.translation-movement",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "アッバース朝社会の必要から翻訳運動が生まれた（Gutas）",
+    "sources": [
+      "src.sep-arabic-greek",
+      "src.gutas1998"
+    ]
+  },
+  {
+    "id": "e.0171",
+    "from": "evt.paper-transmission",
+    "to": "evt.translation-movement",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "バグダードでの製紙が書物の生産を支えた",
+    "sources": [
+      "src.bloom2005-paper"
+    ]
+  },
+  {
+    "id": "e.0172",
+    "from": "evt.translation-movement",
+    "to": "con.hindu-arabic-numerals",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "インドの天文学・計算法のアラビア語訳とフワーリズミーの書",
+    "sources": [
+      "src.mactutor-arabic-numerals"
+    ]
+  },
+  {
+    "id": "e.0173",
+    "from": "evt.indian-ocean-trade",
+    "to": "evt.islam-rise",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "東南アジア・東アフリカへのイスラームは主に商人の網で広がった",
+    "sources": [
+      "src.sluglett2012"
+    ]
+  },
+  {
+    "id": "e.0174",
+    "from": "evt.indian-ocean-trade",
+    "to": "con.african-states",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "キルワ・グレート・ジンバブエは海の交易と結びついた",
+    "sources": [
+      "src.unesco-kilwa",
+      "src.natgeo-great-zimbabwe"
+    ]
+  },
+  {
+    "id": "e.0175",
+    "from": "con.trade-networks",
+    "to": "con.african-states",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "サハラ縦断の金交易がガーナ・マリの台頭と結びついた",
+    "sources": [
+      "src.met-transsaharan-gold"
+    ]
+  },
+  {
+    "id": "e.0176",
+    "from": "evt.mongol-empire",
+    "to": "evt.silk-roads",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "駅の網・関税の引き下げ・紙幣が陸の交易と旅を助けた",
+    "sources": [
+      "src.columbia-mongols"
+    ]
+  },
+  {
+    "id": "e.0177",
+    "from": "evt.mongol-empire",
+    "to": "evt.translation-movement",
+    "type": "contradicts",
+    "epistemic": "fact",
+    "note": "1258年のバグダード攻略でアッバース朝カリフ政権が終わった（学術の終わりではない）",
+    "sources": [
+      "src.columbia-mongols",
+      "src.ferrario2008-saliba-review"
+    ]
+  },
+  {
+    "id": "e.0178",
+    "from": "evt.mongol-empire",
+    "to": "evt.black-death",
+    "type": "precedes",
+    "epistemic": "debate",
+    "note": "モンゴル期の交易網と疫病の拡散の関係（アブー＝ルゴドは疫病がシステムを断ったとする）",
+    "sources": [
+      "src.abulughod1989",
+      "src.spyrou2022"
+    ]
+  },
+  {
+    "id": "e.0179",
+    "from": "evd.ancient-dna",
+    "to": "evt.black-death",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "1338〜39年の墓地の古代DNAがペスト菌の起源を示した",
+    "sources": [
+      "src.spyrou2022"
+    ]
+  },
+  {
+    "id": "e.0180",
+    "from": "evd.ancient-dna",
+    "to": "evt.indian-ocean-trade",
+    "type": "evidence_for",
+    "epistemic": "fact",
+    "note": "スワヒリ海岸の古代DNAがアフリカ系とアジア系の祖先の混合を示した",
+    "sources": [
+      "src.brielle2023-swahili"
+    ]
+  },
+  {
+    "id": "e.0181",
+    "from": "evt.paper-transmission",
+    "to": "evt.printing",
+    "type": "requires",
+    "epistemic": "fact",
+    "note": "印刷は安価な紙を前提とした",
+    "sources": [
+      "src.britannica-printing-history"
+    ]
+  },
+  {
+    "id": "e.0182",
+    "from": "evt.printing",
+    "to": "evt.reformation",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "印刷所のある都市ほどプロテスタント化しやすかった（必要条件・十分条件ではない）",
+    "sources": [
+      "src.rubin2014",
+      "src.edwards1994"
+    ]
+  },
+  {
+    "id": "e.0183",
+    "from": "evt.buddhism-spread",
+    "to": "evt.printing",
+    "type": "enables",
+    "epistemic": "theory",
+    "note": "功徳のために経典を広く配る営みが初期の印刷を支えた（現存最古の年記本は868年の金剛般若経）",
+    "sources": [
+      "src.bl-idp-diamond-sutra"
+    ]
+  },
+  {
+    "id": "e.0184",
+    "from": "con.classical-empires",
+    "to": "evt.japan-ritsuryo",
+    "type": "analogous",
+    "epistemic": "fact",
+    "note": "律令制は唐の律令をまねつつ国情に合わせて改めた",
+    "sources": [
+      "src.britannica-japan-taika"
+    ]
+  },
+  {
+    "id": "e.0185",
+    "from": "evt.buddhism-spread",
+    "to": "evt.japan-ritsuryo",
+    "type": "enables",
+    "epistemic": "fact",
+    "note": "百済からの仏教公伝と受容をめぐる対立、神仏習合",
+    "sources": [
+      "src.ebsco-buddhism-japan",
+      "src.britannica-shinbutsu"
+    ]
+  },
+  {
+    "id": "e.0186",
+    "from": "evt.atlantic-colonialism",
+    "to": "evt.columbian-exchange",
+    "type": "causes",
+    "epistemic": "debate",
+    "note": "征服・植民と病原体の移動が人口崩壊をもたらした（疫病と暴力の比重は論争）",
+    "sources": [
+      "src.koch2019",
+      "src.fisher2017-resendez"
+    ]
+  },
+  {
+    "id": "e.0187",
+    "from": "evt.columbian-exchange",
+    "to": "evt.atlantic-colonialism",
+    "type": "causes",
+    "epistemic": "theory",
+    "note": "先住民の人口減少とプランテーションの労働需要がアフリカ人の強制移送を拡大した（Nunn & Qian）",
+    "sources": [
+      "src.nunn-qian2010"
+    ]
+  },
+  {
+    "id": "e.0188",
+    "from": "evt.atlantic-colonialism",
+    "to": "con.african-states",
+    "type": "contradicts",
+    "epistemic": "theory",
+    "note": "奴隷貿易はアフリカの政治経済を破壊的な依存に引き込んだ（Lindsay、Nunn）",
+    "sources": [
+      "src.lindsay2014-extraversion",
+      "src.nunn2008-slave-trades"
+    ]
+  },
+  {
+    "id": "e.0189",
+    "from": "con.big-gods-debate",
+    "to": "con.state-formation-theories",
+    "type": "raises",
+    "epistemic": "debate",
+    "note": "大規模社会の協力を宗教が支えたか、複雑化が先か",
+    "sources": [
+      "src.norenzayan2013",
+      "src.whitehouse2023"
+    ]
+  },
+  {
+    "id": "e.0190",
+    "from": "con.axial-age",
+    "to": "con.periodization",
+    "type": "instance_of",
+    "epistemic": "debate",
+    "note": "「時代」の名で世界を切り分ける区分の一例と、その批判",
+    "sources": [
+      "src.mullins2018"
+    ]
+  },
+  {
+    "id": "e.0191",
+    "from": "evt.bronze-age-collapse",
+    "to": "con.americas-states",
+    "type": "analogous",
+    "epistemic": "debate",
+    "note": "「崩壊」を何が崩れ何が続いたかに分けて見る（宮廷経済の終わり／マヤの回復力）",
+    "sources": [
+      "src.knapp-manning2016",
+      "src.mcanany-yoffee2010"
+    ]
+  },
+  {
+    "id": "e.0192",
+    "from": "con.americas-states",
+    "to": "evt.writing",
+    "type": "contradicts",
+    "epistemic": "fact",
+    "note": "インカは文字なしに、キープと道路網で広域国家を運営した（文字は国家の必要条件ではない）",
+    "sources": [
+      "src.si-quipu",
+      "src.unesco-qhapaq-nan"
+    ]
+  },
+  {
+    "id": "e.0193",
+    "from": "evt.silk-roads",
+    "to": "q.knowledge-transmission",
+    "type": "addresses",
+    "epistemic": "fact",
+    "note": "交易網による物・技術・宗教の伝播の事例",
+    "sources": [
+      "src.unesco-whc-1442"
+    ]
+  },
+  {
+    "id": "e.0194",
+    "from": "con.hindu-arabic-numerals",
+    "to": "q.knowledge-transmission",
+    "type": "addresses",
+    "epistemic": "fact",
+    "note": "受け手の側での形と計算道具の作り変え",
+    "sources": [
+      "src.mactutor-arabic-numerals"
+    ]
+  },
+  {
+    "id": "e.0195",
+    "from": "evt.printing",
+    "to": "q.knowledge-transmission",
+    "type": "addresses",
+    "epistemic": "debate",
+    "note": "伝播か独立発明か（活版印刷）",
+    "sources": [
+      "src.mcdermott-burke2015"
+    ]
+  },
+  {
+    "id": "e.0196",
+    "from": "con.early-modern-empires",
+    "to": "con.classical-empires",
+    "type": "analogous",
+    "epistemic": "debate",
+    "note": "火器だけでなく官僚制と宗教的正統性で広域を束ねた",
+    "sources": [
+      "src.getz-gunpowder"
+    ]
+  },
+  {
+    "id": "e.0197",
+    "from": "evt.black-death",
+    "to": "evt.mongol-empire",
+    "type": "contradicts",
+    "epistemic": "theory",
+    "note": "疫病による人口減少が13世紀の世界システムを断ったとする説明（アブー＝ルゴド）",
+    "sources": [
+      "src.abulughod1989"
+    ]
   }
 ]
