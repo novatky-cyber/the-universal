@@ -930,7 +930,7 @@
       "ja": "時代区分の相対性",
       "en": "Periodization is contextual"
     },
-    "summary": "「古代→中世→近代」はヨーロッパ由来の区分であり、世界の全地域が同じ段階をたどったわけではない。",
+    "summary": "「古代・中世・近代」の三区分は、ルネサンス以後の見方を17世紀のケラリウスが体系化したもので、境界年も論者で異なり、定着の理由は教育上の便利さとされる。現在は近世を含む四区分がより一般的（三区分も残る）。ヨーロッパの区分を世界の全地域に当てはめることはできない。",
     "domains": [
       "D07",
       "D08"
@@ -938,13 +938,16 @@
     "level": 3,
     "parent": "thm.world-history",
     "time": null,
-    "epistemic": "debate",
+    "epistemic": "theory",
     "confidence": "high",
-    "sources": [],
+    "sources": [
+      "src.nadel-periodization",
+      "src.britannica-middle-ages-historiography"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -956,6 +959,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.4",
+        "change": "要約の改訂・出典登録",
+        "reason": "区分の由来と規約性を出典で確認（L0004）"
       }
     ]
   },
@@ -1265,7 +1273,7 @@
       "ja": "交易網による伝播",
       "en": "Exchange networks"
     },
-    "summary": "シルクロードやインド洋交易などの交易網は、物資だけでなく数学・紙・印刷・宗教・美術様式も運んだ。",
+    "summary": "シルクロード、インド洋交易、サハラ縦断交易などの交易網は、物資だけでなく紙・数字・宗教・美術様式も運んだ。ただし活版印刷は、中国からヨーロッパへ直接伝わった証拠が乏しく、別々に発明された可能性が高い。伝わったものは受け手の側で作り変えられた（紙の原料、数字の形、仏典の漢訳など）。",
     "domains": [
       "D07",
       "D09"
@@ -1278,14 +1286,18 @@
       "label": "古代〜近世"
     },
     "epistemic": "fact",
-    "confidence": "medium",
+    "confidence": "high",
     "sources": [
-      "src.unesco-silk"
+      "src.unesco-whc-1442",
+      "src.bloom2005-paper",
+      "src.mactutor-arabic-numerals",
+      "src.mcdermott-burke2015",
+      "src.met-transsaharan-gold"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1296,6 +1308,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.4",
+        "change": "訂正（中）：印刷を交易網が運んだとする記述を修正、出典の差し替え",
+        "reason": "活版印刷の直接の伝播の証拠は乏しい（McDermott & Burke 2015、Britannica）。src.unesco-silk（実在未確認）を UNESCO 世界遺産ページに差し替え"
       }
     ]
   },
@@ -1612,7 +1629,7 @@
       "ja": "大西洋交易・植民地支配・奴隷貿易",
       "en": "Atlantic trade, colonialism & slavery"
     },
-    "summary": "1500年頃以降、大西洋をまたぐ交易・植民地支配・奴隷貿易が拡大した。暴力性と、利益・負担の偏った分配を含めて理解する。",
+    "summary": "1500年頃以降、大西洋をまたぐ交易・植民地支配・奴隷貿易が拡大した。SlaveVoyages の推定では、1501〜1875年に約1250万人のアフリカ人が船に乗せられ、約1070万人が南北アメリカに着いた（中間航路で150万人近くが死亡）。船の旗国ではポルトガル／ブラジルが約半数を占める。暴力性と、利益・負担の偏った分配、長期の影響を含めて理解する。",
     "domains": [
       "D07",
       "D05",
@@ -1627,11 +1644,16 @@
     },
     "epistemic": "fact",
     "confidence": "high",
-    "sources": [],
+    "sources": [
+      "src.neh2010-slavevoyages",
+      "src.slavevoyages-estimates",
+      "src.nunn-qian2010",
+      "src.nunn2008-slave-trades"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -1642,6 +1664,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.4",
+        "change": "深化：規模の推定と出典の登録",
+        "reason": "SlaveVoyages の推定値を出典つきで追加（L0004）"
       }
     ]
   },
@@ -2777,7 +2804,7 @@
       "ja": "印刷技術の発展と普及",
       "en": "Printing"
     },
-    "summary": "中国での木版・活字印刷の発展と、15世紀ヨーロッパの活版印刷の普及。知識の複製と流通を変えた。",
+    "summary": "中国の木版印刷（年記のある現存最古の印刷本は868年の『金剛般若経』）、畢昇の活字（1040年代、『夢渓筆談』）、高麗の金属活字本『直指』（1377年、現存最古の金属活字本）、朝鮮の銅活字（1403年）、グーテンベルクの42行聖書（1455年頃）。ヨーロッパの活版印刷は東アジアから直接伝わった証拠が乏しい。漢字文化圏では木版が安く柔軟で主流であり続けた。",
     "domains": [
       "D04",
       "D07"
@@ -2785,17 +2812,24 @@
     "level": 3,
     "parent": "thm.tech-history",
     "time": {
-      "start_ya": 1300,
-      "end_ya": 526,
-      "label": "唐代〜15世紀"
+      "start_ya": 1158,
+      "end_ya": 571,
+      "label": "868年（現存最古の年記本）〜1455年頃"
     },
     "epistemic": "fact",
-    "confidence": "medium",
-    "sources": [],
+    "confidence": "high",
+    "sources": [
+      "src.bl-idp-diamond-sutra",
+      "src.britannica-printing-history",
+      "src.britannica-movable-type",
+      "src.bnf-jikji",
+      "src.loc-gutenberg",
+      "src.mcdermott-burke2015"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -2806,6 +2840,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.4",
+        "change": "訂正（中）：一続きの流れに読める記述を修正、朝鮮の金属活字を追加",
+        "reason": "東アジアとヨーロッパの印刷は独立に発明された可能性が高い（McDermott & Burke 2015）"
       }
     ]
   },
@@ -3875,20 +3914,24 @@
       "ja": "知識・技術・制度はどう蓄積・伝播したか",
       "en": "How have knowledge, technology and institutions accumulated and spread?"
     },
-    "summary": "歴史・文明・宗教から生成AIへの接続の問い。",
+    "summary": "紙・数字・宗教・学術・技術は、誰によって、どの経路で運ばれ、受け手の側でどう作り変えられ、誰が排除されたのか。伝播と独立発明をどう見分けるか。生成AIとの関係に限らず、それ自体として問う。",
     "domains": [
       "D07"
     ],
     "level": 3,
     "parent": "thm.world-history",
     "time": null,
-    "epistemic": "theory",
-    "confidence": "high",
-    "sources": [],
+    "epistemic": "unknown",
+    "confidence": "medium",
+    "sources": [
+      "src.bloom2005-paper",
+      "src.mcdermott-burke2015",
+      "src.mactutor-arabic-numerals"
+    ],
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
     },
     "target_level": 3,
     "curriculum": [
@@ -3899,6 +3942,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.4",
+        "change": "要約の改訂",
+        "reason": "問いを生成AIへの接続だけに狭めていた（品質基準10）"
       }
     ]
   },
@@ -5206,7 +5254,7 @@
       "ja": "世界史の多地域比較",
       "en": "Comparative world history"
     },
-    "summary": "同じ時代の世界を地域横断で見る。帝国・宗教・交易・思想・技術・芸術の交流と、支配・暴力も含める。",
+    "summary": "同じ時代の世界を地域横断で見る（紀元前3500年頃〜1750年頃）。帝国・宗教・交易・思想・技術・芸術の交流と、支配・暴力・疫病も含める。ヨーロッパを終点とする一本の線ではなく、複数の中心と回路が重なる歴史として捉える（ホジソン、アブー＝ルゴド）。",
     "domains": [
       "D07"
     ],
@@ -5220,12 +5268,14 @@
     "epistemic": "theory",
     "confidence": "medium",
     "sources": [
-      "src.unesco-silk"
+      "src.hodgson1993-rethinking",
+      "src.abulughod1989",
+      "src.scheidel2009"
     ],
     "verification": {
-      "status": "pending",
-      "date": null,
-      "by": null
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
     },
     "target_level": 2,
     "curriculum": [
@@ -5236,6 +5286,11 @@
         "map_version": "1.0",
         "change": "作成",
         "reason": "引き継ぎ資料からの初期投入"
+      },
+      {
+        "map_version": "1.4",
+        "change": "要約の改訂・出典登録",
+        "reason": "世界史をヨーロッパ中心の一本の線として描かない見方を明記（L0004）"
       }
     ]
   },
@@ -14970,6 +15025,952 @@
         "map_version": "1.3",
         "change": "作成",
         "reason": "サイクル0003（L0003）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.bronze-age-collapse",
+    "type": "event",
+    "title": {
+      "ja": "後期青銅器時代の崩壊",
+      "en": "Late Bronze Age collapse"
+    },
+    "summary": "前1250〜前1150年頃、東地中海の「列強クラブ」とミケーネ・キプロス・レヴァントの都市が打撃を受け、ヒッタイト帝国は滅び、ウガリトは破壊され、エジプトは縮小しつつ存続した。原因は地震・干ばつ・反乱・「海の民」・交易網の断絶が重なった多要因説が主流で、気候を主因とする説には年代の精度が足りないという批判がある（Knapp & Manning 2016）。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 3275,
+      "end_ya": 3175,
+      "label": "前1250〜前1150年頃",
+      "uncertainty": "「前1177年」は便宜的な目印"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.whe-bronze-age-collapse",
+      "src.kaniewski2013",
+      "src.kaniewski2019",
+      "src.knapp-manning2016"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.classical-empires",
+    "type": "concept",
+    "title": {
+      "ja": "古典的な帝国と広域支配の仕組み",
+      "en": "Classical empires"
+    },
+    "summary": "アケメネス朝は属州（サトラピー）の総督と在地の有力者による「規制された自治」と、王の道の中継制度で広域を束ねた。マウリヤ朝のアショーカは法勅で王の倫理（ダルマ）を説いた。秦は前221年に統一して文字・貨幣・度量衡をそろえ、郡県制を敷いた。漢とローマはともに人口約6000万人・約400万km²のほぼ同規模だったが、崩壊後の道筋は大きく分かれた（Scheidel の「最初の大分岐」）。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 2575,
+      "end_ya": 1500,
+      "label": "前550年頃〜後500年頃"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.iranica-satrapies",
+      "src.jacobs2015-iranica",
+      "src.britannica-india-ashoka",
+      "src.unesco-ashoka-tentative",
+      "src.met-qin",
+      "src.scheidel2009"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.axial-age",
+    "type": "concept",
+    "title": {
+      "ja": "「軸の時代」とその批判",
+      "en": "Axial Age"
+    },
+    "summary": "ヤスパース（1949）は、前800〜前200年頃に中国・インド・イラン・イスラエル・ギリシアで超越的な思想が並行して現れたとした。ベラーとヨアスらが再評価した一方、西洋の見方での切り取り、文字資料への偏り、同時期であることと関係があることの混同という批判がある。Seshat を使った検証（Mullins ら 2018）は、「軸的」な特徴は提唱された時期より数百年以上前から各地に現れたとした。",
+    "domains": [
+      "D08",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 2826,
+      "end_ya": 2226,
+      "label": "前800〜前200年頃（ヤスパースの区分）"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.bowersock2013",
+      "src.bellah-joas2012",
+      "src.mullins2018",
+      "src.baumard2015"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "豊かさ仮説",
+        "view": "道徳的・禁欲的な教えの出現は、政治の複雑さより1人あたりのエネルギー獲得量（豊かさ）でよく説明できる（Baumard ら）。",
+        "sources": [
+          "src.baumard2015"
+        ]
+      },
+      {
+        "label": "「宗教」という分類",
+        "view": "政治から切り離された個人の信念としての「宗教」は近代西洋で形づくられた概念で、日本では1853年以降の条約交渉の中で分類が作られたという議論がある（Nongbri、Josephson）。語の使用は必要だとする反論もある。",
+        "sources": [
+          "src.nongbri2013",
+          "src.josephson2012",
+          "src.goddard-review"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt.buddhism-spread",
+    "type": "event",
+    "title": {
+      "ja": "仏教の成立と伝播",
+      "en": "Origins and spread of Buddhism"
+    },
+    "summary": "ブッダの年代は確定していない（前405年頃没とみる研究者が多い）。教えは数世紀にわたり口で伝えられてから文字になった。アショーカの保護、クシャーナ朝期のガンダーラ・マトゥラーでの仏像の制作、鳩摩羅什（401年に長安へ）らの漢訳を経て東アジアへ広がり、9世紀までに中央アジア・東アジアでは大乗が支配的になった。日本への公伝は538年説が有力（『日本書紀』は552年）。",
+    "domains": [
+      "D07",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 2476,
+      "end_ya": 1488,
+      "label": "前5世紀頃〜6世紀（日本）",
+      "uncertainty": "ブッダの没年は諸説（前544/543、前487/486、前370/368年頃など）"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.sep-buddha",
+      "src.openlearn-buddha-dates",
+      "src.britannica-ashoka",
+      "src.met-kushan",
+      "src.britannica-gandhara",
+      "src.britannica-kumarajiva",
+      "src.britannica-mahayana",
+      "src.ebsco-buddhism-japan"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.christianity-spread",
+    "type": "event",
+    "title": {
+      "ja": "キリスト教の成立と拡大",
+      "en": "Spread of Christianity"
+    },
+    "summary": "313年のいわゆる「ミラノ勅令」ですべての人に礼拝の自由が認められ、380年のテオドシウス1世の勅令でニカイア派が正統と定められた。ローマ帝国の外でも、アクスム王国のエザナ王が4世紀に受け入れ、硬貨に十字を刻んだ。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 1996,
+      "end_ya": 1600,
+      "label": "1世紀〜5世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.britannica-milan",
+      "src.britannica-theodosius",
+      "src.met-ethiopia",
+      "src.met-aksum"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.islam-rise",
+    "type": "event",
+    "title": {
+      "ja": "イスラームの成立と拡大",
+      "en": "Rise and spread of Islam"
+    },
+    "summary": "イスラームは7世紀のアラビア半島で成立した（622年のヒジュラが暦の起点、ムハンマドは632年没）。征服と改宗は別の過程で、イランでは改宗がアッバース朝の成立後に急増し、950年頃には80%以上がムスリムになったと推計される（Bulliet）。東南アジアや西アフリカには主に商人の網を通じて広がった。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 1404,
+      "end_ya": 526,
+      "label": "7世紀〜15世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.britannica-muhammad",
+      "src.iranica-conversion",
+      "src.bulliet1979",
+      "src.radushev2010",
+      "src.sluglett2012",
+      "src.met-transsaharan-gold"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.big-gods-debate",
+    "type": "concept",
+    "title": {
+      "ja": "道徳的な神々と社会の複雑化の論争",
+      "en": "Big gods debate"
+    },
+    "summary": "人の行いを見張り罰する「ビッグ・ゴッド」への信仰が大規模社会の協力を支えたとする仮説（Norenzayan）に対し、Whitehouse ら（2019, Nature）は「複雑な社会が先」と報告したが、欠損データを0として扱った問題を指摘され2021年に撤回された。原著者らは修正版の分析で結論を維持しており、論争は決着していない。",
+    "domains": [
+      "D07",
+      "D03"
+    ],
+    "level": 4,
+    "parent": "con.axial-age",
+    "time": null,
+    "epistemic": "debate",
+    "confidence": "high",
+    "sources": [
+      "src.norenzayan2013",
+      "src.whitehouse2019",
+      "src.nature-retraction2021",
+      "src.retractionwatch2021",
+      "src.whitehouse2023"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.silk-roads",
+    "type": "event",
+    "title": {
+      "ja": "シルクロード（陸の交易網）",
+      "en": "Silk Roads"
+    },
+    "summary": "一本の道ではなく、中継交易でつながる網。語は19世紀の造語で、リヒトホーフェン（1877）が広めたが、リッター（1838）に先例がある。UNESCO は2014年に「長安-天山回廊の交易路網」（中国・カザフスタン・キルギス、33資産）を世界遺産に登録した。4世紀のソグド人書簡は、商人の家族網と、重さのわりに高価な品の小規模な商いを伝える。",
+    "domains": [
+      "D07",
+      "D05"
+    ],
+    "level": 4,
+    "parent": "con.trade-networks",
+    "time": {
+      "start_ya": 2226,
+      "end_ya": 526,
+      "label": "前2世紀〜16世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.mertens2019-silkroad",
+      "src.waugh2007-richthofen",
+      "src.unesco-whc-1442",
+      "src.unesco-silk-changan",
+      "src.si-sogdian-letters",
+      "src.uw-sogdian-letters",
+      "src.avery-hansen-review",
+      "src.chin2013-invention"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.indian-ocean-trade",
+    "type": "event",
+    "title": {
+      "ja": "インド洋交易",
+      "en": "Indian Ocean trade"
+    },
+    "summary": "季節で向きの変わる風（モンスーン）を使い、東アフリカ・アラビア・インド・東南アジア・中国を結んだ海の網。1世紀の『エリュトゥラー海案内記』が港と商品を記し、9世紀のベリトゥン沈没船は約7万点と推定される唐の陶磁器を積んでいた。スワヒリ海岸の古代DNA（2023）は、1000年頃からのアフリカ系とペルシア系などアジア系の祖先の混合を示した。",
+    "domains": [
+      "D07",
+      "D05"
+    ],
+    "level": 4,
+    "parent": "con.trade-networks",
+    "time": {
+      "start_ya": 1976,
+      "end_ya": 526,
+      "label": "1世紀〜16世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.uw-periplus",
+      "src.flecker-belitung",
+      "src.si-shipwrecked-intro",
+      "src.brielle2023-swahili",
+      "src.unesco-kilwa"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.paper-transmission",
+    "type": "event",
+    "title": {
+      "ja": "紙の発明と伝播",
+      "en": "Transmission of paper"
+    },
+    "summary": "紙は蔡倫（105年の献上の記録）より前、前2世紀の中国にあった。中央アジアではイスラームの征服より前から使われ、8世紀末までにバグダードで作られた。751年のタラス河畔の戦いの捕虜が製紙を伝えたという話には裏付けがないという批判がある（Bloom）。原料は布くずに変わり、スペインでは10世紀末までに使われ、イタリアでの製紙は13世紀。",
+    "domains": [
+      "D04",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "con.trade-networks",
+    "time": {
+      "start_ya": 2226,
+      "end_ya": 726,
+      "label": "前2世紀（中国）〜13世紀（イタリアでの製紙）"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.ox-cabinet-paper",
+      "src.bloom2005-paper",
+      "src.britannica-printing-history",
+      "src.si-sogdian-letters"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.hindu-arabic-numerals",
+    "type": "concept",
+    "title": {
+      "ja": "インド数字（位取り記数法とゼロ）の伝播",
+      "en": "Hindu–Arabic numerals"
+    },
+    "summary": "インドの「九つの記号」による計算は662年にシリアで言及され、フワーリズミーの書（ラテン語訳のみ現存）を通じて広まり、イスラーム世界の東西で形が分かれた。ヨーロッパ最古の例は976年の『ビギラ写本』、フィボナッチは北アフリカで学び1202年に『算盤の書』を著した。バクシャーリー写本の3〜4世紀という年代（2017年発表）には、筆写の時期を示さないという反論がある。",
+    "domains": [
+      "D02",
+      "D07"
+    ],
+    "level": 4,
+    "parent": "con.trade-networks",
+    "time": {
+      "start_ya": 1826,
+      "end_ya": 824,
+      "label": "インドでの成立〜1202年（『算盤の書』）",
+      "uncertainty": "バクシャーリー写本の年代に論争"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.bodleian2017-bakhshali",
+      "src.hssa2017-bakhshali",
+      "src.mactutor-arabic-numerals",
+      "src.mactutor-fibonacci"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.translation-movement",
+    "type": "event",
+    "title": {
+      "ja": "アッバース朝の翻訳運動",
+      "en": "Graeco-Arabic translation movement"
+    },
+    "summary": "ギリシア語の学術書のアラビア語訳は、ウマイヤ朝に始まりアッバース朝の最初の2世紀に花開いた。担い手の多くはシリア語を話すキリスト教徒の学者で、シリア語訳を経ることも多かった。「知恵の館」は宮廷の図書館とみる見方がある。12世紀にはトレドなどでラテン語への再翻訳が進んだ（クレモナのゲラルド）。翻訳運動は「ヨーロッパへの中継」ではなく、それ自体がアッバース朝社会の必要から生まれた（Gutas）。",
+    "domains": [
+      "D08",
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 1276,
+      "end_ya": 1026,
+      "label": "8〜10世紀（12世紀のラテン語への再翻訳）"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.sep-arabic-greek",
+      "src.gutas1998",
+      "src.britannica-gerard",
+      "src.ferrario2008-saliba-review"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "「衰退」論の批判",
+        "view": "ルネサンス期のヨーロッパに影響した天文学の理論は、従来「衰退期」とされた時期に主に作られた（サリバ）。",
+        "sources": [
+          "src.ferrario2008-saliba-review"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt.mongol-empire",
+    "type": "event",
+    "title": {
+      "ja": "モンゴル帝国とユーラシアの結びつき",
+      "en": "Mongol Empire"
+    },
+    "summary": "世界史上最大の陸続きの帝国。1260年までに元・中央アジア・イル・ハン国・ジョチ・ウルスに分かれた。駅（ジャムチ）や紙幣、関税の引き下げが交易と旅を助け、イル・ハン国では中国の文様がペルシアの美術に取り込まれた。一方で中央アジアでの大量殺害や1258年のバグダード攻略など大きな破壊を伴い、交流と破壊は両立していた。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 820,
+      "end_ya": 658,
+      "label": "13〜14世紀"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.columbia-mongols",
+      "src.met-ilkhanid",
+      "src.abulughod1989"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "13世紀の世界システム",
+        "view": "1250〜1350年頃、8つの交易の回路が重なる世界システムがあり、ヨーロッパは中心ではなかった（アブー＝ルゴド）。交易量の統計的証拠の乏しさとアフリカの欠落が批判される。",
+        "sources": [
+          "src.abulughod1989",
+          "src.bailey-abulughod-review"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt.black-death",
+    "type": "event",
+    "title": {
+      "ja": "黒死病（14世紀のペスト）",
+      "en": "Black Death"
+    },
+    "summary": "キルギスの1338〜39年の墓地の古代DNAから、第二次ペスト・パンデミックの系統の分かれる直前の菌株が見つかり、天山周辺での出現が示された（Spyrou ら 2022）。死亡率は西ユーラシアで最大60%とも推定されるが、花粉データは地域差が大きかったことを示す（Izdebski ら 2022）。",
+    "domains": [
+      "D07",
+      "D03"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 680,
+      "end_ya": 673,
+      "label": "1346〜1353年頃（起源は1338〜39年の天山周辺）"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.spyrou2022",
+      "src.mpg2022-blackdeath",
+      "src.benedictow2021",
+      "src.izdebski2022"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.african-states",
+    "type": "concept",
+    "title": {
+      "ja": "アフリカの諸王国と交易",
+      "en": "African states and trade networks"
+    },
+    "summary": "紅海交易のアクスム（1〜8世紀、二言語の硬貨）、サハラ縦断の金交易と結びついたガーナ・マリ（マンサ・ムーサの1324年の巡礼、トンブクトゥの学問）・ソンガイ、ショナ人の都グレート・ジンバブエ（約1100〜15世紀）、独自の貨幣を鋳造したキルワ。グレート・ジンバブエをアフリカ人以外の建設とする植民地期の説は、考古学で否定されている。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 1926,
+      "end_ya": 435,
+      "label": "1世紀（アクスム）〜1591年（ソンガイの崩壊）"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.unesco-aksum",
+      "src.met-aksum",
+      "src.met-transsaharan-gold",
+      "src.met-wsudan-1000-1400",
+      "src.britannica-musa",
+      "src.natgeo-great-zimbabwe",
+      "src.unesco-kilwa",
+      "src.pbs-nova-great-zimbabwe"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "奴隷貿易とアフリカ側の主体性",
+        "view": "アフリカのエリートの主体性は実在したが限られ、大西洋奴隷貿易はアフリカにとって災厄だった（Lindsay 2014）。",
+        "sources": [
+          "src.lindsay2014-extraversion"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "con.americas-states",
+    "type": "concept",
+    "title": {
+      "ja": "アメリカ大陸の諸社会（マヤ・インカ）",
+      "en": "Societies of the Americas"
+    },
+    "summary": "マヤの象形文字は大部分が解読され、約30のマヤ諸語が今も500万人以上に話される。古典期の南部低地の人口縮小（750〜950年）は戦争・人口圧・乾燥などが絡む過程で、「崩壊」より回復力の例とみる研究もある。インカは文字を持たずに、約3万kmの道路網カパック・ニャン（2014年世界遺産）と、結び目で数を記すキープで広域を治めた。",
+    "domains": [
+      "D07"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 2026,
+      "end_ya": 494,
+      "label": "古典期マヤ〜1532年（インカ）"
+    },
+    "epistemic": "fact",
+    "confidence": "medium",
+    "sources": [
+      "src.britannica-maya",
+      "src.nature2023-maya-seasonality",
+      "src.mcanany-yoffee2010",
+      "src.unesco-qhapaq-nan",
+      "src.si-quipu"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.columbian-exchange",
+    "type": "event",
+    "title": {
+      "ja": "コロンブス交換と先住民の人口崩壊",
+      "en": "Columbian Exchange and the Great Dying"
+    },
+    "summary": "1492年以後、作物・家畜・病原体が大西洋をまたいで行き交った。1492年以前の南北アメリカの人口推定は約800万〜1億1000万超と割れ、Koch ら（2019）は6050万人（四分位範囲4480万〜7820万）とし、1世紀で約90%が失われたとした。疫病が大きかったが、奴隷化・暴力・強制労働が被害を重くしたとする研究（Reséndez）もあり、複合要因として扱う。",
+    "domains": [
+      "D07",
+      "D03",
+      "D05"
+    ],
+    "level": 4,
+    "parent": "evt.atlantic-colonialism",
+    "time": {
+      "start_ya": 534,
+      "end_ya": 376,
+      "label": "1492年〜17世紀"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.koch2019",
+      "src.nunn-qian2010",
+      "src.fisher2017-resendez"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.reformation",
+    "type": "event",
+    "title": {
+      "ja": "宗教改革と印刷",
+      "en": "Reformation and print"
+    },
+    "summary": "1517年のルターの論題の後、1518〜1525年にドイツ語圏で彼の著作が爆発的に印刷された（1518〜1524年に1,576回、Edwards の集計）。1500年までに印刷所のあった都市は1600年までにプロテスタントになる確率が少なくとも29ポイント高かったと推定される（Rubin 2014）。印刷は広がりを加速した条件の一つで、十分条件ではない。",
+    "domains": [
+      "D07",
+      "D08"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 509,
+      "end_ya": 480,
+      "label": "1517年〜16世紀"
+    },
+    "epistemic": "theory",
+    "confidence": "medium",
+    "sources": [
+      "src.edwards1994",
+      "src.rubin2014",
+      "src.pettegree2015"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "evt.japan-ritsuryo",
+    "type": "event",
+    "title": {
+      "ja": "日本の古代国家と大陸文化の受容",
+      "en": "Ritsuryō state in Japan"
+    },
+    "summary": "仏教の公伝（538年説が有力）、大化の改新（645〜646年）、大宝律令（701年）・養老律令（718年）で唐の制度を国情に合わせて取り入れた。官人の登用試験はすぐに廃れ家柄が重視され、743年の開墾地の永年私有で公地の原則が弱まった。神と仏は早くから結びつき（神仏習合）、受容は作り変えを伴った。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 1488,
+      "end_ya": 1283,
+      "label": "6世紀（仏教公伝）〜743年（墾田永年私財法）"
+    },
+    "epistemic": "fact",
+    "confidence": "high",
+    "sources": [
+      "src.britannica-japan-taika",
+      "src.ebsco-buddhism-japan",
+      "src.britannica-shinbutsu"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ]
+  },
+  {
+    "id": "con.early-modern-empires",
+    "type": "concept",
+    "title": {
+      "ja": "近世の大帝国と江戸日本",
+      "en": "Early modern empires"
+    },
+    "summary": "オスマン・サファヴィー・ムガルを火器で説明する「火薬帝国」論は、火器は要因の一つにすぎず官僚制や宗教者との同盟も中心だったと批判される。江戸幕府は長崎・対馬・薩摩・松前の「四つの口」で対外関係を扱い、「鎖国」は1801年の訳語に由来する後代の言葉で、完全な孤立ではなかったとする見直しが定着している。",
+    "domains": [
+      "D07",
+      "D06"
+    ],
+    "level": 3,
+    "parent": "thm.world-history",
+    "time": {
+      "start_ya": 526,
+      "end_ya": 276,
+      "label": "15世紀〜1750年頃"
+    },
+    "epistemic": "debate",
+    "confidence": "medium",
+    "sources": [
+      "src.getz-gunpowder",
+      "src.arano2013",
+      "src.colorado-tokugawa",
+      "src.toby1984-state-diplomacy",
+      "src.strathern2012-lieberman"
+    ],
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-26",
+      "by": "verifier（L0004の主張照合）"
+    },
+    "target_level": 2,
+    "curriculum": [
+      "P01-S04"
+    ],
+    "history": [
+      {
+        "map_version": "1.4",
+        "change": "作成",
+        "reason": "サイクル0004（L0004）の調査・独立検証"
+      }
+    ],
+    "perspectives": [
+      {
+        "label": "守られた周縁",
+        "view": "日本はヨーロッパ・東南アジア大陸部と並ぶ「守られた周縁」で、800〜1830年頃にユーラシアの他地域と並行する統合が進んだ（Lieberman）。",
+        "sources": [
+          "src.strathern2012-lieberman"
+        ]
       }
     ]
   }
