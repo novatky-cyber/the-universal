@@ -1,0 +1,542 @@
+src.ai100｜One Hundred Year Study on Artificial Intelligence (AI100)｜None｜https://ai100.stanford.edu/
+src.allwood2006｜Stromatolite reef from the Early Archaean era of Australia｜2006｜https://doi.org/10.1038/nature04764
+src.alpher-herman-1948｜Evolution of the Universe｜1948｜https://doi.org/10.1038/162774b0
+src.ashby2002-physicstoday｜Relativity and the Global Positioning System｜2002｜https://physicstoday.aip.org/features/relativity-and-the-global-positioning-system
+src.ashby2003｜Relativity in the Global Positioning System｜2003｜https://doi.org/10.12942/lrr-2003-1
+src.augustine-civ-dei-11｜The City of God, Book XI｜None｜https://www.newadvent.org/fathers/120111.htm
+src.bicep-planck-2015｜A Joint Analysis of BICEP2/Keck Array and Planck Data｜2015｜https://doi.org/10.1103/PhysRevLett.114.101301
+src.big-history｜Big History Project｜None｜https://www.bighistoryproject.com/
+src.bondi-gold-1948｜The Steady-State Theory of the Expanding Universe｜1948｜https://doi.org/10.1093/mnras/108.3.252
+src.britannica-kalpa｜kalpa (Indian chronology)｜None｜https://www.britannica.com/topic/kalpa-Indian-chronology
+src.britannica-samsara｜samsara｜None｜https://www.britannica.com/topic/samsara
+src.cern-antimatter｜The matter-antimatter asymmetry problem｜None｜https://home.cern/science/physics/matter-antimatter-asymmetry-problem
+src.chou2010｜Optical Clocks and Relativity｜2010｜https://doi.org/10.1126/science.1192720
+src.codata-planck-time｜CODATA value: Planck time｜None｜https://physics.nist.gov/cgi-bin/cuu/Value?plkt
+src.connelly2012｜The Absolute Chronology and Thermal Processing of Solids in the Solar Protoplane｜2012｜https://doi.org/10.1126/science.1226919
+src.cooperstock1998｜The Influence of the Cosmological Expansion on Local Systems｜1998｜https://doi.org/10.1086/305956
+src.dartmouth-ai｜Artificial Intelligence Coined at Dartmouth｜None｜https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth
+src.davis-lineweaver-2004｜Expanding Confusion: Common Misconceptions of Cosmological Horizons and the Supe｜2004｜https://doi.org/10.1071/AS03040
+src.des-recal-2025｜The Dark Energy Survey Supernova Program: A Reanalysis Of Cosmology Results And ｜2025｜https://arxiv.org/abs/2511.07517
+src.desi-dr2-2025｜New DESI Results Strengthen Hints That Dark Energy May Evolve｜2025｜https://newscenter.lbl.gov/2025/03/19/new-desi-results-strengthen-hints-that-dark-energy-may-evolve/
+src.dunlosky2013｜Improving Students' Learning With Effective Learning Techniques｜2013｜https://doi.org/10.1177/1529100612453266
+src.einstein1905｜Zur Elektrodynamik bewegter Körper｜1905｜https://doi.org/10.1002/andp.19053221004
+src.einstein1916｜Die Grundlage der allgemeinen Relativitätstheorie｜1916｜https://doi.org/10.1002/andp.19163540702
+src.esa-planck｜Planck｜None｜https://www.esa.int/Science_Exploration/Space_Science/Planck
+src.fixsen2009｜The Temperature of the Cosmic Microwave Background｜2009｜https://doi.org/10.1088/0004-637X/707/2/916
+src.freedman-cchp-2025｜Status Report on the Chicago-Carnegie Hubble Program (CCHP): Measurement of the ｜2025｜https://arxiv.org/abs/2408.06153
+src.h0dn-2026｜A global collaboration reaches 1% precision on the local expansion rate of the U｜2026｜https://icc.ub.edu/news/a-global-collaboration-reaches-1-precision-local-expansion-rate-universe
+src.hai-ai-index｜AI Index Report｜2026｜https://hai.stanford.edu/ai-index
+src.hartle-hawking-1983｜Wave function of the Universe｜1983｜https://doi.org/10.1103/PhysRevD.28.2960
+src.hoyle1948｜A New Model for the Expanding Universe｜1948｜https://doi.org/10.1093/mnras/108.5.372
+src.hubble1929｜A relation between distance and radial velocity among extra-galactic nebulae｜1929｜https://doi.org/10.1073/pnas.15.3.168
+src.hublin2017｜New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapien｜2017｜https://doi.org/10.1038/nature22336
+src.iau-2018-hubble-lemaitre｜IAU members vote to recommend renaming the Hubble law as the Hubble–Lemaître law｜2018｜https://www.iau.org/news/pressreleases/detail/iau1812/
+src.ics-chart-2024｜International Chronostratigraphic Chart (v2024/12)｜2024｜https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf
+src.iea-energy-ai｜Energy and AI｜2025｜https://www.iea.org/reports/energy-and-ai
+src.ipcc-ar6-syr｜AR6 Synthesis Report: Climate Change 2023｜2023｜https://www.ipcc.ch/report/ar6/syr/
+src.jades-z14｜Spectroscopic confirmation of two luminous galaxies at a redshift of 14｜2024｜https://doi.org/10.1038/s41586-024-07860-9
+src.johnson2019-elements｜Populating the periodic table: Nucleosynthesis of the elements｜2019｜https://doi.org/10.1126/science.aau9540
+src.lemaitre1927｜Un Univers homogène de masse constante et de rayon croissant rendant compte de l｜1927｜https://ui.adsabs.harvard.edu/abs/1927ASSB...47...49L
+src.nasa-hubble-tension｜NASA's Webb, Hubble Telescopes Affirm Universe's Expansion Rate, Puzzle Persists｜2024｜https://science.nasa.gov/missions/webb/nasas-webb-hubble-telescopes-affirm-universes-expansion-rate-puzzle-persists/
+src.nasa-solar-system｜Solar System Facts｜None｜https://science.nasa.gov/solar-system/solar-system-facts/
+src.nasa-universe｜Universe Overview｜None｜https://science.nasa.gov/universe/overview/
+src.nasa-webb-bigbang｜Webb Telescope & The Big Bang (Q&A)｜None｜https://science.nasa.gov/mission/webb/big-bang-q-and-a/
+src.nature-opera-2012｜Timing glitches dog neutrino claim｜2012｜https://www.nature.com/articles/483017a
+src.nist-2010-al-clocks｜NIST Pair of Aluminum Atomic Clocks Reveal Einstein's Relativity at a Personal S｜2010｜https://www.nist.gov/news-events/news/2010/09/nist-pair-aluminum-atomic-clocks-reveal-einsteins-relativity-personal
+src.nobel2011｜The Nobel Prize in Physics 2011 — Press release｜2011｜https://www.nobelprize.org/prizes/physics/2011/press-release/
+src.openai-chatgpt｜Introducing ChatGPT｜2022｜https://openai.com/index/chatgpt/
+src.opera-2012｜Measurement of the neutrino velocity with the OPERA detector in the CNGS beam｜2012｜https://arxiv.org/abs/1109.4897
+src.owid-tech｜Technology over the long run｜None｜https://ourworldindata.org/technology-long-run
+src.pantos-2026｜Dissecting the Hubble tension: Insights from a diverse set of Sound-Horizon-Free｜2026｜https://arxiv.org/abs/2601.00650
+src.pdg-bbn｜Big-Bang Nucleosynthesis (Review of Particle Physics)｜2024｜https://pdg.lbl.gov/2024/reviews/rpp2024-rev-bbang-nucleosynthesis.pdf
+src.penzias-wilson-1965｜A Measurement of Excess Antenna Temperature at 4080 Mc/s｜1965｜https://doi.org/10.1086/148307
+src.planck2018-vi｜Planck 2018 results. VI. Cosmological parameters｜2020｜https://arxiv.org/abs/1807.06209
+src.rovelli-order-of-time｜The Order of Time（原著 L'ordine del tempo, 2017）｜2018｜
+src.sep-cosmological-argument｜Cosmological Argument｜None｜https://plato.stanford.edu/entries/cosmological-argument/
+src.sep-cosmology｜Philosophy of Cosmology｜None｜https://plato.stanford.edu/entries/cosmology/
+src.sep-time-thermo｜Thermodynamic Asymmetry in Time｜None｜https://plato.stanford.edu/entries/time-thermo/
+src.shannon1948｜A Mathematical Theory of Communication｜1948｜https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
+src.smithsonian-human｜Introduction to Human Evolution｜None｜https://humanorigins.si.edu/education/introduction-human-evolution
+src.sn15-anamatagga｜Saṁyutta Nikāya 15 (Anamatagga Saṁyutta: On Transmigration)｜None｜https://suttacentral.net/sn15.1/en/sujato
+src.uk-futures｜The Futures Toolkit｜2014｜https://www.gov.uk/government/publications/futures-toolkit-for-policy-makers-and-analysts
+src.uk-systems｜Systems thinking for civil servants｜2022｜https://www.gov.uk/government/publications/systems-thinking-for-civil-servants
+src.un-wpp｜World Population Prospects｜None｜https://population.un.org/wpp/
+src.unesco-futures｜Futures Literacy｜None｜https://www.unesco.org/en/futures-literacy
+src.unesco-silk｜Silk Roads Programme｜None｜https://en.unesco.org/silkroad
+src.usgs-age-earth｜Age of the Earth｜None｜https://pubs.usgs.gov/gip/geotime/age.html
+src.vaswani2017｜Attention Is All You Need｜2017｜https://arxiv.org/abs/1706.03762
+src.weinberg-first-three-minutes｜The First Three Minutes: A Modern View of the Origin of the Universe｜1977｜
+src.christian2004｜Maps of Time: An Introduction to Big History｜2004｜
+src.korzybski1933｜Science and Sanity: An Introduction to Non-Aristotelian Systems and General Sema｜1933｜
+src.meadows2008｜Thinking in Systems: A Primer｜2008｜
+src.holland1986｜Statistics and Causal Inference｜1986｜https://doi.org/10.1080/01621459.1986.10478354
+src.angrist-pischke2009｜Mostly Harmless Econometrics: An Empiricist's Companion｜2009｜https://doi.org/10.1515/9781400829828
+src.pearl-mackenzie2018｜The Book of Why: The New Science of Cause and Effect｜2018｜
+src.sep-bayes｜Bayes' Theorem｜None｜https://plato.stanford.edu/entries/bayes-theorem/
+src.kahneman-tversky1973｜On the Psychology of Prediction｜1973｜https://doi.org/10.1037/h0034747
+src.gigerenzer-hoffrage1995｜How to Improve Bayesian Reasoning Without Instruction: Frequency Formats｜1995｜https://doi.org/10.1037/0033-295X.102.4.684
+src.david1985｜Clio and the Economics of QWERTY｜1985｜https://www.jstor.org/stable/1805621
+src.arthur1989｜Competing Technologies, Increasing Returns, and Lock-In by Historical Events｜1989｜https://doi.org/10.2307/2234208
+src.liebowitz-margolis1990｜The Fable of the Keys｜1990｜https://doi.org/10.1086/467198
+src.sep-counterfactual｜Counterfactual Theories of Causation｜None｜https://plato.stanford.edu/entries/causation-counterfactual/
+src.wack1985｜Scenarios: Uncharted Waters Ahead｜1985｜https://hbr.org/1985/09/scenarios-uncharted-waters-ahead
+src.brier1950｜Verification of Forecasts Expressed in Terms of Probability｜1950｜https://doi.org/10.1175/1520-0493(1950)078%3C0001:VOFEIT%3E2.0.CO;2
+src.tetlock-gardner2015｜Superforecasting: The Art and Science of Prediction｜2015｜
+src.roediger-karpicke2006｜Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention｜2006｜https://doi.org/10.1111/j.1467-9280.2006.01693.x
+src.notion-ai-glossary｜AI用語集（あなたのNotionメモ）｜None｜
+src.notion-business-glossary｜ビジネス用語集（あなたのNotionメモ）｜None｜
+src.notion-general-glossary｜一般用語集（あなたのNotionメモ）｜None｜
+src.larson2014｜Current perspectives and the future of domestication studies｜2014｜https://doi.org/10.1073/pnas.1323964111
+src.scott2017｜Against the Grain: A Deep History of the Earliest States｜2017｜https://yalebooks.yale.edu/book/9780300182910
+src.allen2009｜The British Industrial Revolution in Global Perspective｜2009｜https://doi.org/10.1017/CBO9780511816680
+src.mokyr2009｜The Enlightened Economy: An Economic History of Britain 1700–1850｜2009｜https://yalebooks.yale.edu/book/9780300124552
+src.pomeranz2000｜The Great Divergence: China, Europe, and the Making of the Modern World Economy｜2000｜https://doi.org/10.1515/9781400823499
+src.goody2006｜The Theft of History｜2006｜https://doi.org/10.1017/CBO9780511819841
+src.sep-hume-moral｜Hume's Moral Philosophy｜2018｜https://plato.stanford.edu/entries/hume-moral/
+src.walters-wilder2023｜Fabrication and errors in the bibliographic citations generated by ChatGPT｜2023｜https://doi.org/10.1038/s41598-023-41032-5
+src.nilsson2009｜The Quest for Artificial Intelligence: A History of Ideas and Achievements｜2009｜https://doi.org/10.1017/CBO9780511819346
+src.comin-hobijn2010｜An Exploration of Technology Diffusion｜2010｜https://doi.org/10.1257/aer.100.5.2031
+src.abbot2011｜Inclusive fitness theory and eusociality｜2011｜https://doi.org/10.1038/nature09831
+src.allwood2018｜Reassessing evidence of life in 3,700-million-year-old rocks of Greenland｜2018｜https://doi.org/10.1038/s41586-018-0610-4
+src.alvarez1980｜Extraterrestrial cause for the Cretaceous-Tertiary extinction｜1980｜https://ntrs.nasa.gov/citations/19800051929
+src.asu-mendel｜"Experiments in Plant Hybridization" (1866), by Johann Gregor Mendel｜None｜https://embryo.asu.edu/pages/experiments-plant-hybridization-1866-johann-gregor-mendel
+src.asu-sagan1967｜"On the Origin of Mitosing Cells" (1967), by Lynn Sagan｜None｜https://embryo.asu.edu/pages/origin-mitosing-cells-1967-lynn-sagan
+src.barnosky2011｜Has the Earth's sixth mass extinction already arrived?｜2011｜https://www.nature.com/articles/nature09678
+src.bell2015｜Potentially biogenic carbon preserved in a 4.1 billion-year-old zircon｜2015｜https://ui.adsabs.harvard.edu/abs/2015PNAS..11214518B/abstract
+src.blackburn2013｜Zircon U-Pb Geochronology Links the End-Triassic Extinction with the Central Atl｜2013｜https://ui.adsabs.harvard.edu/abs/2013Sci...340..941B
+src.blount2008｜Historical contingency and the evolution of a key innovation in an experimental ｜2008｜https://www.pnas.org/doi/10.1073/pnas.0803151105
+src.britannica-lamarckism｜Lamarckism – Persistence of Lamarckism｜None｜https://www.britannica.com/science/Lamarckism/Persistence-of-Lamarckism
+src.britannica-oparin-haldane｜Oparin-Haldane theory｜None｜https://www.britannica.com/print/article/1791898
+src.britannica-social-darwinism｜Social Darwinism｜None｜https://www.britannica.com/topic/social-Darwinism
+src.britannica-survival-fittest｜Survival of the fittest｜None｜https://www.britannica.com/science/survival-of-the-fittest
+src.britannica-vavilov｜Nikolai Vavilov｜None｜https://www.britannica.com/biography/Nikolai-Vavilov
+src.burgess2014｜High-precision timeline for Earth's most severe extinction｜2014｜https://dspace.mit.edu/handle/1721.1/91514
+src.burgess2017｜Initial pulse of Siberian Traps sills as the trigger of the end-Permian mass ext｜2017｜https://www.usgs.gov/publications/initial-pulse-siberian-traps-sills-trigger-end-permian-mass-extinction
+src.canadian-enc-burgess｜Burgess Shale Fossils｜None｜https://www.thecanadianencyclopedia.ca/en/article/burgess-shale-fossils
+src.christs-sexual-selection｜Sexual Selection｜None｜https://darwin200.christs.cam.ac.uk/node/37
+src.cowie2022｜Strong evidence shows Sixth Mass Extinction of global biodiversity in progress｜2022｜https://www.hawaii.edu/news/2022/01/14/6th-mass-extinction-progress/
+src.daeschler2006｜A Devonian tetrapod-like fish and the evolution of the tetrapod body plan｜2006｜https://doi.org/10.1038/nature04639
+src.damer-deamer2020｜The Hot Spring Hypothesis for an Origin of Life｜2020｜https://pubmed.ncbi.nlm.nih.gov/31841362/
+src.darwin-online-origin｜On the Origin of Species（編集解説）／Overview of illustrations｜None｜https://darwin-online.org.uk/EditorialIntroductions/Freeman_OntheOriginofSpecies.html
+src.dawkins-selfish-gene-ja｜利己的な遺伝子 40周年記念版｜2018｜https://www.kinokuniya.co.jp/f/dsg-08-EK-0517150
+src.dewaal2003｜Silent invasion: Imanishi's primatology and cultural bias in science｜2003｜https://dx.doi.org/10.1007/s10071-003-0197-4
+src.dodd2017｜Evidence for early life in Earth's oldest hydrothermal vent precipitates｜2017｜https://pubs.usgs.gov/publication/70193303
+src.doolittle1999｜Phylogenetic Classification and the Universal Tree｜1999｜https://doi.org/10.1126/science.284.5423.2124
+src.durbin2026｜New study suggests animals may have evolved vastly earlier than fossil evidence ｜2026｜https://www.ox.ac.uk/news/2026-09-23-new-study-suggests-animals-may-have-evolved-vastly-earlier-than-fossil-evidence
+src.eldredge2024｜Reflections on punctuated equilibria｜2024｜https://www.cambridge.org/core/journals/paleobiology/article/reflections-on-punctuated-equilibria/C75F83CCFD766DE6E3B3CEB712078861
+src.eme2023｜Inference and reconstruction of the heimdallarchaeial ancestry of eukaryotes｜2023｜https://doi.org/10.1038/s41586-023-06186-2
+src.eos-ordovician-2022｜What conditions accompanied the Late Ordovician mass extinction?｜2022｜https://eos.org/editor-highlights/what-conditions-accompanied-the-late-ordovician-mass-extinction
+src.ewtn-jp2-1996｜Message to the Pontifical Academy of Sciences on Evolution｜1996｜https://www.ewtn.com/catholicism/library/message-to-the-pontifical-academy-of-science-on-evolution-8825
+src.gilbert1986｜Origin of life: The RNA world｜1986｜https://doi.org/10.1038/319618a0
+src.goldman-becerra2024｜A New View of the Last Universal Common Ancestor｜2024｜https://link.springer.com/article/10.1007/s00239-024-10193-w
+src.gould1988-kropotkin｜Kropotkin Was No Crackpot｜1988｜https://www.marxists.org/subject/science/essays/kropotkin.htm
+src.grant2006｜Evolution of Character Displacement in Darwin's Finches｜2006｜https://doi.org/10.1126/science.1128374
+src.halstead1985｜Anti-darwinian theory in Japan｜1985｜https://www.nature.com/articles/317587a0.pdf
+src.hudson2020｜CO2 reduction driven by a pH gradient｜2020｜https://pmc.ncbi.nlm.nih.gov/articles/PMC7502746
+src.hull2020｜Death of the dinosaurs? It was all about the asteroid, not volcanoes｜2020｜https://news.yale.edu/2020/01/16/death-dinosaurs-it-was-all-about-asteroid-not-volcanoes
+src.hunt2015｜Simple versus complex models of trait evolution and stasis as a response to envi｜2015｜https://pmc.ncbi.nlm.nih.gov/articles/PMC4413263
+src.iep-evolutionary-ethics｜Evolutionary Ethics｜None｜https://iep.utm.edu/evol-eth/
+src.iucn-chengjiang｜Chengjiang Fossil Site｜None｜https://worldheritageoutlook.iucn.org/node/1170
+src.jackson2016｜Natural pH Gradients in Hydrothermal Alkali Vents Were Unlikely to Have Played a｜2016｜https://link.springer.com/article/10.1007/s00239-016-9756-6
+src.javaux2019｜Challenges in evidencing the earliest traces of life｜2019｜https://doi.org/10.1038/s41586-019-1436-4
+src.jensen2019｜The importance of the Neutral Theory in 1968 and 50 years on: A response to Kern｜2019｜https://pmc.ncbi.nlm.nih.gov/articles/PMC6496948
+src.johnson2008｜The Miller volcanic spark discharge experiment｜2008｜https://pubmed.ncbi.nlm.nih.gov/18927386/
+src.joyce2002｜The antiquity of RNA-based evolution｜2002｜https://www.nature.com/articles/418214a
+src.jpl-cheyava-2025｜NASA Says Mars Rover Discovered Potential Biosignature Last Year｜2025｜https://www.jpl.nasa.gov/news/nasa-says-mars-rover-discovered-potential-biosignature-last-year/
+src.jpl-chicxulub｜A Smoking Gun for Dinosaur Extinction｜None｜https://www.jpl.nasa.gov/news/a-smoking-gun-for-dinosaur-extinction/
+src.kay2025｜Complex life developed earlier than previously thought, new study reveals｜2025｜https://www.bristol.ac.uk/news/2025/december/complex-life-developed-earlier-than-previously-thought-new-study-reveals.html
+src.kernhahn2018｜The Neutral Theory in Light of Natural Selection｜2018｜https://hahnlab.sitehost.iu.edu/Publications/KernHahn2018.pdf
+src.kimura1977｜Preponderance of synonymous changes as evidence for the neutral theory of molecu｜1977｜https://www.nature.com/articles/267275a0
+src.kitzmiller-opinion｜Kitzmiller v. Dover Area School District, Memorandum Opinion｜2005｜https://www.pamd.uscourts.gov/sites/pamd/files/kitzmiller_342.pdf
+src.knoll2011｜The Multiple Origins of Complex Multicellularity｜2011｜https://annualreviews.org/doi/pdf/10.1146/annurev.earth.031208.100209
+src.laland2014｜Does evolutionary theory need a rethink?｜2014｜https://doi.org/10.1038/514161a
+src.linnean-1858｜160th anniversary of the presentation of "On the tendency of Species to form Var｜2018｜https://www.linnean.org/news/2018/07/01/1st-july-2018-160th-anniversary-of-the-presentation-of-on-the-tendency-of-species-to-form-varieties
+src.luo2022｜Mechanisms and climatic-ecological effects of the Great Oxidation Event in the e｜2022｜https://link.springer.com/article/10.1007/s11430-021-9934-y
+src.lyons2014｜The rise of oxygen in Earth's early ocean and atmosphere｜2014｜https://doi.org/10.1038/nature13068
+src.marshall2023｜Forty years later: The status of the "Big Five" mass extinctions｜2023｜https://cambridge.org/core/journals/cambridge-prisms-extinction/article/forty-years-later-the-status-of-the-big-five-mass-extinctions/D8B7C1C298686D3622273320E778D22A
+src.martins2008｜Extraterrestrial nucleobases in the Murchison meteorite｜2008｜https://arxiv.org/abs/0806.2286
+src.matsuzawa-mcgrew2008｜Kinji Imanishi and 60 years of Japanese primatology｜2008｜https://doi.org/10.1016/j.cub.2008.05.040
+src.matthews2020｜New study confirms Newfoundland as home to world's oldest animal fossils｜2020｜https://mun.ca/marcomm/news-releases/archive/2019-2020/new-study-confirms-newfoundland-as-home-to-worlds-oldest-animal-fossils.php
+src.mcmahon2019｜Earth's earliest and deepest purported fossils may be iron-mineralized chemical ｜2019｜https://pmc.ncbi.nlm.nih.gov/articles/PMC6939263
+src.mizzou-modern-synthesis｜The Modern Evolutionary Synthesis｜None｜https://library.missouri.edu/specialcollections/exhibits/show/darwin/genes
+src.moj-saikosai-2024｜最高裁判所大法廷 判決（令和5年(受)第1319号、2024年7月3日）｜2024｜https://www.moj.go.jp/content/001457732.pdf
+src.moody2024｜The nature of the last universal common ancestor and its impact on the early Ear｜2024｜https://pmc.ncbi.nlm.nih.gov/articles/PMC11383801/
+src.msu-ltee-2025｜Evolution under a microscope going strong at MSU｜2025｜https://msutoday.msu.edu/news/2025/11/evolution-under-a-microscope-going-strong-at-msu
+src.msu-lysenko｜Lysenkoism in Biology｜None｜https://soviethistory.msu.edu/1947/lysenkoism-in-biology/
+src.nas-2008｜Science, Evolution, and Creationism（刊行の発表）｜2008｜https://www.nationalacademies.org/news/2008/01/scientific-evidence-supporting-evolution-continues-to-grow-nonscientific-approaches-do-not-belong-in-science-classrooms
+src.nasa-bennu-2025｜NASA's Asteroid Bennu Sample Reveals Mix of Life's Ingredients｜2025｜https://www.nasa.gov/news-release/nasas-asteroid-bennu-sample-reveals-mix-of-lifes-ingredients/
+src.nasa-bennu-sugars-2025｜Sugars, 'Gum,' Stardust Found in NASA's Asteroid Bennu Samples｜2025｜https://www.nasa.gov/missions/osiris-rex/sugars-gum-stardust-found-in-nasas-asteroid-bennu-samples/
+src.nasa-life-definition｜Forming a Definition for Life: Interview with Gerald Joyce｜None｜https://astrobiology.nasa.gov/news/forming-a-definition-for-life/
+src.nasa-miller-urey-2008｜Miller-Urey Revisited｜2008｜https://astrobiology.nasa.gov/news/miller-urey-revisited/
+src.natgeo-deccan-2019｜What actually killed the dinosaurs? Volcanoes heat up debate｜2019｜https://www.nationalgeographic.com/science/article/what-actually-killed-dinosaurs-volcanoes-heat-up-debate
+src.ncbi-genetic-codes｜The Genetic Codes｜None｜https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+src.ncse-kitzmiller｜Intelligent Design Trial: Kitzmiller v. Dover｜None｜https://ncse.ngo/creationism/legal/intelligent-design-trial-kitzmiller-v-dover
+src.ncse-monkeys｜Misconception Monday: Let's Stop Monkeying About, Shall We?｜None｜https://ncse.ngo/misconception-monday-lets-stop-monkeying-about-shall-we
+src.nhgri-eugenics｜Eugenics and Scientific Racism｜2022｜https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism
+src.niedzwiedzki2010｜Fossil footprints give land vertebrates a much longer history｜2010｜https://www.uu.se/en/press/press-releases/2009/2010-01-07-fossil-footprints-give-land-vertebrates-a-much-longer-history
+src.nigpas-2024｜Fossils from North China indicate eukaryotes first acquired multicellularity by ｜2024｜https://english.nigpas.cas.cn/new/hs/rp/202401/t20240124_656672.html
+src.nlm-double-helix｜The Francis Crick Papers: The Discovery of the Double Helix, 1951-1953｜None｜https://profiles.nlm.nih.gov/spotlight/sc/feature/doublehelix
+src.noaa-atmosphere｜The Atmosphere｜None｜https://www.noaa.gov/jetstream/atmosphere
+src.nutman2016｜Rapid emergence of life shown by discovery of 3,700-million-year-old microbial s｜2016｜https://doi.org/10.1038/nature19355
+src.oba2023｜Uracil found in Ryugu samples｜2023｜https://www.global.hokudai.ac.jp/?p=68201
+src.ohta-bluebacks｜分子進化のほぼ中立説 偶然と淘汰の進化モデル｜2009｜https://honto.jp/ebook/pd_26459526.html
+src.ohta1973｜Slightly Deleterious Mutant Substitutions in Evolution｜1973｜https://www.nature.com/articles/246096a0
+src.openstax-eukaryotic-origins｜Concepts of Biology, 13.2 Eukaryotic Origins｜None｜https://openstax.org/books/concepts-biology/pages/13-2-eukaryotic-origins
+src.openstax-mechanisms｜Concepts of Biology, 11.2 Mechanisms of Evolution｜None｜https://openstax.org/books/concepts-biology/pages/11-2-mechanisms-of-evolution
+src.owid-lpi-2026｜A 73% average decline in wildlife populations: an overview of the 2026 Living Pl｜2026｜https://ourworldindata.org/2026-lpi-update
+src.owid-mass-extinctions｜Mass extinctions｜None｜https://ourworldindata.org/mass-extinctions
+src.planavsky2014｜Evidence for oxygenic photosynthesis half a billion years before the Great Oxida｜2014｜https://www.nature.com/articles/ngeo2122
+src.poulton2021｜Extra 100 million years before Earth saw permanent oxygen rise｜2021｜https://www.leeds.ac.uk/news/article/4797/extra-100-million-years-before-earth-saw-permanent-oxygen-rise
+src.powner2009｜Synthesis of activated pyrimidine ribonucleotides in prebiotically plausible con｜2009｜https://ui.adsabs.harvard.edu/abs/2009Natur.459..239P/abstract
+src.renne2013｜Time Scales of Critical Events Around the Cretaceous-Paleogene Boundary｜2013｜https://ui.adsabs.harvard.edu/abs/2013Sci...339..684R/abstract
+src.robinson2005-plos｜Jump-Starting a Cellular World: Investigating the Origin of Life, from Soup to N｜2005｜https://journals.plos.org/plosbiology/article/info:doi/10.1371/journal.pbio.0030396
+src.rooney2014｜Re-Os geochronology and coupled Os-Sr isotope constraints on the Sturtian snowba｜2014｜https://durham-repository.worktribe.com/output/1473458
+src.rubinstein2010｜Early Middle Ordovician evidence for land plants in Argentina (eastern Gondwana)｜2010｜https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/CONICETDig_ac9305178331702ab005dfd0f9345ccf
+src.schulte2010｜Alvarez theory on dinosaur die-out upheld｜2010｜https://newscenter.lbl.gov/2010/03/09/alvarez-theory-on-dinosaur/
+src.sciam-panspermia｜The Panspermia Paradox｜None｜https://www.scientificamerican.com/blog/life-unbounded/the-panspermia-paradox/
+src.sciencemuseum-franklin｜Rosalind Franklin's role revealed on the 70th anniversary of the DNA double heli｜2023｜https://blog.sciencemuseum.org.uk/rosalind-franklins-role-revealed-on-the-70th-anniversary-of-the-dna-double-helix-breakthrough/
+src.senckenberg-kimura｜Darwin or Kimura – Natural Selection or Pure Chance?｜None｜https://www.senckenberg.de/en/?p=160416
+src.sep-evolution-before-darwin｜Evolutionary Thought Before Darwin｜2024｜https://plato.stanford.edu/archives/spr2024/entries/evolution-before-darwin/
+src.sep-units-selection｜Units and Levels of Selection｜2023｜https://plato.stanford.edu/archives/win2023/entries/selection-units/
+src.sloan2018｜Cytonuclear integration and co-evolution｜2018｜https://pmc.ncbi.nlm.nih.gov/articles/PMC6469396
+src.smit1980｜An extraterrestrial event at the Cretaceous–Tertiary boundary｜1980｜https://www.nature.com/articles/285198a0.pdf
+src.soken-ohta-interview｜太田朋子氏インタビュー記録｜2009｜https://ir.soken.ac.jp/record/5154/files/%E5%A4%AA%E7%94%B0%E6%9C%8B%E5%AD%90%E6%B0%8F%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%93%E3%83%A5%E3%83%BC.pdf
+src.spang2015｜Complex archaea that bridge the gap between prokaryotes and eukaryotes｜2015｜https://doi.org/10.1038/nature14447
+src.springer2019｜Evolutionary Models for the Diversification of Placental Mammals Across the KPg ｜2019｜https://www.frontiersin.org/articles/10.3389/fgene.2019.01241/text
+src.uchicago-origin-explainer｜Origin of life on Earth, explained｜None｜https://news.uchicago.edu/explainer/origin-life-earth-explained
+src.uchicago-tiktaalik-2006｜Fossils of Tiktaalik roseae（University of Chicago Chronicle）｜2006｜https://chronicle.uchicago.edu/060413/fossils.shtml
+src.ue-lines-of-evidence｜Lines of evidence: The science of evolution｜None｜https://evolution.berkeley.edu/lines-of-evidence
+src.ue-misconceptions｜Misconceptions about evolution｜2020｜https://evolution.berkeley.edu/wp-content/uploads/2021/10/misconceptions_about_evolution_2020.pdf
+src.ue-natural-selection｜Natural selection｜None｜https://evolution.berkeley.edu/natural-selection-2
+src.vasas2010｜Lack of evolvability in self-sustaining autocatalytic networks constraints metab｜2010｜https://pmc.ncbi.nlm.nih.gov/articles/PMC2824406
+src.watson-szathmary2016｜How Can Evolution Learn?｜2016｜https://eprints.soton.ac.uk/396543
+src.weblio-chemical-evolution｜化学進化（デジタル大辞泉ほか）｜None｜https://www.weblio.jp/content/化学進化
+src.who-amr-2025｜WHO warns of widespread resistance to common antibiotics worldwide｜2025｜https://www.who.int/news/item/13-10-2025-who-warns-of-widespread-resistance-to-common-antibiotics-worldwide
+src.williams2020｜Phylogenomics provides robust support for a two-domains tree of life｜2020｜https://researchportal.bath.ac.uk/en/publications/phylogenomics-provides-robust-support-for-a-two-domains-tree-of-l/
+src.woese-fox1977｜Phylogenetic structure of the prokaryotic domain: The primary kingdoms｜1977｜https://doi.org/10.1073/pnas.74.11.5088
+src.woese1990｜Towards a natural system of organisms: proposal for the domains Archaea, Bacteri｜1990｜https://pubmed.ncbi.nlm.nih.gov/2112744/
+src.wood2019｜Integrated records of environmental change and evolution challenge the Cambrian ｜2019｜https://doi.org/10.1038/s41559-019-0821-6
+src.zhang-shu2021｜Current understanding on the Cambrian Explosion: questions and answers｜2021｜https://link.springer.com/article/10.1007/s12542-021-00568-5
+src.ipbes-2019｜Media Release: Nature's Dangerous Decline 'Unprecedented'; Species Extinction Ra｜2019｜https://www.ipbes.net/news/Media-Release-Global-Assessment
+src.langergraber2012｜Generation times in wild chimpanzees and gorillas suggest earlier divergence tim｜2012｜https://pmc.ncbi.nlm.nih.gov/articles/PMC3465451
+src.scally-durbin2012｜Revising the human mutation rate: implications for understanding human evolution｜2012｜https://wiki.helsinki.fi/xwiki/bin/download/mathstatKurssit/Kev%C3%A4t%202015/Statistical%20genetics%2C%20spring%202015/WebHome/Revising%20human%20mutation%20rate%2C%20understanding%20human%20evolution.pdf?rev=1.1
+src.scitable-earliest-hominins｜The Earliest Hominins: Sahelanthropus, Orrorin, and Ardipithecus｜2013｜https://www.nature.com/scitable/knowledge/library/the-earliest-hominins-sahelanthropus-orrorin-and-ardipithecus-67648286
+src.macchiarelli2020｜Nature and relationships of Sahelanthropus tchadensis（報道：Partial left femur of S｜2020｜https://phys.org/news/2020-11-partial-left-femur-sahelanthropus-tchadensis.html
+src.daver2022｜Postcranial evidence of late Miocene hominin bipedalism in Chad｜2022｜https://www.nature.com/articles/s41586-022-04901-z
+src.cazenave2024｜What about bipedalism in Sahelanthropus?（論文：Postcranial evidence does not suppor｜2024｜https://mpg.de/22183908/what-about-bipedalism-in-sahelanthropus
+src.williams2026｜Earliest evidence of hominin bipedalism in Sahelanthropus tchadensis｜2026｜https://knowledge.uchicago.edu/records/p54a4-n6p31
+src.smithsonianmag-sahelanthropus-2026｜New fossil analysis suggests this seven-million-year-old primate walked on two l｜2026｜https://www.smithsonianmag.com/smart-news/new-fossil-analysis-suggests-this-seven-million-year-old-primate-walked-on-two-legs-potentially-making-it-the-oldest-known-human-ancestor-180987947/
+src.smc-spain-sahelanthropus-2026｜Reacciones / expert reactions: Sahelanthropus tchadensis bipedalism｜2026｜https://sciencemediacentre.es/en/node/6461
+src.sciam-lucy2024｜How the Famous Lucy Fossil Revolutionized the Study of Human Origins｜2024｜https://www.scientificamerican.com/article/fossil-human-ancestor-lucy-remains-pivotal-50-years-after-discovery
+src.si-brains｜Brains｜None｜https://humanorigins.si.edu/human-characteristics/brains
+src.masao2016｜New footprints from Laetoli (Tanzania) provide evidence for marked body size var｜2016｜https://pmc.ncbi.nlm.nih.gov/articles/PMC5156529/
+src.mongle2025｜New fossils reveal the hand of Paranthropus boisei（Nature 注目のハイライト）｜2025｜https://www.natureasia.com/ja-jp/nature/pr-highlights/15370
+src.herries2020｜Contemporaneity of Australopithecus, Paranthropus, and early Homo erectus in Sou｜2020｜https://archaeology.org/news/2020/04/03/200406-drimolen-cave-dates/
+src.villmoare2015｜Early Homo at 2.8 Ma from Ledi-Geraru, Afar, Ethiopia｜2015｜https://pure.psu.edu/en/publications/early-homo-at-28-ma-from-ledi-geraru-afar-ethiopia/
+src.nhm-erectus｜Homo erectus, our ancient ancestor｜None｜https://www.nhm.ac.uk/discover/homo-erectus-our-ancient-ancestor.html
+src.ferring2011｜Earliest human occupations at Dmanisi (Georgian Caucasus) dated to 1.85–1.78 Ma｜2011｜https://www.iphes.cat/earliest-human-occupations-dmanisi-georgian-caucasus-dated-185%E2%80%93178-ma
+src.richter2017｜The age of the hominin fossils from Jebel Irhoud, Morocco, and the origins of th｜2017｜https://www.nature.com/articles/doi:10.1038/nature22335
+src.vidal2022｜Age of the oldest known Homo sapiens from eastern Africa｜2022｜https://pmc.ncbi.nlm.nih.gov/articles/PMC8791829
+src.scerri2018｜Did Our Species Evolve in Subdivided Populations across Africa, and Why Does It ｜2018｜https://www.ucl.ac.uk/human-evolution/news/2018/jul/did-our-species-evolve-subdivided-populations-across-africa-and-why-does-it-matter
+src.hublin2026｜Early hominins from Morocco basal to the Homo sapiens lineage（報道）｜2026｜https://www.sciencedaily.com/releases/2026/02/260206012221.htm
+src.ni2025-yunxian｜Analysis of reconstructed ancient skull pushes back our origins（Science, doi:10.｜2025｜https://www.nhm.ac.uk/press-office/press-releases/analysis-of-reconstructed-ancient-skull-pushes-back-our-origins-.html
+src.meyer2016-sima｜400,000-year-old fossils from Spain provide earliest genetic evidence of Neander｜2016｜https://www.mpg.de/10364707/hominins-sima-de-los-huesos
+src.embryo-cann1987｜"Mitochondrial DNA and Human Evolution" (1987), by Rebecca Louise Cann, Mark Sto｜None｜https://embryo.asu.edu/pages/mitochondrial-dna-and-human-evolution-1987-rebecca-louise-cann-mark-stoneking-and-allan
+src.hershkovitz2018｜The earliest modern humans outside Africa｜2018｜https://openresearch-repository.anu.edu.au/items/d1428444-05fd-4215-8c54-6b0ca98d2888
+src.groucutt2018｜Homo sapiens in Arabia by 85,000 years ago｜2018｜https://www.nature.com/articles/s41559-018-0518-2
+src.iasi2024｜New timeline for Neandertal gene flow event（Iasi et al., Science 2024, doi:10.11｜2024｜https://www.mpg.de/23832006/new-timeline-for-neandertal-gene-flow-event
+src.nobel2022｜Nobelpriset i fysiologi eller medicin 2022（プレスリリース）｜2022｜https://www.nobelprize.org/prizes/medicine/2022/193954-press-release-swedish/
+src.clarkson2017｜Human occupation of northern Australia by 65,000 years ago｜2017｜https://www.nature.com/nature-index/article/10.1038/nature22968
+src.oconnell-allen2025｜When did humans first colonize Australia?（O'Connell & Allen, Recent DNA Studies ｜2025｜https://www.global.utah.edu/stories/when-did-humans-first-colonize-australia/
+src.huerta-sanchez2014｜Altitude adaptation in Tibetans caused by introgression of Denisovan-like DNA｜2014｜https://www.nature.com/articles/nature13408
+src.harbin2025｜The proteome / Denisovan mitochondrial DNA of the Harbin cranium（中国科学院の発表）｜2025｜https://www.eurekalert.org/news-releases/1087905
+src.sciencenews-harbin2025｜A skull from China is the first known Denisovan face｜2025｜https://www.sciencenews.org/article/skull-first-denisovan-human-cousin
+src.fu2026-erectus｜Enamel proteins from six Homo erectus specimens across China（報道）｜2026｜https://www.sciencedaily.com/releases/2026/11/261102202836.htm
+src.sutikna2016｜Revised stratigraphy and chronology for Homo floresiensis at Liang Bua in Indone｜2016｜https://openresearch-repository.anu.edu.au/handle/1885/109256?mode=full
+src.dirks2017｜The age of Homo naledi and associated sediments in the Rising Star Cave, South A｜2017｜https://wiredspace.wits.ac.za/items/44c39ea9-5bcf-4352-b7e1-ab8ea320eb44
+src.detroit2019｜A new species of Homo from the Late Pleistocene of the Philippines｜2019｜https://www.nature.com/articles/s41586-019-1067-9
+src.macho2026｜The Taung child and the biogeographic and palaeoclimatic drivers of southern Afr｜2026｜https://www.sciencedaily.com/releases/2026/11/261118065531.htm
+src.nakazawa2017｜On the Pleistocene Population History in the Japanese Archipelago｜2017｜https://www.journals.uchicago.edu/doi/10.1086/694447
+src.nakagawa2010｜Pleistocene human remains from Shiraho-Saonetabaru Cave on Ishigaki Island, Okin｜2010｜https://www.jstage.jst.go.jp/article/ase/118/3/118_091214/_article
+src.japantimes-shiraho2017｜Japan's oldest human skeleton found in Okinawan cave｜2017｜https://japantimes.co.jp/news/2017/05/19/national/science-health/japans-oldest-human-skeleton-found-okinawan-cave
+src.suwa2011｜New insights on the excavation and chronological status of the Late Pleistocene ｜2011｜https://www.jstage.jst.go.jp/article/asj/119/2/119_110727/_article/-char/en
+src.kaifu2025｜Palaeolithic seafaring in East Asia（丸木舟の実験航海、Science Advances 2025、プレスリリース）｜2025｜https://www.u-tokyo.ac.jp/focus/en/press/z0508_00414.html
+src.edge2022｜Celebrating 50 years since Lewontin's apportionment of human diversity｜2022｜https://web.stanford.edu/group/rosenberglab/papers/EdgeEtAl2022-PhilTransB.pdf
+src.tishkoff2009｜The Genetic Structure and History of Africans and African Americans（報道）｜2009｜https://www.sciencedaily.com/releases/2009/04/090430144524.htm
+src.wolpoff2000｜Multiregional, not multiple origins｜2000｜https://deepblue.lib.umich.edu/handle/2027.42/34270
+src.ragsdale2023｜A weakly structured stem for human origins in Africa｜2023｜https://pubmed.ncbi.nlm.nih.gov/37198480/
+src.schlebusch2019｜Human origins in a southern African palaeo-wetland? Strong claims from weak evid｜2019｜https://eeg.zoo.cam.ac.uk/news/human-origins-southern-african-palaeo-wetlands-strong-claims-weak-evidence
+src.veth2025｜Do Recent DNA Studies Refute a 65 kya Arrival of Humans in Sahul?｜2025｜https://ourarchive.otago.ac.nz/esploro/outputs/letter/Do-Recent-DNA-Studies-Refute-a/9926753237301891
+src.livescience-sahul2025｜Neanderthal DNA may refute 65,000-year-old date for human occupation in Australi｜2025｜https://www.livescience.com/archaeology/human-evolution/neanderthal-dna-may-refute-65-000-year-old-date-for-human-occupation-in-australia-but-not-all-experts-are-convinced
+src.shea2011｜Homo sapiens Is as Homo sapiens Was: Behavioral Variability versus "Behavioral M｜2011｜https://researchconnect.stonybrook.edu/en/publications/homo-sapiens-is-as-homo-sapiens-was-behavioral-variability-versus/
+src.villa-roebroeks2014｜Neandertal Demise: An Archaeological Analysis of the Modern Human Superiority Co｜2014｜https://ui.adsabs.harvard.edu/abs/2014PLoSO...996424V
+src.aaba2019｜AABA Statement on Race & Racism｜2019｜https://bioanth.org/about/aaba-statement-on-race-racism/
+src.ucsc-race-letter2018｜Scholars speak out on genomics and race（公開書簡 How Not To Talk About Race And Gene｜2018｜https://news.ucsc.edu/2018/04/reardon-buzzfeed/
+src.bardill2018｜Advancing the ethics of paleogenomics（報道）｜2018｜https://sciencedaily.com/releases/2018/04/180426141528.htm
+src.alpaslan2021｜Ethics of DNA research on human remains: five globally applicable guidelines｜2021｜https://nathannakatsuka.scholars.harvard.edu/publications/ethics-dna-research-human-remains-five-globally-applicable-guidelines
+src.furholt2018｜Massive Migrations? The Impact of Recent aDNA Studies on our View of Third Mille｜2018｜https://www.cambridge.org/core/product/B225B14D82066373B2C11295AA1D1462/core-reader
+src.frieman-hofmann2019｜Present pasts in the archaeology of genetics, identity, and migration in Europe:｜2019｜https://researchportalplus.anu.edu.au/en/publications/present-pasts-in-the-archaeology-of-genetics-identity-and-migrati/
+src.cooke2021-tcd｜Ancient DNA rewrites early Japanese history – modern-day populations have tripar｜2021｜https://www.tcd.ie/news_events/articles/ancient-dna-rewrites-early-japanese-history--modern-day-populations-have-tripartite-genetic-origin/
+src.hudson2005｜For the people, by the people: postwar Japanese archaeology and the Early Paleol｜2005｜https://www.jstage.jst.go.jp/article/ase/113/2/113_2_131/_article
+src.harmand2015｜3.3-million-year-old stone tools from Lomekwi 3, West Turkana, Kenya｜2015｜https://ideas.repec.org/a/nat/nature/v521y2015i7552d10.1038_nature14464.html
+src.lewis-harmand2016｜An earlier origin for stone tool making: implications for cognitive evolution an｜2016｜https://pmc.ncbi.nlm.nih.gov/articles/PMC4920290
+src.dominguez-rodrigo2016｜3.3-Million-Year-Old Stone Tools and Butchery Traces? More Evidence Needed｜2016｜https://paleoanthropology.org/ojs/index.php/paleo/article/view/742
+src.braun2019｜Earliest known Oldowan artifacts at >2.58 Ma from Ledi-Geraru, Ethiopia, highlig｜2019｜https://ui.adsabs.harvard.edu/abs/2019PNAS..11611712B
+src.plummer2023｜Expanded geographic distribution and dietary strategies of the earliest Oldowan ｜2023｜https://www.sciencedaily.com/releases/2023/02/230209141458.htm
+src.braun2025｜Stone tools through generations: 300,000 years of human technology（Braun et al.,｜2025｜https://www.mpg.de/25658869/stone-tools-through-generations-300-000-years-of-human-technology
+src.lepre2011｜An earlier origin for the Acheulian｜2011｜https://www.nature.com/articles/nature10372
+src.delatorre2025｜Standardised production of bone tools: our ancestors pushed back one million yea｜2025｜https://www.cnrs.fr/en/press/standardised-production-bone-tools-our-ancestors-pushed-back-one-million-years
+src.adler2014｜Early Levallois technology and the Lower to Middle Paleolithic transition in the｜2014｜https://www.sciencedaily.com/releases/2014/09/140925141224.htm
+src.proffitt2016｜Wild monkeys flake stone tools｜2016｜https://www.nature.com/articles/nature20112
+src.mercader2007｜4,300-year-old chimpanzee sites and the origins of percussive stone technology（プ｜2007｜https://www.mpg.de/550270/pressRelease20070207
+src.mercader2002｜Excavation of a Chimpanzee Stone Tool Site in the African Rainforest｜2002｜https://www.eva.mpg.de/documents/AAAS/Mercader_Excavation_Science_2002_1555926.pdf
+src.berna2012｜Humans used fire a million years ago（Berna et al., PNAS 2012）｜2012｜https://utoronto.ca/news/humans-used-fire-million-years-ago
+src.marin-monfort2026｜New evidence for Early Pleistocene use of fire at Wonderwerk Cave (South Africa)｜2026｜https://www.sciencedaily.com/releases/2026/06/260623083123.htm
+src.hlubik2017｜Researching the Nature of Fire at 1.5 Mya on the Site of FxJj20 AB, Koobi Fora, ｜2017｜https://www.journals.uchicago.edu/doi/10.1086/692530
+src.goren-inbar2004｜Evidence of Hominin Control of Fire at Gesher Benot Ya'aqov, Israel｜2004｜https://ui.adsabs.harvard.edu/abs/2004Sci...304..725G/abstract
+src.roebroeks-villa2011｜On the earliest evidence for habitual use of fire in Europe｜2011｜https://ui.adsabs.harvard.edu/abs/2011PNAS..108.5209R
+src.goldberg2012｜New evidence on Neandertal use of fire: examples from Roc de Marsal and Pech de ｜2012｜https://ro.uow.edu.au/smhpapers/3054
+src.ashton2025｜British discovery shows humans made fire 350,000 years earlier than thought（Natu｜2025｜https://www.ucl.ac.uk/news/2025/dec/british-discovery-shows-humans-made-fire-350000-earlier-thought
+src.nhm-barnham2025｜Earliest fire-making, dating back 400,000 years, unearthed in Suffolk, England｜2025｜https://www.nhm.ac.uk/discover/news/2025/december/earliest-fire-making-dating-back-400-000-years-unearthed-in-suffolk-england.html
+src.wrangham2009｜Invention of cooking drove evolution of the human species（Catching Fire, 2009 につ｜2009｜https://news.harvard.edu/gazette/story/2009/06/invention-of-cooking-drove-evolution-of-the-human-species/
+src.wrangham2017｜Control of Fire in the Paleolithic: Evaluating the Cooking Hypothesis｜2017｜https://www.journals.uchicago.edu/doi/10.1086/692113
+src.hauser2014｜The mystery of language evolution｜2014｜https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00401/full
+src.dediu-levinson2013｜Neandertals' language（Dediu & Levinson, On the antiquity of language, Frontiers ｜2013｜https://www.mpg.de/7448453/Neandertals-language
+src.atkinson2018｜No Evidence for Recent Selection at FOXP2 among Diverse Human Populations｜2018｜https://escholarship.org/uc/item/45v626k8
+src.krause2007｜The Derived FOXP2 Variant of Modern Humans Was Shared with Neandertals｜2007｜https://pure.mpg.de/pubman/item/item_1554834_8
+src.danastasio2013｜Micro-Biomechanics of the Kebara 2 Hyoid and Its Implications for Speech in Nean｜2013｜https://doaj.org/article/ccc985aa2ad947fd901940d87dba58a1
+src.brooks2018｜Long-distance stone transport and pigment use in the earliest Middle Stone Age｜2018｜https://experts.illinois.edu/en/publications/long-distance-stone-transport-and-pigment-use-in-the-earliest-mid/
+src.sehasseh2021｜Early Middle Stone Age personal ornaments from Bizmoune Cave, Essaouira, Morocco｜2021｜https://research.aber.ac.uk/en/publications/early-middle-stone-age-personal-ornaments-from-bizmoune-cave-essa/
+src.henshilwood2002｜Emergence of modern human behavior: Middle Stone Age engravings from South Afric｜2002｜https://research.aber.ac.uk/en/publications/emergence-of-modern-human-behavior-middle-stone-age-engravings-fr/
+src.henshilwood2009｜Engraved ochres from the Middle Stone Age levels at Blombos Cave, South Africa｜2009｜https://digitalcommons.usf.edu/kip_articles/1784
+src.oktaviana2024｜Cave painting in Indonesia is the oldest known picture story（Oktaviana et al., N｜2024｜https://news.griffith.edu.au/2024/07/04/cave-painting-in-indonesia-is-the-oldest-known-picture-story/
+src.oktaviana2026｜Rock art from at least 67,800 years ago in Sulawesi（プレスリリース）｜2026｜https://www.natureasia.com/en/info/press-releases/detail/9213
+src.chauvet-datings｜Chauvet-Pont d'Arc: Datings｜None｜https://archeologie.culture.gouv.fr/chauvet/en/datings
+src.lascaux-dating｜Lascaux: Dating the figures｜None｜https://archeologie.culture.gouv.fr/lascaux/en/dating-figures-lascaux
+src.hoffmann2018｜U-Th dating of carbonate crusts reveals Neandertal origin of Iberian cave art｜2018｜https://eprints.soton.ac.uk/418540
+src.sciencenews-iberian2019｜Dating questions challenge whether Neandertals drew Spanish cave art｜2019｜https://sciencenews.org/article/dating-questions-challenge-whether-neandertals-drew-spanish-cave-art
+src.white2020｜Still no archaeological evidence that Neanderthals created Iberian cave art｜2020｜https://digitalcommons.usf.edu/kip_articles/5193
+src.hoffmann2020｜Response to White et al.'s reply: 'Still no archaeological evidence that Neander｜2020｜https://ui.adsabs.harvard.edu/abs/2020JHumE.14402810H
+src.pitarch2021｜The symbolic role of the underground world among Middle Paleolithic Neanderthals｜2021｜https://pmc.ncbi.nlm.nih.gov/articles/PMC8379954
+src.bentz2026｜Stone Age signs（Bentz & Dutkiewicz, PNAS 2026）｜2026｜https://www.uni-saarland.de/en/news/steinzeit-zeichen-44061.html
+src.tennie2009｜Ratcheting up the ratchet: on the evolution of cumulative culture｜2009｜https://research-portal.st-andrews.ac.uk/en/publications/ratcheting-up-the-ratchet-on-the-evolution-of-cumulative-culture/
+src.boyd-richerson1985｜Culture and the Evolutionary Process｜1985｜https://chicagoreference.com/ucp/books/book/chicago/C/bo5970597.html
+src.henrich2015｜The Secret of Our Success: How Culture Is Driving Human Evolution, Domesticating｜2015｜https://coevolution.fas.harvard.edu/publications/secret-our-success-how-culture-driving-human-evolution
+src.henrich2004｜Demography and Cultural Evolution: How Adaptive Cultural Processes can Produce M｜2004｜https://henrich.fas.harvard.edu/resource/pdf-69
+src.kline-boyd2010｜Population size predicts technological complexity in Oceania｜2010｜https://pmc.ncbi.nlm.nih.gov/articles/PMC2894932
+src.vaesen2016｜Population size does not explain past changes in cultural complexity｜2016｜https://abdn.elsevierpure.com/files/100834691/PNAS_2016_Vaesen_E2241_7.pdf
+src.whiten1999｜Cultures in chimpanzees｜1999｜https://www.nature.com/articles/21415
+src.garland2011｜Dynamic Horizontal Cultural Transmission of Humpback Whale Song at the Ocean Bas｜2011｜https://www.sciencedaily.com/releases/2011/04/110414131444.htm
+src.vanleeuwen2024｜Chimpanzees are able to learn from their conspecifics what they cannot innovate ｜2024｜https://www.uu.nl/en/news/chimpanzees-are-able-to-learn-from-their-conspecifics-what-they-cannot-innovate-themselves
+src.gunasekaram2024｜Population connectivity shapes the distribution and complexity of chimpanzee cum｜2024｜https://research-portal.st-andrews.ac.uk/en/publications/population-connectivity-shapes-the-distribution-and-complexity-of/
+src.tishkoff2007｜Convergent adaptation of human lactase persistence in Africa and Europe｜2007｜https://pubmed.ncbi.nlm.nih.gov/17159977/
+src.evershed2022｜Dairying, diseases and the evolution of lactase persistence in Europe（プレスリリース）｜2022｜https://www.bristol.ac.uk/news/2022/july/genetic-dairystudy.html
+src.perry2007｜Diet and the evolution of human amylase gene copy number variation（Nature News）｜2007｜https://www.nature.com/news/2007/070903/full/news070903-21.html
+src.yilmaz2024｜Reconstruction of the human amylase locus reveals ancient duplications seeding m｜2024｜https://pubmed.ncbi.nlm.nih.gov/39418342/
+src.klein-stanford2002｜Suddenly Smarter｜2002｜https://stanfordmag.org/contents/suddenly-smarter
+src.mcbrearty-brooks2000｜The revolution that wasn't: a new interpretation of the origin of modern human b｜2000｜https://paleocore.org/references/17/
+src.herrmann2007｜Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelli｜2007｜https://www.sciencedaily.com/releases/2007/09/070906144113.htm
+src.tomasello2012｜Two Key Steps in the Evolution of Human Cooperation: The Interdependence Hypothe｜2012｜https://www.journals.uchicago.edu/doi/10.1086/668207
+src.thornton2006｜Wild meerkats school their young（Thornton & McAuliffe, Science 2006）｜2006｜https://www.cam.ac.uk/research/news/wild-meerkats-school-their-young
+src.kline2015｜How to learn about teaching: An evolutionary framework for the study of teaching｜2015｜https://www.cambridge.org/core/product/017C2C246E9C206562CAE3DB590B01EC
+src.singh-glowacki2022｜Human social organization during the Late Pleistocene: Beyond the nomadic-egalit｜2022｜https://pure.psu.edu/en/publications/human-social-organization-during-the-late-pleistocene-beyond-the-
+src.bergstrom2020｜Origins and genetic legacy of prehistoric dogs｜2020｜https://pubmed.ncbi.nlm.nih.gov/33122379/
+src.fuller2007｜Contrasting patterns in crop domestication and domestication rates: recent archa｜2007｜https://pmc.ncbi.nlm.nih.gov/articles/PMC2759199
+src.zuo2017｜Dating rice remains through phytolith carbon-14 study reveals domestication at t｜2017｜https://pmc.ncbi.nlm.nih.gov/articles/PMC5488950
+src.lu2009｜Earliest domestication of common millet (Panicum miliaceum) in East Asia extende｜2009｜https://pmc.ncbi.nlm.nih.gov/articles/PMC2678631
+src.denham2003｜Origins of agriculture at Kuk Swamp in the Highlands of New Guinea｜2003｜https://openresearch-repository.anu.edu.au/items/d601182a-a8b6-4509-9f84-99f2b3974a51
+src.unesco-kuk｜Kuk Early Agricultural Site｜None｜https://whc.unesco.org/en/list/887
+src.ranere2009｜The cultural and chronological context of early Holocene maize and squash domest｜2009｜https://pmc.ncbi.nlm.nih.gov/articles/PMC2664064
+src.piperno2009｜Starch grain and phytolith evidence for early ninth millennium B.P. maize from t｜2009｜https://repository.si.edu/items/0cedfac1-0d93-4b11-8573-de64560518d3
+src.lombardo2020｜Early Holocene crop cultivation and landscape modification in Amazonia｜2020｜https://www.nature.com/articles/s41586-020-2162-7
+src.smith2006｜Eastern North America as an independent center of plant domestication｜2006｜https://pmc.ncbi.nlm.nih.gov/articles/PMC1567861
+src.fuller2021｜Transition From Wild to Domesticated Pearl Millet (Pennisetum glaucum) Revealed ｜2021｜https://pmc.ncbi.nlm.nih.gov/articles/PMC8550313
+src.lev-mirom2026｜Ancient grains illuminate the mosaic origin of domesticated wheat｜2026｜https://cris.huji.ac.il/en/publications/ancient-grains-illuminate-the-mosaic-origin-of-domesticated-wheat/
+src.richerson2001｜Was Agriculture Impossible during the Pleistocene but Mandatory during the Holoc｜2001｜https://www.cambridge.org/core/journals/american-antiquity/article/abs/was-agriculture-impossible-during-the-pleistocene-but-mandatory-during-the-holocene-a-climate-change-hypothesis/246B240BFFFBE904B1AC31296AD72949
+src.zeder2015｜Core questions in domestication research｜2015｜https://ui.adsabs.harvard.edu/abs/2015PNAS..112.3191Z
+src.mummert2011｜Stature and robusticity during the agricultural transition: Evidence from the bi｜2011｜https://ideas.repec.org/a/eee/ehbiol/v9y2011i3p284-301.html
+src.bocquet-appel2011｜When the World's Population Took Off: The Springboard of the Neolithic Demograph｜2011｜https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_hal_primary_oai_HAL_hal_00834316v1
+src.hofmanova2016｜Early farmers from across Europe directly descended from Neolithic Aegeans｜2016｜https://pmc.ncbi.nlm.nih.gov/articles/PMC4922144
+src.haak2015｜Massive migration from the steppe was a source for Indo-European languages in Eu｜2015｜https://pubmed.ncbi.nlm.nih.gov/25731166/
+src.unesco-gobekli｜Göbekli Tepe｜None｜https://whc.unesco.org/en/list/1572/
+src.banning2023｜Paradise Found or Common Sense Lost? Göbekli Tepe's Last Decade as a Pre-Farming｜2023｜https://www.degruyterbrill.com/document/doi/10.1515/opar-2022-0317/html
+src.wu2012｜A prehistoric pottery barn（Wu et al., Early Pottery at 20,000 Years Ago in Xianr｜2012｜https://www.bu.edu/articles/2012/a-prehistoric-pottery-barn/
+src.nakamura2001｜Radiocarbon Dating of Charred Residues on the Earliest Pottery in Japan｜2001｜https://www.cambridge.org/core/journals/radiocarbon/article/radiocarbon-dating-of-charred-residues-on-the-earliest-pottery-in-japan/D2DE167CFF67D9B361D5D2E3AF198BD8
+src.unesco-jomon2021｜Decision 44 COM 8B.37: Jomon Prehistoric Sites in Northern Japan｜2021｜https://whc.unesco.org/en/decisions/7956
+src.jomon-sannai｜The Sannai Maruyama Site｜2021｜https://jomon-japan.jp/en/wp-content/uploads/2021/02/F006b000002b.pdf
+src.kaken-imamura2003｜縄文・弥生時代の高精度年代体系の構築（2003年度 実績報告）｜2004｜https://kaken.nii.ac.jp/ja/report/KAKENHI-PROJECT-13308009/133080092003jisseki
+src.jsps-kobayashi2011｜弥生文化のルーツの解明｜2011｜https://www.jsps.go.jp/j-grantsinaid/22_letter/data/news_2011_vol2/p-5.pdf
+src.unesco-catalhoyuk｜Neolithic Site of Çatalhöyük｜None｜https://whc.unesco.org/en/list/1405
+src.bonn-catalhoyuk2025｜Was the Neolithic settlement at Çatalhöyük a matriarchate?（Yüncü et al., Science｜2025｜https://www.uni-bonn.de/en/news/was-the-neolithic-settlement-at-catalhoyuk-a-matriarchate
+src.ur2014｜Households and the Emergence of Cities in Ancient Mesopotamia｜2014｜https://scholar.harvard.edu/sites/scholar.harvard.edu/files/jasonur/files/ur_2014_caj_households_and_the_emergence_of_cities.pdf
+src.unesco-mohenjodaro｜Archaeological Ruins at Moenjodaro｜None｜https://whc.unesco.org/en/list/138
+src.zhang2022-erlitou｜14C Dating of the Erlitou Site｜2022｜https://www.cambridge.org/core/journals/radiocarbon/article/14c-dating-of-the-erlitou-site/475359D750D8F9AE70E5126CF4744A4C
+src.icomos-caral2009｜Sacred City of Caral-Supe (Peru) No 1269（ICOMOS 評価書）｜2009｜https://whc.unesco.org/document/152221
+src.unesco-teotihuacan｜Pre-Hispanic City of Teotihuacan｜None｜https://whc.unesco.org/en/list/414
+src.unesco-djenne｜Old Towns of Djenné｜None｜https://whc.unesco.org/en/list/116
+src.sciencenews-dawn2021｜'The Dawn of Everything' rewrites 40,000 years of human history｜2021｜https://www.sciencenews.org/article/human-history-society-dawn-of-everything-book
+src.britannica-hydraulic｜Hydraulic civilization｜None｜https://www.britannica.com/topic/hydraulic-civilization
+src.carneiro1970｜A Theory of the Origin of the State｜1970｜https://eml.berkeley.edu/~saez/course/carneiro70.pdf
+src.yale-scott2017｜Against the Grain: A Deep History of the Earliest States（紹介記事）｜2017｜https://news.yale.edu/2017/08/28/against-grain-deep-history-earliest-states
+src.mayshar2022｜The Origin of the State: Land Productivity or Appropriability?｜2022｜https://econpapers.repec.org/RePEc:ucp:jpolec:doi:10.1086/718372
+src.barberena2026｜Local agricultural transition, crisis and migration in the Southern Andes（報道）｜2026｜https://www.sciencedaily.com/releases/2026/03/260321012642.htm
+src.akbari2026｜Massive ancient DNA study reveals natural selection has accelerated recent human｜2026｜https://www.broadinstitute.org/news/massive-ancient-dna-study-reveals-natural-selection-has-accelerated-recent-human-evolution
+src.uchicago-visible-language2010｜Origins of writing make for engaging new exhibition at Oriental Institute Museum｜2010｜https://news.uchicago.edu/story/origins-writing-make-engaging-new-exhibition-oriental-institute-museum
+src.englund2011｜Accounting in Proto-Cuneiform｜2011｜https://cdli.ucla.edu/staff/englund/publications/englund2011a.pdf
+src.zimansky1993｜Review of Before Writing, Vols. I–II｜1993｜https://urkesh.org/attach/Zimansky1993.pdf
+src.bennison-chapman2019｜Reconsidering 'Tokens': The Neolithic Origins of Accounting or Multifunctional, ｜2019｜https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/abs/reconsidering-tokens-the-neolithic-origins-of-accounting-or-multifunctional-utilitarian-tools/7E6C04CB040AD8AA0EA84B94D4D275C4
+src.archaeology-abydos1999｜Earliest Egyptian Glyphs｜1999｜https://archive.archaeology.org/9903/newsbriefs/egypt.html
+src.liu2021-oracle｜Radiocarbon Dating of Oracle Bones of Late Shang Period in Ancient China｜2021｜https://cambridge.org/core/services/aop-cambridge-core/content/view/S0033822220000909
+src.chinadaily-oracle2017｜Oracle bones added to UNESCO memory｜2017｜https://www.chinadaily.com.cn/a/201712/26/WS5a41b031a31008cf16da379d.html
+src.brown-cascajal2006｜Oldest writing in the New World discovered in Veracruz, Mexico｜2006｜https://archive2.news.brown.edu/1987-2007/2006-07/06-021.html
+src.sciencenews-sanbartolo2006｜Getting a read on early Maya writing｜2006｜https://www.sciencenews.org/article/getting-read-early-maya-writing
+src.mukhopadhyay2023｜Semantic scope of Indus inscriptions comprising taxation, trade and craft licens｜2023｜https://www.nature.com/articles/s41599-023-02320-7.pdf
+src.hyland2017｜Writing with Twisted Cords: The Inscriptive Capacity of Andean Khipus｜2017｜https://research-portal.st-andrews.ac.uk/en/publications/writing-with-twisted-cords-the-inscriptive-capacity-of-andean-khi/
+src.kelley2025｜Seals and signs: tracing the origins of writing in ancient South-west Asia｜2025｜https://www.cambridge.org/core/journals/antiquity/article/seals-and-signs-tracing-the-origins-of-writing-in-ancient-southwest-asia/B3C2D400F3F80A7A0162D9035C9C2804
+src.blaut1999｜Environmentalism and Eurocentrism: A Review Essay｜1999｜https://www.columbia.edu/%7Elnp3/mydocs/Blaut/diamond.htm
+src.mcneill1997｜History Upside Down｜1997｜https://www.nybooks.com/articles/1997/05/15/history-upside-down/
+src.laitin2012｜Geographic axes and the persistence of cultural diversity｜2012｜https://pmc.ncbi.nlm.nih.gov/articles/PMC3387047
+src.acemoglu2002｜Reversal of Fortune: Geography and Institutions in the Making of the Modern Worl｜2002｜https://www.nber.org/papers/w8460
+src.marshall-hildebrand2002｜Cattle Before Crops: The Beginnings of Food Production in Africa｜2002｜https://researchconnect.stonybrook.edu/en/publications/cattle-before-crops-the-beginnings-of-food-production-in-africa/
+src.clement2015｜The domestication of Amazonia before European conquest｜2015｜https://repositorio.inpa.gov.br/handle/1/15967
+src.mcmichael2015｜Comment on Clement et al. 2015 'The domestication of Amazonia before European co｜2015｜https://dare.uva.nl/id/8fbb3d15-54c7-4399-b2dd-ac3a3310ad8e
+src.takahashi2023｜Domestication of azuki bean and soybean in Japan: From the insight of archeologi｜2023｜https://www.jstage.jst.go.jp/article/jsbbs/73/2/73_22074/_html/-char/en
+src.kanazawa2024｜First Evidence of Jomon Cultivated Soybeans Embedded in Earthenware as Decoratio｜2024｜https://www.kanazawa-u.ac.jp/en/rd/147326
+src.diamond1987｜The Worst Mistake in the History of the Human Race｜1987｜https://www.discovermagazine.com/planet-earth/the-worst-mistake-in-the-history-of-the-human-race
+src.wood1992｜The Osteological Paradox: Problems of Inferring Prehistoric Health from Skeletal｜1992｜https://www.journals.uchicago.edu/doi/10.1086/204084
+src.kaplan2000｜The Darker Side of the "Original Affluent Society"｜2000｜https://www.gwern.net/doc/sociology/2000-kaplan.pdf
+src.caj-scott-symposium2019｜Archaeological Perspectives on Scott's Against the Grain: A Deep History of the ｜2019｜https://cambridge.org/core/journals/cambridge-archaeological-journal/article/archaeological-perspectives-on-scotts-against-the-grain-a-deep-history-of-the-earliest-states/179188D2BDE8F425BE6BB11725E56644
+src.dalpoim2019｜An Archaeobotanical Perspective on the Relationship between Grain Crops, Nongrai｜2019｜https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7846FB5888798E52049BD0812DF536DE/S0959774319000350a.pdf/an_archaeobotanical_perspective_on_the_relationship_between_grain_crops_nongrain_crops_and_states.pdf
+src.scheidel2022｜Resetting History's Dial? A Critique of David Graeber and David Wengrow, The Daw｜2022｜https://escholarship.org/content/qt9jj9j6z7/qt9jj9j6z7.pdf
+src.appiah2021｜Digging for Utopia｜2021｜https://www.nybooks.com/articles/2021/12/16/david-graeber-digging-for-utopia/
+src.nyrb-exchange2022｜The Roots of Inequality: An Exchange｜2022｜https://www.nybooks.com/articles/2022/01/13/the-roots-of-inequality-an-exchange/
+src.yoffee2005｜Myths of the Archaic State: Evolution of the Earliest Cities, States, and Civili｜2005｜https://assets.cambridge.org/97805215/21567/excerpt/9780521521567_excerpt.pdf
+src.childe1950｜The Urban Revolution｜1950｜https://faculty.washington.edu/plape/citiesaut11/readings/Childe-urban%20revolution%201950.pdf
+src.mcanany-yoffee2010｜Questioning Collapse: Human Resilience, Ecological Vulnerability, and the Afterm｜2010｜https://assets.cambridge.org/97805215/15726/frontmatter/9780521515726_frontmatter.htm
+src.clarke-heyes2017｜The swashbuckling anthropologist: Henrich on The Secret of Our Success｜2017｜https://eprints.whiterose.ac.uk/id/eprint/112738/
+src.pinker2012｜The False Allure of Group Selection｜2012｜https://www.edge.org/node/21475
+src.notroff2017｜More than a vulture: A response to Sweatman and Tsikritsis｜2017｜https://www.dainst.blog/the-tepe-telegrams/2017/07/03/more-than-a-vulture-a-response-to-sweatman-and-tsikritsis/
+src.whe-bronze-age-collapse｜World History Encyclopedia "Bronze Age Collapse"｜None｜https://www.worldhistory.org/article/276/
+src.kaniewski2013｜"Environmental roots of the Late Bronze Age crisis", PLoS ONE 8(8): e71004｜2013｜https://doaj.org/article/9f370735176543b1ae24efc40ac47697
+src.kaniewski2019｜"300-year drought frames Late Bronze Age to Early Iron Age transition in the Nea｜2019｜https://cris.haifa.ac.il/en/publications/300-year-drought-frames-late-bronze-age-to-early-iron-age-transit/
+src.knapp-manning2016｜"Crisis in Context: The End of the Late Bronze Age in the Eastern Mediterranean"｜2016｜https://ajaonline.org/wp-content/uploads/2015/12/1201_Knapp.pdf
+src.iranica-satrapies｜Encyclopaedia Iranica "Achaemenid Satrapies"｜None｜https://www.iranicaonline.org/articles/achaemenid-satrapies/
+src.jacobs2015-iranica｜"Achaemenid Royal Communication", Encyclopaedia Iranica｜2015｜https://www.iranicaonline.org/articles/achaemenid-royal-communication/
+src.britannica-india-ashoka｜India: Ashoka and his successors｜None｜https://www.britannica.com/place/India/Ashoka-and-his-successors
+src.unesco-ashoka-tentative｜UNESCO World Heritage Centre "Serial nomination for Ashokan Edict sites along th｜2025｜https://whc.unesco.org/en/tentativelists/6803/
+src.met-qin｜The Metropolitan Museum of Art, Department of Asian Art "Qin Dynasty (221–206 B.｜2000｜https://www.metmuseum.org/toah/hd/qind/hd_qind.htm
+src.scheidel2009｜"Rome and China: Comparative Perspectives on Ancient World Empires" 序章草稿｜2009｜https://web.stanford.edu/~scheidel/Rome%26China.pdf
+src.bowersock2013｜A Different Turning Point for Mankind?｜2013｜https://www.nybooks.com/articles/2013/05/09/different-turning-point-mankind/
+src.bellah-joas2012｜The Axial Age and Its Consequences｜2012｜https://www.degruyterbrill.com/isbn/9780674067400
+src.mullins2018｜A Systematic Assessment of 'Axial Age' Proposals Using Global Comparative Histor｜2018｜https://doi.org/10.1177/0003122418772567
+src.baumard2015｜Increased Affluence Explains the Emergence of Ascetic Wisdoms and Moralizing Rel｜2014｜
+src.sep-buddha｜Buddha｜2011｜https://plato.stanford.edu/ENTRIES/buddha/
+src.openlearn-buddha-dates｜The dates of the Buddha｜None｜https://www.open.edu/openlearn/history-the-arts/culture/religious-studies/the-dates-the-buddha
+src.britannica-ashoka｜Ashoka｜None｜https://www.britannica.com/biography/Ashoka
+src.met-kushan｜Kushan Empire (ca. 2nd century B.C.–3rd century A.D.)｜2000｜https://www.metmuseum.org/essays/kushan-empire-ca-second-century-b-c-third-century-a-d
+src.britannica-gandhara｜Gandhara art｜None｜https://www.britannica.com/art/Gandhara-art
+src.britannica-kumarajiva｜Kumarajiva｜None｜https://www.britannica.com/biography/Kumarajiva
+src.britannica-mahayana｜Mahayana｜None｜https://www.britannica.com/topic/Mahayana
+src.ebsco-buddhism-japan｜Buddhism Arrives in Japan｜None｜https://ebsco.com/research-starters/history/buddhism-arrives-japan
+src.britannica-milan｜Edict of Milan｜None｜https://www.britannica.com/topic/Edict-of-Milan
+src.britannica-theodosius｜Theodosius I｜None｜https://www.britannica.com/biography/Theodosius-I
+src.met-ethiopia｜African Christianity in Ethiopia｜2002｜https://www.metmuseum.org/en/essays/african-christianity-in-ethiopia
+src.met-aksum｜"Monumental Architecture and Stelae of the Aksumite Empire", Heilbrunn Timeline｜2015｜https://www.metmuseum.org/ru/essays/monumental-architecture-and-stelae-of-the-aksumite-empire
+src.britannica-muhammad｜Muhammad summary｜None｜https://www.britannica.com/summary/Muhammad
+src.iranica-conversion｜Conversion ii. Of Iranians to Islam｜1993｜https://www.iranicaonline.org/?p=9866
+src.bulliet1979｜R. W. Bulliet, Conversion to Islam in the Medieval Period: An Essay in Quantitat｜1979｜https://www.fulcrum.org/concern/monographs/hq37vn72q
+src.radushev2010｜The spread of Islam in the Ottoman Balkans: Revisiting Bulliet's method on relig｜2010｜https://repository.bilkent.edu.tr/items/ddaed62b-9959-4ae2-be7e-797b958d6767
+src.sluglett2012｜"The Spread of Islam in Southeast Asia c.1275–c.1625"（MEI Insight 55）｜2012｜https://mei.nus.edu.sg/publication/insight-55-the-spread-of-islam-in-southeast-asia-c-1275-c-1625
+src.met-transsaharan-gold｜Metropolitan Museum of Art, Department of the Arts of Africa, Oceania, and the A｜2000｜https://www.metmuseum.org/essays/the-trans-saharan-gold-trade-7th-14th-century
+src.norenzayan2013｜Big Gods: How Religion Transformed Cooperation and Conflict｜2013｜https://press.princeton.edu/node/13297
+src.whitehouse2019｜Complex societies precede moralizing gods throughout world history｜2019｜https://doi.org/10.1038/s41586-019-1043-4
+src.nature-retraction2021｜Retraction Note｜2021｜https://www.nature.com/articles/s41586-021-03656-3
+src.retractionwatch2021｜Critique topples Nature paper on belief in gods｜2021｜https://retractionwatch.com/2021/07/07/critique-topples-nature-paper-on-belief-in-gods/
+src.whitehouse2023｜Testing the Big Gods hypothesis with global historical data: a review and 'retak｜None｜https://doi.org/10.1080/2153599x.2022.2074085
+src.mertens2019-silkroad｜Did Richthofen Really Coin 'the Silk Road'?｜2019｜https://edspace.american.edu/silkroadjournal/wp-content/uploads/sites/984/2020/02/2-Mertens-Did-Richthofen-Really-Coin-the-Silk-Road.pdf
+src.waugh2007-richthofen｜Richthofen's 'Silk Roads': Toward the Archaeology of a Concept｜2007｜https://faculty.washington.edu/dwaugh/publications/waughrichthofen2010.pdf
+src.unesco-whc-1442｜Silk Roads: the Routes Network of Chang'an-Tianshan Corridor – Maps｜2014｜https://whc.unesco.org/en/list/1442/maps
+src.unesco-silk-changan｜The Routes Network of Chang'an-Tianshan Corridor｜None｜https://en.unesco.org/silkroad/silk-road-themes/world-heritage-sites/routes-network-changan-tianshan-corridor
+src.si-sogdian-letters｜Ancient Letters｜None｜https://sogdians.si.edu/ancient-letters/
+src.uw-sogdian-letters｜The Sogdian Ancient Letters（訳：N. Sims-Williams、序：D. C. Waugh）｜None｜https://depts.washington.edu/silkroad/texts/sogdlet.html
+src.avery-hansen-review｜Serge Avery, Review of Valerie Hansen The Silk Road: A New History（Oxford UP, 20｜2013｜https://worldhistoryconnected.press.uillinois.edu/10.3/br_avery.html
+src.chin2013-invention｜"The Invention of the Silk Road, 1877", Critical Inquiry 40(1): 194–219｜2013｜https://www.journals.uchicago.edu/doi/10.1086/673232
+src.uw-periplus｜The Voyage around the Erythraean Sea（W. H. Schoff 訳 1912、L. Casson 1989 による注）｜None｜https://depts.washington.edu/silkroad/texts/periplus/periplus.html
+src.flecker-belitung｜"A Ninth-Century Arab Shipwreck in Indonesia"（in Krahl, Guy, Wilson, Raby eds., ｜2010｜https://asia-archive.si.edu/wp-content/uploads/2017/10/07Flecker.pdf
+src.si-shipwrecked-intro｜Alison Effeny, Introduction to Shipwrecked: Tang Treasures and Monsoon Winds｜2010｜https://archive.asia.si.edu/Shipwrecked/downloads/01Intro.pdf
+src.brielle2023-swahili｜Entwined African and Asian genetic roots of medieval peoples of the Swahili coas｜2023｜https://www.nature.com/articles/s41586-023-05754-w
+src.unesco-kilwa｜UNESCO World Heritage Centre "Ruins of Kilwa Kisiwani and Ruins of Songo Mnara"｜None｜https://whc.unesco.org/en/list/144
+src.ox-cabinet-paper｜Origins of paper｜2019｜https://www.cabinet.ox.ac.uk/node/7013
+src.bloom2005-paper｜Silk Road or Paper Road?｜2005｜https://edspace.american.edu/silkroadjournal/wp-content/uploads/sites/984/2017/09/Silk-Road-or-Paper-Road.pdf
+src.britannica-printing-history｜Printing: History of printing｜None｜https://www.britannica.com/topic/printing-publishing/History-of-printing
+src.bodleian2017-bakhshali｜Carbon dating finds Bakhshali manuscript contains oldest recorded origins of the｜2017｜https://www.glam.ox.ac.uk/node/218481
+src.hssa2017-bakhshali｜The Bakhshālī Manuscript: A Response to the Bodleian Library's Radiocarbon Datin｜2017｜https://journals.library.ualberta.ca/hssa/index.php/hssa/article/view/22
+src.mactutor-arabic-numerals｜The Arabic numeral system｜None｜https://mathshistory.st-andrews.ac.uk/HistTopics/Arabic_numerals/
+src.mactutor-fibonacci｜Leonardo Pisano Fibonacci｜None｜https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci.html
+src.sep-arabic-greek｜Greek Sources in Arabic and Islamic Philosophy｜2012｜https://plato.stanford.edu/archives/spr2012/entries/arabic-islamic-greek/
+src.gutas1998｜Greek Thought, Arabic Culture: The Graeco-Arabic Translation Movement in Baghdad｜1998｜https://www.routledge.com/Greek-Thought-Arabic-Culture/Gutas/p/book/9780415061339
+src.britannica-gerard｜Gerard of Cremona｜None｜https://www.britannica.com/biography/Gerard-of-Cremona
+src.ferrario2008-saliba-review｜"Seek Knowledge as Far as China"（George Saliba Islamic Science and the Making of｜2008｜https://www.sciencehistory.org/stories/magazine/seek-knowledge-as-far-as-china/
+src.columbia-mongols｜Columbia University, Asia for Educators "The Mongols in World History"（解説トランスクリプ｜None｜https://afe.easia.columbia.edu/mongols/main/transcript.pdf
+src.met-ilkhanid｜"The Art of the Ilkhanid Period (1256–1353)", Heilbrunn Timeline｜2001｜https://www.metmuseum.org/essays/the-art-of-the-ilkhanid-period-1256-1353
+src.abulughod1989｜Before European Hegemony: The World System A.D. 1250–1350｜1989｜https://academic.oup.com/book/54378
+src.spyrou2022｜"The source of the Black Death in fourteenth-century central Eurasia", Nature 60｜2022｜https://link.springer.com/10.1038/s41586-022-04800-3
+src.mpg2022-blackdeath｜Max Planck Society プレスリリース "Origins of the Black Death identified"｜2022｜https://www.mpg.de/18778852/0607-evan-origins-of-the-black-death-identified-150495-x
+src.benedictow2021｜The Complete History of the Black Death｜2021｜https://cambridge.org/core/books/complete-history-of-the-black-death/how-many-people-died-in-the-black-death/C16F433B6EB9F34485BCD7D84AAA5166
+src.izdebski2022｜"Palaeoecological data indicates land-use changes across Europe linked to spatia｜2022｜https://pmc.ncbi.nlm.nih.gov/articles/PMC8913360
+src.unesco-aksum｜UNESCO World Heritage Centre "Aksum"｜None｜https://whc.unesco.org/en/list/15/
+src.met-wsudan-1000-1400｜Metropolitan Museum of Art "Western and Central Sudan, 1000–1400 A.D.", Heilbrun｜None｜https://www.metmuseum.org/toah/ht/07/afu
+src.britannica-musa｜Mūsā I of Mali｜None｜https://www.britannica.com/biography/Musa-I-of-Mali
+src.natgeo-great-zimbabwe｜National Geographic Education "Great Zimbabwe"（百科項目）｜None｜https://education.nationalgeographic.org/resource/great-zimbabwe/
+src.pbs-nova-great-zimbabwe｜"Mysteries of Great Zimbabwe", NOVA, PBS｜2000｜https://www.pbs.org/wgbh/nova/article/mysteries-of-great-zimbabwe
+src.britannica-maya｜Maya｜None｜https://www.britannica.com/topic/Maya-people
+src.nature2023-maya-seasonality｜"Decline in seasonal predictability potentially destabilized Classic Maya societ｜2023｜https://www.nature.com/articles/s43247-023-00717-5
+src.unesco-qhapaq-nan｜UNESCO World Heritage Centre "Qhapaq Ñan, Andean Road System"（スペイン語版）｜2014｜https://whc.unesco.org/es/list/1459
+src.si-quipu｜Smithsonian Insider "Quipu, AD 1400–1532"｜2011｜https://insider.si.edu/2011/11/quipu-ad-1400-1532
+src.koch2019｜"Earth system impacts of the European arrival and Great Dying in the Americas af｜2019｜https://eprints.whiterose.ac.uk/id/eprint/154711/
+src.nunn-qian2010｜"The Columbian Exchange: A History of Disease, Food, and Ideas", Journal of Econ｜2010｜https://www.kellogg.northwestern.edu/faculty/qian/resources/NunnQianJEP.pdf
+src.fisher2017-resendez｜"Hidden Servitude"（Andrés Reséndez The Other Slavery, Houghton Mifflin Harcourt,｜2017｜https://commonreader.wustl.edu/hidden-servitude/
+src.edwards1994｜Printing, Propaganda, and Martin Luther｜1994｜https://publishing.cdlib.org/ucpressebooks/public/book/printing-propaganda-and-martin-luther.html
+src.rubin2014｜Printing and Protestants: An Empirical Test of the Role of Printing in the Refor｜2014｜https://econpapers.repec.org/RePEc:tpr:restat:v:96:y:2014:i:2:p:270-286
+src.pettegree2015｜Review of Andrew Pettegree, Brand Luther (2015)｜2016｜https://www.christiancentury.org/reviews/2016-05/selling-reformation
+src.britannica-japan-taika｜Japan: The Taika reforms｜None｜https://www.britannica.com/place/Japan/The-Taika-reforms
+src.britannica-shinbutsu｜Shinbutsu shūgō｜None｜https://www.britannica.com/topic/Shinbutsu-shugo
+src.getz-gunpowder｜"Gunpowder Empires", OER Project（World History Project）｜None｜https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/Origins/Unit6/Gunpowder-Empires
+src.arano2013｜Foreign Relations in Early Modern Japan: Exploding the Myth of National Seclusio｜2013｜https://www.nippon.com/en/features/c00104/foreign-relations-in-early-modern-japan-exploding-the-myth-of-national-seclusion.html
+src.colorado-tokugawa｜University of Colorado, Program for Teaching East Asia "More to a Closed Door th｜None｜https://www.colorado.edu/ptea-curriculum/node/336
+src.toby1984-state-diplomacy｜State and Diplomacy in Early Modern Japan: Asia in the Development of the Tokuga｜1984｜https://muse.jhu.edu/book/33959
+src.strathern2012-lieberman｜Alan Strathern, Featured review of Victor Lieberman Strange Parallels: Southeast｜2012｜https://www.cambridge.org/core/journals/journal-of-global-history/article/strange-parallels-southeast-asia-in-global-context-c-8001830-volume-2-mainland-mirrors-europe-japan-china-south-asia-and-the-islands/17F24109F3011E2557CF15CD9AD6D1A9
+src.nongbri2013｜Before Religion: A History of a Modern Concept｜2013｜
+src.josephson2012｜J. Ā. Josephson, The Invention of Religion in Japan｜2012｜https://www.degruyterbrill.com/document/doi/10.7208/9780226412351/html
+src.goddard-review｜Review of Brent Nongbri, Before Religion: A History of a Modern Concept｜None｜https://worldhistoryconnected.press.uillinois.edu/11.1/br_goddard.html
+src.bailey-abulughod-review｜Scott C. Bailey, Review of Before European Hegemony, World History Connected 3(1｜2008｜https://worldhistoryconnected.press.uillinois.edu/3.1/br_bailey.html
+src.lindsay2014-extraversion｜"Extraversion, Creolization, and Dependency in the Atlantic Slave Trade", Journa｜2014｜https://www.cambridge.org/core/product/F40E772D2D2BEC7A0C5623175017B04B
+src.hodgson1993-rethinking｜Rethinking World History: Essays on Europe, Islam and World History｜1993｜https://www.cambridge.org/core/books/rethinking-world-history/484BA8556FB12EB44D76A8767B81A13F
+src.nadel-periodization｜"Periodization", International Encyclopedia of the Social Sciences（Encyclopedia.｜1968｜https://www.encyclopedia.com/social-sciences/applied-and-social-sciences-magazines/periodization-0
+src.britannica-middle-ages-historiography｜History of Europe: The Middle Ages in modern historiography｜None｜https://www.britannica.com/topic/history-of-Europe/The-Middle-Ages-in-modern-historiography
+src.mcdermott-burke2015｜Joseph P. McDermott & Peter Burke (eds.), The Book Worlds of East Asia and Europ｜2015｜https://hkupress.hku.hk/image/catalog/pdf-preview/9789888208081.pdf、
+src.neh2010-slavevoyages｜NEH, Humanities Magazine "Gross Injustice"（Sept/Oct 2010）｜2010｜https://www.neh.gov/humanities/2010/septemberoctober/feature/gross-injustice
+src.slavevoyages-estimates｜SlaveVoyages "Estimates"（legacy版）｜None｜https://legacy.slavevoyages.org/assessment/estimates
+src.nunn2008-slave-trades｜"The Long-Term Effects of Africa's Slave Trades", Quarterly Journal of Economics｜2008｜https://www.nber.org/papers/w13367
+src.bl-idp-diamond-sutra｜Buddhist texts: the Diamond Sutra｜None｜https://idp.bl.uk/exhibition/buddhism-on-the-silk-roads/articles/buddhism-on-the-ground/buddhist-texts-the-diamond-sutra
+src.britannica-movable-type｜Movable type｜None｜https://www.britannica.com/technology/movable-type
+src.bnf-jikji｜"Jikji", a treasure of the world of printing｜2023｜https://www.bnf.fr/en/jikji-treasure-world-printing
+src.loc-gutenberg｜The Gutenberg Bible（展示ページ）｜None｜https://www.loc.gov/exhibits/bibles/interactives/gutenberg/index.html
+src.britannica-orientalism-said｜Orientalism (by Said)｜None｜https://www.britannica.com/topic/Orientalism-by-Said
+src.britannica-zoroaster｜Zarathustra｜None｜https://www.britannica.com/print/article/658060
+src.cage-pomeranz｜Why the West?（ポメランツへのインタビューの要約）｜None｜https://warwick.ac.uk/fac/soc/economics/research/centres/cage/news/podcasts/pomeranz-why-the-west.pdf
+src.isbell2008｜From Yahwism to Judahism｜2008｜https://bibleinterp.arizona.edu/node/3508
+src.kirchner2023-green-revolution｜Re-thinking the 'Green Revolution' in the Mediterranean world｜2023｜https://discovery.ucl.ac.uk/10172886/1/re-thinking-the-green-revolution-in-the-mediterranean-world.pdf
+src.met-ceramics-silkroad｜Ceramics along the Silk Road｜2016｜https://www.metmuseum.org/perspectives/ceramics-along-the-silk-road
+src.vam-blue-white｜Chinese blue-and-white ceramics｜None｜https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics
+src.murphey-mustafa-ali｜Mustafa Ali and the Politics of Cultural Despair｜1989｜https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/mustafa-ali-and-the-politics-of-cultural-despair/2A1B0A578F7C19C97BCDFC0F66C35FCF
+src.nyrb1982-orientalism-exchange｜Orientalism: An Exchange｜1982｜https://www.nybooks.com/?p=24353
+src.ringbauer2025-punic｜Punic people were genetically diverse with almost no Levantine ancestors｜2025｜https://pubmed.ncbi.nlm.nih.gov/40269169/
+src.sep-japanese-confucian｜Japanese Confucian Philosophy｜None｜https://plato.stanford.edu/entries/japanese-confucian/
+src.sep-legalism｜Legalism in Chinese Philosophy｜None｜https://plato.stanford.edu/entries/chinese-legalism/
+src.sep-mohism｜Mohism｜None｜https://plato.stanford.edu/entries/mohism/
+src.sep-presocratics｜Presocratic Philosophy｜None｜https://plato.stanford.edu/entries/presocratics/
+src.sep-socrates｜Socrates｜None｜https://plato.stanford.edu/entries/socrates/
+src.strenski2014-riesebrodt｜Review of Martin Riesebrodt, The Promise of Salvation｜2014｜https://escholarship.org/content/qt8wt2t9p6/qt8wt2t9p6.pdf
+src.watson1974｜The Arab Agricultural Revolution and Its Diffusion, 700–1100｜1974｜https://doi.org/10.1017/S0022050700079602
+src.lse2021｜A fresh look at the origins of moralising religions｜2021｜https://www.lse.ac.uk/news/latest-news-from-lse/g-july-21/a-fresh-look-at-the-origins-of-moralising-religions

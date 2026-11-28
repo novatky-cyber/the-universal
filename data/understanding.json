@@ -1,1142 +1,1366 @@
 {
-  "scale": "L0未学習 L1認知 L2説明 L3専門理解 L4統合応用 L5批判的検証",
-  "nodes": {
-    "con.age-of-universe": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.ai-productivity-confounding": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.arrow-of-time": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.cosmic-composition": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.cosmic-expansion": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.dark-energy": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.dark-matter": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.entropy": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.evolving-dark-energy": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.first-cause": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.hubble-tension": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.lithium-problem": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.newtonian-time": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.path-dependence-legacy": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.planck-time": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.scenarios-2035": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.science-religion": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.singularity": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.spacetime": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.time-dilation": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evd.bbn-abundances": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evd.clock-tests": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evd.cmb": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evd.radiometric-dating": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evd.redshift": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.bbn": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.earliest-life": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.earth-formation": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.element-synthesis": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.first-galaxies": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.hot-dense-early": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.inflation-epoch": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.recombination": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "evt.solar-system": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.base-rate": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.bayesian-updating": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.causal-inference": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.counterfactual": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.epistemic-categories": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.feedback": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.five-maps": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.forecast-calibration": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.nine-questions": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.path-dependence": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.scenario-analysis": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.seven-steps": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "mth.twelve-axes": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "q.low-entropy-past": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "q.nature-dark-matter-energy": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "q.origin-of-time": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thm.cosmology": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thm.earth-solar": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thm.epistemology": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thm.matter": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thm.systems": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thm.time": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.big-bounce": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.emergent-time": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.general-relativity": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.hot-big-bang": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.inflation": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.lcdm": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.second-law": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "thy.special-relativity": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
-    },
-    "con.disciplinary-evidence": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.periodization": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
-    },
-    "q.why-genai-2020s": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thm.futures": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.biodiversity-crisis": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.common-descent": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.definition-of-life": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.genetic-drift": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.luca": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.mass-extinction": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.natural-selection": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "con.origin-settings": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evd.extraterrestrial-organics": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evd.fossil-record": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evd.observed-evolution": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.cambrian": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.eukaryotes": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.goe": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.kpg": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.land-colonization": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.miller-urey": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "evt.snowball-earth": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "q.origin-of-life": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "q.units-of-selection": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thm.life": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thy.darwinian-evolution": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thy.endosymbiosis": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thy.modern-synthesis": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thy.neutral-theory": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thy.rna-world": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false,
-      "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
-    },
-    "thm.human-evolution": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.hominin-split": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.bipedalism": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.australopiths": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.genus-homo": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.encephalization": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.homo-sapiens": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.out-of-africa": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.archaic-admixture": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.hominin-diversity": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.japan-arrival": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evd.ancient-dna": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evd.molecular-clock": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.tools-fire": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.stone-tool-industries": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.symbolic-behavior": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "q.origin-of-language": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evd.rock-art": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.human-revolution-debate": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.cumulative-culture": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "thy.gene-culture-coevolution": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "thm.civilization": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.agriculture": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.domestication": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.neolithic-demographic-transition": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.gobekli-tepe": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.jomon": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.early-states": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.state-formation-theories": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.writing": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.bronze-age-collapse": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.classical-empires": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.axial-age": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.buddhism-spread": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.christianity-spread": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.islam-rise": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.big-gods-debate": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.silk-roads": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.indian-ocean-trade": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.paper-transmission": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.hindu-arabic-numerals": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.translation-movement": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.mongol-empire": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.black-death": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.african-states": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.americas-states": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.columbian-exchange": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.reformation": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.japan-ritsuryo": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.early-modern-empires": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "thm.world-history": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "con.trade-networks": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.atlantic-colonialism": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "evt.printing": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    },
-    "q.knowledge-transmission": {
-      "level": 0,
-      "status": "presented",
-      "history": [],
-      "next_review": null,
-      "recheck": false
-    }
+ "scale": "L0未学習 L1認知 L2説明 L3専門理解 L4統合応用 L5批判的検証",
+ "nodes": {
+  "con.age-of-universe": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.ai-productivity-confounding": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.arrow-of-time": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.cosmic-composition": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.cosmic-expansion": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.dark-energy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.dark-matter": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.entropy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.evolving-dark-energy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.first-cause": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.hubble-tension": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.lithium-problem": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.newtonian-time": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.path-dependence-legacy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.planck-time": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.scenarios-2035": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.science-religion": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.singularity": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.spacetime": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.time-dilation": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evd.bbn-abundances": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evd.clock-tests": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evd.cmb": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evd.radiometric-dating": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evd.redshift": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.bbn": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.earliest-life": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.earth-formation": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.element-synthesis": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.first-galaxies": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.hot-dense-early": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.inflation-epoch": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.recombination": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "evt.solar-system": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.base-rate": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.bayesian-updating": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.causal-inference": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.counterfactual": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.epistemic-categories": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.feedback": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.five-maps": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.forecast-calibration": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.nine-questions": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.path-dependence": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.scenario-analysis": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.seven-steps": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "mth.twelve-axes": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "q.low-entropy-past": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "q.nature-dark-matter-energy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "q.origin-of-time": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thm.cosmology": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thm.earth-solar": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thm.epistemology": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thm.matter": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thm.systems": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thm.time": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.big-bounce": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.emergent-time": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.general-relativity": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.hot-big-bang": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.inflation": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.lcdm": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.second-law": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "thy.special-relativity": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第1回 L0001 で提示（2026-11-23。ChatGPT上の第1回でも扱われた）・理解度は未評価"
+  },
+  "con.disciplinary-evidence": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.periodization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
+  },
+  "q.why-genai-2020s": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thm.futures": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第0回 L0000 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.biodiversity-crisis": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.common-descent": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.definition-of-life": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.genetic-drift": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.luca": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.mass-extinction": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.natural-selection": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "con.origin-settings": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evd.extraterrestrial-organics": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evd.fossil-record": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evd.observed-evolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.cambrian": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.eukaryotes": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.goe": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.kpg": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.land-colonization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.miller-urey": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "evt.snowball-earth": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "q.origin-of-life": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "q.units-of-selection": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thm.life": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thy.darwinian-evolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thy.endosymbiosis": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thy.modern-synthesis": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thy.neutral-theory": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thy.rna-world": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false,
+   "note": "第2回 L0002 で提示（2026-11-24）・理解度は未評価"
+  },
+  "thm.human-evolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.hominin-split": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.bipedalism": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.australopiths": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.genus-homo": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.encephalization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.homo-sapiens": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.out-of-africa": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.archaic-admixture": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.hominin-diversity": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.japan-arrival": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evd.ancient-dna": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evd.molecular-clock": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.tools-fire": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.stone-tool-industries": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.symbolic-behavior": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "q.origin-of-language": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evd.rock-art": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.human-revolution-debate": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.cumulative-culture": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thy.gene-culture-coevolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thm.civilization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.agriculture": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.domestication": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.neolithic-demographic-transition": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.gobekli-tepe": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.jomon": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.early-states": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.state-formation-theories": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.writing": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.bronze-age-collapse": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.classical-empires": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.axial-age": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.buddhism-spread": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.christianity-spread": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.islam-rise": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.big-gods-debate": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.silk-roads": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.indian-ocean-trade": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.paper-transmission": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.hindu-arabic-numerals": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.translation-movement": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.mongol-empire": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.black-death": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.african-states": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.americas-states": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.columbian-exchange": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.reformation": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.japan-ritsuryo": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.early-modern-empires": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thm.world-history": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.trade-networks": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.atlantic-colonialism": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.printing": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "q.knowledge-transmission": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.capitalism": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.industrial-revolution-causes": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.atlantic-revolutions": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.electrification": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.enlightenment": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.imperialism": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.industrial-revolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.scientific-revolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thm.economy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thm.modernity": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thm.state-order": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "thm.tech-history": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.great-divergence": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.malthusian-escape": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.high-wage-cheap-energy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.industrious-revolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.institutions-growth": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.organic-mineral-economy": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.steam-engine": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.cotton-mechanization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.slavery-industrialization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.second-industrial-revolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.science-institutions": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.newtonian-synthesis": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.sovereign-state": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.nationalism": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.haitian-revolution": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.meiji-industrialization": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.opium-wars": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.scramble-for-africa": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "evt.abolition": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
+  },
+  "con.industrial-labour": {
+   "level": 0,
+   "status": "presented",
+   "history": [],
+   "next_review": null,
+   "recheck": false
   }
+ }
 }
